@@ -1,0 +1,127 @@
+.b-web-video
+	position: relative
+	min-height: 220px
+	display: flex
+	align-items: center
+	overflow: hidden
+	background-color: $grey-darker
+	&.record
+		.b-web-video__btn-start-record
+			display: none
+		.b-web-video__btn-stop-record,
+		.b-web-video__status-record,
+		.b-web-video__on-rec-button
+			display: inline-block
+	&.view-record
+		.b-web-video__video--record
+			display: none
+		.b-web-video__video--view-record
+			display: block
+			z-index: 1
+		.b-web-video__button-overwrite
+			align-self: flex-end
+			display: -ms-flexbox
+			display: flex
+			align-items: flex-start
+	&.message
+		.b-web-video__message-recording
+			display: flex
+	&__video
+		width: 100%
+		height: auto
+		&--view-record
+			display: none
+			height: 100%
+		&--lg
+			height: 500px
+
+
+	&__container
+		padding: 15px
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		display: flex
+		flex-direction: column
+		flex-wrap: nowrap
+		justify-content: space-between
+		align-content: stretch
+		align-items: flex-start
+	&__button
+		-webkit-order: 0
+		-ms-flex-order: 0
+		order: 0
+		-webkit-flex: 1 1 auto
+		-ms-flex: 1 1 auto
+		flex: 1 1 auto
+		align-self: center
+		text-align: center
+		display: flex
+		align-items: flex-end
+
+	&__pie
+			align-items: center
+			order: 0
+			-webkit-flex: 1 1 auto
+			-ms-flex: 1 1 auto
+			-webkit-box-flex: 1
+			flex: 1 1 auto
+			align-self: center
+			justify-content: center
+			display: none
+			&.active
+				display: flex
+
+	&__btn-stop-record
+		display: none
+		width: 100%
+		text-align: right
+	&__status-record
+		display: none
+		color: #ffffff
+		font-family: $font-def-light
+	&__button-overwrite
+		display: none
+
+	&__message-recording
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: $modal-background
+		color: #ffffff
+
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		display: none
+	&__message-icon
+		margin-bottom: 35px
+	&__message-subcapion
+		color: #ffffff
+	&__on-rec-button
+		display: none
+		width: 100%
+		text-align: right
+	//.b-web-video
+	@media screen and (min-width: $lg)
+		height: 300px
+		&--sm
+			height: 273px
+		&--xl
+			height: 450px
+		&__video
+			//height: 268px
+	@media screen and (min-width: $xl)
+		height: 360px
+
+		&--sm
+			height: 305px
+		&--xl
+			height: 500px
+		&__message-subcapion
+
+			font-size: 18px

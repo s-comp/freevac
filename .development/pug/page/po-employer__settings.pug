@@ -1,0 +1,312 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('Настройки профиля', 'Кабинет работодателя')
+	.c-content
+		.b-commutator.js-commutator-body
+			form.b-form.__error-bg
+				.b-commutator__tabs
+					.container
+						.row
+							.col-lg-9
+								.row
+									.col-sm-6
+										.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+											| Профиль
+									.col-sm-6
+										.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+											| Конфиденциальность
+
+
+							.col-md-3.offset-md-9.offset-lg-0
+								.b-form__settings-aside
+									.b-form__upload-file.b-form__settings-img
+										img(src="assets/img/company.jpg" alt="alt")
+										.b-form__settings-img-hover
+											i.e-icon.e-icon--m0.e-icon--white
+												+icon('photo-camera','e-icon__figure e-icon__figure--white')
+
+											span.b-form__settings-img-hover-text Обновить фото
+												br
+												| профиля
+										label.b-form__file-input
+											input(type='file').b-form__input-file
+
+
+				section.b-commutator__content.active.js-commutator-content(data-child='a').b-form__settings-content
+						.container
+							.row
+								.col-md-9
+									//Form block
+									.b-form__block
+										.b-form__caption
+											i.e-icon
+												+icon('lock','e-icon__figure e-icon__figure--credit-lock')
+											h5.h5.b-form__title Информация для авторизации
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center.__mb-20
+											.col-sm-4
+												.b-form__field-label.__bold Email
+
+											.col-lg-4.col-md-5.col-sm-6.col-9
+												| job-ukraine@hp.com
+
+											.col-lg-4.col-md-3.col-sm-2.col-3
+												button
+													i.e-icon.e-icon--md
+														+icon('edit','e-icon__figure e-icon__figure--sm')
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-sm-4
+												.b-form__field-label.__bold Пароль
+
+											.col-lg-4.col-md-5.col-sm-6.col-9
+												| ••••••••••
+
+											.col-lg-4.col-md-3.col-sm-2.col-3
+												button
+													i.e-icon.e-icon--md
+														+icon('edit','e-icon__figure e-icon__figure--sm')
+
+
+									//Form block
+									.b-form__block
+										.b-form__caption
+											i.e-icon
+												+icon('user','e-icon__figure')
+											h5.h5.b-form__title Персональные данные
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-sm-4
+												.b-form__field-label.__bold ФИО *
+
+											.col-md-8.col-sm-8.col-12
+												input(type='text' placeholder='ФИО' value='Джеймс Нокс Полк').b-form__field.js-required
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-sm-4
+												.b-form__field-label.__bold Город *
+
+											.col-lg-4.col-sm-8.col-12
+												input(type='text' placeholder='Город' value='Киев').b-form__field.js-required
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-sm-4
+												.b-form__field-label.__bold Телефон *
+
+											.col-lg-4.col-sm-8.col-12
+												input(type='text' value='0671234567').b-form__field.js-required.js-phone-masked
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-sm-4
+												.b-form__field-label.__bold Skype
+
+											.col-lg-4.col-sm-8.col-12
+												input(type='text' placeholder='Skype' value='job-ukraine').b-form__field.js-required
+
+							.row
+								.col-12
+									//Form block
+									.b-form__block.__no-border
+										.b-form__caption
+											i.e-icon
+												+icon('building','e-icon__figure')
+											h5.h5.b-form__title Информация о компании
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold Компания *
+
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='Компания' value='Тревор Филипс Индастрис ЛТД Лимитед').b-form__field.js-required
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold Сайт
+
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='Сайт ' value='hp.com').b-form__field
+
+
+
+										//Form row
+										.b-form__field-wrap.row
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold Описание компании
+
+											.col-md-9.col-sm-8.col-12
+												include ../blocks/wysiwyg--edit
+
+
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold Должность
+
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='Должность' value='начальник').b-form__field
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold Организационно-правовая форма
+
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='Организационно-правовая форма' value='правая').b-form__field
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold ЕДРПОУ *
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='ЕДРПОУ' value='123456789101112').b-form__field.js-required
+
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold ИНН *
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='ИНН' value='123456789101112').b-form__field.js-required
+
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold Юридическое название
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='Юридическое название' value='Тревор Филипс Индастрис ЛТД Лимитед').b-form__field
+
+										//Form row
+										.b-form__field-wrap.row.align-items-center
+											.col-md-3.col-sm-4
+												.b-form__field-label.__bold Юридический адрес
+											.col-md-6.col-sm-8.col-12
+												input(type='text' placeholder='Юридический адрес' value='г. Киев, ул. Кирилловская (Фрунзе), 40').b-form__field
+							.row
+								.col-md-9
+									//Form block
+									.b-form__block
+										.b-form__caption
+											i.e-icon
+												+icon('paper','e-icon__figure ')
+											h5.h5.b-form__title Настройка рассылок
+
+										//Form row
+										.b-form__field-wrap.row
+											.col-sm-4
+												.b-form__field-label.__bold Сообщения
+												p.b-form__light-text Ежедневные извещения, приходящие в формате вайбер-сообщений
+
+											.col-sm-8.col-12
+												+checkbox('полученные приглашения к просмотру вакансии или прохождению видео-собеседований','b-form__field-wrap',  '__center')
+												+checkbox('полученные сообщения/отклики','b-form__field-wrap', '__center')
+
+										//Form row
+										.b-form__field-wrap.row
+											.col-sm-4
+												.b-form__field-label.__bold Уведомления
+												p.b-form__light-text Ежедневные подборки важной информации, приходящие на электронную почту
+
+											.col-sm-8.col-12
+												+checkbox('подходящие резюме по вашему профилю','b-form__field-wrap',  '__center')
+
+										//Form row
+										.b-form__field-wrap.row
+											.col-sm-4
+												.b-form__field-label.__bold Новости
+												p.b-form__light-text Ежедневные подборки новостей и прочей полезной информации, приходящие на электронную почту
+
+											.col-sm-8.col-12
+												+checkbox('получать новости','b-form__field-wrap',  '__center')
+												+checkbox('отказаться от всех рассылок','b-form__field-wrap', '__center')
+
+									.b-form__footer.__no-border
+										.row.no-gutters
+											.b-form__footer-button.__lg
+												button.btn.btn--lg.js-send Сохранить
+											.b-form__footer-button.__sm
+												a(href="#resume-delete" data-tooltip="Удалить").e-manipulation-btn.js-modal-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+			section.b-commutator__content.js-commutator-content(data-child='b').b-form__settings-content
+						.container
+							.row
+								.col-md-9
+									form.b-form.b-form--mb-30
+										//Form block
+										.b-form__block.__no-border
+											.b-form__caption
+												i.e-icon
+													+icon('hand','e-icon__figure ')
+												h5.h5.b-form__title Стоп-лист
+
+											p Стоп-лист может сделать так, чтобы определенные рекрутеры не могли вас найти и предложить вакансию.
+											//Form row
+											.b-form__field-wrap
+												.b-form__field-label.__bold Введите стоп-слова через запятую
+												input(type='text' placeholder='Например: global, consultant, ivanov').js-required
+
+											.b-form__button-wrap.__mt-20
+												button.btn.btn--lg.js-send Обновить стоп-лист
+										//Form block
+										.b-form__block
+											h6.h6 Как это работает?
+
+											p Каждый раз, когда ваш профиль попадает в поисковую выдачу работодателя, система проверяет, не находится ли этот работодатель у вас в стоп-листе. Если да, ваш профиль для него исчезает. Даже если такой работодатель пападен на ваш профиль он увидит только «профиль неактивен».
+											p Стоп-лист проверяется по имени и должности, указанной в профиле работодателя.
+											p Мы не можем дать 100% гарантию, что работодатель не найдет ваш профиль, если задастся такой целью. Задача стоп-листа — избежать неловких ситуаций, когда вас случайно находит работодатель, с которым вы не хотели общаться.
+
+									.b-black-list
+										.b-black-list__caption
+											i.e-icon
+												+icon('list-ul','e-icon__figure ')
+											h5.h5.b-black-list__title Черный список
+
+										.b-black-list__item
+											.b-black-list__item-body
+												img(src='assets/img/candidats/small/item-4.jpg' alt='alt').b-black-list__image
+												.b-black-list__content
+													.b-black-list__name Дячук Мирослава
+													.b-black-list__location Киев
+
+											a(href="#" data-tooltip="Удалить").e-manipulation-btn
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+										.b-black-list__item
+											.b-black-list__item-body
+												img(src='assets/img/candidats/small/item-1.jpg' alt='alt').b-black-list__image
+												.b-black-list__content
+													.b-black-list__name Михайлюк Алексей
+													.b-black-list__location Киев
+
+											a(href="#" data-tooltip="Удалить").e-manipulation-btn
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+	//resume delete
+	.o-modal#resume-delete
+		.o-modal__center
+			.o-modal__content.__md
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						h5.h5 Вы уверены, что хотите удалить свой профиль ?
+					.o-modal__footer.__mt-70
+						.o-modal__button-row
+							.o-modal__button-wrap
+								a(href="#").btn-transp Да
+							.o-modal__button-wrap
+								a(href="#").btn-transp Нет

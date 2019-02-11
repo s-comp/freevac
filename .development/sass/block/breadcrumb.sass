@@ -1,0 +1,61 @@
+.b-breadcrumb-wrap
+	padding: 15px 0
+
+	border-bottom: 1px solid $grey-darker
+
+	&.__padd-xs
+		padding: 5px 0
+	@media screen and (min-width: $sm)
+		padding: 18px 0
+	@media screen and (min-width: $lg)
+		padding: 20px 0
+	@media screen and (min-width: $xl)
+		padding: 22px 0
+
+.b-breadcrumb
+	padding: 0 15px
+	list-style: none
+	margin: 0
+	//margin: 0 0 0 9%
+	+row
+	align-items: center
+	justify-content: center
+	&.__in-btn
+		flex-grow: 1
+	&__item
+		+col
+		margin-right: 17px
+		position: relative
+
+		&:after
+			content: '/'
+			font-family: $add-font
+			color: $font-light
+			margin-left: 17px
+
+		&:last-child
+			margin-right: 0
+			&:after
+				display: none
+
+	&__link
+		font-family: $add-font
+		color: $font-light
+		&:hover
+			color: $font-dark
+			text-decoration: underline
+	&__caption
+		color: $dark
+		margin: 0
+	//.b-breadcrumb
+	@media screen and (min-width: $sm-l)
+		&.__in-btn
+			margin-left: -144px
+
+	@media screen and (min-width: $lg)
+		&.__in-btn
+			margin-left: -168px
+.b-breadcrumb-back-btn
+	line-height: 0
+	padding: 0 15px
+	margin: 5px 0

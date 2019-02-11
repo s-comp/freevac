@@ -1,0 +1,50 @@
+.o-sidebar-content
+
+	&__img
+		text-align: center
+		margin: 25px auto
+		flex-shrink: 0
+		max-width: 260px
+		max-height: 260px
+		overflow: hidden
+
+	&__aside
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__text-row
+		display: flex
+		align-items: center
+		font-size: 16px
+		margin-bottom: 15px
+		color: $font-dark
+	&__block
+		margin-bottom: 25px
+	&__btn
+		min-width: 195px
+
+	//.o-sidebar-content
+	@media screen and (min-width: $sm-l)
+		&__img
+			text-align: left
+			margin-left: 0
+
+		&__aside
+			height: 0
+			align-items: flex-start
+		&__text-row
+			font-size: 13px
+		&__block
+			width: 100%
+		&__btn
+			min-width: 100%
+	@media screen and (min-width: $lg)
+		&__img
+			margin-top: 0
+
+		&__text-row
+			font-size: 16px
+
+
+
+

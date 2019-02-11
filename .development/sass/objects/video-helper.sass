@@ -1,0 +1,43 @@
+.o-video-helper
+
+	&__title-block
+
+		margin-bottom: 35px
+
+	&__block
+		margin-bottom: 50px
+
+	&__button-row
+		position: relative
+		padding-top: 50px
+		margin-top: 0px
+		&:after
+			content: ''
+			position: absolute
+			left: 15px
+			top: 0
+			right: 15px
+			border-bottom: 1px solid $grey-darker
+			height: 1px
+			width: calc(100% - 30px)
+			display: block
+	&__button-block
+		text-align: center
+		//margin-top: 30px
+	&__item-block
+		margin-bottom: 40px
+	&__dropdown-wrapp,
+	&__video-wrap,
+	&__volume-wrap
+		margin-bottom: 30px
+	&__text-light
+		font: $font-light
+	//.o-video-helper
+	@media screen and (min-width: $lg)
+		&__block
+			margin-bottom: 0
+		&__button-row
+			margin-top: 50px
+	@media screen and (min-width: $xl)
+		&__title-block
+			margin-bottom: 56px

@@ -1,0 +1,108 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Профиль компании','Вкансии')
+	.c-content
+		section.b-company
+			.container
+				.b-company__caption
+					.row
+						.col-4.col-md-2.col-sm-3
+							figure.b-company__figure
+								img(src="assets/img/company.jpg" alt="alt")
+						.col
+							h1.b-company__name HP Украина
+
+							p.b-company__light-text Веб-сайт: <a href="www.hp.com/ua/ru/home.html" class='b-company__link'> www.hp.com/ua/ru/home.html</a>
+
+				.b-company__body
+					p Горжусь проектом «VSCO» (vk.com/vscojournal), который самостоятельно поднял 135к (на 01.03.17) опираясь на эстетический вкус, без завлечения денежных средств.
+
+					p В отличии от многих SMM-щиков, я умею создавать собственный контент (дизайн, фото, текст), а не брать безвкусные, всем приевшиеся материалы с фотобанков с добавлением сухого текста. Понимаю, что в тренде и как правильно писать продаваемый текст.
+
+					p В деталях знаю, как устроены соцсети, как общаться с создателями групп в них, что попросить у медиа-ресурса на переговорах о «партнерке», и что попросить взамен. Я не просто занимаюсь продвижением, а оказываю влияние на сам продукт.
+
+					p Работаю в Facebook, Vkontakte, Twitter, Instagram. За Одноклассники не берусь принципиально, даже не предлагайте) . Только фриланс!
+
+
+				h5.h5 Открытые вакансии
+
+
+				//Vacancy
+				.b-vacancy-in-list
+					.b-vacancy-in-list__inside-wrap
+						//Header
+						.b-vacancy-in-list__header
+							.b-vacancy-in-list__caption
+								a(href="#").b-vacancy-in-list__title
+									i.e-icon.e-icon--xs.e-icon--mr10
+										+icon('camera','e-icon__figure e-icon__figure--xs')
+									| Администратор сайта, контент-менеджер
+
+								.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+							.b-vacancy-in-list__inform
+								.b-vacancy-in-list__inform-item
+									a(href="#").b-vacancy-in-list__company HP Украина
+								.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+									i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+										+icon('location','e-icon__figure e-icon__figure--xs')
+									| Киев
+								.b-vacancy-in-list__inform-item 13 мая 2017
+
+						//Body
+						.b-vacancy-in-list__body
+							.b-vacancy-in-list__desrcipt
+								| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+							.b-vacancy-in-list__favorit
+								.js-favorit-body
+									a(href="#vacancy-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+									a(href="#").e-favorit-btn.__active.js-favorit-btn
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+						//Footer
+						.b-vacancy-in-list__footer
+							.b-vacancy-in-list__list
+								a(href="#").b-vacancy-in-list__list-item  Пройти
+
+				//Vacancy
+				.b-vacancy-in-list
+					.b-vacancy-in-list__inside-wrap
+						//Header
+						.b-vacancy-in-list__header
+							.b-vacancy-in-list__caption
+								a(href="#").b-vacancy-in-list__title
+									i.e-icon.e-icon--xs.e-icon--mr10
+										+icon('camera','e-icon__figure e-icon__figure--xs')
+									| Junior, Middle Ruby on Rails developer
+
+								.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+							.b-vacancy-in-list__inform
+								.b-vacancy-in-list__inform-item
+									a(href="#").b-vacancy-in-list__company HP Украина
+								.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+									i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+										+icon('location','e-icon__figure e-icon__figure--xs')
+									| Киев
+								.b-vacancy-in-list__inform-item 13 мая 2017
+
+						//Body
+						.b-vacancy-in-list__body
+							.b-vacancy-in-list__desrcipt
+								| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+							.b-vacancy-in-list__favorit
+								.js-favorit-body
+									a(href="#vacancy-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+									a(href="#").e-favorit-btn.__active.js-favorit-btn
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+						//Footer
+						.b-vacancy-in-list__footer
+							.b-vacancy-in-list__list
+								a(href="#").b-vacancy-in-list__list-item  Пройти

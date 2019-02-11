@@ -1,0 +1,638 @@
+extends ../template/employer
+block title
+	| Markup
+block main
+	+breadcrumb('Кандидаты')
+	.c-content.c-content--padd-sm
+
+		.b-commutator.js-commutator-body
+			//Tabs
+			.b-commutator__tabs.b-commutator__tabs--mb-25
+				.container
+					.row
+						.col-sm-4
+							.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+								| Поиск кандидата
+						.col-sm-4
+							.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+								| Избранные кандидаты
+						.col-sm-4
+							.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+								| SCAN
+			//Tab content
+			section.b-commutator__content.active.js-commutator-content(data-child='a')
+				.container
+					form.b-search-form
+						.row
+							.col-lg-7.b-search-form__item
+								.b-form
+									.b-form__searh-field-group
+										input(type="text", placeholder="Поиск кандидатов").b-form__item-group-lg.b-form__field-group--mr
+										.b-select.b-form__item-group-xs.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name Город
+												input(type="hidden" value="" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content
+												a.b-select__item(data-value="Авдеевка") Авдеевка
+												a.b-select__item(data-value="Александровка") Александровка
+												a.b-select__item(data-value="Андрушевка") Андрушевка
+							.col-lg-5.b-form__field-group-custom
+								.b-form__field-group-item
+									.main-checkbox.form__chekbox
+										label.main-checkbox__label.main-checkbox__label--center
+											input.main-checkbox__check(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon
+												+icon('check','main-checkbox__svg')
+											span.main-checkbox__label-text.c-form__chek-label-text Кандидаты с видео-
+												br
+												| собеседованием
+								.b-form__field-group-item.b-form__field-group-item--sm-center
+									button.btn.btn--md.btn--md--long Найти
+
+				//content
+				.container
+					.row
+						.col-lg-3
+							//Filter
+							include ../blocks/aside-filter
+						.col-lg-9
+							.o-heading-group.__between.__on-button
+								h5.h5.o-heading-group__caption Найдено <span>14100</span> резюме
+
+								button.btn.btn--xs.btn--transp
+									| Активировать
+									br
+									| видео-собеседования
+
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Михайлюк Алексей
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Консультант технической поддержки
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по работе с клиентами  в <span class="b-candidat__worked-to">Каскад</span>
+													p.b-candidat__work-time.b-candidat__item-xs 01.2016 — ...
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Manual QA Engineer в <span class="b-candidat__worked-to">Coding Ninjas</span>
+													p.b-candidat__work-time.b-candidat__item-xs  2 года 3 месяца
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-2.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Дячук Мирослава
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Руководитель ИТ отделом
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Аналитик компьютерных систем  в <span class="b-candidat__worked-to">Proxima Research</span>
+													p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Manual QA Engineer в <span class="b-candidat__worked-to">Hoshva DGTL</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 3 месяца
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-3.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Кирилл Алексеевич
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Агент службы поддержки
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">18 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по развити в <span class="b-candidat__worked-to">MoApps</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 5 месяцев
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn.active
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										.b-candidat__video-preview
+											.b-candidat__video-preview-icon
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('play','e-icon__figure e-icon__figure--play')
+										img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Кирилл Алексеевич
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Агент службы поддержки
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">18 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по развити в <span class="b-candidat__worked-to">MoApps</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 5 месяцев
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-4.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Тимощук Евгения
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Customer Support Representative
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Junior Recruitment Officer в <span class="b-candidat__worked-to">Weegree</span>
+													p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по продажам в  <span class="b-candidat__worked-to">KinoHub</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 3 месяцев
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Михайлюк Алексей
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Консультант технической поддержки
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по работе с клиентами  в <span class="b-candidat__worked-to">Каскад</span>
+													p.b-candidat__work-time.b-candidat__item-xs 01.2016 — ...
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Manual QA Engineer в <span class="b-candidat__worked-to">Coding Ninjas</span>
+													p.b-candidat__work-time.b-candidat__item-xs  2 года 3 месяца
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-2.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Дячук Мирослава
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Руководитель ИТ отделом
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Аналитик компьютерных систем  в <span class="b-candidat__worked-to">Proxima Research</span>
+													p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Manual QA Engineer в <span class="b-candidat__worked-to">Hoshva DGTL</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 3 месяца
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-3.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Кирилл Алексеевич
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Агент службы поддержки
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">18 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по развити в <span class="b-candidat__worked-to">MoApps</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 5 месяцев
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn.active
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										.b-candidat__video-preview
+											.b-candidat__video-preview-icon
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('play','e-icon__figure e-icon__figure--play')
+										img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+									.b-candidat__inform
+										a(href="#").b-candidat__name Кирилл Алексеевич
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Агент службы поддержки
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">18 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по развити в <span class="b-candidat__worked-to">MoApps</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 5 месяцев
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+
+							//Candidat
+							.b-candidat
+								.b-candidat__body
+									a(href="#").b-candidat__preview
+										img(src="assets/img/candidats/small/item-4.jpg" alt="alt")
+
+									.b-candidat__inform
+										a(href="#").b-candidat__name Тимощук Евгения
+
+										.b-candidat__descrip
+
+											.b-candidat__item-block.__main-info
+												.b-candidat__item-row
+													p.b-candidat__position.b-candidat__item-lg Customer Support Representative
+													p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Junior Recruitment Officer в <span class="b-candidat__worked-to">Weegree</span>
+													p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+												.b-candidat__item-row
+													p.b-candidat__worked.b-candidat__item-lg Менеджер по продажам в  <span class="b-candidat__worked-to">KinoHub</span>
+													p.b-candidat__work-time.b-candidat__item-xs 2 года 3 месяцев
+
+											.b-candidat__item-block.__favorit
+												.js-favorit-body
+													a(href="#add-to-favorite").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+													a(href="#").e-favorit-btn.__active.js-favorit-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+
+					//Pagination
+					include ../blocks/pagination
+			//Tab content
+			section.b-commutator__content.js-commutator-content(data-child='b')
+				.container
+					.o-heading-group.__between.__on-button.__border-bottom.__mb-0
+
+						h6.h7.o-heading-group__caption Всего <span>84</span> кандидата
+
+						.b-select.js-dropdown-body.col-sm-6
+							.b-select__caption-wrap.js-dropdown-btn
+								span.b-select__caption.js-value-name Отобразить по  вакансиям
+								input(type="hidden" value="" name="select").js-value-input
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+							.b-select__dropdown(data-child="a").js-dropdown-content
+								a.b-select__item(data-value="Менеджер по продажам со знанием англ. языка (IT)") Менеджер по продажам со знанием англ. языка (IT)
+								a.b-select__item(data-value="Менеджер по продажам в интернет-магазин") Менеджер по продажам в интернет-магазин
+								a.b-select__item(data-value="Бухгалтер-кассир") Бухгалтер-кассир
+								a.b-select__item(data-value="Продавец-кассир в магазин") Продавец-кассир в магазин
+								a.b-select__item(data-value="Front-end/JavaScript Developer") Front-end/JavaScript Developer
+								a.b-select__item(data-value="Продавец-кассир в магазин") Продавец-кассир в магазин
+
+				//Candidats
+				.container
+					//Candidat
+					.b-candidat.__gutter-0.__border-bottom.__no-hover
+						.b-candidat__body.__custom-p
+							a(href="#").b-candidat__preview
+								img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+
+							.b-candidat__inform
+								.b-candidat__item-row.__jus-start.__column-md
+									a(href="#").b-candidat__name.__custom Михайлюк Алексей
+									.b-candidat__vacancy Менеджер по продажам в интернет-магазин
+
+								.b-candidat__descrip
+
+									.b-candidat__item-block.__main-info
+										.b-candidat__item-row
+											p.b-candidat__position.b-candidat__item-lg Консультант технической поддержки
+											p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">10 000</span> грн.
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Junior Recruitment Officer в <span class="b-candidat__worked-to">Weegree</span>
+
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Менеджер по продажам в  <span class="b-candidat__worked-to">KinoHub</span>
+
+
+									.b-candidat__item-block.__favorit
+										button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+					//Candidat
+					.b-candidat.__gutter-0.__border-bottom.__no-hover
+						.b-candidat__body.__custom-p
+							a(href="#").b-candidat__preview
+								img(src="assets/img/candidats/small/item-2.jpg" alt="alt")
+
+							.b-candidat__inform
+								.b-candidat__item-row.__jus-start.__column-md
+									a(href="#").b-candidat__name.__custom Дячук Мирослава
+									.b-candidat__vacancy Менеджер по продажам в интернет-магазин
+
+								.b-candidat__descrip
+
+									.b-candidat__item-block.__main-info
+										.b-candidat__item-row
+											p.b-candidat__position.b-candidat__item-lg Руководитель ИТ отделом
+											p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Аналитик компьютерных систем  в <span class="b-candidat__worked-to">Proxima Research</span>
+											p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Manual QA Engineer в <span class="b-candidat__worked-to">Hoshva DGTL</span>
+											p.b-candidat__work-time.b-candidat__item-xs 2 года 3 месяца
+
+									.b-candidat__item-block.__favorit
+										button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+					//Candidat
+					.b-candidat.__gutter-0.__border-bottom.__no-hover
+						.b-candidat__body.__custom-p
+							a(href="#").b-candidat__preview
+								img(src="assets/img/candidats/small/item-3.jpg" alt="alt")
+
+							.b-candidat__inform
+								.b-candidat__item-row.__jus-start.__column-md
+									a(href="#").b-candidat__name Кирилл Алексеевич
+
+
+								.b-candidat__descrip
+
+									.b-candidat__item-block.__main-info
+										.b-candidat__item-row
+											p.b-candidat__position.b-candidat__item-lg РуководитеАгент службы поддержки
+											p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg  Менеджер по развити в <span class="b-candidat__worked-to">MoApps</span>
+											p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+
+
+									.b-candidat__item-block.__favorit
+										button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+					//Candidat
+					.b-candidat.__gutter-0.__border-bottom.__no-hover
+						.b-candidat__body.__custom-p
+							a(href="#").b-candidat__preview
+								.b-candidat__video-preview
+									.b-candidat__video-preview-icon
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('play','e-icon__figure e-icon__figure--play')
+								img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+
+							.b-candidat__inform
+								.b-candidat__item-row.__jus-start.__column-md
+									a(href="#").b-candidat__name.__custom Михайлюк Алексей
+									.b-candidat__vacancy Менеджер по продажам в интернет-магазин
+
+								.b-candidat__descrip
+
+									.b-candidat__item-block.__main-info
+										.b-candidat__item-row
+											p.b-candidat__position.b-candidat__item-lg Руководитель ИТ отделом
+											p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Аналитик компьютерных систем  в <span class="b-candidat__worked-to">Proxima Research</span>
+											p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Manual QA Engineer в <span class="b-candidat__worked-to">Hoshva DGTL</span>
+											p.b-candidat__work-time.b-candidat__item-xs 2 года 3 месяца
+
+									.b-candidat__item-block.__favorit
+										button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+					//Candidat
+					.b-candidat.__gutter-0.__border-bottom.__no-hover
+						.b-candidat__body.__custom-p
+							a(href="#").b-candidat__preview
+								img(src="assets/img/candidats/small/item-4.jpg" alt="alt")
+
+							.b-candidat__inform
+								.b-candidat__item-row.__jus-start.__column-md
+									a(href="#").b-candidat__name.__custom Тимощук Евгения
+									.b-candidat__vacancy Менеджер по продажам в интернет-магазин
+								.b-candidat__descrip
+
+									.b-candidat__item-block.__main-info
+										.b-candidat__item-row
+											p.b-candidat__position.b-candidat__item-lg Customer Support Representative
+											p.b-candidat__salary.b-candidat__item-xs от <span class="b-candidat__salary-from">20 000</span> грн.
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Аналитик компьютерных систем  в <span class="b-candidat__worked-to">Proxima Research</span>
+											p.b-candidat__work-time.b-candidat__item-xs 3 года 5 месяцев
+										.b-candidat__item-row
+											p.b-candidat__worked.b-candidat__item-lg Manual QA Engineer в <span class="b-candidat__worked-to">Hoshva DGTL</span>
+											p.b-candidat__work-time.b-candidat__item-xs 2 года 3 месяца
+
+									.b-candidat__item-block.__favorit
+										button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+				.container
+					//Pagination
+					include ../blocks/pagination-no-border.pug
+
+			//Tab content
+			section.b-commutator__content.__pt35.js-commutator-content(data-child='c')
+				.container
+					.row
+						.col-md-6
+							.b-filter
+								//Filter block
+								.b-filter__block.__no-border
+									.b-filter__block-body
+										.b-filter__row
+											.b-filter__point.__flex-auto Сфера:
+											.b-filter__strong IT, компьютеры, интернет
+										.b-filter__point Искать кандитатов с тегами:
+										.b-filter__tag-wrap.__mb-20
+											span.b-filter__tag.__lg mobile
+											span.b-filter__tag.__lg web
+											span.b-filter__tag.__lg английский
+											span.b-filter__tag.__lg IT
+											span.b-filter__tag.__lg программирование
+											span.b-filter__tag.__lg python
+											span.b-filter__tag.__lg java
+						.col-md-6
+							.b-filter
+								//Filter block
+								.b-filter__block.__no-border
+									.b-filter__block-body
+										.b-filter__row
+											.b-filter__point.__flex-auto Профессия:
+											.b-filter__strong не выбрано
+										.b-filter__point Исключить кандидатов с тегами:
+										.b-filter__tag-wrap
+											span.b-filter__tag.__not-active.__lg become
+											span.b-filter__tag.__not-active.__lg dove
+											span.b-filter__tag.__not-active.__lg breake
+											span.b-filter__tag.__not-active.__lg bow
+											span.b-filter__tag.__not-active.__lg TI
+
+
+					.o-heading-group.__between.__on-button.__border-top
+						h5.h7.o-heading-group__caption Найдено <span>14100</span> резюме
+
+						button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+							i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+								+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+
+
+
+
+
+
+	.o-modal#add-to-favorite
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xxs')
+				h5.h5.o-modal__caption Добавить в избранные кандидаты
+				.o-modal__body
+					form(action="/" method="post")
+
+						.row.no-gutters
+							.col-lg-10
+								.b-form__field-wrap
+									.b-select.js-dropdown-body
+										.b-select__caption-wrap.js-dropdown-btn
+											span.b-select__caption.js-value-name Без привязки к вакансиям
+											input(type="hidden" value="" name="select").js-value-input
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+										.b-select__dropdown(data-child="a").js-dropdown-content
+											a.b-select__item(data-value="Авдеевка") Авдеевка
+											a.b-select__item(data-value="Александровка") Александровка
+											a.b-select__item(data-value="Андрушевка") Андрушевка
+								.b-form__field-group-row
+									p.b-form__light-text.b-form__help-text Кандидат будет отмечен как
+
+									span.b-form__dark-text.b-form__help-text.b-form__text-row
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--mr10
+											+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill')
+										| Интересный
+
+								.main-checkbox.form__chekbox
+									label.main-checkbox__label
+										input.main-checkbox__check(type='checkbox', style='display: none')
+										span.main-checkbox__item.main-checkbox__item--icon
+											+icon('check','main-checkbox__svg')
+										span.main-checkbox__label-text.c-form__chek-label-text Уведомить соискателя с предложением ознакомиться с вакансией
+											br
+											span.b-form__light-text.b-form__help-text Кандидат получит письмо с сылкой на вакансию
+
+						.b-form__button-wrap.b-form__button-wrap--modal
+							button.btn.btn--lg.js-send Добавить
+
+
+

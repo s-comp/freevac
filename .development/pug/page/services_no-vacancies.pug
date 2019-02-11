@@ -1,0 +1,33 @@
+extends ../template/employer
+block title
+	| Markup
+block main
+	+breadcrumb('Услуги и сервисы')
+	.o-video-helper
+		.c-content.c-content--padd-sm
+			.b-commutator.js-commutator-body
+				//Tabs
+				.b-commutator__tabs.b-commutator__tabs--mb
+					.container
+						.row
+							.col-sm-4
+								.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+									| Заказать услугу
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+									| Активные услуги
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+									| История
+				//Tab content
+				section.b-commutator__content.active.js-commutator-content(data-child='a')
+					.b-service
+						.container
+							.row.justify-content-center
+								.col.b-service__inform
+									i.e-icon.e-icon--lg.b-service__inform-figure
+										+icon('bag','e-icon__figure e-icon__figure--bag')
+
+									h5.h5 У вас нет вакансий!
+
+									p.b-service__inform-text Для заказа услуг создайте <a href="#" class="tdu">вакансию</a>.

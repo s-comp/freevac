@@ -1,0 +1,113 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('', 'Отклики', 'Мои вакансии')
+	.c-content.c-content--padd-sm
+
+		.container
+			h4 Менеджер по продажам со знанием англ. языка (IT)
+			//Candidat
+			.b-candidat.__border-bottom.__m-t-b-0
+				.b-candidat__body
+					a(href="#").b-candidat__preview
+						img(src="assets/img/candidats/small/item-3.jpg" alt="alt")
+
+					.b-candidat__inform
+						.b-candidat__item-row.__column-sm.__mb-12
+							a(href="#").b-candidat__name.__custom.__bold Гордиенко Андрей
+							.b-candidat__date-message сегодня в 14:00
+
+						.b-candidat__descrip
+							.b-candidat__item-block.__main-info.__col-md-10
+								p.b-candidat__message Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+
+						.b-candidat__item-block.__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//Candidat
+			.b-candidat.__border-bottom.__m-t-b-0.__unread
+				.b-candidat__body
+					a(href="#").b-candidat__preview
+						img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+
+					.b-candidat__inform
+						.b-candidat__item-row.__column-sm.__mb-12
+							a(href="#").b-candidat__name.__custom.__bold Петренко Анатолий
+							.b-candidat__date-message 15 января 2017
+
+						.b-candidat__descrip
+							.b-candidat__item-block.__main-info.__col-md-10
+								p.b-candidat__message Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.
+							.b-candidat__item-block
+								p <span class="strong">2</span> сообщения
+						.b-candidat__item-block.__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+			//Candidat
+			.b-candidat.__border-bottom.__m-t-b-0.__unread
+				.b-candidat__body
+					a(href="#").b-candidat__preview
+						img(src="assets/img/candidats/small/item-2.jpg" alt="alt")
+
+					.b-candidat__inform
+						.b-candidat__item-row.__column-sm.__mb-12
+							a(href="#").b-candidat__name.__custom.__bold Дячук Мирослава
+							.b-candidat__date-message 13 января 2017
+
+						.b-candidat__descrip
+							.b-candidat__item-block.__main-info.__col-md-10
+								p.b-candidat__message Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+							.b-candidat__item-block
+								p <span class="strong">1</span> сообщения
+
+						.b-candidat__item-block.__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+			//Candidat
+			.b-candidat.__border-bottom.__m-t-b-0
+				.b-candidat__body
+					a(href="#").b-candidat__preview
+						img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+
+					.b-candidat__inform
+						.b-candidat__item-row.__column-sm.__mb-12
+							a(href="#").b-candidat__name.__custom.__bold Артур Мартыненко
+							.b-candidat__date-message сегодня в 14:00
+
+						.b-candidat__descrip
+							.b-candidat__item-block.__main-info.__col-md-10
+								p.b-candidat__message Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.
+						.b-candidat__item-block.__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+			//Candidat
+			.b-candidat.__border-bottom.__m-t-b-0.__unread
+				.b-candidat__body
+					a(href="#").b-candidat__preview
+						img(src="assets/img/candidats/small/item-3.jpg" alt="alt")
+
+					.b-candidat__inform
+						.b-candidat__item-row.__column-sm.__mb-12
+							a(href="#").b-candidat__name.__custom.__bold Иван Филимонов
+							.b-candidat__date-message 15 января 2017
+
+						.b-candidat__descrip
+							.b-candidat__item-block.__main-info.__col-md-10
+								p.b-candidat__message Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.
+							.b-candidat__item-block
+								p <span class="strong">2</span> сообщения
+						.b-candidat__item-block.__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+			//Pagination
+			include ../blocks/pagination-no-border

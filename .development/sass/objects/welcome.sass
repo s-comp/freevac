@@ -1,0 +1,138 @@
+.o-welcome
+	position: relative
+	margin-top: -67px
+	&--style-2
+		margin-top: 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			display: block
+			background-color: #2d2d2d
+			opacity: 0.8
+	@media screen and (min-width: $xl)
+		margin-top: -93px
+		&--style-2
+			margin-top: 0
+	&__container
+		padding: 50px 15px
+		max-width: 88%
+		@media screen and (min-width: $lg)
+			padding: 150px 15px
+	&__content
+		position: relative
+
+	&__item
+		//min-height: 550px
+		min-height: 100%
+		min-height: 100vh
+		background: transparent center / cover
+
+		display: none
+
+		align-items: center
+		justify-content: center
+
+		padding-bottom: 100px
+
+		padding-top: 67px
+		&.active
+			display: flex
+		@media screen and (min-width: $lg)
+			//min-height: 760px
+			padding-bottom: 80px
+		@media screen and (min-width: $xl)
+			//min-height: 845px
+			padding-bottom: 100px
+			padding-top: 130px
+
+		@media screen and (min-width: $xxl)
+			//min-height: calc(100% - 213px)
+			//min-height: calc(100vh - 213px)
+
+
+		@media screen and (min-height: $xl-g)
+			//min-height: calc(100% - 213px)
+			//min-height: calc(100vh - 213px)
+
+
+
+	&__content
+
+		padding: 50px 15px
+		@media screen and (min-width: $lg)
+			padding: 150px 15px
+
+	&__caption
+		position: relative
+		text-align: center
+		text-transform: uppercase
+		+text-shadow(2px, 3px, 3px, rgba(50, 45, 49, 0.2))
+		color: $white-op
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		margin-bottom: 40px
+		&--decoration
+			&:after
+				content: ''
+				display: block
+				margin: 0 auto
+				background-color: $accent
+				height: 2px
+				width: 100%
+				max-width: 180px
+				margin-top: 32px
+				+border-radius(1px)
+
+		&--style-2
+			font-family: $rubik
+			font-weight: 700
+			letter-spacing: 0
+			color: #ffffff
+	&__desc
+		color: #ffffff
+		font: 400 18px/1.5 $rubik
+		text-align: center
+		margin-left: auto
+		margin-right: auto
+		max-width: 740px
+		margin-bottom: 40px
+		@media screen and (min-width: $lg)
+			font-size: 20px
+			margin-bottom: 54px
+	&__btn-list
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+
+		@media screen and (min-width: $sm)
+			flex-direction: row
+	&__btn-list-item
+		margin-bottom: 15px
+		@media screen and (min-width: $sm)
+			margin-bottom: 0
+			margin-right: 16px
+			&:last-child
+				margin-right: 0
+	&__wel-info
+		+row
+
+		margin-top: 16px
+	&__video-wrap
+
+		@media screen and (max-width: $max-xl)
+			text-align: center
+			margin-bottom: 25px
+
+		@media screen and (min-width: $xl)
+			padding-right: 50px
+body .o-welcome
+	&__middle
+		margin: 50px 0
+		@media screen and (min-width: $lg)
+			margin: 75px 0
+

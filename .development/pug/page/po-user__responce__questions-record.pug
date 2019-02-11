@@ -1,0 +1,83 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Запись дополнительных ответов\n')
+	.c-content.c-content--padd-sm
+		.container
+			.b-record-answer
+				.row.align-items-center.justify-content-between.b-record-answer__header
+					.col-sm-1
+						.b-record-answer__steps
+							span.b-record-answer__step 2
+							span.b-record-answer__step.b-record-answer__step--next 4
+					.col-sm-7.b-record-answer__caption
+						//input(type='checkbox').js-start-webcam
+						| <strong class="strong">Чем вы больше всего гордитесь с профессиональной точки зрения?</strong>
+					.col-3.col-sm-2.b-record-answer__time
+						| 00:05
+					.col-3.col-sm-2.b-record-answer__button-wrap.text-a-r
+						button.btn.btn--icon--sm.b-record-answer__start-record.js-start-record
+							i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+								+icon('camera','e-icon__figure e-icon__figure--camera')
+						button.btn.btn--icon--sm.b-record-answer__stop-record.js-stop-record
+							i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+								+icon('stop','e-icon__figure')
+
+				//VIDEO
+				.row.justify-content-center
+					.col-lg-10.b-record-answer__video
+						.b-web-video.b-web-video--xl
+							.b-video.paused.b-web-video__video.b-web-video__video--view-record.__no-gutters.js-video-wrap
+								.b-video__controls
+									button.b-video__start.js-video-control
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('play','e-icon__figure e-icon__figure--play')
+
+									.b-video__control-bottom
+										button.b-video__play-pause.js-video-control.paused
+											+icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+											+icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+										.b-video__seekbar.js-progress-bar-video
+											span
+
+										button.b-video__fullscreen.js-video-full-screen
+											+icon('expand','e-icon__figure e-icon__figure--play')
+								video.js-video-content.b-video__video.__w100.js-record-video
+							video(width='640', autoplay='').b-web-video__video.b-web-video__video--record.js-web-video
+							.b-web-video__container
+								.b-web-video__status-record
+									i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--mr10
+										+icon('circle','e-icon__figure e-icon__figure--circle')
+									| Идет запись
+								.b-web-video__pie.b-record-answer__pie
+									.e-time-pie.e-time-pie--lg.e-time-pie--opacity
+										span.e-time-pie__set-time.e-time-pie__set-time--lg.js-set-time-out
+										.e-time-pie__fill.e-time-pie__fill--animation.js-time-pie-fill
+								//Message recording
+								.b-web-video__message-recording
+									.b-web-video__message-icon
+										i.e-icon.e-icon--lg.e-icon--m0.e-icon--trsp
+											+icon('check','e-icon__figure e-icon__figure--white e-icon__figure--check')
+									h5.h5 Ответы на дополнительные вопросы записаны!
+
+				.row.align-items-center.justify-content-center.justify-content-lg-between.b-record-answer__footer.b-record-answer__footer-test-record
+					.b-record-answer__footer-button-wrap
+						button.btn-transp.__lg.b-record-answer__btn.b-record-answer__start-overwrite.js-start-record  Перезаписать
+						button.btn-transp.__lg.b-record-answer__btn.b-record-answer__play-recorded Просмотреть
+					.b-record-answer__footer-button-wrap
+						a(href="#additional-questions").btn.btn--lg.js-modal-btn  Отправить
+
+
+	.o-modal#additional-questions
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						i.e-icon.e-icon--lg.o-modal__greeting--figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Поздравляем, ответы на дополнительные вопросы отправлены

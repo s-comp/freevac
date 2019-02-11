@@ -1,0 +1,53 @@
+footer.c-footer.c-footer--landing
+	.container
+		.row.align-items-center.justify-content-between
+			.col-lg-2
+				//Logo
+				.c-footer__logo
+					a(href="/").b-logo
+						include ../../assets/img/svg/logo-sub.svg
+
+			.col-lg-8
+				.row
+
+					.col-12.col-md-4
+						.b-address.b-address--only-content.b-address--mb-md
+							.b-address__item.b-address__item--gutter-0
+								i.e-icon.e-icon--no-border.e-icon--no-size
+									+icon('phone-svg','b-address__icon')
+								a(href="tel:0660102034").b-address__text (066) 010-20-34
+					.col-12.col-md-4
+						.b-address.b-address--only-content.b-address--mb-md
+							.b-address__item.b-address__item--gutter-0
+								i.e-icon.e-icon--no-border.e-icon--no-size
+									+icon('mail','b-address__icon')
+								a(href="mailto:info@freevac.com.ua").b-address__text info@freevac.com.ua
+
+					.col-12.col-md-4
+						.b-address.b-address--only-content.b-address--mb-md
+							.b-address__item.b-address__item--gutter-0
+								i.e-icon.e-icon--no-border.e-icon--no-size
+									+icon('location','b-address__icon')
+								.b-address__text Киев, ул. Степана Бандери, 9. корпус 3В,<br>7 этаж, офис №3-701
+
+			.c-col.b-social-footer
+				.b-social
+					a(href="#").b-social__item
+						i.b-social__icon-wrap.b-social__icon-wrap__style-2
+							+icon('fb','b-social__icon')
+					a(href="#").b-social__item
+						i.b-social__icon-wrap.b-social__icon-wrap__style-2
+							+icon('linkedin','b-social__icon')
+					a(href="#").b-social__item
+						i.b-social__icon-wrap.b-social__icon-wrap__style-2
+							+icon('youtube','b-social__icon')
+
+	.c-footer__line-bottom
+		.container
+			.row.align-items-center.justify-content-between
+				.c-col
+					a(href="#").b-copyright Условия и соглашения
+					a(href="#").b-copyright Персональные данные
+
+				.c-col
+					span.b-copyright © 2011 - 2018 Freevac.com.ua Все права защищены

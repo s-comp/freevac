@@ -1,0 +1,300 @@
+.b-candidat
+	margin: 0px -10px
+	+transition(all, .4s, ease)
+	position: relative
+	&:before,
+	&:after
+		z-index: 1
+		box-sizing: inherit
+		content: ''
+		position: absolute
+
+		border: 2px solid transparent
+		width: 0
+		height: 0
+
+	&:before
+		top: 0
+		left: 0
+
+	&:after
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+
+	&:hover
+		background-color: $grey-light-dark
+
+		.e-favorit-btn.__active
+			border-color: $accent
+		.b-candidat__star
+			color: $accent
+		&:before,
+		&:after
+			width: 100%
+			height: 100%
+		&:before
+			border-top-color: $accent
+			border-right-color: $accent
+			transition: width 0.25s ease-out, height 0.25s ease-out 0.25s
+		&:after
+
+			border-bottom-color: $accent
+			border-left-color: $accent
+			transition: height 0.25s ease-out, width 0.25s ease-out 0.25s
+	&.__prompt,
+	&.__unread
+		background-color: $grey-light-dark
+	&.__gutter-0
+		margin: 0px 0
+	&.__border-bottom
+		border-bottom: 1px solid $grey-darker
+		//&:last-child
+		//	border-bottom: none
+	&.__no-hover
+		&:hover
+			background-color: transparent
+		&:before,
+		&:after
+			display: none
+	&.__m-t-b-0
+		margin-top: 0
+		margin-bottom: 0
+	&__body
+		+row
+		align-items: flex-start
+		padding: 15px
+		z-index: 2
+		position: relative
+		&.__custom-p
+			padding: 30px 0
+		&.__custom-padd-t-b
+			padding-top: 30px
+			padding-bottom: 30px
+	&__preview
+		position: relative
+		display: block
+		margin: 0 auto 10px
+
+	&__inform
+		flex: 1 1 100%
+
+	&__name
+		text-align: center
+		display: block
+		font: 16px $default-font
+		font-weight: normal
+		margin: 8px 0 8px
+
+		&.__bold
+			font-family: $font-bold
+
+	&__descrip
+		+row
+		justify-content: space-between
+	&__item-block
+		margin-bottom: 5px
+		&:last-child
+			margin-bottom: 0
+		&.__main-info
+			flex-basis: 100%
+			max-width: 100%
+		&.__favorit
+			position: absolute
+			top: 15px
+			right: 15px
+		&.__delete
+			text-align: right
+
+	&__position
+		font-family: $font-bold
+		margin-bottom: 8px
+		text-align: center
+		&.__italic-light
+			font-family: $font-italic
+			color: $font-light
+	&__worked
+		color: $font-light
+		font-size: 16px
+		margin-bottom: 8px
+		&:last-child
+			margin-bottom: 0
+
+	&__worked-to
+		color: $font-dark
+		font-family: $font-add-semi-bold
+	&__signature-value
+		
+		color: $font-light
+		font-size: 16px
+		margin-bottom: 3px
+		margin-right: 5px
+
+	&__tag-value
+		font-size: 16px
+		text-decoration: underline
+		text-decoration-color: $accent
+		margin-right: 5px
+	&__salary
+		margin-bottom: 8px
+		text-align: center
+	&__salary-from
+		color: $font-dark
+		font-family: $font-add-semi-bold
+
+	&__work-time
+		font-size: 16px
+		margin-bottom: 8px
+
+	&__item-row
+		+row
+		justify-content: space-between
+		&.__jus-start
+			justify-content: flex-start
+		&.__column-md,
+		&.__column-sm
+			flex-direction: column
+
+
+		&.__mb-12
+			margin-bottom: 12px
+
+	&__item-lg
+		flex-basis: 100%
+		max-width: 100%
+	&__item-xs
+		flex-basis: 100%
+		max-width: 100%
+	&__video-preview
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		background: rgba(0,0,0, .3)
+
+	&__video-preview-icon
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 10px solid $orange
+		width: 108px
+		height: 108px
+		+border-radius(50%)
+
+
+	&__vacancy
+		font-family: $font-italic
+		margin: 8px 0 8px
+		position: relative
+		text-align: center
+
+		&:before
+			content: '—'
+			margin-right: 8px
+			margin-left: 8px
+		&.__def-font
+			font-family: $default-font
+
+	&__date-message
+		font: 16px $font-italic
+		margin: 8px 0 8px
+		position: relative
+		color: $font-light
+	&__light-text
+		color: $font-light
+	&__message
+		color: $font-light
+		overflow: hidden
+		text-overflow: ellipsis
+		display: -webkit-box
+		line-height: 22px     /* fallback */
+		max-height: 66px     /* fallback */
+		-webkit-line-clamp: 3 /* number of lines to show */
+		-webkit-box-orient: vertical
+	&__text
+		color: $font-light
+		font-size: 16px
+
+	//.b-candidat
+	@media screen and (min-width: $xs)
+		&__salary,
+		&__position
+			text-align: left
+		&__item-lg
+			flex-basis: 70%
+			max-width: 70%
+		&__item-xs
+			flex: 0 0 auto
+	@media screen and (min-width: $sm)
+		margin: 0px -10px
+		&__preview
+			margin-bottom: 0
+
+	@media screen and (min-width: $sm-l)
+		&__inform
+			flex: 1
+		&__preview
+			margin-right: 25px
+
+		&__name
+			text-align: left
+			margin-bottom: 35px
+			&.__custom
+				margin: 8px 0 8px
+		&__item-lg
+			flex-basis: 73%
+			max-width: 73%
+			padding-right: 5%
+		&__item-xs
+			flex-basis: 27%
+			max-width: 27%
+		&__item-block
+			&.__col-md-10
+				padding-right: 15px
+				flex: 0 0 80%
+		&__item-row
+			&.__column-sm
+				flex-direction: row
+		&__message
+			margin-bottom: 0
+		&__vacancy
+			text-align: left
+	@media screen and (min-width: $lg)
+
+		&__name,
+		&__position
+			font-size: 18px
+		&__salary
+			font-size: 20px
+
+		&__item-lg
+			padding-right: 9%
+		&__item-row
+			&.__column-md
+				flex-direction: row
+
+	@media screen and (min-width: $xl)
+
+		&__name
+			margin: 10px 0px 10px 0
+		&__item-block
+			margin-bottom: 0
+
+			&:first-child
+				padding-right: 25px
+				flex: 0 0 80%
+			&.__favorit
+				position: relative
+				top: 0
+				right: 0
+		&__position,
+		&__salary
+			margin-bottom: 15px
+
+
+

@@ -1,0 +1,369 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Мои отклики')
+	.c-content
+		.b-commutator.js-commutator-body
+			.o-sidebar-content
+				.b-commutator__tabs.b-commutator__tabs--mb-25
+					.container
+						.row
+							.col-lg-9
+								.row
+									.col-sm-4
+										.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+											| Отклики
+									.col-sm-4
+										.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+											| Предложения
+									.col-sm-4
+										.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+											| Просмотры
+
+
+							.col-md-3.offset-md-9.offset-lg-0
+								.o-sidebar-content__aside
+									.o-sidebar-content__img
+										img(src="assets/img/candidats/candidat.jpg" alt="alt")
+									.o-sidebar-content__block
+										.o-sidebar-content__text-row
+											i.e-icon.e-icon--xs.e-icon--mr10
+												+icon('check','e-icon__figure e-icon__figure--check--xs')
+											| Собеседована сервисом
+
+										.o-sidebar-content__text-row
+											i.e-icon.e-icon--xs.e-icon--mr10.e-icon--disabled
+												+icon('question','e-icon__figure e-icon__figure--check--xs')
+											| Опыт работы
+											br
+											| не подтвержден
+										.o-sidebar-content__text-row
+											i.e-icon.e-icon--xs.e-icon--mr10
+												+icon('check','e-icon__figure e-icon__figure--check--xs')
+											| Есть видео-резюме
+										.o-sidebar-content__text-row
+											i.e-icon.e-icon--xs.e-icon--mr10
+												+icon('check','e-icon__figure e-icon__figure--check--xs')
+											| Готов к удаленной работе
+
+									.o-sidebar-content__block
+										a(href='#').btn.btn--xs-two-row.o-sidebar-content__btn Записать
+											br
+											| видео-резюме
+
+
+			.o-sidebar-content__content
+				.container
+					.row
+						.col-md-9
+							section.b-commutator__content.active.js-commutator-content(data-child='a')
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0
+									.b-vacancy-in-list__inside-wrap.__row
+										.b-vacancy-in-list__figure
+											img(src="assets/img/company/lg/item-4.jpg" alt="alt")
+										.b-vacancy-in-list__content
+											//Header
+											.b-vacancy-in-list__header
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__company-name HP Украина
+													.b-vacancy-in-list__date сегодня в 14:00
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__title
+														i.e-icon.e-icon--xs.e-icon--mr10
+															+icon('camera','e-icon__figure e-icon__figure--xs')
+														| Продавец-кассир в магазин
+
+													.b-vacancy-in-list__feedback
+														span.b-vacancy-in-list__counts
+															<span class='strong'>23 </span>
+														| сообщения
+											//Body
+											.b-vacancy-in-list__body
+												.b-vacancy-in-list__desrcipt
+													| Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+
+												.b-vacancy-in-list__favorit
+													button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0.__prompt
+									.b-vacancy-in-list__inside-wrap.__row
+										.b-vacancy-in-list__figure
+											img(src="assets/img/company/lg/item-5.jpg" alt="alt")
+										.b-vacancy-in-list__content
+											//Header
+											.b-vacancy-in-list__header
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__company-name LG Electronics
+													.b-vacancy-in-list__date 15 января 2017
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__title
+														| Менеджер по продажам в интернет-магазин
+											//Body
+											.b-vacancy-in-list__body
+												.b-vacancy-in-list__desrcipt
+													| Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.
+
+												.b-vacancy-in-list__favorit
+													button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0
+									.b-vacancy-in-list__inside-wrap.__row
+										.b-vacancy-in-list__figure
+											img(src="assets/img/company/lg/item-4.jpg" alt="alt")
+										.b-vacancy-in-list__content
+											//Header
+											.b-vacancy-in-list__header
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__company-name HP Украина
+													.b-vacancy-in-list__date сегодня в 14:00
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__title
+														i(data-tooltip="Избранная вакансия").e-icon.e-icon--xs.e-icon--mr10
+															+icon('star-fill','e-icon__figure e-icon__figure--xs')
+														i.e-icon.e-icon--xs.e-icon--mr10
+															+icon('camera','e-icon__figure e-icon__figure--xs')
+														| Продавец-кассир в магазин
+
+													.b-vacancy-in-list__feedback
+														span.b-vacancy-in-list__counts
+															<span class='strong'>23 </span>
+														| сообщения
+											//Body
+											.b-vacancy-in-list__body
+												.b-vacancy-in-list__desrcipt
+													| Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+
+												.b-vacancy-in-list__favorit
+													button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0
+									.b-vacancy-in-list__inside-wrap.__row
+										.b-vacancy-in-list__figure
+											img(src="assets/img/company/lg/item-4.jpg" alt="alt")
+										.b-vacancy-in-list__content
+											//Header
+											.b-vacancy-in-list__header
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__company-name HP Украина
+													.b-vacancy-in-list__date сегодня в 14:00
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__title
+														i.e-icon.e-icon--xs.e-icon--mr10
+															+icon('camera','e-icon__figure e-icon__figure--xs')
+														| Продавец в магазин
+
+													.b-vacancy-in-list__feedback
+														| 11 сообщения
+											//Body
+											.b-vacancy-in-list__body
+												.b-vacancy-in-list__desrcipt
+													| Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+
+												.b-vacancy-in-list__favorit
+													button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0.__prompt
+									.b-vacancy-in-list__inside-wrap.__row
+										.b-vacancy-in-list__figure
+											img(src="assets/img/company/lg/item-5.jpg" alt="alt")
+										.b-vacancy-in-list__content
+											//Header
+											.b-vacancy-in-list__header
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__company-name LG Electronics
+													.b-vacancy-in-list__date 13 января 2017
+												.b-vacancy-in-list__caption
+													a(href="#").b-vacancy-in-list__title
+														| Менеджер по продажам в интернет-магазин
+													.b-vacancy-in-list__feedback
+														| 5 сообщения
+											//Body
+											.b-vacancy-in-list__body
+												.b-vacancy-in-list__desrcipt
+													| Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.
+
+												.b-vacancy-in-list__favorit
+													button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+								//Pagination
+								include ../blocks/pagination-no-border
+							section.b-commutator__content.js-commutator-content(data-child='b')
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0
+									.b-vacancy-in-list__inside-wrap
+										//Header
+										.b-vacancy-in-list__header
+											.b-vacancy-in-list__caption
+												a(href="#").b-vacancy-in-list__company-name HP Украина
+												.b-vacancy-in-list__date сегодня в 14:00
+											.b-vacancy-in-list__caption
+												a(href="#").b-vacancy-in-list__title
+													i.e-icon.e-icon--xs.e-icon--mr10
+														+icon('camera','e-icon__figure e-icon__figure--xs')
+													| Продавец-кассир в магазин
+
+												.b-vacancy-in-list__feedback
+
+													span.b-vacancy-in-list__counts
+														<span class='strong'>23 </span>
+													| сообщения
+										//Body
+										.b-vacancy-in-list__body
+											.b-vacancy-in-list__desrcipt
+												| Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+
+											.b-vacancy-in-list__favorit
+												button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+										//Footer
+										.b-vacancy-in-list__footer
+											.b-vacancy-in-list__list
+												a(href="#").b-vacancy-in-list__list-item  Задать вопрос
+												a(href="#").b-vacancy-in-list__list-item  Откликнуться
+
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0
+									.b-vacancy-in-list__inside-wrap
+										//Header
+										.b-vacancy-in-list__header
+											.b-vacancy-in-list__caption
+												a(href="#").b-vacancy-in-list__company-name HP Украина
+												.b-vacancy-in-list__date сегодня в 14:00
+											.b-vacancy-in-list__caption
+												a(href="#").b-vacancy-in-list__title
+													i.e-icon.e-icon--xs.e-icon--mr10
+														+icon('camera','e-icon__figure e-icon__figure--xs')
+													| Продавец-кассир в магазин
+
+												.b-vacancy-in-list__feedback
+
+													span.b-vacancy-in-list__counts
+														<span class='strong'>23 </span>
+													| сообщения
+										//Body
+										.b-vacancy-in-list__body
+											.b-vacancy-in-list__desrcipt
+												| Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+
+											.b-vacancy-in-list__favorit
+												button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+										//Footer
+										.b-vacancy-in-list__footer
+											.b-vacancy-in-list__list
+												a(href="#").b-vacancy-in-list__list-item  Задать вопрос
+												a(href="#").b-vacancy-in-list__list-item  Пройти видео-собеседование
+												a(href="#").b-vacancy-in-list__list-item  Откликнуться
+								//Vacancy
+								.b-vacancy-in-list.__gutter-0.__prompt
+									.b-vacancy-in-list__inside-wrap
+										//Header
+										.b-vacancy-in-list__header
+											.b-vacancy-in-list__caption
+												a(href="#").b-vacancy-in-list__company-name HP Украина
+												.b-vacancy-in-list__status Закрытая
+											.b-vacancy-in-list__caption
+												a(href="#").b-vacancy-in-list__title
+													i.e-icon.e-icon--xs.e-icon--mr10
+														+icon('camera','e-icon__figure e-icon__figure--xs')
+													| Продавец-кассир в магазин
+
+												.b-vacancy-in-list__feedback
+
+													span.b-vacancy-in-list__counts
+														<span class='strong'>23 </span>
+													| сообщения
+										//Body
+										.b-vacancy-in-list__body
+											.b-vacancy-in-list__desrcipt
+												| Приветствую! Возьмите меня пожалуйста на работу! Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение форм развития.  С другой стороны ...
+
+											.b-vacancy-in-list__favorit
+												button(data-tooltip="Убрать из изобранных").e-manipulation-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+							section.b-commutator__content.js-commutator-content(data-child='c')
+								//compny-in-list
+								.b-compny-in-list
+									.b-compny-in-list__body
+										.b-compny-in-list__figure
+											img(src='assets/img/company/lg/item-1.jpg' alt='alt')
+										.b-compny-in-list__content
+											.b-compny-in-list__caption
+												a(href="#").b-compny-in-list__title ТОВ АФ "ПКФ аудит-финансы"
+											.b-compny-in-list__item-block
+												p.b-compny-in-list__message Аудиторская Фирма "ПКФ аудит-финансы" является членом Международной сети юридически независимых аудиторских и консалтинговых фирм PKF Internatial Limited, которая насчитывает представительства в 150 странах мира, и занимает 15 позицию среди мировых сетевых фирм, а так же имеет значительный опыт
+
+								//compny-in-list
+								.b-compny-in-list
+									.b-compny-in-list__body
+										.b-compny-in-list__figure
+											img(src='assets/img/company/lg/item-2.jpg' alt='alt')
+										.b-compny-in-list__content
+											.b-compny-in-list__caption
+												a(href="#").b-compny-in-list__title ПроАудит, Консалтинговая группа ООО
+											.b-compny-in-list__item-block
+												p.b-compny-in-list__message Аудиторская Фирма "ПКФ аудит-финансы" является членом Международной сети юридически независимых аудиторских и консалтинговых фирм PKF Internatial Limited, которая насчитывает представительства в 150 странах мира, и занимает 15 позицию среди мировых сетевых фирм, а так же имеет значительный опыт
+
+								//compny-in-list
+								.b-compny-in-list
+									.b-compny-in-list__body
+										.b-compny-in-list__figure
+											img(src='assets/img/company/lg/item-1.jpg' alt='alt')
+										.b-compny-in-list__content
+											.b-compny-in-list__caption
+												a(href="#").b-compny-in-list__title ТОВ АФ "ПКФ аудит-финансы"
+											.b-compny-in-list__item-block
+												p.b-compny-in-list__message Аудиторская Фирма "ПКФ аудит-финансы" является членом Международной сети юридически независимых аудиторских и консалтинговых фирм PKF Internatial Limited, которая насчитывает представительства в 150 странах мира, и занимает 15 позицию среди мировых сетевых фирм, а так же имеет значительный опыт
+
+								//compny-in-list
+								.b-compny-in-list
+									.b-compny-in-list__body
+										.b-compny-in-list__figure
+											img(src='assets/img/company/lg/item-2.jpg' alt='alt')
+										.b-compny-in-list__content
+											.b-compny-in-list__caption
+												a(href="#").b-compny-in-list__title ПроАудит, Консалтинговая группа ООО
+											.b-compny-in-list__item-block
+												p.b-compny-in-list__message Компания "ПроАудит" работает в городе Киеве на протяжении более трех лет в области предоставления аудиторских услуг. Основное направление в работе компании: аудит, бухгалтерские и консалтинговые услуги. В 2009 году "ПроАудит" получила свидетельство Аудиторской палаты Украины о включении компании
+								//compny-in-list
+								.b-compny-in-list
+									.b-compny-in-list__body
+										.b-compny-in-list__figure
+											img(src='assets/img/company/lg/item-1.jpg' alt='alt')
+										.b-compny-in-list__content
+											.b-compny-in-list__caption
+												a(href="#").b-compny-in-list__title ТОВ АФ "ПКФ аудит-финансы"
+											.b-compny-in-list__item-block
+												p.b-compny-in-list__message Аудиторская Фирма "ПКФ аудит-финансы" является членом Международной сети юридически независимых аудиторских и консалтинговых фирм PKF Internatial Limited, которая насчитывает представительства в 150 странах мира, и занимает 15 позицию среди мировых сетевых фирм, а так же имеет значительный опыт
+
+								//compny-in-list
+								.b-compny-in-list
+									.b-compny-in-list__body
+										.b-compny-in-list__figure
+											img(src='assets/img/company/lg/item-2.jpg' alt='alt')
+										.b-compny-in-list__content
+											.b-compny-in-list__caption
+												a(href="#").b-compny-in-list__title ПроАудит, Консалтинговая группа ООО
+											.b-compny-in-list__item-block
+												p.b-compny-in-list__message Компания "ПроАудит" работает в городе Киеве на протяжении более трех лет в области предоставления аудиторских услуг. Основное направление в работе компании: аудит, бухгалтерские и консалтинговые услуги. В 2009 году "ПроАудит" получила свидетельство Аудиторской палаты Украины о включении компании
+
+
+
+								//Pagination
+								include ../blocks/pagination-no-border

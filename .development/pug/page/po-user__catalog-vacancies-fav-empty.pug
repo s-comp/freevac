@@ -1,0 +1,306 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Вакансии')
+	.c-content.c-content--padd-sm
+
+		.b-commutator.js-commutator-body
+			//Tabs
+			.b-commutator__tabs.b-commutator__tabs--mb-25
+				.container
+					.row
+						.col-sm-4
+							.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+								| Все вакансии
+						.col-sm-4
+							.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+								| Избранные вакансии
+						.col-sm-4
+							.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+								| SCAN
+			//Tab content
+			section.b-commutator__content.active.js-commutator-content(data-child='a')
+				.container
+					form.b-search-form
+						.row
+							.col-lg-7.b-search-form__item
+								.b-form
+									.b-form__searh-field-group
+										input(type="text", placeholder="Поиск вакансий").b-form__item-group-lg.b-form__field-group--mr
+										.b-select.b-form__item-group-xs.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name Город
+												input(type="hidden" value="" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content
+												a.b-select__item(data-value="Авдеевка") Авдеевка
+												a.b-select__item(data-value="Александровка") Александровка
+												a.b-select__item(data-value="Андрушевка") Андрушевка
+							.col-lg-5.b-form__field-group-custom
+								.b-form__field-group-item
+									.main-checkbox.form__chekbox
+										label.main-checkbox__label.main-checkbox__label--center
+											input.main-checkbox__check(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon
+												+icon('check','main-checkbox__svg')
+											span.main-checkbox__label-text.c-form__chek-label-text Вакансии с видео-
+												br
+												| собеседованием
+								.b-form__field-group-item.b-form__field-group-item--sm-center
+									button.btn.btn--md.btn--md--long Найти
+
+				//content
+				.container
+					.row
+						.col-lg-3
+							//Filter
+							include ../blocks/aside-filter-vacancies
+						.col-lg-9
+							.o-heading-group
+								h5.h5.o-heading-group__caption Найдено <span>5600</span> вакансий
+
+
+							//Vacancy
+							.b-vacancy-in-list
+								.b-vacancy-in-list__inside-wrap
+									//Header
+									.b-vacancy-in-list__header
+										.b-vacancy-in-list__caption
+											a(href="#").b-vacancy-in-list__title
+												| Продавец-кассир в магазин
+
+											.b-vacancy-in-list__price <span class="strong">20 000</span> грн.
+										.b-vacancy-in-list__inform
+											.b-vacancy-in-list__inform-item
+												a(href="#").b-vacancy-in-list__company Soft-Group
+											.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+												i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+													+icon('location','e-icon__figure e-icon__figure--xs')
+												| Киев
+											.b-vacancy-in-list__inform-item 13 мая 2017
+
+									//Body
+									.b-vacancy-in-list__body
+										.b-vacancy-in-list__desrcipt
+											| Требуется активный, приветливый, аккуратный, исполнительный человек для работы официантом в кофейню на постоянную работу.
+
+										.b-vacancy-in-list__favorit
+											.js-favorit-body
+												a(href="#need-register-vacancy").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+												a(href="#").e-favorit-btn.__active.js-favorit-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+									//Footer
+									.b-vacancy-in-list__footer
+										.b-vacancy-in-list__list
+											a(href="#").b-vacancy-in-list__list-item  Откликнуться
+
+
+							//Vacancy
+							.b-vacancy-in-list
+								.b-vacancy-in-list__inside-wrap
+									//Header
+									.b-vacancy-in-list__header
+										.b-vacancy-in-list__caption
+											a(href="#").b-vacancy-in-list__title
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('camera','e-icon__figure e-icon__figure--xs')
+												| Администратор сайта, контент-менеджер
+
+											.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+										.b-vacancy-in-list__inform
+											.b-vacancy-in-list__inform-item
+												a(href="#").b-vacancy-in-list__company HP Украина
+											.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+												i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+													+icon('location','e-icon__figure e-icon__figure--xs')
+												| Киев
+											.b-vacancy-in-list__inform-item 13 мая 2017
+
+									//Body
+									.b-vacancy-in-list__body
+										.b-vacancy-in-list__desrcipt
+											| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+										.b-vacancy-in-list__favorit
+											.js-favorit-body
+												a(href="#need-register-vacancy").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+												a(href="#").e-favorit-btn.__active.js-favorit-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+									//Footer
+									.b-vacancy-in-list__footer
+										.b-vacancy-in-list__list
+											a(href="#").b-vacancy-in-list__list-item  Пройти
+
+
+							//Vacancy
+							.b-vacancy-in-list
+								.b-vacancy-in-list__inside-wrap
+									//Header
+									.b-vacancy-in-list__header
+										.b-vacancy-in-list__caption
+											a(href="#").b-vacancy-in-list__title
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('camera','e-icon__figure e-icon__figure--xs')
+												| Junior, Middle Ruby on Rails developer
+
+											.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+										.b-vacancy-in-list__inform
+											.b-vacancy-in-list__inform-item
+												a(href="#").b-vacancy-in-list__company HP Украина
+											.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+												i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+													+icon('location','e-icon__figure e-icon__figure--xs')
+												| Киев
+											.b-vacancy-in-list__inform-item 13 мая 2017
+
+									//Body
+									.b-vacancy-in-list__body
+										.b-vacancy-in-list__desrcipt
+											| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+										.b-vacancy-in-list__favorit
+											.js-favorit-body
+												a(href="#need-register-vacancy").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+												a(href="#").e-favorit-btn.__active.js-favorit-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+									//Footer
+									.b-vacancy-in-list__footer
+										.b-vacancy-in-list__list
+											a(href="#").b-vacancy-in-list__list-item  Пройти
+
+
+							//Vacancy
+							.b-vacancy-in-list
+								.b-vacancy-in-list__inside-wrap
+									//Header
+									.b-vacancy-in-list__header
+										.b-vacancy-in-list__caption
+											a(href="#").b-vacancy-in-list__title
+												| Продавец-кассир в магазин
+
+											.b-vacancy-in-list__price <span class="strong">20 000</span> грн.
+										.b-vacancy-in-list__inform
+											.b-vacancy-in-list__inform-item
+												a(href="#").b-vacancy-in-list__company Soft-Group
+											.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+												i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+													+icon('location','e-icon__figure e-icon__figure--xs')
+												| Киев
+											.b-vacancy-in-list__inform-item 13 мая 2017
+
+									//Body
+									.b-vacancy-in-list__body
+										.b-vacancy-in-list__desrcipt
+											| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+										.b-vacancy-in-list__favorit
+											.js-favorit-body
+												a(href="#need-register-vacancy").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+												a(href="#").e-favorit-btn.__active.js-favorit-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+									//Footer
+									.b-vacancy-in-list__footer
+										.b-vacancy-in-list__list
+											a(href="#").b-vacancy-in-list__list-item  Откликнуться
+
+							//Vacancy
+							.b-vacancy-in-list.__prompt
+								.b-vacancy-in-list__inside-wrap
+									//Header
+									.b-vacancy-in-list__header
+										.b-vacancy-in-list__caption
+											a(href="#").b-vacancy-in-list__title
+												| Администратор сайта, контент-менеджер
+
+											.b-vacancy-in-list__price <span class="strong">20 000</span> грн.
+										.b-vacancy-in-list__inform
+											.b-vacancy-in-list__inform-item
+												a(href="#").b-vacancy-in-list__company HP Украина
+											.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+												i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+													+icon('location','e-icon__figure e-icon__figure--xs')
+												| Киев
+											.b-vacancy-in-list__inform-item 13 мая 2017
+
+									//Body
+									.b-vacancy-in-list__body
+										.b-vacancy-in-list__desrcipt
+											| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+										.b-vacancy-in-list__favorit
+											.js-favorit-body
+												a(href="#need-register-vacancy").e-favorit-btn.active.js-favorit-btn.js-modal-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star','e-icon__figure e-icon__figure--star e-favorit-btn__figure b-candidat__star')
+												a(href="#").e-favorit-btn.__active.js-favorit-btn
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill b-candidat__star')
+									//Footer
+									.b-vacancy-in-list__footer
+										.b-vacancy-in-list__list
+											a(href="#").b-vacancy-in-list__list-item  Откликнуться
+
+
+					//Pagination
+					include ../blocks/pagination
+
+
+
+
+
+
+
+			//Tab content
+			section.b-commutator__content.js-commutator-content(data-child='b')
+				.b-service.__mt-60
+					.container
+						.row.justify-content-center
+							.col.b-service__inform
+								i.e-icon.e-icon--lg.b-service__inform-figure
+									+icon('star','e-icon__figure e-icon__figure--star')
+
+								h5.h5 Вы не добавили избранных вакансий
+
+								p.b-service__inform-text Отмечайте вакансии и смотрите их здесь.
+						.row.justify-content-center
+							.col
+								.b-service__footer.__no-border
+									.row.justify-content-center
+										button(data-main='a').btn.btn--lg.js-inside-commutator-btn НАЙТИ Вакансии
+
+
+
+
+	.o-modal#need-register-vacancy
+		.o-modal__center
+			.o-modal__content.__md
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						h5.h5 Чтобы добавить вакансию в избранное Вам нужно зарегистрировать
+					.o-modal__footer.__mt-70
+						.o-modal__button-row
+							.o-modal__button-wrap
+								a(href="#").btn.btn--transp.btn--lg Авторизироваться
+							.o-modal__button-wrap
+								a(href="#").btn.btn--transp.btn--lg Зарегистрироваться
+
+						
+

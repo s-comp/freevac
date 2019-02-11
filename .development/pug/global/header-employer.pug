@@ -1,0 +1,42 @@
+header.c-header
+	.container-fluid
+		.row.justify-content-between.align-content-center
+			//Logo
+			.c-header__logo
+				a(href="/").b-logo.b-logo--dark
+					include ../../assets/img/svg/logo-sub.svg
+			//Navigation
+			.c-header__nav-wrap
+				nav.b-nav
+					a(href="#").b-nav__item Мои вакансии
+					a(href="search-candidates.html").b-nav__item Кандидаты
+					a(href="services.html").b-nav__item Услуги и сервисы
+
+			.c-header__btn-wrap
+				a(href="#").btn.btn--norml.btn--md.c-header__btn-link.btn-add
+						span.btn-add__on-mobile +
+						span.btn-add__on-desctop Создать вакансию
+				.b-private-office.js-dropdown-body
+					.b-private-office__caption.js-dropdown-btn
+						i.e-icon.e-icon--no-border.e-icon--no-size.b-private-office__icon
+							+icon('user','e-icon__figure e-icon__figure--user')
+						span.b-private-office__title Hewlett Packard
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--right.b-private-office__icon-arrow
+							+icon('arrow-down-xs','e-icon__figure e-icon__figure--arrow-small')
+					ul.b-private-office__dropdown.js-dropdown-content
+						li.b-private-office__dropdown-item
+							a(href="#").b-private-office__link Уведомления
+								span.b-private-office__count 12
+						li.b-private-office__dropdown-item
+							a(href="#").b-private-office__link Настройки профиля
+						li.b-private-office__dropdown-item
+							a(href="faq.html").b-private-office__link Часто задаваемые вопросы
+						li.b-private-office__dropdown-item
+							a(href="#").b-private-office__link Выход
+
+
+
+			//Burger
+			.c-header__burger-wrapp
+				.burger.js-burger-btn
+					.burger__icon

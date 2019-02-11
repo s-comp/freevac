@@ -1,0 +1,77 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Подбор вакансии','Услуги и сервисы')
+	.c-content.c-content--padd-sm
+		form.b-order
+			.container
+				.row.justify-content-center
+					.col
+						.b-order__select.b-order__select--border.b-order__select--no-border
+							.b-order__caption.b-order__caption--mb-0
+								i.e-icon
+									+icon('tag','e-icon__figure e-icon__figure--tag')
+
+								h5.h5.b-order__title Общая стоимость к оплате
+								span.b-order__pricing <strong class="b-order__price">1000</strong> грн.
+
+						.b-order__select.b-order__select--border
+							.b-order__caption.b-order__caption--mb-50
+								i.e-icon
+									+icon('credit-card','e-icon__figure e-icon__figure--credit-card')
+								h5.h5.b-order__title Введите данные кредитной карты
+
+							.b-form.b-form--mb-30.offset-lg-3
+								.b-form__field-wrap.row.align-items-center
+									.col-md-4
+										label.b-form__text Имя держателя карты
+									.col-md-8
+										input(type="text" placeholder="ФИО" class="b-form__field js-required")
+								.b-form__field-wrap.row.align-items-center
+									.col-md-4
+										label.b-form__text Номер кредитной карты
+									.col-md-4
+										input(type="text" placeholder="Номер карты" class="b-form__field js-required")
+								.b-form__field-wrap.row.align-items-center
+									.col-md-4
+										label.b-form__text Срок действоя карты
+									.col-md-3
+										input(type="text" placeholder="ММ / ГГ" class="b-form__field js-required")
+								.b-form__field-wrap.row.align-items-center
+									.col-md-4
+										label.b-form__text Код безопасности CVV2
+									.col-10.col-md-3
+										input(type="text" placeholder="CVV2" class="b-form__field js-required")
+									.col-1
+										.e-hint
+											i.e-icon.e-icon--xs.e-icon--m0
+												span.e-icon__figure.e-icon__figure--text ?
+											.e-hint__content.e-hint__content--dark
+												.e-hint__text Последние 3 цифры на обратной стороне карты.
+
+												img(src="../assets/img/icon/credit-card.png" alt="alt")
+								.b-form__field-wrap.row.align-items-center
+									.col-md-4
+									.col-md-8
+										.main-checkbox.form__chekbox
+											label.main-checkbox__label
+												input.main-checkbox__check(type='checkbox', style='display: none')
+												span.main-checkbox__item.main-checkbox__item--icon
+													+icon('check','main-checkbox__svg')
+												span.main-checkbox__label-text.c-form__chek-label-text сохранить платежные данные и привязать к аккаунту
+
+
+				.b-order__footer
+					.row.align-items-center
+						.col-12.col-sm-4.b-order__back
+							a(href="#").btn-transp
+								i.e-icon.e-icon--no-border.e-icon--no-size
+									+icon('backspace','e-icon__figure e-icon__figure--backspace')
+								| Назад
+						.col-12.col-sm-8.text-a-c-sm-down
+							a(href="#").btn.btn--lg Оплатить
+
+
+
+

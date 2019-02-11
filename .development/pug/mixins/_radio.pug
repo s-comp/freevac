@@ -1,0 +1,11 @@
+mixin radio(caption, nameRadio, customClass)
+	if customClass
+		label(class="e-radio " + customClass)
+			input(type='radio', name=nameRadio)
+			span.e-radio__btn
+			=caption
+	else
+		label(class="e-radio ")
+			input(type='radio', name=nameRadio)
+			span.e-radio__btn
+			=caption

@@ -1,0 +1,59 @@
+.b-social
+	+row
+	&__item
+		display: inline-block
+		margin-right: 7px
+		+transition(all, .4s, ease)
+
+		&:last-child
+			margin-right: 0
+		&:hover,
+		&:focus
+			+translate(0, -4px)
+
+	&__icon-wrap
+		display: inline-flex
+		justify-content: center
+		align-items: center
+
+		width: 24px
+		height: 24px
+		vertical-align: middle
+		background-color: #fff
+		+border-radius(50%)
+		&__style-2
+			background-color: $accent
+			width: 38px
+			height: 38px
+
+			+border-radius(4px)
+
+	&__icon
+		font-size: 16px
+		vertical-align: middle
+
+
+	//.b-social
+	@media screen and (min-width: $sm)
+		&__icon-wrap
+			width: 28px
+			height: 28px
+			&__style-2
+				width: 38px
+				height: 38px
+	@media screen and (min-width: $lg)
+
+		&__icon-wrap
+			width: 24px
+			height: 24px
+			&__style-2
+				width: 38px
+				height: 38px
+	@media screen and (min-width: $xl)
+
+		&__item
+			margin-right: 10px
+.b-social-footer
+	margin: 40px auto 0
+	@media screen and (min-width: $lg)
+		margin: 0

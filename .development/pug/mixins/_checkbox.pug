@@ -1,0 +1,29 @@
+mixin checkbox(text, checkboxClass, labelClass)
+	if checkboxClass && labelClass
+		div(class="main-checkbox form__chekbox " + checkboxClass)
+			label(class="main-checkbox__label " + labelClass)
+				input.main-checkbox__check(type='checkbox', style='display: none')
+				span.main-checkbox__item.main-checkbox__item--icon
+					+icon('check','main-checkbox__svg')
+				span.main-checkbox__label-text=text
+	else if checkboxClass
+		div(class="main-checkbox form__chekbox " + checkboxClass)
+			label(class="main-checkbox__label ")
+				input.main-checkbox__check(type='checkbox', style='display: none')
+				span.main-checkbox__item.main-checkbox__item--icon
+					+icon('check','main-checkbox__svg')
+				span.main-checkbox__label-text=text
+	else if labelClass
+		div(class="main-checkbox form__chekbox ")
+			label(class="main-checkbox__label " + labelClass)
+				input.main-checkbox__check(type='checkbox', style='display: none')
+				span.main-checkbox__item.main-checkbox__item--icon
+					+icon('check','main-checkbox__svg')
+				span.main-checkbox__label-text=text
+	else
+		div(class="main-checkbox form__chekbox ")
+			label(class="main-checkbox__label ")
+				input.main-checkbox__check(type='checkbox', style='display: none')
+				span.main-checkbox__item.main-checkbox__item--icon
+					+icon('check','main-checkbox__svg')
+				span.main-checkbox__label-text=text

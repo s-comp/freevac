@@ -1,0 +1,86 @@
+.b-service-panel
+	border: 1px solid $grey-darker
+	+transition(all,.4s,ease)
+
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+	margin-bottom: 40px
+	&:hover
+		border-color: $accent
+	&__header
+
+		padding: 38px 22px 30px
+
+	&__title
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 0
+		letter-spacing: 0.5px
+
+	&__price-circle
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+		background-color: $accent
+		+border-radius(50%)
+
+		margin: 0 auto 30px
+
+		width: 120px
+		height: 120px
+
+		font: 16px $add-font-light
+
+	&__price
+		color: $font-dark
+		font-family: $font-bold
+		font-size: 26px
+
+	&__body
+		font-size: 16px
+		color: $font-light
+		padding: 0 22px 30px
+
+		flex: 1
+
+	&__text
+		margin-bottom: 25px
+
+	&__sub-caption
+		font-size: 16px
+		margin-bottom: 10px
+	&__list
+		margin: 0
+	&__footer
+		background-color: $grey-light
+		border-top: 1px solid $grey-darker
+		padding: 15px 22px
+		text-align: center
+
+	&__btn
+		vertical-align: middle
+		width: 100%
+
+	//.b-service-panel
+	@media screen and (min-width: $sm-l)
+		margin-bottom: 0
+		height: 100%
+	@media screen and (min-width: $lg)
+
+		&__price-circle
+			margin-bottom: 35px
+
+		&__price
+			font-size: 26px
+
+	@media screen and (min-width: $xl)
+		&__price-circle
+			width: 150px
+			height: 150px
+			margin-bottom: 45px
+		&__price
+			font-size: 36px

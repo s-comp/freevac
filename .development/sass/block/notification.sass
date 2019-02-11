@@ -1,0 +1,35 @@
+.b-notification
+	padding: 25px 0
+	border-bottom: 1px solid $grey-darker
+
+	&__caption
+		+row
+		justify-content: space-between
+		flex-direction: column
+
+		margin-bottom: 12px
+	&__title
+		font-family: $font-bold
+		margin: 8px 0 8px
+	&__date-message
+		@extend .b-candidat__date-message
+
+	&__content
+		+row
+		justify-content: space-between
+
+	&__message
+		@extend .b-candidat__message
+
+	&__delete
+		flex: 1
+		text-align: right
+	//.b-notification
+	@media screen and (min-width: $sm-l)
+		&__caption
+			flex-direction: row
+
+		&__item-block
+			&.__col-md-10
+				padding-right: 15px
+				flex: 0 0 80%

@@ -1,0 +1,247 @@
+extends ../template/employer
+block title
+	| Markup
+block main
+	+breadcrumb('Профиль кандидата', 'Кандидаты')
+	.c-content
+		.container
+			.row
+				//Profile aside
+				.col-md-4
+					.b-profile-card
+						img(src="assets/img/candidats/small/circle.jpg" alt="alt").b-profile-card__photo
+
+						p Работаю, но готова к предложениям.
+						p от  <span class="b-profile-card__strong">20 000</span> грн.
+						span.b-profile-card__delimiter
+						p Киев
+							span.text-row
+								i.e-icon.e-icon--mr10.e-icon--xxs
+									+icon('check','e-icon__figure e-icon__figure--check--xs')
+								| контактные данные
+						span.b-profile-card__delimiter
+
+						p.b-profile-card__small-title Дата рождения
+
+						p 8 января 1983 <span class="b-profile-card__light-text">(34 года)</span>
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Сфера
+							p IT, компьютеры, интернет
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Язык
+							p Английский — средний
+							p Испанский — средний
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Образование
+							p Высшее
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Опыт работы
+							p 5 лет 10 месяцев
+
+				//Profile CONTENT
+				.col-md-8
+					.b-profile
+						.b-profile__caption
+							h3.b-profile__title Кузьминова Ярослава Ивановна
+							h5.b-profile__sub-caption Инженер компьютерных сетей
+
+
+							.row.justify-content-center.align-items-center.justify-content-md-between
+								.b-profile__button-wrap
+									a(href="#offer-videoresume").btn-transp.__lg.b-profile__btn.js-modal-btn Пригласить на
+										br
+										| видео-собеседование
+								.b-profile__button-wrap
+									a(href="#offer").btn-transp.__lg.b-profile__btn.js-modal-btn Предложить вакансию
+								.b-profile__button-wrap
+									a(href="#").btn-transp.__lg.b-profile__btn Добавить в избранное
+
+						.b-profile__content
+							.b-video.js-video-wrap.paused.b-profile__video
+								.b-video__controls
+									button.b-video__start.js-video-control
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('play','e-icon__figure e-icon__figure--play')
+
+									.b-video__control-bottom
+										button.b-video__play-pause.js-video-control.paused
+											+icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+											+icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+										.b-video__seekbar.js-progress-bar-video
+											span
+
+										button.b-video__fullscreen.js-video-full-screen
+											+icon('expand','e-icon__figure e-icon__figure--play')
+								video.js-video-content.b-video__video.__w100.video
+									source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
+									source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
+									source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
+
+
+							.b-profile__text-block
+								.b-text-info
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+										i.e-icon
+											+icon('key','e-icon__figure e-icon__figure--sound')
+										h5.h5.b-text-info__caption.__md Ключевая информация
+									ul.b-text-info__list
+										li.b-text-info__list-item весомый опыт по управлению ключевыми клиентами
+										li.b-text-info__list-item продвинутый английский
+										li.b-text-info__list-item стремления к обучению и развитию
+										li.b-text-info__list-item лидерские и управленческие качества
+										li.b-text-info__list-item командрный игрок
+
+							.b-profile__text-block
+								.b-text-info
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+										i.e-icon
+											+icon('building','e-icon__figure e-icon__figure--sound')
+										h5.h5.b-text-info__caption.__md Последнее место работы
+									ul.b-text-info__list
+										li.b-text-info__list-item.__mb-30
+											h6.b-text-info__sub-caption ООО «Украино-Бельгийское предприятие Айвокс»
+											p <strong> Должность:</strong>  Менеджер по продажам
+											p <strong> Отрасль компании:</strong> Некоммерческие - Общественные организации
+											p <strong> Начало работы:</strong> апрель 2010
+											p <strong> Конец работы:</strong> март 2015
+											p <strong> Обязаности и достижения:</strong> С другой стороны сложившаяся структура организации
+												| играет важную роль в формировании соответствующий условий активизации.
+												| Не следует, однако забывать, что сложившаяся структура организации требуют
+												| от нас анализа соответствующий условий активизации.
+
+										li.b-text-info__list-item.__mb-30
+											h6.b-text-info__sub-caption Компания «Торговая компания «Номер 1»»
+											p <strong> Должность:</strong>  Менеджер по продажам
+											p <strong> Отрасль компании:</strong> Государственные учреждения - Местное самоуправление
+											p <strong> Начало работы:</strong> апрель 2010
+											p <strong> Конец работы:</strong> март 2015
+											p <strong> Обязаности и достижения:</strong> Не следует, однако забывать, что сложившаяся
+												| структура организации требуют от нас анализа соответствующий условий
+												| активизации.
+
+							.b-profile__text-block
+								.b-text-info
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+										i.e-icon
+											+icon('graduation','e-icon__figure e-icon__figure--sound')
+										h5.h5.b-text-info__caption.__md  Место учебы
+									.b-text-info__content
+										h6.b-text-info__sub-caption Киевский национальный университет имени Тараса Шевченко
+										p <strong> Специализация:</strong> Менеджмент
+										p <strong> Степень:</strong> магистр
+										p <strong> Год окончания: </strong> 2008
+
+
+							.b-profile__text-block
+								.b-text-info
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+										i.e-icon
+											+icon('info','e-icon__figure e-icon__figure--sound')
+										h5.h5.b-text-info__caption.__md Дополнительно
+									.b-text-info__content
+										p Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки новых предложений. Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании новых предложений. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности требуют определения и уточнения направлений прогрессивного развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития.
+
+							.row.align-items-center.justify-content-center.justify-content-md-end.b-profile__footer
+
+								.b-profile__button-wrap.__padd-def
+									a(href="#").btn-transp.__lg.b-profile__btn Скачать резюме
+								.b-profile__button-wrap.__padd-def
+									a(href="#").btn-transp.__lg.b-profile__btn Печатать резюме
+
+
+
+
+	//offer a job
+	.o-modal#offer
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				h5.h5.o-modal__caption Предложить вакансию
+				.o-modal__body
+					.b-offer
+						.row
+							.col-md-3
+								img(src="assets/img/candidats/small/item-4.jpg" alt="alt").b-offer__img
+
+							.col-md-8
+								h5.b-offer__name Кузьминова Ярослава Ивановна
+								p.b-offer__position Инженер компьютерных сетей
+
+								p Киев / 34 года / Менеджмент, руководство высшего звена / Украинский - эксперт, Английский - средний, Руский - эксперт
+				.o-modal__body.__border-top
+					.b-offer
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Менеджер по продажам финансовых услуг брокерской компании (Forex , Форекс)
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Руководитель отдела маркетинга
+
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Менеджер по продажам банковских продуктов
+
+				.o-modal__footer.__border-top
+					button.btn.btn--lg Предложить
+
+	//offer a videoresume
+	.o-modal#offer-videoresume
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				h5.h5.o-modal__caption Пригласить на видео-собеседование
+				.o-modal__body
+					.b-offer
+						.row
+							.col-md-3
+								img(src="assets/img/candidats/small/item-4.jpg" alt="alt").b-offer__img
+
+							.col-md-8
+								h5.b-offer__name Кузьминова Ярослава Ивановна
+								p.b-offer__position Инженер компьютерных сетей
+
+								p Киев / 34 года / Менеджмент, руководство высшего звена / Украинский - эксперт, Английский - средний, Руский - эксперт
+				.o-modal__body.__border-top
+					.b-offer
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Менеджер по продажам финансовых услуг брокерской компании (Forex , Форекс)
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Руководитель отдела маркетинга
+
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Менеджер по продажам банковских продуктов
+
+				.o-modal__footer.__border-top
+					button.btn.btn--lg Пригласить
+
+
+

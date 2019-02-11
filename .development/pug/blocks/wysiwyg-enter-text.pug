@@ -1,0 +1,68 @@
+include ../global/_mixins
+.b-wysiwyg
+	.b-wysiwyg__panel-boutons
+		.b-wysiwyg__bouton-groupe
+			button(type='button' data-id='bold').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('bold','e-icon__figure e-icon__figure--xs')
+			button(type='button' data-id='italic').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('italic','e-icon__figure e-icon__figure--xs')
+			button(type='button' data-id='underline').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('underline','e-icon__figure e-icon__figure--xs')
+			button(type='button' data-id='strikethrough').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('strikethrough','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='justifyleft').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('align-left','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='justifycenter').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('align-center','e-icon__figure e-icon__figure--xs')
+			button(type='button' data-id='justifyright').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('align-right','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='justifyfull').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('align-justify','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='insertunorderedlist').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('list-ul','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='insertorderedlist').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('list-ol','e-icon__figure e-icon__figure--xs')
+
+
+			button(type='button' data-id='indent').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('indent','e-icon__figure e-icon__figure--xs')
+			button(type='button' data-id='outdent').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('outdent','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='undo').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('undo','e-icon__figure e-icon__figure--xs')
+			button(type='button' data-id='redo').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('redo','e-icon__figure e-icon__figure--xs')
+			button(type='button' data-id='delete').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('eraser','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='createLink').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('link','e-icon__figure e-icon__figure--xs')
+
+			button(type='button' data-id='insertImage').b-wysiwyg__btn
+				i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+					+icon('image','e-icon__figure e-icon__figure--xs')
+
+	.b-wysiwyg__editeur(contenteditable='').js-editeur Введите текст сообщения
+	.htmlview Введите текст сообщения

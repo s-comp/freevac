@@ -1,0 +1,259 @@
+extends ../template/main
+block title
+	| Markup
+block main
+	+breadcrumb('Поиск вакансий')
+	.c-content.c-content--padd-sm
+		.container
+			form.b-search-form
+				.row
+					.col-lg-7.b-search-form__item
+						.b-form
+							.b-form__searh-field-group
+								input(type="text", placeholder="Поиск вакансий").b-form__item-group-lg.b-form__field-group--mr
+								.b-select.b-form__item-group-xs.js-dropdown-body
+									.b-select__caption-wrap.js-dropdown-btn
+										span.b-select__caption.js-value-name Город
+										input(type="hidden" value="" name="select").js-value-input
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+									.b-select__dropdown(data-child="a").js-dropdown-content
+										a.b-select__item(data-value="Авдеевка") Авдеевка
+										a.b-select__item(data-value="Александровка") Александровка
+										a.b-select__item(data-value="Андрушевка") Андрушевка
+					.col-lg-5.b-form__field-group-custom
+						.b-form__field-group-item
+							.main-checkbox.form__chekbox
+								label.main-checkbox__label.main-checkbox__label--center
+									input.main-checkbox__check(type='checkbox', style='display: none')
+									span.main-checkbox__item.main-checkbox__item--icon
+										+icon('check','main-checkbox__svg')
+									span.main-checkbox__label-text.c-form__chek-label-text Вакансии с видео-
+										br
+										| собеседованием
+						.b-form__field-group-item.b-form__field-group-item--sm-center
+							button.btn.btn--md.btn--md--long Найти
+
+		//Tabs
+		.b-commutator.js-commutator-body
+			.b-commutator__tabs.b-commutator__tabs--mb
+				.container
+					.row
+						.col-sm-6
+							.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+								| Подбор по сферам
+						.col-sm-6
+							.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+								| Поиск по городам
+
+			//Tab content
+			section.b-commutator__content.active.js-commutator-content(data-child='a')
+				.container
+					.row
+						.col-lg-6
+							ul.b-category-list
+								+category-list-item('IT, компьютеры, интернет ', '100639', '#', 'between')
+								+category-list-item('Администрация, руководство среднего звена', '252021', '#', 'between')
+								+category-list-item('Бухгалтерия, аудит', '162050', '#', 'between')
+								+category-list-item('Гостинично-ресторанный бизнес, туризм', '116259', '#', 'between')
+								+category-list-item('Дизайн, творчество', '54646', '#', 'between')
+								+category-list-item('Красота, фитнес, спорт', '45132', '#', 'between')
+								+category-list-item('Культура, музыка, шоу-бизнес', '41456', '#', 'between')
+								+category-list-item('Логистика, склад, ВЭД', '131984', '#', 'between')
+								+category-list-item('Маркетинг, реклама, PR', '89713', '#', 'between')
+								+category-list-item('Медицина, фармацевтика', '61171', '#', 'between')
+								+category-list-item('Недвижимость', '5159', '#', 'between')
+								+category-list-item('Образование, наука', '106472', '#', 'between')
+								+category-list-item('Охрана, безопасность', '45563', '#', 'between')
+								+category-list-item('Продажи, закупки', '2263', '#', 'between')
+								+category-list-item('Рабочие специальности, производство', '178289', '#', 'between')
+
+
+						.col-lg-6
+							ul.b-category-list
+								+category-list-item('Розничная торговля', '100639', '#', 'between')
+								+category-list-item('Секретариат, делопроизводство, АХО', '162050', '#', 'between')
+								+category-list-item('Сельское хозяйство, агробизнес', '116259', '#', 'between')
+								+category-list-item('СМИ, издательство, полиграфия', '54646', '#', 'between')
+								+category-list-item('Страхование', '45132', '#', 'between')
+								+category-list-item('Строительство, архитектура', '41456', '#', 'between')
+								+category-list-item('Сфера обслуживания', '41456', '#', 'between')
+								+category-list-item('Телекоммуникации и связь', '89713', '#', 'between')
+								+category-list-item('Топ-менеджмент, руководство высшего звена', '61171', '#', 'between')
+								+category-list-item('Транспорт, автобизнес', '5159', '#', 'between')
+								+category-list-item('Управление персоналом, HR', '106472', '#', 'between')
+								+category-list-item('Финансы, банк', '45563', '#', 'between')
+								+category-list-item('Юриспруденция', '222171', '#', 'between')
+								+category-list-item('Другие сферы деятельности', '178289', '#', 'between')
+
+
+
+			//Tab content
+			section.b-commutator__content.js-commutator-content(data-child='b')
+				//Letter
+				.container
+					.row
+						.col
+							h6.h6 А
+					.row
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Авдеевка', '100', '#')
+								+category-list-item('Алчевск', '25', '#')
+								+category-list-item('Апостолово', '39', '#')
+								+category-list-item('Акимовка ', '37', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Александрия ', '16', '#')
+								+category-list-item('Ананьев  ', '33', '#')
+								+category-list-item('Армянск  ', '25', '#')
+								+category-list-item('Александровка   ', '11', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Андреевка', '19', '#')
+								+category-list-item('Андрушевка', '23', '#')
+								+category-list-item('Ахтырка', '37', '#')
+								+category-list-item('Алушта', '75', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Андреевка', '19', '#')
+								+category-list-item('Андрушевка', '23', '#')
+								+category-list-item('Ахтырка', '37', '#')
+								+category-list-item('Алушта', '75', '#')
+				//Letter
+				.container
+					.row
+						.col
+							h6.h6 Б
+					.row
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Балаклея', '3', '#')
+								+category-list-item('Балта', '25', '#')
+								+category-list-item('Бар', '39', '#')
+								+category-list-item('Барановка ', '1', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Бердичев ', '78', '#')
+								+category-list-item('Бердянск', '31', '#')
+								+category-list-item('Берегово', '5', '#')
+								+category-list-item('Берегомет', '1', '#')
+								+category-list-item('Бережаны', '2', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Болград', '15', '#')
+								+category-list-item('Болехов', '33', '#')
+								+category-list-item('Борзна', '31', '#')
+								+category-list-item('Борисполь', '1129', '#')
+								+category-list-item('Боровая', '12', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Буды', '2', '#')
+								+category-list-item('Бурштын', '28', '#')
+								+category-list-item('Бурынь', '8', '#')
+								+category-list-item('Буск', '65', '#')
+								+category-list-item('Буча', '5', '#')
+				//Letter
+				.container
+					.row
+						.col
+							h6.h6 В
+					.row
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Авдеевка', '100', '#')
+								+category-list-item('Алчевск', '25', '#')
+								+category-list-item('Апостолово', '39', '#')
+								+category-list-item('Акимовка ', '37', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Александрия ', '16', '#')
+								+category-list-item('Ананьев  ', '33', '#')
+								+category-list-item('Армянск  ', '25', '#')
+								+category-list-item('Александровка   ', '11', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Андреевка', '19', '#')
+								+category-list-item('Андрушевка', '23', '#')
+								+category-list-item('Ахтырка', '37', '#')
+								+category-list-item('Алушта', '75', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Андреевка', '19', '#')
+								+category-list-item('Андрушевка', '23', '#')
+								+category-list-item('Ахтырка', '37', '#')
+								+category-list-item('Алушта', '75', '#')
+				//Letter
+				.container
+					.row
+						.col
+							h6.h6 Г
+					.row
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Балаклея', '3', '#')
+								+category-list-item('Балта', '25', '#')
+								+category-list-item('Бар', '39', '#')
+								+category-list-item('Барановка ', '1', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Бердичев ', '78', '#')
+								+category-list-item('Бердянск', '31', '#')
+								+category-list-item('Берегово', '5', '#')
+								+category-list-item('Берегомет', '1', '#')
+								+category-list-item('Бережаны', '2', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Болград', '15', '#')
+								+category-list-item('Болехов', '33', '#')
+								+category-list-item('Борзна', '31', '#')
+								+category-list-item('Борисполь', '1129', '#')
+								+category-list-item('Боровая', '12', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Буды', '2', '#')
+								+category-list-item('Бурштын', '28', '#')
+								+category-list-item('Бурынь', '8', '#')
+								+category-list-item('Буск', '65', '#')
+								+category-list-item('Буча', '5', '#')
+				//Letter
+				.container
+					.row
+						.col
+							h6.h6 Д
+					.row
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Авдеевка', '100', '#')
+								+category-list-item('Алчевск', '25', '#')
+								+category-list-item('Апостолово', '39', '#')
+								+category-list-item('Акимовка ', '37', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Александрия ', '16', '#')
+								+category-list-item('Ананьев  ', '33', '#')
+								+category-list-item('Армянск  ', '25', '#')
+								+category-list-item('Александровка   ', '11', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Андреевка', '19', '#')
+								+category-list-item('Андрушевка', '23', '#')
+								+category-list-item('Ахтырка', '37', '#')
+								+category-list-item('Алушта', '75', '#')
+						.col-6.col-sm-4.col-lg-3
+							ul.b-category-list
+								+category-list-item('Андреевка', '19', '#')
+								+category-list-item('Андрушевка', '23', '#')
+								+category-list-item('Ахтырка', '37', '#')
+								+category-list-item('Алушта', '75', '#')
+
+
+
+
+
+
+
+
+
+
+

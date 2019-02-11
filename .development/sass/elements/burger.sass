@@ -1,0 +1,54 @@
+.burger
+	position: relative
+	width: 30px
+	height: 30px
+	transition-duration: 0.5s
+	z-index: 101
+
+	&:hover
+		cursor: pointer
+	&__icon
+		transition-duration: 0.5s
+		position: absolute
+		height: 2px
+		width: 30px
+		top: 50%
+		background-color: $dark
+
+		&:before
+			transition-duration: 0.5s
+			position: absolute
+			width: 30px
+			height: 2px
+			background-color: $dark
+			content: ""
+			top: -10px
+		&:after
+			transition-duration: 0.5s
+			position: absolute
+			width: 30px
+			height: 2px
+			background-color: $dark
+			content: ""
+			top: 10px
+		&--white
+			background-color: #ffffff
+			&:before,
+			&:after
+				background-color: #ffffff
+	&.active
+		.burger__icon
+			transition-duration: 0.5s
+			background: transparent
+			&:before
+				-webkit-transform: rotateZ(45deg) scaleX(1.25) translate(5px, 7px)
+				transform: rotateZ(45deg) scaleX(1.25) translate(5px, 7px)
+				background-color: $dark
+			&:after
+				-webkit-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -8px)
+				transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -8px)
+				background-color: $dark
+			&--white
+				&:before,
+				&:after
+					background-color: #ffffff

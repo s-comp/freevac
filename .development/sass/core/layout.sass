@@ -1,0 +1,327 @@
+.c-page
+	display: flex
+	flex-direction: column
+	height: 100%
+
+
+.c-main
+	flex: 1 0 auto
+
+.c-header
+	position: relative
+	z-index: 10
+	padding: 9px 0px 10px
+	background-color: rgba($grey, 1)
+
+	@media screen and (min-width: $xl)
+		//padding: 9px 35px 10px
+		padding: 12px 35px 13px
+
+	&--transparent
+		@media screen and (min-width: $lg)
+			background-color: rgba($grey, .35)
+	&--landing
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		background-color: $footer-background
+
+		@media screen and (min-width: $lg)
+			background-color: transparent
+			padding-top: 50px
+		@media screen and (min-width: $xl)
+			padding-top: 50px
+	&__logo
+		padding-left: 15px
+		padding-right: 15px
+
+	&__nav-wrap
+		display: flex
+		@media screen and (max-width: $max-lg)
+			position: absolute
+			left: 0
+			right: 0
+			top: 100%
+			padding: 0
+			flex-direction: column
+			opacity: 0
+			visibility: hidden
+			border-bottom: 2px solid $accent
+			+transition(all, .4s, ease)
+			&.active
+				opacity: 1
+				visibility: visible
+
+
+
+		@media screen and (min-width: $lg)
+			align-items: center
+			justify-content: center
+
+	&__btn-wrap
+		align-items: center
+		justify-content: flex-end
+		display: flex
+		padding-left: 0
+		position: relative
+		padding-right: 15px
+		flex: 1
+
+		@media screen and (min-width: $lg)
+			flex: unset
+
+	&__btn-link
+		margin-right: 5px
+		@media screen and (min-width: $xs)
+			margin-right: 9px
+		@media screen and (min-width: $sm)
+			margin-right: 15px
+		@media screen and (min-width: $lg)
+			margin-right: 5px
+		@media screen and (min-width: $xl)
+			margin-right: 10px
+		@media screen and (min-width: $xxl)
+			margin-right: 28px
+
+		&--right-10
+			@media screen and (min-width: $xxl)
+				margin-right: 10px
+	&__btn-dropdown
+		@media screen and (max-width: $max-sm)
+			position: absolute
+			left: inherit
+			top: 92%
+			right: 15px
+
+			display: none
+
+			min-width: 213px
+
+			z-index: 2
+
+			background: $dark
+
+			margin: 0
+			padding: 20px 30px 14px
+			list-style: none
+
+			border-bottom-right-radius: 1.5em
+			border-bottom-left-radius: 1.5em
+
+		@media screen and (min-width: $sm)
+			display: flex !important
+			align-items: center
+	&__btn-dropdown-item
+		@media screen and (max-width: $max-sm)
+			font-size: 16px !important
+			padding: 0 !important
+			display: block
+			margin: 0 0 11px
+			color: #ffffff
+			background: transparent
+			border: none
+			max-width: 100%
+			min-height: auto
+			text-align: left
+			border-radius: 0
+			font-weight: 400
+			&:before
+				display: none
+			&:last-child
+				margin-bottom: 0
+			&:hover,
+			&:focus
+				background: transparent !important
+				color: #ffffff !important
+
+	&__burger-wrapp
+		+col
+		padding: 0 15px 0 0
+		display: flex
+		-webkit-box-align: center
+		-webkit-align-items: center
+		-ms-flex-align: center
+		align-items: center
+		justify-content: flex-end
+		//flex: 0 0 16.66667%
+		max-width: 45px
+		@media screen and (min-width: $sm)
+			//max-width: 10%
+			//flex: 0 0 10%
+		@media screen and (min-width: $lg)
+			display: none
+
+
+.c-content
+
+	padding: 50px 0 50px
+	&.__padd-t-0
+		padding-top: 0
+	&--padd-sm
+		padding: 25px 0 25px
+	@media screen and (min-width: $lg)
+		padding: 70px 0 70px
+		&--padd-sm
+			padding: 25px 0 50px
+
+.c-footer
+	padding: 30px 0px
+	flex: 0 0 auto
+	color: #ffffff
+	background-color: $footer-background
+	&--landing
+		background-color: #1d1d1d
+	p
+		margin: 0
+	@media screen and (max-width: $max-lg)
+		font-size: 14px
+
+	@media screen and (min-width: $lg)
+		padding: 49px 0
+		p
+			font-size: 18px
+	@media screen and (min-width: $xl)
+		padding: 49px 80px
+
+		&--landing
+			padding: 60px 0 40px
+	&__logo
+		text-align: center
+		margin-bottom: 40px
+		@media screen and (min-width: $lg)
+			text-align: left
+			margin-bottom: 0
+	&__link-wrap
+		margin-bottom: 12px
+
+		@media screen and (min-width: $lg)
+			margin-bottom: 21px
+
+		@media screen and (min-width: $sm)
+			&:last-child
+				margin-bottom: 0
+
+	&__link
+		font-family: $font-bold
+
+		color: #ffffff
+
+		display: inline-block
+	&__contacts-wrap
+
+		display: flex
+		justify-content: center
+
+		margin-bottom: 15px
+
+		@media screen and (min-width: $lg)
+			margin-bottom: 0
+
+
+	&__social
+		+row
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		flex-direction: column
+		margin-bottom: 15px
+		@media screen and (min-width: $lg)
+			margin-bottom: 0
+			flex-direction: row
+
+	&__social-item
+		margin-bottom: 15px
+		@media screen and (min-width: $lg)
+			margin-right: 10px
+			margin-bottom: 0
+
+		@media screen and (min-width: $xl)
+			margin-right: 19px
+	&__info-block
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+
+		@media screen and (min-width: $lg)
+			align-items: flex-end
+
+
+	&__copyright
+		opacity: .5
+	&__line-bottom
+		margin-top: 60px
+		padding-top: 40px
+		border-top: 1px solid rgba(255, 255, 255, .2)
+.hidden-sm
+
+	display: block
+	&--flex
+		display: flex
+	@media screen and (min-width: $sm)
+		display: none
+
+.hidden-lg
+	display: block
+	@media screen and (min-width: $lg)
+		display: none
+
+.hidden-lg-down
+	@media screen and (max-width: $max-lg)
+		display: none
+.text-a-c
+	text-align: center
+.text-a-c-sm-down
+	@media screen and (max-width: $max-sm)
+		text-align: center
+.text-a-r
+	text-align: right
+.text-a-r-sm-up
+	@media screen and (min-width: $sm)
+		text-align: right
+.text-a-r-lg-up
+	@media screen and (min-width: $lg)
+		text-align: right
+
+@media screen and (min-width: $lg)
+	.col-lg-2-5
+		max-width: 20%
+		flex: 0 0 20%
+
+.text-row
+	display: inline-flex
+	align-items: center
+	margin: 0 8px
+
+.c-section-wrap
+	position: relative
+	background: no-repeat center
+	background-size: cover
+	margin-bottom: 70px
+	&--no-gutter
+		margin-bottom: 0
+	&--inside-padd
+		padding: 70px 0
+	&--shadow
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			display: block
+			background-color: #2d2d2d
+			opacity: 0.8
+
+	@media screen and (min-width: $sm)
+		margin-bottom: 100px
+		&--inside-padd
+			padding: 100px 0
+		&--no-gutter
+			margin-bottom: 0
+
+.c-col
+	padding-left: 15px
+	padding-right: 15px

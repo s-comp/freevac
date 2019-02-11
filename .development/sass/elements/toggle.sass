@@ -1,0 +1,116 @@
+
+.e-toggle
+	display: flex
+	align-items: center
+	vertical-align: middle
+
+	&__item
+		font-family: $add-font-light
+		display: inline-block
+		vertical-align: middle
+		transition: .2s
+
+		letter-spacing: -0.41px
+
+		text-align: center
+		+transition(all, .4s, ease)
+		&--white
+			color: #ffffff
+			text-shadow: 2px 3px 3px rgba(50, 45, 49, 0.2)
+		&.active
+			font-family: $additional-font-bold
+
+	&__switch-wrap
+		position: relative
+		width: 48px
+		height: 28px
+		border-radius: 100px
+		background-color: #fff
+		overflow: hidden
+		border: 2px solid $accent
+
+		margin: 0 8px
+		flex-shrink: 0
+
+	&__switch
+		position: absolute
+		left: 2px
+		top: 2px
+		bottom: 2px
+		right: 49%
+		background-color: $accent
+		border-radius: 36px
+		z-index: 1
+		transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+		transition-property: left, right
+		transition-delay: 0s, .08s
+		display: block
+
+	&__check
+		position: absolute
+		display: block
+		cursor: pointer
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		z-index: 6
+
+		&:checked ~ .e-toggle__switch
+			right: 2px
+			left: 49%
+			transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+			transition-property: left, right
+			transition-delay: .08s, 0s
+	//e-toggle
+	@media screen and (min-width: $xs)
+		&__switch-wrap
+			margin: 0 30px
+	@media screen and (min-width: $sm)
+		&__item
+			//text-align: left
+			font-size: 22px
+		&__switch-wrap
+			&--lg
+				width: 60px
+				height: 32px
+		&__switch
+			right: 53%
+		&__check
+			&:checked ~ .e-toggle__switch
+				left: 53%
+	@media screen and (min-width: $lg)
+		&__item
+			font-size: 22px
+			&--lg
+				font-size: 26px
+
+		&__switch-wrap
+			width: 60px
+			height: 34px
+			&--lg
+				width: 90px
+				height: 45px
+		&__switch
+			right: 55%
+		&__check
+			&:checked ~ .e-toggle__switch
+				left: 55%
+	@media screen and (min-width: $xl)
+		&__item
+			font-size: 26px
+			&--lg
+				font-size: 30px
+		&__switch-wrap
+			&--lg
+				width: 100px
+				height: 55px
+		&__switch
+			right: 49%
+		&__check
+			&:checked ~ .e-toggle__switch
+				left: 49%
+
+
+

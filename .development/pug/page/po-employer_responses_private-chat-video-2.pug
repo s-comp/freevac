@@ -1,0 +1,257 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('', 'Мои отклики', 'Кабинет работодаля')
+	.c-content
+		.o-dialog-box
+			.container
+				h4.o-dialog-box__title Менеджер по продажам со знанием англ. языка (IT)
+
+			.container
+				.row
+					.col-lg-4.col-xl-3
+						.o-aside-wrap.js-filter-wrap
+							button.btn-transp.js-open-filter.b-filter-btn-open-filter Открыть профиль
+							.o-aside.js-filter-body
+								.o-aside__content
+									.b-profile-card.__no-styles
+										.b-profile-card__photo
+											img(src="assets/img/candidats/candidat.jpg" alt="alt")
+										.b-profile-card__block
+											.b-profile-card__inform-block.__row
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('check','e-icon__figure e-icon__figure--check--xs')
+												| Собеседована сервисом
+
+											.b-profile-card__inform-block.__row
+												span.tooltip
+													i.e-icon.e-icon--xs.e-icon--mr10.e-icon--disabled
+															+icon('question','e-icon__figure e-icon__figure--check--xs')
+													span.tooltiptext tooltip some text
+												| Опыт работы <br> не подтвержден
+
+										.b-profile-card__inform-block
+											.b-profile-card__name Дячук Мирослава
+
+										.b-profile-card__inform-block
+											p 8 января 1983 <span class="b-profile-card__light-text">(34 года)</span>
+										.b-profile-card__inform-block
+											p IT, компьютеры, интернет
+										.b-profile-card__inform-block
+											p Менеджмент, руководство высшего звена
+										.b-profile-card__block
+											p Украинский — эксперт
+											p Английский — средний
+											p Русский — эксперт
+
+										.b-profile-card__inform-block.__center
+											a(href='#candidate-delete').btn-transp.__lg.js-modal-btn Удалить кандидата
+										.b-profile-card__inform-block.__center
+											a(href='#complaint').btn-transp.__lg.js-modal-btn Заблокировать
+										.b-profile-card__inform-block.__center
+											a(href='#').btn-transp.__lg Задать дополнительный
+												br
+												| вопрос
+										.b-profile-card__inform-block.__center
+											a(href='#candidate-hired').btn-transp.__lg.js-modal-btn Нанять
+
+					.col-lg-8.col-xl-9
+						.b-message-box
+							.b-message-box__body
+								.b-video.js-video-wrap.paused
+									.b-video__controls
+										button.b-video__start.js-video-control
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('play','e-icon__figure e-icon__figure--play')
+
+										.b-video__control-bottom
+											button.b-video__play-pause.js-video-control.paused
+												+icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+												+icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+											.b-video__seekbar.js-progress-bar-video
+												span
+
+											button.b-video__fullscreen.js-video-full-screen
+												+icon('expand','e-icon__figure e-icon__figure--play')
+									video.js-video-content.b-video__video.__w100.video
+										source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
+										source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
+										source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
+
+								//Message
+								.b-message-box__message.__alien
+									.b-message-box__message-caption
+										.b-message-box__message-name Дячук Мирослава
+										.b-message-box__message-date сегодня в 13:00
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Уточнения дальнейших направлений развития. Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную роль в формировании форм развития. Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия.
+
+								//Message
+								.b-message-box__message.__own
+									.b-message-box__message-caption
+										.b-message-box__message-name Вы
+										.b-message-box__message-date сегодня в 13:25
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия. Равным образом консультация с широким активом.
+
+
+								//Message
+								.b-message-box__message.__alien
+									.b-message-box__message-caption
+										.b-message-box__message-name Ответы на дополнительные вопросы
+										.b-message-box__message-date сегодня в 13:25
+									.b-message-box__message-body
+										.b-video.js-video-wrap.paused
+											.b-video__controls
+												button.b-video__start.js-video-control
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('play','e-icon__figure e-icon__figure--play')
+
+												.b-video__control-bottom
+													button.b-video__play-pause.js-video-control.paused
+														+icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+														+icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+													.b-video__seekbar.js-progress-bar-video
+														span
+
+													button.b-video__fullscreen.js-video-full-screen
+														+icon('expand','e-icon__figure e-icon__figure--play')
+											video.js-video-content.b-video__video.__w100.video
+												source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
+												source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
+												source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
+										.b-message-box__message-message
+											ol.b-list-ol
+												li.b-list-ol__item Значимость этих проблем настолько очевидна, что консультация с широким?
+												li.b-list-ol__item Активом играет важную роль в формировании форм развития практика показывает?
+												li.b-list-ol__item Что начало формированию позиции позволяет выполнять важные задания?
+
+
+								//Message
+								.b-message-box__message.__inform
+									.b-message-box__inform-caption
+										.b-message-box__message-name
+											i.e-icon.e-icon--xs.e-icon--mr10
+												+icon('camera','e-icon__figure e-icon__figure--xs')
+											| Вы задали <span class='tdu'>дополнительные вопросы</span>
+										.b-message-box__message-date сегодня в 13:00
+
+								//Message
+								.b-message-box__message.__alien
+									.b-message-box__message-caption
+										.b-message-box__message-name Дячук Мирослава
+										.b-message-box__message-date сегодня в 13:00
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную роль в формировании форм развития практика показывает, что начало формированию позиции позволяет выполнять важные задания по разработке систем массового участия.
+
+								//Message
+								.b-message-box__message
+									.b-message-box__message-caption
+										.b-message-box__message-name Кандидат открыл вам свои контакты
+										.b-message-box__message-date сегодня в 13:00
+									.b-message-box__message-body
+										.b-message-box__message-message
+											a(href="tel:+380951234567").b-message-box__message-link
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('phone','e-icon__figure e-icon__figure--xs')
+
+												| +38 (095) 123 45 67
+											a(href="mailto:kuzya_yaroslava@gmail.com").b-message-box__message-link
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('mail','e-icon__figure e-icon__figure--xs')
+
+												| kuzya_yaroslava@gmail.com
+											a(href="skype:kuzya_yaroslava@gmail.com").b-message-box__message-link
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('skype','e-icon__figure e-icon__figure--xs')
+
+												| kuzya_yaroslava
+
+								//Message
+								.b-message-box__message.__own
+									.b-message-box__message-caption
+										.b-message-box__message-name Вы
+										.b-message-box__message-date сегодня в 13:25
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия. Равным образом консультация с широким активом.
+
+							.b-message-box__footer
+								.b-message-box__text-editor
+									include ../blocks/wysiwyg-enter-text
+
+								.b-message-box__button-wrpa
+									.row.no-gutters.justify-content-lg-end.justify-content-center
+										.b-message-box__button
+											button.btn.btn--lg Отправить
+
+
+	//candidate is hired
+	.o-modal#candidate-hired
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						i.e-icon.e-icon--lg.o-modal__greeting--figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Поздравляем! Кандидат нанят.
+
+
+	//candidate is delete
+	.o-modal#candidate-delete
+		.o-modal__center
+			.o-modal__content.__md
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						h5.h5 Вы уверены, что хотите удалить кандидата ?
+					.o-modal__footer.__mt-70
+						.o-modal__button-row
+							.o-modal__button-wrap
+								a(href="#").btn-transp Да
+							.o-modal__button-wrap
+								a(href="#").btn-transp Нет
+
+	//complaint
+	.o-modal#complaint
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				h5.h5.o-modal__caption Причина блокировки
+				.o-modal__body
+					.b-offer
+						h6.h7 Выберите причину жалобы:
+
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Условия вакансии не соответствуют действительности
+						.main-checkbox.form__chekbox.b-offer__check-vacancy
+							label.main-checkbox__label
+								input.main-checkbox__check(type='checkbox', style='display: none')
+								span.main-checkbox__item.main-checkbox__item--icon
+									+icon('check','main-checkbox__svg')
+								span.main-checkbox__label-text.b-offer__label Работодатель подлец и негодяй
+
+
+				.o-modal__body.__border-top
+					h6.h7 Введите текст жалобы:
+
+					textarea(placeholder='Текст жалобы').o-modal__textarea.place-norm
+				.o-modal__footer.__border-top
+					button.btn.btn--lg Отправить

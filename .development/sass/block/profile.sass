@@ -1,0 +1,90 @@
+.b-profile
+	padding-top: 25px
+	&.__message-box
+		background-color: #ffffff
+		width: 100%
+		padding-top: 0
+		margin-top: -32px
+		display: none
+	&.__padd-t-0
+		padding-top: 0
+	&__caption
+		text-align: center
+		border-bottom: 1px solid $grey-darker
+		padding-bottom: 40px
+		margin-bottom: 40px
+		&.__no-border
+			border-bottom: none
+			padding-bottom: 0
+			margin-bottom: 0
+	&__sub-caption
+		margin-bottom: 40px
+		&.__gutter-0
+			margin-bottom: 0
+	&__photo
+		margin: 0 auto 40px
+		max-width: 166px
+		overflow: hidden
+		+border-radius(50%)
+
+	&__title
+		font-family: $default-font
+		font-weight: 400
+		letter-spacing: -0.54px
+		margin-bottom: 12px
+
+	&__button-wrap
+		padding: 0 15px
+		margin: 5px 0
+		&.__padd-def
+			padding: 0 15px !important
+
+
+	&__video
+		width: 100%
+		height: auto
+
+
+	&__text-block
+		border-bottom: 1px solid $grey-darker
+		padding-bottom: 30px
+		margin-bottom: 50px
+		&:last-child
+			border-bottom: none
+
+		&.__no-border
+			border-bottom: none
+			padding-bottom: 0
+
+	&__footer
+		padding: 20px 0
+	//.b-profile
+	@media (max-width: $max-xl) and (min-width: $lg)
+		&__btn
+			font-size: 13px
+			padding-left: 14px
+			padding-right: 14px
+
+
+	@media screen and (min-width: $lg)
+		padding-top: 50px
+
+		&.__message-box
+			margin-top: -38px
+		&__text-block
+			padding-bottom: 25px
+			margin-bottom: 40px
+		&__button-wrap
+			flex: 1 0 33%
+			max-width: 33%
+
+		&__footer
+			padding: 30px 0
+	@media screen and (min-width: $xl)
+		padding-top: 68px
+		&__caption
+			padding-bottom: 40px
+			margin-bottom: 50px
+		&__sub-caption
+			margin-bottom: 58px
+

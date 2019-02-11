@@ -1,0 +1,44 @@
+footer.c-footer
+    .container-fluid
+        .row
+            .col-xl-3.col-lg-3.col-sm-5
+                div.c-footer__link-wrap
+                    a(href="#").c-footer__link Условия и соглашения
+                div.c-footer__link-wrap
+                    a(href="#").c-footer__link Персональные данные
+            .col-lg-6.col-lg-6.col-sm-7.c-footer__contacts-wrap
+                .b-footer-contacts
+                    .b-footer-contacts__item
+                        p Связаться с нами:
+                    .b-footer-contacts__item
+                        a(href="tel:0660102034").b-footer-contacts__info
+                            i.b-footer-contacts__icon-wrap
+                                +icon('phone','b-footer-contacts__icon')
+                            span.b-footer-contacts__text (066) 010-20-34
+                        a(href="mailto:info@freevac.com.ua").b-footer-contacts__info
+                            i.b-footer-contacts__icon-wrap
+                                +icon('mail','b-footer-contacts__icon b-footer-contacts__icon--mail')
+                            span.b-footer-contacts__text info@freevac.com.ua
+
+                        div.b-footer-contacts__location-wrap
+                            a(href="mailto:info@freevac.com.ua").b-footer-contacts__info.b-footer-contacts__info--light
+                                i.b-footer-contacts__icon-wrap
+                                    +icon('location','b-footer-contacts__icon b-footer-contacts__icon--location')
+                                span.b-footer-contacts__text.b-footer-contacts__text--address Киев, ул. Степана Бандери, 9. корпус 3В,
+                                    br
+                                    | 7 этаж, офис №3-701
+            .col-xl-3.col-lg-3.c-footer__info-block
+                .c-footer__social
+                    .c-footer__social-item
+                        p Мы в соцсетях:
+                    .b-social
+                        a(href="#").b-social__item
+                            i.b-social__icon-wrap
+                                +icon('fb','b-social__icon')
+                        a(href="#").b-social__item
+                            i.b-social__icon-wrap
+                                +icon('linkedin','b-social__icon')
+                        a(href="#").b-social__item
+                            i.b-social__icon-wrap
+                                +icon('youtube','b-social__icon')
+                p.c-footer__copyright © 2017 Freevac

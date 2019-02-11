@@ -1,0 +1,15 @@
+include ../global/_mixins
+.b-pagination.__mt-0
+	.b-pagination__body
+		a(href="#").b-pagination__page.__prev
+			i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+				+icon('arrow-left','e-icon__figure e-icon__figure--arrow-pag b-pagination__arrow')
+		a(href="#").b-pagination__page 1
+		a(href="#").b-pagination__page 2
+		a(href="#").b-pagination__page.active 3
+		a(href="#").b-pagination__page 4
+		span.b-pagination__page.__stub ...
+		a(href="#").b-pagination__page 18
+		a(href="#").b-pagination__page.__next
+			i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+				+icon('arrow-right','e-icon__figure e-icon__figure--arrow-pag b-pagination__arrow')

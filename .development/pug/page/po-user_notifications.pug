@@ -1,0 +1,142 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Уведомления')
+	.c-content.c-content--padd-sm
+		.container
+			.o-heading-group.__between.__on-button.__border-bottom.__mb-0
+				h6.h7.o-heading-group__caption <span>36</span> непрочитанных сообщений
+				.b-select.js-dropdown-body.col-sm-5.col-md-6
+					.b-select__caption-wrap.js-dropdown-btn
+						span.b-select__caption.js-value-name Дата получения
+						input(type="hidden" value="" name="select").js-value-input
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+							+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+					.b-select__dropdown(data-child="a").js-dropdown-content
+						a.b-select__item(data-value="Сегодня") Сегодня
+						a.b-select__item(data-value="На этой неделе") На этой неделе
+						a.b-select__item(data-value="В этом месяце") В этом месяце
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Технические работы 20.01.2017
+						.b-notification__date-message сегодня в 14:00
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании новых предложений...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Товарищи! консультация с широким активом влечет за собой процесс внедрения и модернизации
+						.b-notification__date-message 17 января 2017
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании новых предложений...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Технические работы 16.01.2017
+						.b-notification__date-message 15 января 2017
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение позиций, занимаемых участниками в отношении...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Разнообразный и богатый опыт новая модель организационной
+						.b-notification__date-message 12 января 2017
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании новых предложений...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Технические работы 20.01.2017
+						.b-notification__date-message сегодня в 14:00
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании новых предложений...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Товарищи! консультация с широким активом влечет за собой процесс внедрения и модернизации
+						.b-notification__date-message 17 января 2017
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании новых предложений...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Технические работы 16.01.2017
+						.b-notification__date-message 15 января 2017
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение позиций, занимаемых участниками в отношении...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+			//notification
+			.b-notification
+				.b-notification__body
+					.b-notification__caption
+						a(href="#").b-notification__title Разнообразный и богатый опыт новая модель организационной
+						.b-notification__date-message 12 января 2017
+
+					.b-notification__content
+						.b-notification__item-block.__col-md-10
+							p.b-notification__message Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности играет важную роль в формировании новых предложений...
+
+						.b-notification__delete
+							button(data-tooltip="Удалить").e-manipulation-btn
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+			//Pagination
+			include ../blocks/pagination-no-border

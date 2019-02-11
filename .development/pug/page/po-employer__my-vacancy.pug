@@ -1,0 +1,119 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('','Мои вакансии', 'Кабинет работодателя')
+	.c-content
+		section.b-vacancy
+			.container
+				.row
+
+					.col-lg-9
+						.b-vacancy__header
+							h4.b-vacancy__caption Менеджер по продажам со знанием англ. языка (IT)
+
+							p.b-vacancy__paragr.b-vacancy__price
+								i.e-icon.e-icon--xs.e-icon--mr10
+									+icon('wallet','e-icon__figure e-icon__figure--xs')
+
+								| от <span class="strong">20 000</span> грн.
+							p.b-vacancy__paragr
+								i.e-icon.e-icon--xs.e-icon--mr10
+									+icon('location','e-icon__figure e-icon__figure--xs')
+
+								| Киев
+
+						.b-vacancy__item-block
+							.row
+								.col-md-2
+									p.b-vacancy__light-text Компания:
+
+								.col-md-8
+									p.b-vacancy__under-line <a href="#" class="strong">Hewlett Packard </a> <a href="#" class="b-vacancy__light-text">(Все вакансии)</a>
+
+							.row
+								.col-md-2
+									p.b-vacancy__light-text Вид занятости:
+
+								.col-md-8
+									p полная занятость, неполная занятость, готовы взять студента
+
+							.row
+								.col-md-2
+									p.b-vacancy__light-text Язык:
+
+								.col-md-8
+									p Английский — средний
+
+
+						.b-vacancy__item-block
+
+							h6.h6 Необходимые навыки
+
+							ul.b-list
+								li.b-list__item Условия работы: официальное оформление, полный соц.пакет. Обучение в отделе продажи предприятия.
+								li.b-list__item Желание работать и получать достойную заработную плату;
+								li.b-list__item Умение общаться с клиентами, расположить их к себе;
+								li.b-list__item Трудолюбие;
+								li.b-list__item Аналитический ум;
+								li.b-list__item Опыт работы в большой команде приветствуется.
+
+						.b-vacancy__item-block
+
+							h6.h6 Дополнительно приветствуются
+
+							ul.b-list
+								li.b-list__item Регистрация пользователей локальной сети и почтового сервера, назначение идентификаторов и паролей.
+								li.b-list__item Установка операционных систем и необходимого для работы программного обеспечения.
+								li.b-list__item Знание правильной эксплуатации орг. техники, её настроек и устранения неполадок.
+
+						.b-vacancy__item-block
+
+							h6.h6 Мы предлагаем
+
+							ul.b-list
+								li.b-list__item Работу в комфортном офисе в центре города
+								li.b-list__item Гибкий график: 7 часов в день / 5 дней в неделю
+								li.b-list__item Хорошо оборудованный офис со всеми удобствами и «плюшками» (корпоративные программы/скидки, кухня и печенюшки, игровая комната с видео- и настольными играми и т.д.)
+								li.b-list__item Оплата: фиксированная ставка и/или % от заказов
+								li.b-list__item Прямые USA/Europe-заказчики, интересные проекты
+
+							p Компания работает на рынке web разработки и аутсорсинга с 2005 г. За продолжительное время работы наша команда разработала и внедрила множество проектов различной степени сложности.
+
+							p На сегодняшний день основные наши клиенты это стартап-компании из Европы (Великобритания, Германия, Нидерланды, Дания), США и Израиля, а также те, кто заинтересован в кастомных решениях. В ближайшее время планируется расширение компании и открытие нового офиса.
+
+
+					.col-lg-3.b-vacancy__aside-right
+
+						.b-vacancy__item-block.__aside-block
+							p.b-vacancy__paragr
+								i.e-icon.e-icon--xs.e-icon--mr10
+									+icon('calendar','e-icon__figure e-icon__figure--xs')
+
+								| Открыта <span class="strong">15.02.17</span>
+
+							p.b-vacancy__paragr
+								i.e-icon.e-icon--xs.e-icon--mr10
+									+icon('lock','e-icon__figure e-icon__figure--xs')
+
+								| Актуальна до <span class="strong">13.03.17</span>
+
+							p.b-vacancy__paragr
+								i.e-icon.e-icon--xs.e-icon--mr10
+									+icon('file','e-icon__figure e-icon__figure--xs')
+
+								| <span class="strong">2</span> отклика
+						.b-vacancy__item-block.__aside-block
+							.b-vacancy__paragr
+								a(href="#").btn-transp.__lg Редактировать
+
+							.b-vacancy__paragr
+								a(href="#").btn-transp.__lg Подключить платные
+									br
+									| сервисы
+
+							.b-vacancy__paragr
+								a(href="#").btn-transp.__lg Деактивировать
+
+
+

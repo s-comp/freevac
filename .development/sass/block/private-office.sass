@@ -1,0 +1,102 @@
+.b-private-office
+	position: relative
+	font-size: 14px
+	font-family: $font-bold
+	padding: 11px 12px
+	background: $dark
+	color: #ffffff
+	line-height: 0
+	+border-radius(50%)
+	//+transition(all, .4s, ease)
+	&.active
+		//border-bottom-right-radius: 0
+		//border-bottom-left-radius: 0
+		.b-private-office__icon-arrow
+			+rotate(180deg)
+
+	&__caption
+		position: relative
+
+		justify-content: space-between
+		align-items: center
+		z-index: 3
+		+row
+	&__dropdown
+		position: absolute
+		left: inherit
+		top: 99%
+		right: 0
+
+		display: none
+
+		min-width: 213px
+
+		z-index: 2
+
+		background: $dark
+
+		margin: 0
+		padding: 20px 30px 14px
+		list-style: none
+
+		border-bottom-right-radius: 1.5em
+		border-bottom-left-radius: 1.5em
+
+
+	&__dropdown-item
+		margin-bottom: 11px
+		//&:last-child
+		//	margin-bottom: 0
+	&__link
+		color: #ffffff
+		font-family: $font-add-semi-bold
+		letter-spacing: -0.27px
+		line-height: 1.4
+		display: flex
+		justify-content: space-between
+
+
+	&__title
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		display: none
+		line-height: 1.3
+
+	&__icon-arrow
+		display: none
+		+transition(all, .4s, ease)
+
+
+	//.b-private-office
+
+	@media screen and (max-width: $max-lg)
+		&__icon
+			margin: 0
+	@media (max-width: $max-xxl) and (min-width: $lg)
+		&__icon
+			margin-right: 10px
+
+	@media screen and (min-width: $lg)
+		font-size: 15px
+		padding: 12px 22px 10px
+		+border-radius(1.5em)
+		&__icon-arrow
+			display: block
+		&__title
+			display: block
+			max-width: 70%
+		&__dropdown
+			left: 0
+	@media screen and (min-width: $xl)
+		font-size: 16px
+
+		padding: 14px 28px 13px
+		&__title
+			//padding-right: 0px
+			max-width: 100%
+	@media screen and (min-width: $xxl)
+		font-size: 18px
+		padding: 15px 30px 14px
+		&__title
+			//padding-right: 50px

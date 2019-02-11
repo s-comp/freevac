@@ -1,0 +1,136 @@
+extends ../template/transparent-header
+block title
+    | Markup
+block main
+    section.o-welcome
+        //Slide 1
+        div(style="background-image: url(assets/img/welcome/item-1.jpg)" data-child="a").o-welcome__item.active
+            .container-fluid
+                .row.align-content-center.justify-content-center
+                    .o-welcome__content
+                        h1.h1.o-welcome__caption We will represent you
+                        .o-welcome__btn-list
+                            .o-welcome__btn-list-item
+                                a(href="#").btn.btn--lg.btn--icon
+                                    +icon('freevac-icon','btn__icon btn__icon--freevac-icon')
+                                    span.btn__span Ищу сотрудника
+                            .o-welcome__btn-list-item
+                                a(href="#").btn.btn--lg.btn--icon
+                                    +icon('search','btn__icon btn__icon--search')
+                                    span.btn__span Ищу работу
+        //Slide 2
+        div(style="background-image: url(assets/img/welcome/item-2.jpg)" data-child="b").o-welcome__item
+            .o-welcome__container
+                .row.align-content-center.justify-content-center
+                    .col-xl-6.o-welcome__video-wrap
+                        .b-video.js-video-wrap.paused
+                            .b-video__controls
+                                button.b-video__start.js-video-control
+                                    i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+                                        +icon('play','e-icon__figure e-icon__figure--play')
+
+                                .b-video__control-bottom
+                                    button.b-video__play-pause.js-video-control.paused
+                                        +icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+                                        +icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+                                    .b-video__seekbar.js-progress-bar-video
+                                        span
+
+                                    button.b-video__fullscreen.js-video-full-screen
+                                        +icon('expand','e-icon__figure e-icon__figure--play')
+                            video.js-video-content.b-video__video.__w100.video
+                                source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
+                                source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
+                                source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
+                    .col-xl-6.o-welcome__wel-info
+                        .b-wel-info
+                            .b-wel-info__caption
+                                i.e-icon.b-wel-info__icon
+                                    +icon('freevac-video-services--white','e-icon__figure e-icon__figure--video-service')
+                                h6.h6.b-wel-info__title О видео-сервисе
+                            p.b-wel-info__text Значимость этих проблем настолько очевидна, что консультация степени значительной обуславливает...
+                        .b-wel-info
+                            .b-wel-info__caption
+                                i.e-icon.b-wel-info__icon
+                                    +icon('communication','e-icon__figure e-icon__figure--communication')
+                                h6.b-wel-info__title Видео-собеседование
+                            p.b-wel-info__text Значимость этих проблем настолько очевидна, что консультация значительной степени обуславливает
+                        .b-wel-info
+                            .b-wel-info__caption
+                                i.e-icon.b-wel-info__icon
+                                    +icon('video-resume','e-icon__figure e-icon__figure--video-resume')
+                                h6.h6.b-wel-info__title Видео-резюме
+                            p.b-wel-info__text Значимость этих проблем настолько очевидна, что консультация степени значительной обуславливает...
+                        .b-wel-info
+                            .b-wel-info__caption
+                                i.e-icon.b-wel-info__icon
+                                    +icon('instruction','e-icon__figure e-icon__figure--instruction')
+                                h6.h6.b-wel-info__title Инструкция по записи
+                            p.b-wel-info__text Значимость этих проблем настолько очевидна, что консультация степени значительной обуславливает...
+        //Slide 3
+        div(style="background-image: url(assets/img/welcome/item-31.jpg)" data-child="c").o-welcome__item
+            .o-welcome__container
+                .row.align-content-center.justify-content-center
+                    .e-toggle
+                        label.e-toggle__item.e-toggle__item--lg.e-toggle__item--white.js-employer.active Для работодателя
+                        .e-toggle__switch-wrap.e-toggle__switch-wrap--lg
+                            input(type='checkbox').e-toggle__check
+                            b.e-toggle__switch
+                        label.e-toggle__item.e-toggle__item--lg.e-toggle__item--white.js-aspirant Для соискателя
+                    ol.b-wel-step.o-welcome__middle.js-employer-step-list.active
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Нажмите кнопку «Опубликовать вакансию»
+                                p.b-text-info__text Повседневная практика показывает, что новая модель организационной...
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Выберите необходимые сервисы
+                                p.b-text-info__text Таким образом постоянное информационно-аналитическое...
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Проведите отбор кандидата
+                                p.b-text-info__text Повседневная практика показывает, что новая модель организационной...
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Наймите кандидата
+                                p.b-text-info__text Повседневная практика показывает, что новая модель организационной...
+
+                    ol.b-wel-step.o-welcome__middle.js-aspirant-step-list
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Составьте резюме в личном профиле
+                                p.b-text-info__text Подробное описание как составить
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Запишите и разместите видео-резюме
+                                p.b-text-info__text Выберите удобный способ: запись онлайн или в офисе
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Откликнитесь на вакансию или получите отклик
+                                p.b-text-info__text Получите предложение от работодателя или предложите свою кандидатуру на вакансию
+                        li.b-wel-step__item
+                            .b-text-info.b-text-info--white
+                                h6.h6.b-text-info__caption Получите работу
+                                p.b-text-info__text Получите и примите предложение работодателя
+                    .o-welcome__btn-list
+                        .o-welcome__btn-list-item
+                            a(href="#").btn.btn--lg Видео-инструкция
+                        .o-welcome__btn-list-item
+                            a(href="#").btn.btn--lg РАЗМЕСТИТЬ ВАКАНСИЮ
+
+
+
+        //TABS
+        .b-welcome-tab
+            .b-welcome-tab__item.active(data-main="a")
+                span.b-welcome-tab__icon-wrap
+                    +icon('freevac-what-it','b-welcome-tab__icon b-welcome-tab__icon--what-it')
+                span.b-welcome-tab__title Что такое FreeVac
+            .b-welcome-tab__item(data-main="b")
+                span.b-welcome-tab__icon-wrap
+                    +icon('freevac-video-services','b-welcome-tab__icon b-welcome-tab__icon--video-services')
+                span.b-welcome-tab__title Видеосервис
+            .b-welcome-tab__item(data-main="c")
+                span.b-welcome-tab__icon-wrap
+                    +icon('freevac-what-work','b-welcome-tab__icon b-welcome-tab__icon--what-work')
+                span.b-welcome-tab__title Как это работает

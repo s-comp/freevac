@@ -1,0 +1,62 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('Разместить вакансию','Мои вакансии')
+	.c-content
+		.b-service.b-service--mb-35
+			.container
+				.row.justify-content-center
+					.col.b-service__inform.__border-bottom
+						i.e-icon.e-icon--lg.b-service__inform-figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Вакансия будет опубликована сразу после проверки
+
+						p.b-service__inform-text Проверка занимает до 2-х часов в будние дни и до 4-х часов в выходные.
+							br
+							| Соискателям вакансия будет доступна по адресу:  <a class="tdu" href="www.freevak.com.ua/jobs/2381781/"> www.freevak.com.ua/jobs/2381781/</a>
+
+				.row.justify-content-center
+					.col.b-service__inform.__border-bottom
+
+						h5.h5 Подтвердите подлинность вашей компании, чтобы получить 2 Business публикации бесплатно.
+
+						p.b-service__inform-text Для этого <span class="tdu">загрузите скан-копию свидетельства о регистрации преприятия.</span>
+
+
+						.b-text-info.b-text-info--c-light.__one-center.__mt-50
+							.b-text-info__caption-wrap.b-text-info__caption-wrap--align-top-table
+								i.e-icon
+									+icon('file','e-icon__figure e-icon__figure--file')
+								p.b-text-info__text Подтвердив подлиность своей компании, вы будете получать 3 бесплатные публикации каждый месяц!
+
+				.row.justify-content-center
+					.col.b-service__inform
+						h5.h5 Укажите код ЕГРПОУ и прикрепите скан-копию кода
+
+					.col-12
+						form(action='/' method='post').b-form.b-form--mt30
+							.row.b-form__field-group-row.align-items-center
+								.col-md-3.col-sm-4
+									.b-form__field-label Код ЕГРПОУ
+								.col-md-6.col-sm-8
+									input(type="text" placeholder="Введите код ЕГРПОУ" class="b-form__field js-required" required)
+
+							.row.b-form__field-group-row.align-items-center
+								.col-md-3.col-sm-4
+									.b-form__field-label Скан-копия кода
+								.col-md-6.col-sm-8
+									.b-form__upload-file
+										label.e-input.js-labelFile.b-form__upload-file-label
+											input(type='file', name='file').b-form__input-file.js-input-file
+											span.b-form__placeholder.js-fileName Файл не выбран
+											i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+												+icon('attach','e-icon__figure e-icon__figure--attach')
+
+
+							.b-form__button-wrap
+								button.btn.btn--lg.js-send Отправить
+
+
+

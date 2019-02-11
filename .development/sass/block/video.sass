@@ -1,0 +1,146 @@
+.b-video
+	position: relative
+	margin-bottom: 33px
+	&.__no-gutters
+		margin: 0
+	&.__preview
+		overflow: hidden
+		line-height: 0
+		+border-radius(8px)
+		+box-shadow(0, 0, 54px,0, rgba(0, 0, 0, 0.19))
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: #1d1d1d
+			opacity: 0.5
+			z-index: 1
+	&.playing
+		.b-video__start,
+		.b-video__control-play
+			display: none
+		&.__preview
+			&:before
+				display: none
+
+	&.paused
+		.b-video__control-pause,
+		.b-video__control-bottom
+			display: none
+
+	&__body
+		position: relative
+	&__controls
+		z-index: 1
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+	&__start
+		position: absolute
+		top: 50%
+		left: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 8px solid $orange
+		background-color: transparent
+		width: 80px
+		height: 80px
+		+border-radius(50%)
+		+translate(-50%,-50%)
+
+		svg
+			font-size: 30px
+
+		//&.playing
+		//	display: none
+		&.__no-border
+			border: none
+		&.__svg-big
+			svg
+				font-size: 47px
+
+	&__video
+		&.__w100
+			width: 100%
+	&__control-bottom
+		+row
+		padding: 10px
+		align-items: center
+		position: absolute
+		left: 0
+		right: 0
+		width: 100%
+		bottom: 0
+
+		height: 46px
+		background-color: rgba($dark-bg, .5)
+
+	&__play-pause
+		background-color: transparent
+		border: none
+		margin-right: 10px
+
+	&__seekbar
+		flex: 1
+		position: relative
+		cursor: pointer
+		height: 5px
+		background-color: $grey-darker
+		overflow: hidden
+		margin-right: 10px
+		span
+
+			background-color: $orange
+			position: absolute
+			top: 0
+			left: 0
+			height: 5px
+			width: 0px
+
+	&__fullscreen
+		background: transparent
+		border: none
+
+	&__video
+
+		//margin-bottom: 33px
+
+	&__ligt-link
+		font-family: $font-def-light
+		font-size: 18px
+
+	&__footer
+		+row
+		align-items: center
+
+		&.__beetwen
+			justify-content: space-between
+	&__footer-btn
+		margin: 10px 0
+	//.b-video
+	@media screen and (min-width: $sm)
+		&__ligt-link
+			font-size: 20px
+
+		&__start
+			width: 108px
+			height: 108px
+			border-width: 10px
+			svg
+				font-size: 40px
+			&.__svg-big
+				svg
+					font-size: 67px
+	@media screen and (min-width: $lg)
+		&__ligt-link
+			font-size: 24px
+

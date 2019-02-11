@@ -1,0 +1,78 @@
+.b-video-responses
+	padding: 22px 0
+	border-bottom: 1px solid $grey-darker
+	background-color: $grey-light
+
+	+row
+	&.__unread
+		background-color: #ffffff
+	&__video
+		margin-bottom: 25px
+
+		@extend .col-lg-4
+
+	&__content
+		display: flex
+		flex-direction: column
+		@extend .col-lg-8
+
+	&__header
+		margin-bottom: 20px
+		+row
+
+	&__caption
+		@extend .col-sm-8
+	&__date
+		@extend .b-vacancy-in-list__date
+
+		position: absolute
+		top: 0
+		right: 15px
+
+	&__price
+		@extend .b-vacancy-in-list__feedback
+		align-self: flex-end
+	&__figure
+		max-width: 65px
+	&__name
+		font-family: $font-bold
+		color: $font-dark
+	&__sub-desc
+		font-size: 14px
+		color: $font-light
+		margin-bottom: 15px
+	&__body
+		font-size: 16px
+		margin-bottom: 25px
+	&__footer
+		display: flex
+		align-items: flex-end
+		justify-content: flex-end
+		flex: 1
+	&__delete-btn
+		text-align: right
+	//.b-video-responses
+	@media screen and (max-width: $max-sm)
+		&__caption
+			margin-top: 15px
+			padding-left: 0
+			padding-right: 0
+			order: 1
+		&__price
+			order: 0
+
+	@media screen and (min-width: $sm)
+		&__sub-desc
+			margin-bottom: 0
+
+	@media screen and (min-width: $sm-l)
+		&__sub-desc
+			font-size: 16px
+
+	@media screen and (min-width: $lg)
+		&__video
+			margin-bottom: 0
+		&__content
+			padding-left: 0
+		&__name
+			font-size: 18px

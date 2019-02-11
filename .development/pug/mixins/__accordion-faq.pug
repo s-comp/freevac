@@ -1,0 +1,19 @@
+mixin accordion-item(title, content, className)
+		if className
+			.b-accordion__item.js-accordion-item
+				.b-accordion__item-caption.js-accordion-btn
+					h6.h6.b-accordion__title= title
+					.e-icon.e-icon--md.e-icon--right.b-accordion__icon
+						+icon('arrow_down','e-icon__figure e-icon__figure--arrow')
+
+				.b-accordion__body.js-accordion-content
+					p.p-sm= content
+		else
+			.b-accordion__item.js-accordion-item
+				.b-accordion__item-caption.js-accordion-btn
+					h6.h6.b-accordion__title= title
+					.e-icon.e-icon--md.e-icon--right.b-accordion__icon
+						+icon('arrow_down','e-icon__figure e-icon__figure--arrow')
+
+				.b-accordion__body.js-accordion-content
+					p.p-sm= content

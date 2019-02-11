@@ -1,0 +1,419 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Видеосервис')
+	.o-video-helper
+		.c-content.c-content--padd-sm
+			.container
+
+				.b-commutator.js-commutator-body
+					.b-commutator__tabs.b-commutator__tabs--mb
+						.row
+							.col-sm-4
+								.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+									| Инструкция
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+									| Настройки
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+									| Запись видео
+
+					section.b-commutator__content.active.js-commutator-content(data-child='a')
+						.row.justify-content-center
+							.col-xl-7.col-lg-7.o-video-helper__block
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--align-top-table
+										i.e-icon
+											+icon('camera','e-icon__figure e-icon__figure--camera')
+										p.b-text-info__text Вы записываете на камеру ответы на несколько текстовых вопросов. Потом отправляете записи работодателю и ждете ответа. В момент записи работодатель не находится онлайн и не видит вас.
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--align-top-table
+										i.e-icon
+											+icon('eye-slash','e-icon__figure e-icon__figure--eye-slash')
+										p.b-text-info__text Видеоинтервью безопасно. После отправки доступ к интервью будет только у вас и у работодателя. Никто посторонний не сможет найти и увидеть вашу запись.
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--align-top-table
+										i.e-icon
+											+icon('mobile','e-icon__figure e-icon__figure--mobile')
+										p.b-text-info__text Интервью можно записать на следующих устройствах:
+											br
+											| — компьютеры и ноутбуки с камерой и микрофоном.
+											br
+											| — iPhone 4 и выше, iPad 2 и выше.
+											br
+											| — смартфоны на платформе Android 4.0 и выше.
+
+						.row.justify-content-center.o-video-helper__button-row
+							button.btn.btn--lg.js-go-rec-video Перейти к записи
+
+					section.b-commutator__content.js-commutator-content(data-child='b')
+						.row
+							.col-lg-6
+								.o-video-helper__item-block
+									.b-text-info.b-text-info--mb-30
+										.b-text-info__caption-wrap
+											i.e-icon
+												+icon('sound','e-icon__figure e-icon__figure--sound')
+											h6.h6.b-text-info__caption Колонки
+										.b-text-info__content
+											p.b-text-info__text.b-text-info--c-light Слышите ли вы проверочный звук?
+
+									.o-video-helper__dropdown-wrapp
+										.b-select.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name.js-loudspeakerSourceDefault
+												input(type="hidden" value="" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content#loudspeakerSource
+
+									.o-video-helper__button-block
+										a(href="#").btn-transp.__lg Проверить звук
+								.o-video-helper__item-block
+									.b-text-info.b-text-info--mb-30
+										.b-text-info__caption-wrap
+											i.e-icon
+												+icon('microphone','e-icon__figure e-icon__figure--microphone')
+											h6.h6.b-text-info__caption Микрофон
+										.b-text-info__content
+											p.b-text-info__text.b-text-info--c-light Слышите ли вы свой голос?
+									.o-video-helper__dropdown-wrapp
+										.b-select.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name.js-audioSourceDefault
+												input(type="hidden" value="" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content#audioSource
+
+									.o-video-helper__volume-wrap
+										.e-range
+											.e-range__before.js-range
+											input(type="range" min="0" max="100" value="50").e-range__input
+									.o-video-helper__checkbox
+										.main-checkbox.form__chekbox
+											label.main-checkbox__label
+												input.main-checkbox__check(type='checkbox', style='display: none')
+												span.main-checkbox__item.main-checkbox__item--icon
+													+icon('check','main-checkbox__svg')
+												span.main-checkbox__label-text.c-form__chek-label-text Разрешить автоматическую настройку микрофона
+
+
+							.col-lg-6
+								.o-video-helper__item-block
+									.b-text-info.b-text-info--mb-30
+										.b-text-info__caption-wrap
+											i.e-icon
+												+icon('camera','e-icon__figure e-icon__figure--camera')
+											h6.h6.b-text-info__caption Видео
+										.b-text-info__content
+											p.b-text-info__text.b-text-info--c-light Видите ли вы себя?
+									.o-video-helper__dropdown-wrapp
+										.b-select.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name.js-videoSourceDefault
+												input(type="hidden" value="" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content#videoSource
+
+
+
+								.o-video-helper__item-block
+									.o-video-helper__video-wrap
+										.b-web-video.b-web-video--sm
+											video(width='640', autoplay='').b-web-video__video.js-web-video
+
+									.o-video-helper__checkbox
+										.main-checkbox.form__chekbox
+											label.main-checkbox__label
+												input.main-checkbox__check(type='checkbox', style='display: none').js-start-webcam
+												span.main-checkbox__item.main-checkbox__item--icon
+													+icon('check','main-checkbox__svg')
+												span.main-checkbox__label-text.c-form__chek-label-text Согласен с подключением к вебкамере
+
+						.row.justify-content-center.o-video-helper__button-row
+								button.btn.btn--lg.js-go-rec-video Записать видео
+
+					section.b-commutator__content.js-commutator-content(data-child='c')
+						.o-interview-tables
+							//checking-record
+							.o-interview-tables__item.active#checking-record
+								.row
+									.col-xl-5.col-lg-6
+										.o-video-helper__item-block
+											h5 Проверка записи
+											p.o-video-helper__text-light.b-text-info--c-light
+												| Сделайте пробную 10-секундную запись.
+												br
+												| Скажите что-нибудь на камеру. Вы увидите, как Ваши видеответы будут выглядеть для работодателя.
+										.o-video-helper__item-block
+											.b-text-info.b-text-info--c-light.b-text-info--mb-15
+												.b-text-info__caption-wrap
+													i.e-icon.e-icon--sm
+														+icon('check','e-icon__figure')
+													p.b-text-info__text Выберите тихое освещенное место
+											.b-text-info.b-text-info--c-light.b-text-info--mb-15
+												.b-text-info__caption-wrap
+													i.e-icon.e-icon--sm
+														+icon('check','e-icon__figure')
+													p.b-text-info__text Сядьте ровно, лицом к свету
+											.b-text-info.b-text-info--c-light.b-text-info--mb-15
+												.b-text-info__caption-wrap
+													i.e-icon.e-icon--sm
+														+icon('check','e-icon__figure')
+													p.b-text-info__text Дышите расслабленно. говорите спокойно
+									.col-xl-7.col-lg-6
+										.o-video-helper__video-wrap
+											.b-web-video
+												.b-video.paused.b-web-video__video.b-web-video__video--view-record.__no-gutters.js-video-wrap
+													.b-video__controls
+														button.b-video__start.js-video-control
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+																+icon('play','e-icon__figure e-icon__figure--play')
+
+														.b-video__control-bottom
+															button.b-video__play-pause.js-video-control.paused
+																+icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+																+icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+															.b-video__seekbar.js-progress-bar-video
+																span
+
+															button.b-video__fullscreen.js-video-full-screen
+																+icon('expand','e-icon__figure e-icon__figure--play')
+													video.js-video-content.b-video__video.__w100.js-record-video
+
+
+												video(width='640', autoplay='').b-web-video__video.b-web-video__video--record.js-web-video
+												.b-web-video__container
+													.b-web-video__button-overwrite
+														button.btn.btn--xs.btn--xs--long.btn--norm.b-web-video__overwrite-btn.js-overwrite-video
+															| Перезаписать
+															br
+															| запись
+													.b-web-video__status-record
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--mr10
+															+icon('circle','e-icon__figure e-icon__figure--circle')
+														| Идет запись
+													.b-web-video__pie
+														.e-time-pie.e-time-pie--lg.e-time-pie--opacity
+															span.e-time-pie__set-time.e-time-pie__set-time--lg.js-set-time-out
+															.e-time-pie__fill.e-time-pie__fill--animation.js-time-pie-fill
+
+													.b-web-video__button
+														button.btn.btn--xs.btn--norm.b-web-video__btn-start-record.js-start-record
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--mr10
+																+icon('camera','e-icon__figure e-icon__figure--camera e-icon__figure--camera--sm')
+															span.btn__span Начать запись
+														button.btn.btn--xs.btn--norm.b-web-video__btn-stop-record.js-stop-record
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--mr10
+																+icon('stop','e-icon__figure e-icon__figure--stop')
+															span.btn__span Остановить запись
+
+
+								.row.justify-content-center.o-video-helper__button-row
+									a(href="#answers-questions").btn.btn--lg.js-show-tabs Пропустить
+							//answers on questions
+							.o-interview-tables__item#answers-questions
+								form(action="#" method="post")
+									.b-table
+										//table row
+										.row.align-items-center.b-table__row
+											.col-lg-3.b-table__column-title
+												h6.h7.b-table__caption Должность *
+											.col-12.col-lg-9
+												input(type='text' placeholder="Название до 70 символов" required)
+
+										//table row
+										.row.align-items-center.b-table__row
+											.col-lg-3.b-table__column-title
+												h6.h7.b-table__caption Категории *
+											.col-lg-6
+												.b-select.js-dropdown-body
+													.b-select__caption-wrap.js-dropdown-btn
+														span.b-select__caption.js-value-name Выберите категорию
+														input(type="hidden" value="" name="select").js-value-input
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+													.b-select__dropdown(data-child="a").js-dropdown-content
+														a.b-select__item(data-value="Украинский") Украинский
+														a.b-select__item.active(data-value="Белорусский") Белорусский
+														a.b-select__item(data-value="Русский") Русский
+
+									.o-content-caption.o-content-caption__mt-60
+										h5.h5 Подсказки и временные интервалы
+
+									.b-table.js-time-body.js-int-table
+
+
+										//table row
+										.row.b-table__header.align-items-center
+											.col-1
+											.col-9.col-sm-8.col-lg-7.b-table__head-caption-column
+												| Текст подсказки
+											.col-3.col-lg-1.b-table__head-caption-column.hidden-lg-down
+												| На ответ мин:сек
+											.col-1.b-table__head-caption-column.hidden-lg-down На подготовку мин:сек
+											.col-2
+
+										//table row
+										.row.align-items-center.b-table__row
+											.col-1.b-table__number 1
+											.col-9.col-lg-7
+												| Поприветствовать и помахать ручкой. Представиться!
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-1
+												| <span class="b-table__auxiliary-text"> На ответ мин:сек</span> 01:00
+
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-3.order-lg-1
+												| <span class="b-table__auxiliary-text">На подготовку мин:сек</span> 00:15
+											.col-2.col-lg-2.b-table__button-wrap.order-1
+												button.e-icon.e-icon--md.e-icon--right
+													+icon('close','e-icon__figure e-icon__figure--close')
+
+										//table row
+										.row.align-items-center.b-table__row
+											.col-1.b-table__number 2
+											.col-9.col-lg-7
+												| Обозначаем сферу деятельности «Вот уже 12 лет как я работаю в сфере продаж»
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-1
+												| <span class="b-table__auxiliary-text"> На ответ мин:сек</span> 01:00
+
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-3.order-lg-1
+												| <span class="b-table__auxiliary-text">На подготовку мин:сек</span> 00:15
+											.col-2.col-lg-2.b-table__button-wrap.order-1
+												button.e-icon.e-icon--md.e-icon--right
+													+icon('close','e-icon__figure e-icon__figure--close')
+										//table row
+										.row.align-items-center.b-table__row
+											.col-1.b-table__number 2
+											.col-9.col-lg-7
+												| Началось все с 90х, когда ты или продавал или воровал. Я выбрал честный путь…
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-1
+												| <span class="b-table__auxiliary-text"> На ответ мин:сек</span> 01:00
+
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-3.order-lg-1
+												| <span class="b-table__auxiliary-text">На подготовку мин:сек</span> 00:15
+											.col-2.col-lg-2.b-table__button-wrap.order-1
+												button.e-icon.e-icon--md.e-icon--right
+													+icon('close','e-icon__figure e-icon__figure--close')
+										//table row
+										.row.align-items-center.b-table__row
+											.col-1.b-table__number 2
+											.col-9.col-lg-7
+												| Обозначаем сферу деятельности «Вот уже 12 лет как я работаю в сфере продаж»
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-1
+												| <span class="b-table__auxiliary-text"> На ответ мин:сек</span> 01:00
+
+											.offset-1.offset-lg-0.col-11.col-lg-1.order-3.order-lg-1
+												| <span class="b-table__auxiliary-text">На подготовку мин:сек</span> 00:15
+											.col-2.col-lg-2.b-table__button-wrap.order-1
+												button.e-icon.e-icon--md.e-icon--right
+													+icon('close','e-icon__figure e-icon__figure--close')
+
+										//table row
+										.row.align-items-center.b-table__row.b-table__row--border-top.b-table__row--checked.b-table__row--mt15
+											.col-12
+												.main-checkbox.form__chekbox
+													label.main-checkbox__label
+														input.main-checkbox__check.js-required.validate-check(type='checkbox', style='display: none')
+														span.main-checkbox__item.main-checkbox__item--icon
+															+icon('check','main-checkbox__svg')
+														span.main-checkbox__label-text.c-form__chek-label-text Нажимая эту кнопку, вы принимаете условия <a href="rules.html" class="main-checkbox__label-link">пользовательского соглашения</a>
+
+										//table row
+										.row.align-items-center.justify-content-lg-end.justify-content-center.b-table__footer
+											.b-table__footer-button-wrap
+												a(href="#").btn.btn--lg.no-active Игнорировать вопросы
+											.b-table__footer-button-wrap
+												a(href="#write-answers").btn.btn--lg.js-show-tabs.no-active  Начать запись
+
+							//write answers
+							.o-interview-tables__item#write-answers
+								.row
+									.col
+										.o-content-caption.o-content-caption--mb60
+											h5 Руководитель отдела продаж
+								.b-record-answer
+									.row.align-items-center.justify-content-between.b-record-answer__header
+										.col-sm-1
+											.b-record-answer__steps
+												span.b-record-answer__step 2
+												span.b-record-answer__step.b-record-answer__step--next 4
+										.col-sm-7.b-record-answer__caption
+											| <strong class="strong">Важные моменты.</strong>  Упомяните, что конкретно важно для данной вакансии. Облегчите выбор для менеджера по персоналу :)
+										.col-3.col-sm-2.b-record-answer__time
+											| 00:05
+										.col-3.col-sm-2.b-record-answer__button-wrap.text-a-r
+											button.btn.btn--icon--sm.b-record-answer__start-record.js-start-record
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('camera','e-icon__figure e-icon__figure--camera')
+											button.btn.btn--icon--sm.b-record-answer__stop-record.js-stop-record
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('stop','e-icon__figure')
+
+									//VIDEO
+									.row.justify-content-center
+										.col-lg-10.b-record-answer__video
+											.b-web-video.b-web-video--xl
+												.b-video.paused.b-web-video__video.b-web-video__video--view-record.__no-gutters.js-video-wrap
+													.b-video__controls
+														button.b-video__start.js-video-control
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+																+icon('play','e-icon__figure e-icon__figure--play')
+
+														.b-video__control-bottom
+															button.b-video__play-pause.js-video-control.paused
+																+icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+																+icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+															.b-video__seekbar.js-progress-bar-video
+																span
+
+															button.b-video__fullscreen.js-video-full-screen
+																+icon('expand','e-icon__figure e-icon__figure--play')
+													video.js-video-content.b-video__video.__w100.js-record-video
+												video(width='640', autoplay='').b-web-video__video.b-web-video__video--record.js-web-video
+												.b-web-video__container
+													.b-web-video__status-record
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--mr10
+															+icon('circle','e-icon__figure e-icon__figure--circle')
+														| Идет запись
+													.b-web-video__pie.b-record-answer__pie
+														.e-time-pie.e-time-pie--lg.e-time-pie--opacity
+															span.e-time-pie__set-time.e-time-pie__set-time--lg.js-set-time-out
+															.e-time-pie__fill.e-time-pie__fill--animation.js-time-pie-fill
+													//Message recording
+													.b-web-video__message-recording
+														.b-web-video__message-icon
+															i.e-icon.e-icon--lg.e-icon--m0.e-icon--trsp
+																+icon('check','e-icon__figure e-icon__figure--white e-icon__figure--check')
+														h5.h5 Ваш ответ на вопрос записан!
+														a(href="#").b-web-video__message-subcapion Переходите к следующему
+
+
+
+
+
+									.row.align-items-center.justify-content-center.justify-content-lg-between.b-record-answer__footer
+										.b-record-answer__footer-button-wrap
+											button.btn-transp.__lg.b-record-answer__btn.b-record-answer__start-overwrite.js-start-record  Перезаписать
+											button.btn-transp.__lg.b-record-answer__btn.b-record-answer__play-recorded Просмотреть
+										.b-record-answer__footer-button-wrap
+											a(href="#").btn.btn--lg  Готово
+	//Popup
+	.o-modal#video-interview-questions-final
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						i.e-icon.e-icon--lg.o-modal__greeting--figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Поздравляем!
+							br
+							| Вы опубликовали видео-собеседование.

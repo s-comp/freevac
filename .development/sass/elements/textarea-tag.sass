@@ -1,0 +1,39 @@
+.e-textarea-tag
+	&__body
+		background-color: $grey-light
+		padding: 10px
+		&.__no-padd
+			padding: 0
+		&.__transp
+			background-color: transparent
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: -5px
+	&__item
+		display: inline-flex
+		align-items: center
+		justify-content: space-between
+		font-size: 16px
+		padding: 10px 15px
+		margin: 5px
+		min-width: 65px
+		background-color: $accent
+		&.__transp
+			background-color: transparent
+			border: 2px solid $grey-darker
+	&__input
+		order: 1
+		width: auto
+		border: none
+	&__input-wrap
+		margin: 10px 5px 5px
+	&__add-btn
+		display: block
+		font-size: 14px
+		margin: 10px 5px
+	@media screen and (min-width: $sm-l)
+		&__input
+			width: 100%
+			max-width: 30%
+

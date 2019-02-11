@@ -1,0 +1,43 @@
+.b-accordion
+	&__item
+		border-bottom: 1px solid $grey-darker
+		&.active
+			.b-accordion__icon
+				+rotate(-180deg)
+				background-color: $accent
+	&__item-caption
+		+row
+		justify-content: space-between
+		align-items: center
+		flex-wrap: nowrap
+		cursor: pointer
+
+		padding: 15px 0 15px
+
+	&__title
+		margin: 0
+	&__icon
+		+transition(transform, .4s, ease)
+
+
+	&__body
+		padding: 0 3% 15px
+		display: none
+
+	//.b-accordion //
+	@media screen and (min-width: $sm)
+		&__item-caption
+			padding: 16px 0 16px
+		&__body
+			padding: 0 3% 16px
+
+	@media screen and (min-width: $lg)
+		&__item-caption
+			padding: 18px 0 18px
+		&__body
+			padding: 0 3% 18px
+	@media screen and (min-width: $xl)
+		&__item-caption
+			padding: 20px 0 20px
+		&__body
+			padding: 0 3% 20px

@@ -1,0 +1,87 @@
+.b-select
+	position: relative
+	border: 2px solid transparent
+	background-color: $grey-light
+	padding: 10px 11px 10px
+	width: 100%
+	font-size: 16px
+	&:before
+		content: ''
+		position: absolute
+		top: -2px
+		left: -2px
+		right: 0
+		width: calc(100% + 4px)
+		height: 100%
+		border-bottom: none
+	&.error, &:focus:required:invalid
+		border-color: $input-error-border
+	&:focus,
+	&:required:valid
+		border-color: $accent
+	&.active
+		&:before
+			border: 2px solid $accent
+			border-bottom: none
+			+box-shadow(0, 7px, 10px, 0, rgba(50, 45, 49, 0.3))
+		.b-select__caption
+			font-family: $font-def-light
+			//color: $dark
+		.b-select__dropdown
+			border: 2px solid $accent
+			border-top: none
+			+box-shadow(0, 7px, 10px, 0, rgba(50, 45, 49, 0.3))
+
+		.b-select__arrow
+			+rotate(180deg)
+	&__dropdown
+		position: absolute
+		top: calc(100% - 2px)
+		left: -2px
+		right: 0
+		width: calc(100% + 4px)
+		display: none
+		background-color: #ffffff
+		z-index: 3
+		min-width: 100%
+		+transition(border, .4s , ease)
+
+	&__item-wrap
+		max-height: 300px
+		overflow-y: auto
+	&__caption-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		+transition(all, 4s,ease)
+
+	&__caption
+		color: $font-light
+
+		text-overflow: ellipsis
+		white-space: nowrap
+		overflow: hidden
+
+		&.active
+			color: $font-dark
+	&__item
+		display: block
+		font-family: $font-def-light
+		cursor: pointer
+		padding: 11px
+		+transition(all, .4s, ease)
+		&:active,
+		&.active
+			background-color: $accent
+			font-family: $font-bold
+		&:hover,
+		&:focus
+			background-color: $grey-light
+
+	&__arrow
+		+transition(all, .4s,ease)
+	//.b-select
+	@media screen and (min-width: $lg)
+		padding: 13px 11px 11px
+

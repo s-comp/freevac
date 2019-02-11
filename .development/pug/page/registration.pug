@@ -1,0 +1,49 @@
+extends ../template/main
+block title
+	| Markup
+block main
+	+breadcrumb('Регистрации работодателя')
+	.c-content
+		section.b-registration
+			.container
+				.row
+					.col-lg-6.b-registration__info
+						.b-text-info.b-text-info--mb-30
+							.b-text-info__caption-wrap
+								i.e-icon
+									+icon('music','e-icon__figure e-icon__figure--music')
+								h6.h6.b-text-info__caption Более 700 категорий услуг для работы
+							.b-text-info__content
+								p.b-text-info__text Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание системы обучения кадров.
+						.b-text-info.b-text-info--mb-30
+							.b-text-info__caption-wrap
+								i.e-icon
+									+icon('leaf','e-icon__figure')
+								h6.h6.b-text-info__caption Работайте в удобное для вас время
+							.b-text-info__content
+								p.b-text-info__text Задача организации, в особенности же начало  повседневной работы по формированию позиции  играет важную роль в формировании модели развития.
+						.b-text-info.b-text-info--mb-30
+							.b-text-info__caption-wrap
+								i.e-icon
+									+icon('music','e-icon__figure e-icon__figure--music')
+								h6.h6.b-text-info__caption Зарабатывайте достойно
+							.b-text-info__content
+								p.b-text-info__text Повседневная практика показывает, что реализация намеченных плановых заданий в значительной вает создание системы обучения кадров.
+					.col-lg-6
+						.e-toggle.b-registration__toggle
+							label.e-toggle__item.js-employer.active Работодатель
+							.e-toggle__switch-wrap
+								input(type='checkbox').e-toggle__check
+								b.e-toggle__switch
+							label.e-toggle__item.js-aspirant Соискатель
+
+						form(action='/' method='post').b-form
+							+input('ФИО *')
+							+input('Город *')
+							+input('Телефон *')
+							+input('Email *', '', 'email')
+							+input('Пароль *', '', 'password')
+							+input('', '', 'checkbox')
+							.b-form__button-wrap
+								button.btn.js-send Зарегистрироваться
+

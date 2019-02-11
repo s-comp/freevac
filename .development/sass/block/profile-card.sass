@@ -1,0 +1,67 @@
+.b-profile-card
+	height: 100%
+	background-color: $grey-light
+	padding: 30px
+	font-size: 16px
+	letter-spacing: 0.4px
+	&.__no-styles
+		padding: 0
+		background-color: transparent
+
+	p
+		font-size: 16px
+		margin-bottom: 9px
+	&__name
+		font-family: $font-bold
+	&__photo
+		display: block
+		margin: 0 auto 45px
+		+border-radius(50%)
+
+	&__strong
+		font: 16px $font-bold
+
+	&__delimiter
+		display: block
+		padding: 12px 0
+		&.__xs
+			padding: 8px 0
+	&__block
+		margin-bottom: 25px
+
+	&__inform-block
+		margin-bottom: 16px
+		&.__row
+			+row
+		&.__center
+			text-align: center
+		&:last-child
+			margin-bottom: 0
+	&__small-title
+		color: $font-light
+
+	&__light-text
+		color: $font-light
+
+	//.b-profile-card
+	//@media screen and (min-width: $sm)
+	//	font-size: 13px
+	//	p
+	//		font-size: 13px
+	@media screen and (min-width: $sm-l)
+		padding: 20px
+		//font-size: 13px
+		p
+			font-size: 13px
+	@media screen and (min-width: $lg)
+		padding: 30px
+		p
+			font-size: 16px
+
+		&__strong
+			font-size: 20px
+
+		&__delimiter
+			padding: 18px 0
+		&__name
+			font-size: 18px

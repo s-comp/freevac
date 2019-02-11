@@ -1,0 +1,61 @@
+[data-tooltip] 
+	position: relative
+	z-index: 2
+	cursor: pointer
+
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after 
+	visibility: hidden
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	//filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0)
+	opacity: 0
+	pointer-events: none
+
+
+/* Position tooltip above the element */
+[data-tooltip]:before 
+	position: absolute
+	bottom: 116%
+	right: 140%
+	margin-bottom: 5px
+	padding: 7px
+	width: 160px
+	background-color: $hint-dark
+	color: #fff
+	content: attr(data-tooltip)
+	text-align: center
+	font-size: 12px
+	line-height: 1.2
+	font-family: $font-def-light
+	+translate(50%,0)
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after 
+	position: absolute
+	bottom: 105%
+	left: 50%
+	margin-left: -5px
+	width: 0
+	border-top: 10px solid $hint-dark
+	border-right: 7px solid transparent
+	border-left: 7px solid transparent
+	content: " "
+	font-size: 0
+	line-height: 0
+
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after 
+	visibility: visible
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+	//filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100)
+	opacity: 1
+@media screen and (min-width: $xl)
+
+	[data-tooltip]:before
+		left: 140%
+		right: 0
+		+translate(-50%,0)

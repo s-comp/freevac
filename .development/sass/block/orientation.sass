@@ -1,0 +1,35 @@
+.b-orientation
+	position: relative
+	background-color: #ffffff
+	text-align: center
+	+box-shadow(0, 0, 54px, 0, rgba(0, 0, 0, 0.08))
+	+border-radius(8px)
+
+	padding: 30px 20px
+	+translate(0, -50px)
+
+	margin-bottom: 70px
+
+	@media screen and (min-width: $sm)
+		margin-bottom: 100px
+		padding: 70px
+	//&__caption
+	//	font-family: $rubik
+	//	font-weight: 700
+	//	text-transform: uppercase
+	//	margin-bottom: 36px
+	//
+	//&__caption-accent
+	//	color: $accent
+	&__item-figure
+		margin-bottom: 20px
+
+	&__svg
+		font-size: 55px
+		margin: 0 auto
+	&__item-title
+		font: 700 18px $rubik
+		text-transform: uppercase
+
+	&__item-desc
+		font: 300 16px $rubik

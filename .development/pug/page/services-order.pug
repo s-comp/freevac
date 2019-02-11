@@ -1,0 +1,73 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('Подбор кандидата','Услуги и сервисы')
+	.c-content
+		form.b-order
+			.container
+				.row.justify-content-center
+					.col-sm-11.col-lg-7
+						.b-order__select
+							.b-order__caption
+								i.e-icon
+									+icon('calendar','e-icon__figure e-icon__figure--calendar')
+
+								h5.h5.b-order__title Выбор периода:
+							.b-order__content
+								label.b-order__check
+									| 14 дней поиска
+									span.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon.main-checkbox__item--lg
+												+icon('check','main-checkbox__svg main-checkbox__svg--lg')
+								label.b-order__check
+									| 30 дней поиска
+									span.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon.main-checkbox__item--lg
+												+icon('check','main-checkbox__svg main-checkbox__svg--lg')
+						.b-order__select
+							.b-order__caption
+								i.e-icon
+									+icon('bag','e-icon__figure e-icon__figure--bag')
+
+								h5.h5.b-order__title Выбор вакансий:
+							.b-order__content
+								label.b-order__check
+									| Junior sales manager
+									span.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon.main-checkbox__item--lg
+												+icon('check','main-checkbox__svg main-checkbox__svg--lg')
+								label.b-order__check
+									| Product manager
+									span.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon.main-checkbox__item--lg
+												+icon('check','main-checkbox__svg main-checkbox__svg--lg')
+						.b-order__select
+							.b-order__caption
+								i.e-icon
+									+icon('tag','e-icon__figure e-icon__figure--tag')
+
+								h5.h5.b-order__title Общая стоимость к оплате
+								span.b-order__pricing <strong class="b-order__price">1000</strong> грн.
+
+				.b-order__footer
+					.row.align-items-center
+						.col-12.col-sm-4.b-order__back
+							a(href="#").btn-transp
+								i.e-icon.e-icon--no-border.e-icon--no-size
+									+icon('backspace','e-icon__figure e-icon__figure--backspace')
+								| Назад
+						.col-12.col-sm-8.text-a-c-sm-down
+							a(href="#").btn.btn--lg Оформить заказ
+
+
+
+

@@ -1,0 +1,69 @@
+.b-footer-contacts
+	letter-spacing: -0.27px
+	+row
+	&__item
+		margin-right: 30px
+		margin-bottom: 15px
+
+		&:last-child
+			margin-right: 0
+			margin-bottom: 0
+
+
+	&__info
+		display: inline-block
+		font-family: $font-bold
+		color: #ffffff
+		margin: 0 12px 15px 0
+		@media screen and (min-width: $lg)
+			margin: 0 22px 0 0
+		&:last-child
+			margin: 0
+
+		&--light
+			font-family: $default-font
+
+	&__text
+		display: inline-block
+		vertical-align: text-top
+		line-height: 1.6
+
+		@media screen and (max-width: $max-lg)
+			font-size: 14px
+	&__icon-wrap
+		display: inline-flex
+		justify-content: center
+		align-items: center
+
+		width: 20px
+		height: 20px
+		vertical-align: middle
+		background-color: $accent
+
+		margin-right: 5px
+
+		+border-radius(50%)
+
+		@media screen and (min-width: $sm)
+			margin-right: 10px
+			width: 28px
+			height: 28px
+
+	&__icon
+		font-size: 10px
+		color: $font
+		&--mail
+			font-size: 8px
+		&--location
+			font-size: 12px
+		@media screen and (min-width: $sm)
+			font-size: 14px
+			&--mail
+				font-size: 12px
+			&--location
+				font-size: 17px
+	&__location-wrap
+		//margin-top: 15px
+
+		@media screen and (min-width: $lg)
+			margin-top: 31px

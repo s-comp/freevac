@@ -1,0 +1,15 @@
+.e-favorit-btn
+	background-color: #ffffff
+	border: 2px solid $accent
+	padding: 7px 19px 11px
+	+border-radius(2em)
+	display: none
+	&.__active
+		border-color: $grey-light-dark
+	&.active
+		display: inline-block
+
+	&__figure
+		+transition(all, .4s, ease)
+		&.__fill
+			color: $accent

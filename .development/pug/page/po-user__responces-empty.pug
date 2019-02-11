@@ -1,0 +1,40 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Мои отклики')
+	.c-content.c-content--padd-sm
+
+		.b-commutator.js-commutator-body
+			//Tabs
+			.b-commutator__tabs.b-commutator__tabs--mb-25
+				.container
+					.row
+						.col-sm-6
+							.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+								| Отклики
+						.col-sm-6
+							.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+								| Просмотры
+			//Tab content
+			section.b-commutator__content.active.js-commutator-content(data-child='a')
+				.b-service.__mt-60
+					.container
+						.row.justify-content-center
+							.col.b-service__inform
+								i.e-icon.e-icon--lg.b-service__inform-figure
+									+icon('file-text','e-icon__figure e-icon__figure--check')
+
+								h5.h5 Нет сообщений
+
+								p.b-service__inform-text Вы еще не откликались. Откликайтесь на вакансии. История будет здесь.
+						.row.justify-content-center
+							.col
+								.b-service__footer.__no-border
+									.row.justify-content-center
+										a(href='#').btn.btn--lg НАЙТИ Вакансии
+
+
+
+						
+

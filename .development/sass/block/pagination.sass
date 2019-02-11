@@ -1,0 +1,32 @@
+.b-pagination
+	margin-top: 30px
+	padding: 30px 0
+	border-top: 1px solid $grey-darker
+	&.__no-border
+		border: none
+	&.__mt-0
+		margin-top: 0
+	&__body
+		+row
+		justify-content: center
+		align-items: center
+
+	&__page
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		width: 46px
+		height: 46px
+		margin: 5px
+		border: 1px solid $grey-darker
+		&.active
+			background-color: $accent
+			border-color: transparent
+			color: $font-dark
+			font-family: $font-bold
+		&:focus,
+		&:hover
+			border-color: $accent
+		&.__stub
+			border-color: transparent

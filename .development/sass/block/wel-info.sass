@@ -1,0 +1,64 @@
+.b-wel-info
+	+col
+
+	color: #ffffff
+
+	max-width: 100%
+	flex-basis: 100%
+
+	margin-bottom: 40px
+
+	@media screen and (min-width: $lg)
+		max-width: 50%
+		flex-basis: 50%
+		&:nth-child(odd)
+			padding-right: 15px
+	&__caption
+		+row
+		align-items: center
+		margin-bottom: 10px
+		@media screen and (min-width: $lg)
+			margin-bottom: 15px
+
+	&__icon
+		@media (max-width: $max-xxl) and (min-width: $xl)
+			margin-right: 12px
+
+			width: 36px
+			height: 36px
+			svg
+				font-size: 80%
+
+	&__title
+		font-size: 16px
+		letter-spacing: -0.36px
+		margin: 0
+		@media screen and (min-width: $sm)
+			font-size: 20px
+		@media screen and (min-width: $lg)
+			font-size: 24px
+		@media screen and (min-width: $xl)
+			font-size: 19px
+		@media screen and (min-width: $xxl)
+			font-size: 21px
+		@media screen and (min-width: $xxxl)
+			font-size: 24px
+	&__text
+		font-size: 16px
+		letter-spacing: -0.24px
+		line-height: 1.5
+
+		padding-left: 48px
+		margin-bottom: 0
+
+		@media (max-width: $max-xxl) and (min-width: $xl)
+			padding-left: 50px
+		@media screen and (min-width: $lg)
+			padding-left: 58px
+		//@media screen and (min-width: $xl)
+			//padding-left: 50px
+		@media screen and (min-width: $xxl)
+			padding-left: 75px
+
+		@media (max-width: $max-xxl) and (min-width: $xl)
+			padding-left: 50px

@@ -1,0 +1,126 @@
+extends ../template/main
+block title
+	| Markup
+block main
+	+breadcrumb('Поиск резюме')
+	.c-content.c-content--padd-sm
+		.container
+			form.b-search-form
+				.row
+					.col-lg-7.b-search-form__item
+						.b-form
+							.b-form__searh-field-group
+								input(type="text", placeholder="Поиск вакансий").b-form__item-group-lg.b-form__field-group--mr
+								.b-select.b-form__item-group-xs.js-dropdown-body
+									.b-select__caption-wrap.js-dropdown-btn
+										span.b-select__caption.js-value-name Город
+										input(type="hidden" value="" name="select").js-value-input
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+									.b-select__dropdown(data-child="a").js-dropdown-content
+										a.b-select__item(data-value="Авдеевка") Авдеевка
+										a.b-select__item(data-value="Александровка") Александровка
+										a.b-select__item(data-value="Андрушевка") Андрушевка
+					.col-lg-5.b-form__field-group-custom
+						.b-form__field-group-item
+							.main-checkbox.form__chekbox
+								label.main-checkbox__label.main-checkbox__label--center
+									input.main-checkbox__check(type='checkbox', style='display: none')
+									span.main-checkbox__item.main-checkbox__item--icon
+										+icon('check','main-checkbox__svg')
+									span.main-checkbox__label-text.c-form__chek-label-text Кандидаты с видео-
+										br
+										| собеседованием
+						.b-form__field-group-item.b-form__field-group-item--sm-center
+							button.btn.btn--md.btn--md--long Найти
+
+		//Tabs
+		.b-commutator.js-commutator-body
+			.b-commutator__tabs.b-commutator__tabs--mb
+				.container
+					.row
+						.col-sm-6
+							.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+								| Подбор по сферам
+						.col-sm-6
+							.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+								| Поиск по городам
+
+			//Tab content
+			section.b-commutator__content.active.js-commutator-content(data-child='a')
+				.container
+					.row
+						.col-lg-6
+							ul.b-category-list
+								+category-list-item('IT, компьютеры, интернет ', '100639', '#', 'between')
+								+category-list-item('Администрация, руководство среднего звена', '252021', '#', 'between')
+								+category-list-item('Бухгалтерия, аудит', '162050', '#', 'between')
+								+category-list-item('Гостинично-ресторанный бизнес, туризм', '116259', '#', 'between')
+								+category-list-item('Дизайн, творчество', '54646', '#', 'between')
+								+category-list-item('Красота, фитнес, спорт', '45132', '#', 'between')
+								+category-list-item('Культура, музыка, шоу-бизнес', '41456', '#', 'between')
+								+category-list-item('Логистика, склад, ВЭД', '131984', '#', 'between')
+								+category-list-item('Маркетинг, реклама, PR', '89713', '#', 'between')
+								+category-list-item('Медицина, фармацевтика', '61171', '#', 'between')
+								+category-list-item('Недвижимость', '5159', '#', 'between')
+								+category-list-item('Образование, наука', '106472', '#', 'between')
+								+category-list-item('Охрана, безопасность', '45563', '#', 'between')
+								+category-list-item('Продажи, закупки', '2263', '#', 'between')
+								+category-list-item('Рабочие специальности, производство', '178289', '#', 'between')
+
+
+						.col-lg-6
+							ul.b-category-list
+								+category-list-item('Розничная торговля', '100639', '#', 'between')
+								+category-list-item('Секретариат, делопроизводство, АХО', '162050', '#', 'between')
+								+category-list-item('Сельское хозяйство, агробизнес', '116259', '#', 'between')
+								+category-list-item('СМИ, издательство, полиграфия', '54646', '#', 'between')
+								+category-list-item('Страхование', '45132', '#', 'between')
+								+category-list-item('Строительство, архитектура', '41456', '#', 'between')
+								+category-list-item('Сфера обслуживания', '41456', '#', 'between')
+								+category-list-item('Телекоммуникации и связь', '89713', '#', 'between')
+								+category-list-item('Топ-менеджмент, руководство высшего звена', '61171', '#', 'between')
+								+category-list-item('Транспорт, автобизнес', '5159', '#', 'between')
+								+category-list-item('Управление персоналом, HR', '106472', '#', 'between')
+								+category-list-item('Финансы, банк', '45563', '#', 'between')
+								+category-list-item('Юриспруденция', '222171', '#', 'between')
+								+category-list-item('Другие сферы деятельности', '178289', '#', 'between')
+
+
+
+			//Tab content
+			section.b-commutator__content.js-commutator-content(data-child='b')
+				.b-category-list
+					.container
+						.row
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Киев', '55300', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Харьков', '19850', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Львов', '5320', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Одесса', '10130', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Днепр', '12300', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Запорожье', '530', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Кривой Рог', '150', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Николаев', '5320', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Тернополь', '1', '#', 'column')
+							.col-6.col-sm-4.col-lg-2-5
+								+category-list-item('Луцк', '2', '#', 'column')
+
+
+
+
+
+
+
+
+
+
+

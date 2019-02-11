@@ -1,0 +1,269 @@
+extends ../template/employer
+block title
+	| Markup
+block main
+	+breadcrumb('Мои вакансии')
+	.c-content.c-content--padd-sm
+		.b-commutator.js-commutator-body
+			//Tabs
+			.b-commutator__tabs.b-commutator__tabs--mb-25
+				.container
+					.row
+						.col-sm-6
+							.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+								| Открытые
+						.col-sm-6
+							.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+								| Архив
+			//Tab content
+			section.b-commutator__content.active.js-commutator-content(data-child='a')
+				.container
+					//Vacancy
+					.b-vacancy-in-list.__pending
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										i.e-icon.e-icon--xs.e-icon--mr10
+											+icon('camera','e-icon__figure e-icon__figure--xs')
+										| Администратор сайта, контент-менеджер
+
+									.b-vacancy-in-list__price <span class="strong">25 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts"><span class="strong">2</span>/10</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item  Деактивировать
+
+
+								.b-vacancy-in-list__pending-verification
+									i.e-icon.e-icon--xs.e-icon--mr10
+										+icon('hourglass','e-icon__figure e-icon__figure--xs')
+									| Ожидает проверку
+
+
+					//Vacancy
+					.b-vacancy-in-list
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										| Junior, Middle Ruby on Rails developer
+
+									.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts"><span class="strong">1</span>/12</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item Продвигать
+									a(href="#").b-vacancy-in-list__list-item  Деактивировать
+
+
+
+					//Vacancy
+					.b-vacancy-in-list
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										i.e-icon.e-icon--xs.e-icon--mr10
+											+icon('camera','e-icon__figure e-icon__figure--xs')
+										| Администратор сайта, контент-менеджер
+
+									.b-vacancy-in-list__price <span class="strong">25 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts"><span class="strong">2</span>/10</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item  Деактивировать
+
+
+					//Vacancy
+					.b-vacancy-in-list
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										| Junior, Middle Ruby on Rails developer
+
+									.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts"><span class="strong">1</span>/12</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item Продвигать
+									a(href="#").b-vacancy-in-list__list-item  Деактивировать
+
+				.container
+					include ../blocks/pagination-no-mt
+
+			//Tab content
+			section.b-commutator__content.js-commutator-content(data-child='b')
+				.container
+					//Vacancy
+					.b-vacancy-in-list
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										i.e-icon.e-icon--xs.e-icon--mr10
+											+icon('camera','e-icon__figure e-icon__figure--xs')
+										| Администратор сайта, контент-менеджер
+
+									.b-vacancy-in-list__price <span class="strong">25 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts">10</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item  Активировать
+
+
+
+					//Vacancy
+					.b-vacancy-in-list
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										| Junior, Middle Ruby on Rails developer
+
+									.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts">12</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item  Активировать
+
+
+
+					//Vacancy
+					.b-vacancy-in-list
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										i.e-icon.e-icon--xs.e-icon--mr10
+											+icon('camera','e-icon__figure e-icon__figure--xs')
+										| Администратор сайта, контент-менеджер
+
+									.b-vacancy-in-list__price <span class="strong">25 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts">10</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item  Активировать
+
+
+
+					//Vacancy
+					.b-vacancy-in-list
+						.b-vacancy-in-list__inside-wrap
+							//Header
+							.b-vacancy-in-list__header
+								.b-vacancy-in-list__caption
+									a(href="#").b-vacancy-in-list__title
+										| Junior, Middle Ruby on Rails developer
+
+									.b-vacancy-in-list__price <span class="strong">35 000</span> грн.
+								.b-vacancy-in-list__inform
+									p.b-vacancy-in-list__inform-item 13 мая 2017
+									p.b-vacancy-in-list__inform-item.b-vacancy-in-list__text-row
+										i.e-icon.e-icon--xs.e-icon--mr10.e-icon--no-border.e-icon--no-size
+											+icon('location','e-icon__figure e-icon__figure--xs')
+										| Киев
+							//Body
+							.b-vacancy-in-list__body
+								.b-vacancy-in-list__desrcipt
+									| Ищем ответственного сотрудника на должность Администратор сайта, Контент-менеджер. Если Вам интересно данное направление мы готовы предоставить полное обучение.
+
+								.b-vacancy-in-list__feedback <span class="b-vacancy-in-list__counts">12</span> откликов
+							//Footer
+							.b-vacancy-in-list__footer
+								.b-vacancy-in-list__list
+									a(href="#").b-vacancy-in-list__list-item  Активировать
+
+

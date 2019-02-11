@@ -1,0 +1,46 @@
+.b-compny-in-list
+	padding: 25px 0
+	border-bottom: 1px solid $grey-darker
+	&__body
+		@extend .row
+
+	&__figure
+		text-align: center
+		margin-bottom: 25px
+		@extend .col-sm-3
+		@extend .col-lg-2
+
+	&__content
+		@extend .col-sm-9
+		@extend .col-lg-10
+
+	&__caption
+
+		margin-bottom: 12px
+	&__title
+		font-family: $font-bold
+		margin: 8px 0 8px
+	&__date-message
+		@extend .b-candidat__date-message
+
+	&__content
+		+row
+		justify-content: space-between
+
+	&__message
+		@extend .b-candidat__message
+
+		max-height: 88px
+		-webkit-line-clamp: 4
+
+	&__delete
+		flex: 1
+		text-align: right
+
+	//.b-compny-in-list
+	@media screen and (min-width: $sm)
+		&__figure
+			text-align: left
+			margin-bottom: 0
+
+

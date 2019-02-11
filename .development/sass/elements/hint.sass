@@ -1,0 +1,53 @@
+.e-hint
+	position: relative
+	cursor: pointer
+	&:hover
+		.e-hint__content
+			display: block
+	&__content
+		position: absolute
+		right: 150%
+		bottom: 0
+		min-width: 174px
+
+		font: 12px $font-def-light
+		letter-spacing: -0.18px
+		color: #ffffff
+		padding: 10px
+		display: none
+		&:before
+			content: ''
+			position: absolute
+			bottom: 8px
+			left: 100%
+			width: 0
+			height: 0
+
+			border-top: 6px solid transparent
+			border-left: 8px solid $grey-light
+			border-bottom: 6px solid transparent
+
+		&--dark
+			background-color: $hint-dark
+			&:before
+				border-left-color: $hint-dark
+
+	&__text
+		margin-bottom: 10px
+
+	//.e-hint
+	@media screen and (min-width: $sm-l)
+		&__content
+			left: 100%
+			bottom: 0
+			&:before
+
+				right: 100%
+				left: initial
+				border-top: 6px solid transparent
+				border-right: 8px solid $grey-light
+				border-bottom: 6px solid transparent
+				border-left: none
+			&--dark
+				&:before
+					border-right-color: $hint-dark

@@ -1,0 +1,66 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Подбор вакансии','Услуги и сервисы')
+	.c-content
+		.b-service.b-service--mb-35
+			.container
+				.row.justify-content-center
+					.col.b-service__inform
+						i.e-icon.e-icon--lg.b-service__inform-figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Поздравляем! Ваш заказ сформирован.
+
+						p.b-service__inform-text Выберите способ оплаты
+
+
+		form.b-order
+			.container
+				.row.justify-content-center
+					.col
+						.b-order__select.b-order__select--border
+							label.b-order__caption.b-order__caption--mb-xs
+								i.e-icon
+									+icon('credit-card','e-icon__figure e-icon__figure--credit-card')
+								span.h5.b-order__title Оплата картами Visa, Mastercard
+
+							.b-order__content
+								p.b-order__text
+									| Моментальное зачисление услуги на ваш счет. Проще чем в банке и безопаснее.
+
+
+						.b-order__select.b-order__select--border.b-order__select--order-inform
+							.row.align-items-center.justify-content-between
+								.b-order__row-col.col-lg-5.col-md-6
+									p.b-order__label-text Количество публикаций
+
+									span.b-order__number <span class="b-order__count">1</span> шт.
+
+								.b-order__row-col.col-lg-5.col-md-6
+									p.b-order__label-text Номер заказа
+
+									span.b-order__number <span class="b-order__count">№1352369</span>
+
+						.b-order__select.b-order__select--border.b-order__select
+							.b-order__caption.b-order__caption--mb-0
+								i.e-icon
+									+icon('tag','e-icon__figure e-icon__figure--tag')
+
+								h5.h5.b-order__title Общая стоимость к оплате
+								span.b-order__pricing <strong class="b-order__price">1000</strong> грн.
+
+				.b-order__footer
+					.row.align-items-center
+						.col-12.col-sm-4.b-order__back
+							a(href="#").btn-transp
+								i.e-icon.e-icon--no-border.e-icon--no-size
+									+icon('backspace','e-icon__figure e-icon__figure--backspace')
+								| Назад
+						.col-12.col-sm-8.text-a-c-sm-down
+							a(href="#").btn.btn--lg Оплатить кредиткой
+
+
+
+

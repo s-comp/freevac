@@ -1,0 +1,45 @@
+.b-vacancy
+	&__header
+		margin-bottom: 40px
+
+	&__caption
+		display: flex
+		margin-bottom: 40px
+
+	&__item-block
+		margin-bottom: 40px
+		&.__aside-block
+			+row
+			align-items: center
+			justify-content: center
+			flex-direction: column
+	&__price
+		font-size: 18px
+	&__paragr
+		margin-bottom: 25px
+		//&:last-child
+		//	margin-bottom: 0
+
+	&__light-text
+		color: $font-light
+
+	&__under-line
+		text-decoration: underline
+
+	//.b-vacancy
+	@media screen and (min-width: $xs)
+		&__item-block
+			&.__aside-block
+				flex-direction: row
+				justify-content: space-between
+	@media screen and (min-width: $lg)
+
+		&__price
+			font-size: 20px
+
+		&__aside-right
+			margin-top: 10px
+
+		&__item-block
+			&.__aside-block
+				display: block

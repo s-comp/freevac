@@ -1,0 +1,61 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Собеседование сервисом', 'Настройки профиля')
+	.c-content
+		.container
+			.row.justify-content-center
+				.col-lg-10
+					form.b-form
+						//Form block
+						.b-form__block.__padd-t-0
+							//Form-row
+							.row.align-items-center
+								.col-sm-4
+									.b-form__field-label.__bold Удобная дата проведения собеседования
+								.col-lg-4.col-md-5.col-sm-6
+									.b-form__field-wrap.row.align-items-center
+										.col-4
+											input(type='text' placeholder='дд').b-form__field.js-required.place-norm
+										.col-4
+											input(type='text' placeholder='мм').b-form__field.js-required.place-norm
+										.col-4
+											input(type='text' placeholder='гггг').b-form__field.js-required.place-norm
+							//Form-row
+							.row.align-items-center
+								.col-sm-4
+									.b-form__field-label.__bold Удобное время для звонка
+								.col-lg-4.col-md-5.col-sm-6
+									.b-form__field-wrap.row.align-items-center
+										.col-4
+											input(type='text' placeholder='чч').b-form__field.js-required.place-norm
+										.col-4
+											input(type='text' placeholder='мм').b-form__field.js-required.place-norm
+
+							//Form-row
+							.row.align-items-center.b-form__field-wrap
+								.col-sm-4
+									.b-form__field-label.__bold Удобный способ связи
+								.col-md-6.col-sm-8
+									.b-select.js-dropdown-body
+										.b-select__caption-wrap.js-dropdown-btn
+											span.b-select__caption.js-value-name Выберите способ связи
+											input(type="hidden" value="" name="select").js-value-input.js-required
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+										.b-select__dropdown(data-child="a").js-dropdown-content
+											a.b-select__item(data-value="Торговля") Торговля
+											a.b-select__item(data-value="Торговля") Торговля
+											a.b-select__item.active(data-value="Торговля") Торговля
+
+							//Form-row
+							.row.align-items-center.b-form__field-wrap
+								.col-sm-4
+									.b-form__field-label.__bold Ваш никнейм/номер:
+								.col-sm-8
+									input(type='text' placeholder='Введите ваш никнейм или номер').b-form__field.js-required
+
+						.b-form__footer.__no-border
+							.row.justify-content-center.no-gutters
+								button.btn.btn--lg.js-send Отправить

@@ -1,0 +1,157 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('Разместить вакансию', 'Мои вакансии')
+	.c-content
+		form(action="#").b-form
+			.b-table
+				.container
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Название вакансии *
+							.col-12.col-lg-9
+								input(type='text' placeholder='Название до 70 символов' value="Менеджер по продажам со знанием английского языка (IT)" required).js-required.place-norm
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Сфера *
+							.col-12.col-lg-5
+								.b-select.js-dropdown-body
+									.b-select__caption-wrap.js-dropdown-btn
+										span.b-select__caption.js-value-name Выберите сферу деятельности
+										input(type="hidden" value="" name="select").js-required.js-value-input
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+									.b-select__dropdown(data-child="a").js-dropdown-content
+										a.b-select__item(data-value="IT, компьютеры, интернет") IT, компьютеры, интернет
+										a.b-select__item.active(data-value="Администрация, руководство среднего звена") Администрация, руководство среднего звена
+										a.b-select__item(data-value="Бухгалтерия, аудит") Бухгалтерия, аудит
+										a.b-select__item(data-value="Гостинично-ресторанный бизнес, туризм") Гостинично-ресторанный бизнес, туризм
+										a.b-select__item(data-value="Дизайн, творчество ") Дизайн, творчество
+										a.b-select__item(data-value="Рабочие специальности, производство ") Рабочие специальности, производство
+
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Город *
+							.col-12.col-lg-5
+								.b-select.js-dropdown-body
+									.b-select__caption-wrap.js-dropdown-btn
+										span.b-select__caption.js-value-name.active Харьков
+										input(type="hidden" value="Харьков" name="select").js-required.js-value-input
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+									.b-select__dropdown(data-child="a").js-dropdown-content
+										a.b-select__item(data-value="Киев") Киев
+										a.b-select__item.active(data-value="Харьков") Харьков
+										a.b-select__item(data-value="Львов") Львов
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Вид деятельности *
+							.col-12.col-lg-5
+								.b-select.js-dropdown-body
+									.b-select__caption-wrap.js-dropdown-btn
+										span.b-select__caption.js-value-name Выберите вид деятельности
+										input(type="hidden" value="" name="select").js-required.js-value-input
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+									.b-select__dropdown(data-child="a").js-dropdown-content
+										a.b-select__item(data-value="Украинский") Украинский
+										a.b-select__item.active(data-value="Белорусский") Белорусский
+										a.b-select__item(data-value="Русский") Русский
+					//table row
+					.b-table__row
+						.row
+							.col-lg-3.b-table__column-title
+								ul.b-list
+									li.b-list__item.b-list__item--sm
+										span.h7 Обязанности
+									li.b-list__item.b-list__item--sm
+										span.h7 Условия
+									li.b-list__item.b-list__item--sm
+										span.h7 Опыт
+							.col-12.col-lg-9
+								include ../blocks/wysiwyg--edit
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Язык
+							.col-12.col-lg-8
+								.row.align-items-center
+									.col-md-5.b-table__md-mb-30
+										.b-select.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name.active Украинский
+												input(type="hidden" value="Украинский" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content
+												a.b-select__item.active(data-value="Украинский") Украинский
+												a.b-select__item(data-value="Белорусский") Белорусский
+												a.b-select__item(data-value="Русский") Русский
+									.col-md-5.b-table__md-mb-30
+										.b-select.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name.active Высокий
+												input(type="hidden" value="Высокий" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content
+												a.b-select__item(data-value="Низкий") Низкий
+												a.b-select__item(data-value="Средний") средний
+												a.b-select__item.active(data-value="Высокий") Высокий
+									.col-md-2
+										a(href="#")
+											i.e-icon.e-icon--md.e-icon--m0
+												+icon('plus','e-icon__figure e-icon__figure--plus')
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Зарплата
+							.col-12.col-lg-8
+								.row.align-items-center.no-gutters
+									.col-11.col-md-2
+										input(type='text' placeholder='0' value="20 000" required).place-norm
+
+									.col-1.col-md-2
+										i.e-icon.e-icon--md.e-icon--m0.e-icon--no-border
+											+icon('dollar','e-icon__figure e-icon__figure--plus')
+
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Кандидаты *
+							.col-12.col-lg-8
+								label.e-radio.e-radio--md
+									input(type='radio', checked='checked', name='candidats')
+									span.e-radio__btn
+									| Все кандидаты
+								label.e-radio.e-radio--md
+									input(type='radio', name='candidats')
+									span.e-radio__btn
+									| Только кандидаты с видео-резюме
+
+					//table row
+					.b-table__footer
+						.row.align-items-center
+							.col-12.col-sm-6.col-lg-4.b-table__back.text-a-c-sm-down
+								a(href="#").btn-transp Предварительный просмотр
+							.col-12.col-sm-6.col-lg-8.text-a-c-sm-down
+								a(href="#").btn.btn--lg Опубликовать
+

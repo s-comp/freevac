@@ -1,0 +1,160 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('', 'Мои вакансии', 'Кабинет работодателя')
+	.c-content.c-content--padd-sm
+		.container
+			form(action="#" method="post")
+				.b-table
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Название вакансии
+							.col-10.col-lg-8
+								input(type='text' value="Менеджер по продажам со знанияем англ.языка (IT)")
+							.col-2.col-lg-1.b-table__column.b-table__column--right
+								i.e-icon.e-icon--xs.e-icon--m0
+									span.e-icon__figure.e-icon__figure--text ?
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-lg-3.b-table__column-title
+								h6.h7.b-table__caption Язык собеседования
+							.col-10.col-lg-4
+								.b-select.js-dropdown-body
+									.b-select__caption-wrap.js-dropdown-btn
+										span.b-select__caption.js-value-name Выберите язык
+										input(type="hidden" value="" name="select").js-value-input
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+									.b-select__dropdown(data-child="a").js-dropdown-content
+											a.b-select__item(data-value="Украинский") Украинский
+											a.b-select__item.active(data-value="Белорусский") Белорусский
+											a.b-select__item(data-value="Русский") Русский
+
+				.o-content-caption.o-content-caption__mt-60
+					h5.h5 Список вопросов для кандидатов
+
+				.b-table.js-time-body.js-int-table
+
+
+					//table row
+					.b-table__header
+						.row.align-items-center
+							.col-1
+							.col-11.col-sm-8.col-lg-7.b-table__head-caption-column
+								| Текст вопроса
+							.col-3.col-lg-1.b-table__head-caption-column.hidden-lg-down
+								| Время для ответов
+							.col-1.b-table__head-caption-column.hidden-lg-down
+								| Обязательный вопрос
+							.col-2
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-1.b-table__number 1
+							.col-11.col-lg-7.b-table__column-title
+								input(type="text" value="Расскажите немного о себе.")
+							.offset-1.offset-lg-0.col-3.col-lg-1
+								input(type="text" value="00:30" placeholder="00:00").b-table__time-input.js-time-interview
+
+							.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-0
+								.b-table__required-row
+									.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check.js-required(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon
+												+icon('check','main-checkbox__svg')
+											span.main-checkbox__label-text.b-table__auxiliary-text Обязательный вопрос
+							.col-8.col-lg-2.b-table__button-wrap
+
+								button.e-icon.e-icon--md.e-icon--right
+									+icon('save','e-icon__figure e-icon__figure--save')
+								button.e-icon.e-icon--md.e-icon--right
+									+icon('close','e-icon__figure e-icon__figure--close')
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-1.b-table__number 2
+							.col-11.col-lg-7.b-table__column-title.b-table__column-title--bold
+								| Вы считаете себя достойным занять эту должность? В чем ваши преимущества пере другими кандидатами?
+							.offset-1.offset-lg-0.col-3.col-lg-1
+								input(type="text" value="00:32" placeholder="00:00").b-table__time-input.js-time-interview
+							.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-0
+								.b-table__required-row
+									.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check.js-required(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon
+												+icon('check','main-checkbox__svg')
+											span.main-checkbox__label-text.b-table__auxiliary-text Обязательный вопрос
+							.col-8.col-lg-2.b-table__button-wrap
+								button.e-icon.e-icon--md.e-icon--right
+									+icon('edit','e-icon__figure e-icon__figure--edit')
+								button.e-icon.e-icon--md.e-icon--right
+									+icon('close','e-icon__figure e-icon__figure--close')
+
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-1.b-table__number 2
+							.col-11.col-lg-7.b-table__column-title.b-table__column-title--bold
+								| Чем Вас привлекает работа у нас в данной должности?
+							.offset-1.offset-lg-0.col-3.col-lg-1
+								input(type="text" value="00:32" placeholder="00:00").b-table__time-input.js-time-interview
+							.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-0
+								.b-table__required-row
+									.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check.js-required(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon
+												+icon('check','main-checkbox__svg')
+											span.main-checkbox__label-text.b-table__auxiliary-text Обязательный вопрос
+							.col-8.col-lg-2.b-table__button-wrap
+								button.e-icon.e-icon--md.e-icon--right
+									+icon('edit','e-icon__figure e-icon__figure--edit')
+								button.e-icon.e-icon--md.e-icon--right
+									+icon('close','e-icon__figure e-icon__figure--close')
+					//table row
+					.b-table__row
+						.row.align-items-center
+							.col-1.b-table__number 3
+							.col-11.col-lg-7.b-table__column-title
+								input(type="text" placeholder="Введите вопрос")
+							.offset-1.offset-lg-0.col-3.col-lg-1
+								input(type="text" placeholder="00:00").b-table__time-input.js-time-interview
+							.offset-1.offset-lg-0.col-11.col-lg-1.order-2.order-lg-0
+								.b-table__required-row
+									.main-checkbox.form__chekbox
+										label.main-checkbox__label
+											input.main-checkbox__check.js-required(type='checkbox', style='display: none')
+											span.main-checkbox__item.main-checkbox__item--icon
+												+icon('check','main-checkbox__svg')
+											span.main-checkbox__label-text.b-table__auxiliary-text Обязательный вопрос
+							.col-8.col-lg-2.b-table__button-wrap
+
+					//table row
+					.b-table__row.b-table__row--p-md
+						.row.align-items-center
+							.col-12
+								i.e-icon.e-icon--md.e-icon--m0
+									+icon('plus','e-icon__figure e-icon__figure--plus')
+
+
+					//table row
+					.b-table__footer
+						.row.align-items-center
+							.col-12.col-sm-4.b-table__back
+								a(href="#").btn-transp
+									i.e-icon.e-icon--no-border.e-icon--no-size
+										+icon('backspace','e-icon__figure e-icon__figure--backspace')
+									| Назад
+							.col-12.col-sm-8.text-a-c-sm-down
+								a(href="#").js-show-tabs.btn.btn--lg Сохранить
+
+
+

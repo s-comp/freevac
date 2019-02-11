@@ -1,0 +1,190 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('', 'Мои отклики','Кабинет соискателя')
+	.c-content.c-content--padd-sm
+
+		.b-commutator.js-commutator-body
+			//Tabs
+			.b-commutator__tabs.b-commutator__tabs--mb
+				.container
+					.row
+						.col-sm-6
+							.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+								| Отклики
+						.col-sm-6
+							.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+								| Просмотры
+			//Tab content
+			section.b-commutator__content.active.js-commutator-content(data-child='a')
+				.o-dialog-box
+					.container
+						.row
+							.col-lg-4.col-xl-3
+								.o-aside-wrap.js-filter-wrap
+									button.btn-transp.js-open-filter.b-filter-btn-open-filter Открыть отклики
+									.o-aside.js-filter-body
+										.o-aside__content
+											//Responce
+											.b-person-message.active
+												.b-person-message__figure
+													img(src="assets/img/company/item-1.jpg" alt="alt")
+												.b-person-message__body
+													.b-person-message__caption
+														.b-person-message__name HP Украина
+														.b-person-message__date 11.02.17
+													.b-person-message__vacancy-caption
+														i.e-icon.e-icon--xxs.e-icon--mr10
+															+icon('camera','e-icon__figure e-icon__figure--xxs ')
+														| Менеджер по продажам со знанием англ. языка (IT)
+
+											//Responce
+											.b-person-message.__unread
+												.b-person-message__figure
+													img(src="assets/img/company/item-2.jpg" alt="alt")
+												.b-person-message__body
+													.b-person-message__caption
+														.b-person-message__name ТОВ АФ "ПКФ аудит-финансы"
+														.b-person-message__date 11.02.17
+													.b-person-message__vacancy-caption
+														| Продавец консультант зоомаркет
+
+											//Responce
+											.b-person-message
+												.b-person-message__figure
+													img(src="assets/img/company/item-3.jpg" alt="alt")
+												.b-person-message__body
+													.b-person-message__caption
+														.b-person-message__name ПроАудит
+														.b-person-message__date 11.02.17
+													.b-person-message__vacancy-caption
+														| Территориальный супервайзер
+
+											//Responce
+											.b-person-message
+												.b-person-message__figure
+													img(src="assets/img/company/item-4.jpg" alt="alt")
+												.b-person-message__body
+													.b-person-message__caption
+														.b-person-message__name LG Украина
+														.b-person-message__date 11.02.17
+													.b-person-message__vacancy-caption
+														| Инструктор, оператор детских аттракционов
+
+											//Responce
+											.b-person-message
+												.b-person-message__figure
+													img(src="assets/img/company/item-2.jpg" alt="alt")
+												.b-person-message__body
+													.b-person-message__caption
+														.b-person-message__name ТОВ АФ "ПКФ аудит-финансы"
+														.b-person-message__date 11.02.17
+													.b-person-message__vacancy-caption
+														| Middle Ruby on Rails разработчик
+
+											//Responce
+											.b-person-message
+												.b-person-message__figure
+													img(src="assets/img/company/item-3.jpg" alt="alt")
+												.b-person-message__body
+													.b-person-message__caption
+														.b-person-message__name ПроАудит
+														.b-person-message__date 11.02.17
+													.b-person-message__vacancy-caption
+														| Продавец-консультант мобильных телефонов
+
+							.col-lg-8.col-xl-9
+								.b-message-box
+									.b-message-box__caption
+										h4.o-dialog-box__vacancy-title
+											i.e-icon.e-icon--xs.e-icon--mr10
+												+icon('camera','e-icon__figure e-icon__figure--xs')
+											| Менеджер по продажам со знанием англ. языка (IT)
+										.b-message-box__company-name HP Украина
+
+										.b-profile.__padd-t-0
+											.row.justify-content-center.align-items-center
+												.b-profile__button-wrap.__padd-def
+													a(href="#").btn.btn--xs-two-row
+														| Пройти
+														br
+														| видеособеседование
+												.b-profile__button-wrap.__padd-def
+													a(href="#").btn.btn--xs-two-row
+														| Отклонить
+														br
+														| видеособеседование
+												.b-profile__button-wrap.__padd-def
+													a(href="#").btn.btn--xs-two-row
+														| Отклонить
+														br
+														| вакансию
+
+
+									.b-message-box__body
+
+										//Message
+										.b-message-box__message.__alien
+											.b-message-box__message-caption
+												.b-message-box__message-name HP Украина
+												.b-message-box__message-date сегодня в 13:00
+											.b-message-box__message-body
+												.b-message-box__message-message
+													| Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия. Равным образом консультация с широким активом.
+
+
+										//Message
+										.b-message-box__message.__inform.js-slideToggle-wrap
+											.col
+												.b-message-box__inform-caption
+													.b-message-box__message-name.__bold Как проходит видеособеседование
+													.b-message-box__open-content-btn.js-slideToggle-btn
+														span.open развернуть
+														span.close свернуть
+
+														i.e-icon.e-icon--no-border.e-icon--no-size
+															+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small')
+												.b-message-box__inform-body.js-slideToggle-content
+													.b-text-info.b-text-info--mb-30.b-text-info--c-light
+														.b-text-info__caption-wrap.b-text-info__caption-wrap--align-top-table
+															i.e-icon
+																+icon('camera','e-icon__figure e-icon__figure--camera')
+															p.b-text-info__text Вы записываете на камеру ответы на несколько текстовых вопросов. Потом отправляете записи работодателю и ждете ответа. В момент записи работодатель не находится онлайн и не видит вас.
+													.b-text-info.b-text-info--mb-30.b-text-info--c-light
+														.b-text-info__caption-wrap.b-text-info__caption-wrap--align-top-table
+															i.e-icon
+																+icon('eye-slash','e-icon__figure e-icon__figure--eye-slash')
+															p.b-text-info__text Видеоинтервью безопасно. После отправки доступ к интервью будет только у вас и у работодателя. Никто посторонний не сможет найти и увидеть вашу запись.
+													.b-text-info.b-text-info--c-light
+														.b-text-info__caption-wrap.b-text-info__caption-wrap--align-top-table
+															i.e-icon
+																+icon('mobile','e-icon__figure e-icon__figure--mobile')
+															p.b-text-info__text Интервью можно записать на следующих устройствах:
+																br
+																| — компьютеры и ноутбуки с камерой и микрофоном.
+																br
+																| — iPhone 4 и выше, iPad 2 и выше.
+																br
+																| — смартфоны на платформе Android 4.0 и выше.
+
+
+
+									.b-message-box__footer
+										.b-message-box__text-editor
+											include ../blocks/wysiwyg-enter-text
+
+										.b-message-box__button-wrpa
+											.row.no-gutters
+												.b-message-box__button.__lg
+													button.btn.btn--lg Отправить
+												.b-message-box__button.__sm
+													button(data-tooltip="Удалить").e-manipulation-btn
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+
+
+
+
+

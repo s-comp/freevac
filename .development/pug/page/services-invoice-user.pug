@@ -1,0 +1,79 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Подбор вакансии','Услуги и сервисы')
+	.c-content
+		.b-score
+			.container
+				.row.justify-content-center
+					.col
+						h5.h5.b-score__caption Счет на оплату №107 от 25 мая 2017
+
+				.row.b-score__row
+					.col-lg-4
+						h6.h7 Поставщик
+					.col-lg-8
+						.b-score__strong ОАО «Фривак»
+						p Р/С 1234567890, в банке Приватбанк, МФО 33000,
+							| код по ЕГРПОУ 12345678, ИНН 123456789, № свид. 12345
+							| Не является плательщиком налога на прибыль на общих основаниях
+				.row.b-score__row
+					.col-lg-4
+						h6.h7 Покупатель
+					.col-lg-8
+						.b-score__strong Кузьмина Ярослава Ивановна
+
+			.b-table
+				.container
+					.b-table__header.b-table__header--bg.hidden-lg-down
+						.row.align-items-center
+							.col-5 Товар
+							.col-3 Количество
+							.col-2 Цена
+							.col-2 Сумма
+
+					//table row
+					.b-table__row.b-table__row--p-md
+						.row.align-items-center
+							.col-lg-5
+								span.b-table__label Товар:
+								| Подбор кандидата
+							.col-lg-3
+								span.b-table__label Количество:
+								| 2 публикация
+							.col-lg-2
+								span.b-table__label Цена:
+								| 1000 грн.
+							.col-lg-2
+								span.b-table__label Сумма:
+								| 2000 грн.
+					//table row
+					.b-table__row.b-table__row--p-md.b-table__row--border-top.b-table__row--border-dark
+						.row.align-items-center
+							.col-lg-5
+								| Всего наименований 2, на сумму 2000,00 грн
+								.b-score__strong Две тысячи гривен 00 копеек
+
+							.col-lg-3
+							.col-lg-2
+								.b-score__strong Итого:
+							.col-lg-2
+								.b-score__strong 2000 грн.
+
+					//table footer
+					.b-table__footer.b-table__footer--border-top
+						.row.align-items-center.justify-content-sm-between
+							.col-12.col-lg-3.b-table__back
+								a(href="#").btn-transp
+									i.e-icon.e-icon--no-border.e-icon--no-size
+										+icon('backspace','e-icon__figure e-icon__figure--backspace')
+									| Назад
+							.col-12.col-lg-6.text-a-c.b-table__footer-button-c
+								a(href="#").btn.btn--lg распечатать
+
+							.col-12.col-lg-3.b-table__footer-button-c.text-a-r-lg-up
+								a(href="#").btn-transp.__lg  Скачать счет
+
+
+

@@ -1,0 +1,111 @@
+extends ../template/employer
+block title
+	| Markup
+block main
+	+breadcrumb('Профиль кандидата', 'Кандидаты')
+	.c-content
+		.container
+			.row
+				//Profile aside
+				.col-md-4
+					.b-profile-card
+						img(src="assets/img/candidats/small/circle.jpg" alt="alt").b-profile-card__photo
+
+						p Работаю, но готова к предложениям.
+						p от  <span class="b-profile-card__strong">20 000</span> грн.
+						span.b-profile-card__delimiter
+						p Киев
+							span.text-row
+								i.e-icon.e-icon--mr10.e-icon--xxs
+									+icon('check','e-icon__figure e-icon__figure--check--xs')
+								| контактные данные
+						span.b-profile-card__delimiter
+
+						p.b-profile-card__small-title Дата рождения
+
+						p 8 января 1983 <span class="b-profile-card__light-text">(34 года)</span>
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Сфера
+							p IT, компьютеры, интернет
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Язык
+							p Английский — средний
+							p Испанский — средний
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Образование
+							p Высшее
+
+						.b-profile-card__inform-block
+							p.b-profile-card__small-title Опыт работы
+							p отсутствует
+
+				//Profile CONTENT
+				.col-md-8
+					.b-profile
+						.b-profile__caption
+							h3.b-profile__title Кузьминова Ярослава Ивановна
+							h5.b-profile__sub-caption Инженер компьютерных сетей
+
+
+							.row.justify-content-center.align-items-center.justify-content-md-between
+								.b-profile__button-wrap
+									a(href="#").btn-transp.__lg.b-profile__btn Пригласить на
+										br
+										| видео-собеседование
+								.b-profile__button-wrap
+									a(href="#").btn-transp.__lg.b-profile__btn Предложить вакансию
+								.b-profile__button-wrap
+									a(href="#").btn-transp.__lg.b-profile__btn Добавить в избранное
+
+						.b-profile__content
+							.b-profile__text-block
+								.b-text-info
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+										i.e-icon
+											+icon('key','e-icon__figure e-icon__figure--sound')
+										h5.h5.b-text-info__caption.__md Ключевая информация
+									ul.b-text-info__list
+										li.b-text-info__list-item весомый опыт по управлению ключевыми клиентами
+										li.b-text-info__list-item продвинутый английский
+										li.b-text-info__list-item стремления к обучению и развитию
+										li.b-text-info__list-item лидерские и управленческие качества
+										li.b-text-info__list-item командрный игрок
+
+
+							.b-profile__text-block
+								.b-text-info
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+										i.e-icon
+											+icon('graduation','e-icon__figure e-icon__figure--sound')
+										h5.h5.b-text-info__caption.__md  Место учебы
+									.b-text-info__content
+										h6.b-text-info__sub-caption Киевский национальный университет имени Тараса Шевченко
+										p <strong> Специализация:</strong> Менеджмент
+										p <strong> Степень:</strong> магистр
+										p <strong> Год окончания: </strong> 2008
+
+
+							.b-profile__text-block
+								.b-text-info
+									.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+										i.e-icon
+											+icon('info','e-icon__figure e-icon__figure--sound')
+										h5.h5.b-text-info__caption.__md Дополнительно
+									.b-text-info__content
+										p Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки новых предложений. Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании новых предложений. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности требуют определения и уточнения направлений прогрессивного развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития.
+
+							.row.align-items-center.justify-content-center.justify-content-md-end.b-profile__footer
+
+								.b-profile__button-wrap.__padd-def
+									a(href="#").btn-transp.__lg.b-profile__btn Скачать резюме
+								.b-profile__button-wrap.__padd-def
+									a(href="#").btn-transp.__lg.b-profile__btn Печатать резюме
+
+
+
+
+
+

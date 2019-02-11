@@ -1,0 +1,42 @@
+.b-offer
+	&__name
+		text-align: center
+		color: $font-dark
+		margin-bottom: 10px
+	&__position
+		text-align: center
+		font-family: $font-italic
+		color: $font-light
+		
+		
+	&__img
+		display: block
+		margin: 0 auto 30px
+	&__label
+		font-family: $font-bold
+		margin-top: 0
+		color: $font-dark
+
+	&__check-vacancy
+		margin-bottom: 25px
+
+		&:last-child
+			margin-bottom: 0
+	//.b-offer
+	@media screen and (min-width: $sm-l)
+		&__name,
+		&__position
+			text-align: left
+		&__img
+			margin: 0
+			
+		
+	@media screen and (min-width: $lg)
+		&__position,
+		&__label
+			font-size: 18px
+
+
+	@media screen and (min-width: $xl)
+		&__check-vacancy
+			margin-bottom: 40px

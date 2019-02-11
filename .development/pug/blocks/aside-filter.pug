@@ -1,0 +1,316 @@
+include ../global/_mixins
+.o-aside-wrap.js-filter-wrap
+	button.btn.btn--transp.btn--xs.b-filter-btn-open-filter.js-open-filter Открыть фильтры
+	aside.o-aside.js-filter-body
+		.o-aside__content
+			.b-filter
+				a(href="#").b-filter__top-caption
+					i.e-icon.e-icon--xs
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+					h6.h7.b-filter__top-title Параметры
+
+				//Filter block
+				.b-filter__block
+					.b-filter__block-body
+						.b-filter__header-block
+							.b-filter__title Сферы
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point IT, компьютеры, интернет
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Администрация, руководство среднего звена
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Бухгалтерия, аудит
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Гостинично-ресторанный бизнес, туризм
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Дизайн, творчество
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Красота, фитнес, спорт
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Культура, музыка, шоу-бизнес
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Логистика, склад, ВЭД
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+						//Filter
+						.b-filter__dropdown.js-filter-dropdown-body
+							.b-filter__dropdown-caption.js-filter-dropdown-btn
+								.b-filter__btn.b-filter__btn-close
+									+icon('minus','b-filter__icon')
+								.b-filter__btn.b-filter__btn-open
+									+icon('plus','b-filter__icon')
+								.b-filter__point Маркетинг, реклама, PR
+							.b-filter__dropdown-body.b-filter__dropdown-body--pl.js-filter-dropdown-content
+								+filter-item('Game Developer')
+								+filter-item('IT продавец')
+								+filter-item('Mobile Developer')
+								+filter-item('Product Manager')
+								+filter-item('Архитектор ПО')
+								+filter-item('Дизайнер (Web, UI, 3D)')
+								+filter-item('Консультант по внедрению ПО')
+								+filter-item('Специалист по сетям')
+				//Filter block
+				.b-filter__block.js-filter-dropdown-body
+
+					.b-filter__header-block.js-filter-dropdown-btn
+						.b-filter__title Иностранный язык
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0.b-filter__arrow
+							+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+
+					.b-filter__dropdown-body.js-filter-dropdown-content
+						.b-select.b-filter__select.js-dropdown-body
+							.b-select__caption-wrap.js-dropdown-btn
+								span.b-select__caption.js-value-name Выберите язык
+								input(type="hidden" value="" name="select").js-value-input
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+							.b-select__dropdown(data-child="a").js-dropdown-content
+								a.b-select__item(data-value="Украинский") Украинский
+								a.b-select__item(data-value="Белорусский") Белорусский
+								a.b-select__item(data-value="Русский") Русский
+						.b-select.b-filter__select.js-dropdown-body
+							.b-select__caption-wrap.js-dropdown-btn
+								span.b-select__caption.js-value-name Выберите уровень
+								input(type="hidden" value="" name="select").js-value-input
+								i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+									+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+							.b-select__dropdown(data-child="a").js-dropdown-content
+								a.b-select__item(data-value="Украинский") Украинский
+								a.b-select__item(data-value="Белорусский") Белорусский
+								a.b-select__item(data-value="Русский") Русский
+
+				//Filter block
+				.b-filter__block.js-filter-dropdown-body
+
+					.b-filter__header-block.js-filter-dropdown-btn
+						.b-filter__title Опыт работы
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0.b-filter__arrow
+							+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+					.b-filter__dropdown-body.js-filter-dropdown-content
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='experience')
+							span.e-radio__btn.e-radio__btn--xs
+							| Без опыта
+						label.e-radio.b-filter__radio
+							input(type='radio', checked='checked', name='experience')
+							span.e-radio__btn.e-radio__btn--xs
+							| до 5 лет
+						label.e-radio.b-filter__radio
+							input(type='radio', name='experience')
+							span.e-radio__btn.e-radio__btn--xs
+							| от 5 лет
+						label.e-radio.b-filter__radio
+							input(type='radio', name='experience')
+							span.e-radio__btn.e-radio__btn--xs
+							| от 10 лет
+						label.e-radio.b-filter__radio
+							input(type='radio', name='experience')
+							span.e-radio__btn.e-radio__btn--xs
+							| от 15 лет
+				//Filter block
+				.b-filter__block.js-filter-dropdown-body
+					.b-filter__header-block.js-filter-dropdown-btn
+						.b-filter__title Возвраст
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0.b-filter__arrow
+							+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+					.b-filter__dropdown-body.js-filter-dropdown-content
+						.b-form
+							.b-form__field-group-row.align-items-center
+								.b-form__input-xxs
+									input(type='text' placeholder='от').b-form__input-place-norm
+								span.b-form__subs —
+								.b-form__input-xxs
+									input(type='text' placeholder='до').b-form__input-place-norm
+								span.b-form__subs лет
+
+
+				//Filter block
+				.b-filter__block.js-filter-dropdown-body
+
+					.b-filter__header-block.js-filter-dropdown-btn
+						.b-filter__title Вид занятости
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0.b-filter__arrow
+							+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+					.b-filter__dropdown-body.js-filter-dropdown-content
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='employment')
+							span.e-radio__btn.e-radio__btn--xs
+							| Полная занятость
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='employment')
+							span.e-radio__btn.e-radio__btn--xs
+							| Стажировка / практика
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='employment')
+							span.e-radio__btn.e-radio__btn--xs
+							| Неполная занятость
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='employment')
+							span.e-radio__btn.e-radio__btn--xs
+							| Удаленая работа
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='employment')
+							span.e-radio__btn.e-radio__btn--xs
+							| Проектная работа
+				//Filter block
+				.b-filter__block.js-filter-dropdown-body
+
+					.b-filter__header-block.js-filter-dropdown-btn
+						.b-filter__title Пол
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0.b-filter__arrow
+							+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+					.b-filter__dropdown-body.js-filter-dropdown-content
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='sex')
+							span.e-radio__btn.e-radio__btn--xs
+							| Без разницы
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='sex')
+							span.e-radio__btn.e-radio__btn--xs
+							| Женский
+						label.e-radio.b-filter__radio
+							input(type='radio',  name='sex')
+							span.e-radio__btn.e-radio__btn--xs
+							| Мужской
+				//Filter block
+				.b-filter__block.js-filter-dropdown-body
+
+					.b-filter__header-block.js-filter-dropdown-btn
+						.b-filter__title Зарплата
+						i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0.b-filter__arrow
+							+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+					//.b-filter__dropdown-body.js-filter-dropdown-content
+					.js-filter-dropdown-content.js-hidden-onload
+						.e-range-slider
+							.b-form
+								.b-form__field-group-row.align-items-center
+									.b-form__input-xxs
+										input(type='text' value="500").js-range-slider-min.b-form__input-place-norm
+									span.b-form__subs —
+									.b-form__input-xxs
+										input(type='text' value="10000").js-range-slider-max.b-form__input-place-norm
+									span.b-form__subs грн.
+							.e-range-slider__slider(se-min='0', se-step='1', se-min-value='500', se-max-value='10000', se-max='25000').js-range-slider
+								.e-range-slider__slider-touch-left.js-range-slider-touch-left
+									span
+								.e-range-slider__slider-touch-right.js-range-slider-touch-right
+									span
+								.e-range-slider__slider-line
+									span.js-range-slider-span

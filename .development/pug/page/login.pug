@@ -1,0 +1,43 @@
+extends ../template/main
+block title
+	| Markup
+block main
+	+breadcrumb('Вход в личный кабинет')
+	.c-content
+		section.b-login
+			.container
+				.row
+					.b-login__wrap-form
+						form(action='/' method='post').b-form
+							.b-form__error
+								| Такого сочетания логина и пароля не существует!
+							+input('Email *', '', 'email')
+							+input('Пароль *', '', 'password')
+							.b-form__field-wrap.b-form__field-wrap--row
+								.main-checkbox.form__chekbox
+									label.main-checkbox__label
+										input.main-checkbox__check(type='checkbox', style='display: none')
+										span.main-checkbox__item.main-checkbox__item--icon
+											+icon('check','main-checkbox__svg')
+										span.main-checkbox__label-text.c-form__chek-label-text не выходить из системы
+								a(href="#reccovery-pass").b-form__link.b-form__link--recov-pass.js-modal-btn Забыли пароль?
+							.b-form__button-wrap
+								button.btn.btn--lg.js-send Войти
+	//reccovery-pass modal
+	.o-modal#reccovery-pass
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				.o-modal__inside-wrap
+					h5.h5.o-modal__caption Востановление пароля
+					.o-modal__body
+						form(action="/" method="post").b-form
+							p.o-modal__text Введите электронную почту, которую вы использовали
+								br
+								| при регистрации. Туда вышлем пароль.
+							+input('Email *', '', 'email')
+							.b-form__button-wrap.b-form__button-wrap--modal
+								button.btn.btn--lg.js-send Отправить
+

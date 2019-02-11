@@ -1,0 +1,26 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Кабинет работодателя')
+	.c-content
+		.b-service
+			.container
+				.row.justify-content-center
+					.col.b-service__inform
+						i.e-icon.e-icon--lg.b-service__inform-figure.e-icon--no-border
+							+icon('freevac-icon-lg','e-icon__figure e-icon__figure--freevac-icon-lg')
+
+						h5.h5 Поздравляем с регистрацией!
+
+						p.b-service__inform-text У вас нет резюме, создайте его
+
+
+				.b-service__footer.__no-border
+					.row.justify-content-center
+						a(href="#").btn.btn--lg Создать резюме
+
+
+
+						
+

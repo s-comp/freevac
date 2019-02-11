@@ -1,0 +1,44 @@
+
+.b-nav
+	display: flex
+	max-width: 100%
+	margin: 0
+	flex-direction: column
+	background-color: $grey
+	width: 100%
+	box-shadow: 0 15px 15px 0 rgba(88,120,131,.21)
+	&__item
+		padding: 13px 15px
+		color: $font
+		font-family: $font-bold
+		letter-spacing: -0.27px
+		&.active,
+		&:focus,
+		&:hover
+			color: $accent
+			background-color: $nav-bar-btn-bg
+
+		&--white
+			font-family: $rubik
+			font-weight: 400
+			//color: #ffffff
+
+	//.b-nav
+	@media screen and (min-width: $lg)
+		width: auto
+
+		flex-direction: row
+		background: transparent
+		box-shadow: none
+		&__item
+			font-size: 15px
+			padding: 12px
+			&--white
+				color: #ffffff
+
+	@media screen and (min-width: $xl)
+		&__item
+			padding: 12px
+	@media screen and (min-width: $xxl)
+		&__item
+			padding: 20px

@@ -1,0 +1,193 @@
+.b-table
+	position: relative
+	&--border-top
+		&:after
+			content: ''
+			position: absolute
+			//left: 15px
+			left: 0
+			top: 0
+			border-bottom: 1px solid $grey-darker
+			height: 1px
+			//width: calc(100% - 30px)
+			width: 100%
+			display: block
+	&--even-bg
+		.b-table__row
+			padding-left: 15px
+			padding-right: 15px
+			&:nth-child(even)
+	&--odd-bg
+		.b-table__row
+			padding-left: 15px
+			padding-right: 15px
+			&:nth-child(odd)
+				background-color: $grey-light
+	&__header
+		font-size: 16px
+		position: relative
+		padding-bottom: 15px
+		padding-top: 15px
+		//margin-bottom: 15px
+		border-bottom: 1px solid $grey-darker
+		border-top: 1px solid $grey-darker
+		&--bg
+			padding-left: 15px
+			padding-right: 15px
+			background-color: $grey-light
+			border-bottom-color: $border-dark
+			.b-table__row
+				padding-left: 15px
+				padding-right: 15px
+	&__row
+		padding-top: 18px
+		padding-bottom: 18px
+		position: relative
+		&--border
+			border-bottom: 1px solid $grey-darker
+			border-top: 1px solid $grey-darker
+
+		&--border-top
+			border-top: 1px solid $grey-darker
+		&--border-bottom
+			border-bottom: 1px solid $grey-darker
+		&--border-dark
+			border-color: $border-dark
+
+
+		&--p-md
+			padding-top: 40px
+			padding-bottom: 40px
+		&--checked
+			padding-top: 40px
+			padding-bottom: 25px
+		&--mt15
+			margin-top: 15px
+
+		&.active
+			.b-table__time
+				opacity: 1
+				visibility: visible
+			.b-table__time-input
+				background-color: $error-block-bg
+			.b-table__column-title--bold
+				font-family: $font-bold
+
+	&__column
+
+		&--right
+			text-align: right
+
+	&__caption
+		margin-bottom: 0
+
+	&__head-caption-column
+
+		font-size: 13px
+		color: $font-light
+	&__column-title
+		margin-bottom: 15px
+	&__number
+		color: $font-light
+		font-family: $font-def-light
+		font-size: 16px
+		text-align: center
+
+	&__button-wrap
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+	&__time-wrap
+		position: relative
+		height: 40px
+	&__time
+		display: flex
+		align-items: center
+		opacity: 0
+		visibility: hidden
+	&__time-input
+		font-size: 14px
+		padding-left: 4px
+		padding-right: 4px
+		text-align: center
+	&__time-desc
+		font-size: 11px
+		line-height: 1
+		margin-left: 5px
+	&__back
+		margin-bottom: 35px
+
+	&__footer
+		position: relative
+		padding-top: 40px
+		padding-bottom: 40px
+		margin-top: 15px
+		//border-bottom: 1px solid $grey-darker
+		border-top: 1px solid $grey-darker
+		&--border-top
+			border-top: 1px solid $grey-darker
+			border-bottom: none
+	&__add-link-wrap
+		text-align: right
+	&__add-link
+		text-decoration: underline
+		color: $font-dark
+		font-size: 14px
+	&__auxiliary-text
+		font-size: 13px
+		margin: 5px 0
+		display: inline-block
+	&__footer-button-wrap
+		padding: 0 15px
+
+
+
+	&__label
+		display: block
+		font-family: $font-bold
+		color: $font-dark
+		margin: 5px 0
+
+	&__required-row
+		margin-top: 8px
+
+	//.b-table
+	@media screen and (max-width: $max-sm-l)
+		&__md-mb-30
+			margin-bottom: 30px
+	@media screen and (max-width: $max-lg)
+
+		&__footer-button-c
+			margin-bottom: 15px
+			text-align: center
+			&:last-child
+				margin-bottom: 0
+	@media screen and (max-width: $max-sm)
+		&__pl0
+			padding-left: 0
+		&__number
+			padding-right: 0
+
+	@media screen and (min-width: $sm)
+		&__back
+			margin-bottom: 0
+	@media screen and (min-width: $lg)
+		&__row
+			font-size: 15px
+		&__column-title
+			margin-bottom: 0
+		&__time-input
+			font-size: 16px
+		&__auxiliary-text,
+		&__label
+			display: none
+		&__date,
+		&__left-time
+			text-align: center
+		&__required-row
+			width: 26px
+			margin: 0 0 0 auto
+	@media screen and (min-width: $xl)
+		&__time-input
+			font-size: 18px

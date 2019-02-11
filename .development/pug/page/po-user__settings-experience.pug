@@ -1,0 +1,56 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Опыт работы', 'Настройки профиля')
+	.c-content
+		.container
+			.row.justify-content-center
+				.col-lg-10
+					form.b-form
+						//Form block
+						.b-form__block.__padd-t-0
+							//Form-row
+							.row.align-items-center
+								.col-sm-4
+									.b-form__field-label.__bold Название компании (сайт)
+								.col-sm-8
+									+input('Введите название компании или адрес сайта')
+							//Form-row
+							.row.align-items-center
+								.col-sm-4
+									.b-form__field-label.__bold Должность
+								.col-sm-8
+									+input('Введите вашу должность')
+							//Form-row
+							.row.align-items-center
+								.col-sm-4
+									.b-form__field-label.__bold Период работы
+								.col-xl-5.col-md-6.col-sm-8
+									.b-form__field-wrap.row.align-items-center
+										.col
+											input(type='text' placeholder='мм').b-form__field.js-required.place-norm
+										.col
+											input(type='text' placeholder='гггг').b-form__field.js-required.place-norm
+										.b-form__subs
+											| —
+										.col
+											input(type='text' placeholder='мм').b-form__field.js-required.place-norm
+										.col
+											input(type='text' placeholder='гггг').b-form__field.js-required.place-norm
+							//Form-row
+							.row.align-items-center
+								.col-sm-4
+									.b-form__field-label.__bold Контакт для связи
+								.col-sm-8
+									+input('Введите контакт для связи')
+							//Form-row
+							.row.align-items-center
+								.col-sm-4
+									.b-form__field-label.__bold Контактное лицо
+								.col-sm-8
+									+input('Введите контактное личцо')
+
+						.b-form__footer.__no-border
+							.row.justify-content-center.no-gutters
+								button.btn.btn--lg.js-send Отправить

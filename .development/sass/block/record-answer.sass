@@ -1,0 +1,80 @@
+.b-record-answer
+	&.finish-record
+		.b-record-answer__header
+			display: none
+		.b-record-answer__footer-test-record
+			display: flex
+	&.record
+		.b-record-answer__header
+			border: 2px solid $accent
+	&__header
+		margin-bottom: 55px
+		padding: 5px 0
+		&.record
+			border: 2px solid $accent
+	&__step
+		font-family: $font-bold
+		color: $font-dark
+		position: relative
+		&--next
+			font: 16px $font-def-light
+			color: $font-light
+			&:before
+				content: '/'
+				color: $font-light
+				margin-left: 5px
+				margin-right: 5px
+	&__caption
+		font-size: 16px
+		margin: 15px 0
+	&__time,
+	&__time-test
+		text-align: center
+	&__time-left
+		display: flex
+		align-items: center
+	&__btn
+		margin: 0 15px 15px 15px
+
+	&__stop-record
+		display: none
+
+	&__video
+		margin: 15px 0 0
+	&__footer
+		position: relative
+		margin-top: 55px
+		padding: 55px 0
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 15px
+			right: 15px
+			border-bottom: 1px solid $grey-darker
+			height: 1px
+			width: calc(100% - 30px)
+			display: block
+	&__footer-button-wrap
+		width: 100%
+		text-align: center
+		&:last-child
+			margin-bottom: 0
+	&__footer-test-record
+		display: none
+	@media screen and (min-width: $xs)
+		&__btn
+			margin: 0 15px 15px 15px
+
+	@media screen and (min-width: $sm)
+		&__caption
+			margin: 15px 0
+	@media screen and (min-width: $lg)
+		&__footer-button-wrap
+			//margin-bottom: 0
+			width: auto
+			text-align: left
+		&__btn
+			margin: 0 30px 0 0
+			&:last-child
+				margin: 0

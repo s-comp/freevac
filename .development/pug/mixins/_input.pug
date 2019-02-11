@@ -1,0 +1,21 @@
+mixin input(placeholder, className, type)
+	if type === 'checkbox'
+		.b-form__field-wrap
+			.main-checkbox.form__chekbox
+				label.main-checkbox__label
+					input.main-checkbox__check.js-required(type='checkbox', style='display: none')
+					span.main-checkbox__item.main-checkbox__item--icon
+						+icon('check','main-checkbox__svg')
+					span.main-checkbox__label-text.c-form__chek-label-text С <a href="rules.html" class="main-checkbox__label-link">правилами сервиса</a> согласен
+	else if className && type && type !== 'checkbox'
+		.b-form__field-wrap
+			input(type=type placeholder=placeholder class="b-form__field js-required " + className required)
+	else if className
+		.b-form__field-wrap
+			input(type="text" placeholder=placeholder class="b-form__field js-required " + className required)
+	else if type && type !== 'checkbox'
+		.b-form__field-wrap
+			input(type=type placeholder=placeholder class="b-form__field js-required" required)
+	else
+		.b-form__field-wrap
+			input(type="text" placeholder=placeholder class="b-form__field js-required" required)

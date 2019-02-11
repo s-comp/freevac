@@ -1,0 +1,21 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Подбор вакансии','Услуги и сервисы')
+	.c-content
+		.b-service
+			.container
+				.row.justify-content-center
+					.col.b-service__inform.b-service__inform--mb-50
+						i.e-icon.e-icon--lg.e-icon--bord-red.b-service__inform-figure
+							+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--lg')
+
+
+						h5.h5 Недостаточно средств на счету!
+						
+				.row.justify-content-center
+					.col
+						.b-service__footer
+							.row.justify-content-center
+								a(href="#").btn-transp Повторить ввод данных

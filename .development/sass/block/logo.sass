@@ -1,0 +1,24 @@
+.b-logo
+	display: block
+	line-height: 0
+	max-width: 120px
+	&--dark
+		.logosub0
+			fill: $dark-bg
+	@media screen and (min-width: $xl)
+		max-width: 166px
+	&__icon
+		display: block
+		max-width: 100%
+		font-size: 36px
+		@media screen and (min-width: $xs)
+			font-size: 42px
+
+		@media screen and (min-width: $xl)
+			font-size: 68px
+			max-width: 166px
+
+	@media screen and (max-width: $max-lg)
+		&--dark-table
+			.logosub0
+				fill: $dark-bg

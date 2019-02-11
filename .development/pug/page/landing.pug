@@ -1,0 +1,260 @@
+extends ../template/landing
+block title
+    | Markup
+block main
+    section.o-welcome.o-welcome--style-2
+        //Slide 1
+        div(style="background-image: url(assets/img/welcome/item-4.jpg)").o-welcome__item.active
+            .container-fluid
+                .row.align-content-center.justify-content-center
+                    .o-welcome__content
+                        h1.o-welcome__caption.o-welcome__caption--style-2.o-welcome__caption--decoration Мы поможем вам в поиске
+                        h2.o-welcome__desc
+                            | Компания FreeVac — это сервис-провайдер информационной
+                            br
+                            | системы сопровождения рекрутинга, осуществляющий операции на рынках
+                            br
+                            | труда Восточной и Центральной Европы
+                        .o-welcome__btn-list
+                            .o-welcome__btn-list-item
+                                a(href="#").btn.btn--style-2.btn--welcome.btn--shadow Ищу сотрудника
+                            .o-welcome__btn-list-item
+                                a(href="#").btn.btn--style-2.btn--welcome.btn--shadow Ищу работу
+
+    section
+        .container
+            .b-orientation
+                .b-caption.b-caption--no-decoration
+                    h4.b-caption__title для кого сервис Free<span class="b-caption__accent">Vac</span>?
+                .row.justify-content-center
+                    .col-lg-5
+                        .b-orientation__item
+                            .b-orientation__item-figure
+                                +icon('employer','b-orientation__svg')
+
+                            h5.b-orientation__item-title работодателей
+
+                            h6.b-orientation__item-desc <span class="bold">Простой</span> и <span class="bold">гибкий</span> в использовании <span class="bold">сервис</span>, как средство повышения эффективности и профессионализма.
+
+                    .col-lg-5
+                        .b-orientation__item
+                            .b-orientation__item-figure
+                                +icon('candidat','b-orientation__svg')
+
+                            h5.b-orientation__item-title кандидатов
+
+                            h6.b-orientation__item-desc <span class="bold">Радикально новый</span> метод трудоустройства, отличный способ выделиться на фоне других в глазах зарубежных работодателей.
+
+    section.c-section-wrap
+            .container
+                .b-caption
+                    h2.b-caption__title ЗАЧЕМ ВИДЕОСЕРВИС Free<span class="b-caption__accent">Vac</span>?
+
+                .row
+                    .col-xl-5.order-0.order-xl-1
+                        .b-advantage
+                            .b-advantage__figure
+                                i.e-icon.e-icon--no-border.e-icon--no-size
+                                    +icon('video-cv','e-icon__figure')
+                            .b-advantage__description
+                                h4.b-advantage__title Видео-резюме
+                                p.b-advantage__text В отличии от обычно печатного резюме, в видеорезюме Вы лучше покажите свои сильные стороны.
+
+                        .b-advantage
+                            .b-advantage__figure
+                                i.e-icon.e-icon--no-border.e-icon--no-size
+                                    +icon('instruction-st2','e-icon__figure')
+
+                            .b-advantage__description
+                                h4.b-advantage__title Инструкция по записи
+                                p.b-advantage__text Наши специалисты подскажут Вам как профессионально составить деловое видеорезюме.
+                        .b-advantage
+                            .b-advantage__figure
+                                i.e-icon.e-icon--no-border.e-icon--no-size
+                                    +icon('interview-video','e-icon__figure')
+
+                            .b-advantage__description
+                                h4.b-advantage__title Видео-собеседование
+                                p.b-advantage__text Всегда до поездки в офис, Вы можете пройти или провести видеособеседование для принятия решения.
+
+                    .col-xl-7.order-1.order-xl-0
+                        .b-video.js-video-wrap.paused.__no-gutters.__preview
+                            .b-video__controls
+                                button.b-video__start.js-video-control.__no-border.__svg-big
+                                    i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+                                        +icon('play-white','e-icon__figure e-icon__figure--play-white')
+
+                                .b-video__control-bottom
+                                    button.b-video__play-pause.js-video-control.paused
+                                        +icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+                                        +icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+                                    .b-video__seekbar.js-progress-bar-video
+                                        span
+
+                                    button.b-video__fullscreen.js-video-full-screen
+                                        +icon('expand','e-icon__figure e-icon__figure--play')
+                            video.js-video-content.b-video__video.__w100.video
+                                source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
+                                source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
+                                source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
+
+    section.c-section-wrap
+        .container
+            .b-caption
+                h2.b-caption__title возможности Free<span class="b-caption__accent">Vac</span>?
+            .b-opportunities
+
+                .row
+
+                    .col-lg-5
+                        .b-opportunities__images
+                            img(src="assets/img/capability/item-1.jpg" alt="alt")
+
+                    .col-lg-7
+
+                        h5.b-opportunities__caption Для работодателя
+                        .b-opportunities__list
+                            ul.b-list
+                                li.b-list__item Быстро отфильтровать данные кандидатов по заданным критериям
+                                li.b-list__item Группировать отобранных кандидатов путем указания приоритета для проведения собеседований
+                                li.b-list__item Оплатить получение полного пакета данных кандидатов в зависимости от своих условий сотрудничества с работодателем
+                                li.b-list__item Хранить историю итогов собеседований по каждому кандидату
+                                li.b-list__item Выделиться по отношению к другим рекрутерам (не пользователям FreeVac)
+                                li.b-list__item Рекламировать свои вакансии на сервисе FreeVac
+                                li.b-list__item Сформировать свою индивидуальную анкету для кандидатов
+
+                        a(href="#").btn.btn--style-2 Подробнее
+
+            .b-opportunities
+
+                .row
+                    .col-lg-5.order-0.order-lg-1
+                        .b-opportunities__images.__right
+                            img(src="assets/img/capability/item-2.jpg" alt="alt")
+
+                    .col-lg-7
+                        h5.b-opportunities__caption Для кандидатов
+                        .b-opportunities__list
+                            ul.b-list
+                                li.b-list__item Возможность создать видео-резюме в зависимости от выбранных языков общения
+                                li.b-list__item Текстовые версии, составленные с использованием технологии распознавания речи
+                                li.b-list__item Сover letter,  составленные на основе текстовых версий видео-анкет с привлечением копирайтеров, со ссылкой на сохраненные текстовую версию и видео-анкету
+                                li.b-list__item Подтверждение со стороны сервиса FreeVac, что все материалы прошли проверку на корректность (на непротиворечивость в сравнении с резюме, вопросами анкеты) с указанием даты проверки
+
+                        a(href="#").btn.btn--style-2 Подробнее
+
+    section(style="background-image: url('assets/img/work-it-bg.jpg')").c-section-wrap.c-section-wrap--inside-padd.c-section-wrap--shadow.c-section-wrap--no-gutter
+        .container
+            .b-caption
+                h2.b-caption__title.b-caption__title--white как работает Free<span class="b-caption__accent">Vac</span>
+            .js-commutator-body
+                .b-alternative
+                    div(data-main='a').b-alternative__item.active.js-commutator-btn
+                        span  Для работодателя
+                    div(data-main='b').b-alternative__item.js-commutator-btn
+                        span Для кандидата
+
+                div(data-child="a").b-alternative-content.js-commutator-content.active
+                    .row
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('employer-icon-1','work-it-step__figure-svg')
+
+                                .work-it-step__title Нажмите кнопку «Опубликовать вакансию»
+                                .work-it-step__desc Простая форма позволит Вам составить требования к кандидату.
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('employer-icon-2','work-it-step__figure-svg')
+
+                                .work-it-step__title Выберите необходимые сервисы
+                                .work-it-step__desc Выберите нужные сервисы по подбору Вашего идеального кандидата.
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('employer-icon-3','work-it-step__figure-svg')
+
+                                .work-it-step__title Проведите отбор кандидата
+                                .work-it-step__desc По его видео резюме или проведя свое собеседование в нашем сервисе.
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('employer-icon-4','work-it-step__figure-svg')
+
+                                .work-it-step__title Наймите кандидата на должность
+                                .work-it-step__desc Несколькими кликами Вы можете нанять кандидата к себе на работу.
+
+                    .b-main-bottom
+                        .b-main-bottom__item
+                            a(href="#").btn.btn--style-2 Видео инструкция
+                        .b-main-bottom__item
+                            a(href="#").btn.btn--style-2 Разместить резюме
+
+                div(data-child="b").b-alternative-content.js-commutator-content
+                    .row
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('candidat-icon-1','work-it-step__figure-svg')
+
+                                .work-it-step__title Составьте резюме в личном профиле
+                                .work-it-step__desc Благодаря понятному и удобному     интерфейсу сервиса - это сделать.
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('candidat-icon-2','work-it-step__figure-svg')
+
+                                .work-it-step__title Запишите и разместите видео-реезюме
+                                .work-it-step__desc Выберите удобный для Вас способ: запись онлайн или в офисе.
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('candidat-icon-3','work-it-step__figure-svg')
+
+                                .work-it-step__title Откликнитесь на вакансию или получите отклик
+                                .work-it-step__desc Получите предложение или предложите свою кандидатуру на вакансию.
+                        .col-lg-3
+                            .work-it-step
+                                .work-it-step__figure
+                                    +icon('candidat-icon-4','work-it-step__figure-svg')
+
+                                .work-it-step__title Получите работу своей мечты
+                                .work-it-step__desc Обсудите условия работы и примите предложение работодателя.
+
+                    .b-main-bottom
+                        .b-main-bottom__item
+                            a(href="#").btn.btn--style-2 Видео инструкция
+                        .b-main-bottom__item
+                            a(href="#").btn.btn--style-2 Разместить резюме
+
+    section.c-section-wrap.c-section-wrap--inside-padd.c-section-wrap--no-gutter
+        .container
+            .b-main-map
+                #map.b-main-map__item
+
+                .b-main-map__address
+                    .b-address
+
+                        .b-address__item
+                            i.e-icon.e-icon--no-border.e-icon--no-size
+                                +icon('location','b-address__icon')
+                            .b-address__content
+                                .b-address__title Адрес:
+                                .b-address__text Киев, ул. Степана Бандери, 9. корпус 3В,<br>7 этаж, офис №3-701
+
+                        .b-address__item
+                            i.e-icon.e-icon--no-border.e-icon--no-size
+                                +icon('phone-svg','b-address__icon')
+                            .b-address__content
+                                .b-address__title Телефон:
+                                a(href="tel:0660102034").b-address__text (066) 010-20-34
+
+                        .b-address__item
+                            i.e-icon.e-icon--no-border.e-icon--no-size
+                                +icon('mail','b-address__icon')
+                            .b-address__content
+                                .b-address__title Email:
+                                a(href="mailto:info@freevac.com.ua").b-address__text info@freevac.com.ua
+
+

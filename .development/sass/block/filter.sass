@@ -1,0 +1,147 @@
+.b-filter
+
+	&__top-caption
+		+row
+		align-items: center
+		padding-bottom: 16px
+		border-bottom: 1px solid $grey-darker
+		margin-bottom: 20px
+	&__top-title
+		margin-bottom: 0
+		&.__sm
+			font-size: 14px
+	&__title
+		margin-bottom: 0
+		font-family: $additional-font-bold
+		font-size: 16px
+
+	&__block
+
+		margin-bottom: 16px
+		border-bottom: 1px solid $grey-darker
+
+		&.__no-border
+			border-bottom: none
+			.b-filter__block-body
+				padding-bottom: 0
+	&__block-body
+		padding-bottom: 20px
+	&__header-block
+		margin-bottom: 16px
+		+row
+		justify-content: space-between
+		&.active
+			.b-filter__arrow
+				+rotate(180deg)
+	&__arrow
+		+transition(all,.4s,ease)
+
+	&__row
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		margin-bottom: 10px
+	&__item
+		margin-bottom: 11px
+	&__point
+		flex: 1
+		font-size: 14px
+		color: $font-light
+		letter-spacing: -0.21px
+		margin-top: 0
+		&.__flex-auto
+			flex: 0 0 auto
+			padding-right: 8px
+	&__strong
+		font-family: $font-add-semi-bold
+		color: $dark
+		font-size: 14px
+	&__tag-wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin: -3px
+		margin-top: 10px
+		&.__mb-20
+			margin-bottom: 15px
+	&__tag
+		padding: 2px 5px
+		border: 1px solid $accent
+		font-size: 14px
+		margin: 3px
+
+		&.__not-active
+			border-color: $grey-darker
+		&.__lg
+			border-width: 2px
+			font-size: 16px
+			padding: 10px 15px
+			margin: 5px
+			min-width: 65px
+	&__btn
+		width: 18px
+		height: 18px
+		display: inline-flex
+		justify-content: center
+		align-items: center
+
+		line-height: 0
+		margin-right: 10px
+
+		+border-radius(50%)
+
+
+		border: 2px solid $accent
+	&__btn-open
+		border: 2px solid $grey-light
+		background-color: $grey-light
+	&__btn-close
+		display: none
+	&__icon
+		font-size: 12px
+		height: 16px
+		width: 10px
+
+	&__dropdown
+		&:last-child
+			.b-filter__dropdown-caption
+				padding-bottom: 0
+	&__dropdown-caption
+		padding-bottom: 11px
+		+row
+		align-items: center
+		&.active
+			.b-filter
+				&__btn-open
+					display: none
+				&__btn-close
+					display: inline-flex
+				&__point
+					color: $font-dark
+	&__checkbox-item
+		margin-right: 8px !important
+
+	&__checkbox:checked ~ .b-filter__point
+		color: $font-dark
+
+	&__dropdown-body
+		padding-bottom: 20px
+		display: none
+		&--pl
+			padding-left: 29px
+	&__select
+		margin-bottom: 11px
+		&:last-child
+			margin-bottom: 0
+	&__radio
+		font-size: 14px
+		font-family: $default-font
+		margin-bottom: 11px
+
+.b-filter-btn-open-filter
+	display: block
+	margin: 0 auto 25px
+	@media screen and (min-width: $sm)
+		margin-left: 0
+	@media screen and (min-width: $lg)
+		display: none

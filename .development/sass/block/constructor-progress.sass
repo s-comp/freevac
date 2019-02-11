@@ -1,0 +1,60 @@
+.b-constructor-progress
+	+row
+	margin: -15px -15px 60px
+
+	&__item
+		display: inline-flex
+		flex: 1 0 100%
+		padding: 10px
+		text-align: center
+		font-family: $additional-font-bold
+		color: $font-dark
+		&.active
+			.b-constructor-progress__inside-wrap
+				background-color: $accent
+		&.passed
+			.b-constructor-progress__count
+				font-size: 0
+			.e-icon
+				display: inline-flex
+			.b-constructor-progress__inside-wrap
+				background-color: $grey-light
+
+
+		.e-icon
+			display: none
+	&__inside-wrap
+		display: inline-flex
+		flex-direction: column
+		align-items: center
+		flex: 1
+		padding: 13px
+	&__count
+
+		width: 54px
+		height: 54px
+		line-height: 54px
+		font-size: 24px
+		background-color: #ffffff
+		border: 2px solid $accent
+		margin-bottom: 10px
+
+		+border-radius(50%)
+
+	&__text
+		font-size: 15px
+
+	//.b-constructor-progress
+	@media screen and (min-width: $xs)
+		&__item
+			flex: 1 0 50%
+			max-width: 50%
+	@media screen and (min-width: $sm)
+		&__item
+			flex: 1 0 33.333%
+			max-width: 33.333%
+
+	@media screen and (min-width: $lg)
+		&__item
+			flex: 1 0 16.666%
+			max-width: 16.666%

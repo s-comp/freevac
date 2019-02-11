@@ -1,0 +1,7 @@
+mixin filter-item(caption)
+	.main-checkbox.b-filter__item
+		label.main-checkbox__label
+			input.main-checkbox__check(type='checkbox', style='display: none').b-filter__checkbox
+			span.main-checkbox__item.main-checkbox__item--icon.main-checkbox__item--icon--xs.b-filter__checkbox-item
+				+icon('check','main-checkbox__svg main-checkbox__svg--xs')
+			span.main-checkbox__label-text.b-filter__point=caption

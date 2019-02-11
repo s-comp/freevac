@@ -1,0 +1,67 @@
+.b-wel-step
+	margin: 0
+	padding: 0
+
+	counter-reset: wel-step
+	list-style: none
+	+row
+	display: none
+	&.active
+		display: flex
+	&__item
+		+col
+
+		position: relative
+
+		padding: 0 15px
+
+		margin-bottom: 20px
+
+		flex-basis: 100%
+		max-width: 100%
+
+		padding-left: 48px
+		&:last-child
+			margin-bottom: 0
+		&:before
+			counter-increment: wel-step
+			content: counter(wel-step)
+			position: absolute
+			left: 0
+			width: 36px
+			height: 36px
+			background-color: $accent
+			+border-radius(50%)
+
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-shrink: 0
+
+			font-size: 16px
+
+	//.b-wel-step
+	@media screen and (min-width: $lg)
+		&__item
+			flex-basis: 50%
+			max-width: 50%
+			padding-left: 58px
+			&:before
+				width: 44px
+				height: 44px
+				font-size: 18px
+
+	@media screen and (min-width: $xl)
+		&__item
+			flex-basis: 25%
+			max-width: 25%
+			margin-bottom: 0
+	@media screen and (min-width: $xxl)
+		&__item
+			&:before
+				width: 54px
+				height: 54px
+				font-size: 24px
+	@media screen and (min-width: $xxl)
+		&__item
+			padding-left: 75px

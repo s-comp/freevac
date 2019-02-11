@@ -1,0 +1,434 @@
+extends ../template/employer
+block title
+	| Markup
+block main
+	+breadcrumb('Услуги и сервисы')
+	.o-video-helper
+		.c-content.c-content--padd-sm
+			.b-commutator.js-commutator-body
+				//Tabs
+				.b-commutator__tabs.b-commutator__tabs--mb
+					.container
+						.row
+							.col-sm-4
+								.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+									| Заказать услугу
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+									| Активные услуги
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+									| История
+				//Tab content
+				section.b-commutator__content.active.js-commutator-content(data-child='a')
+					.b-service
+						.container
+							.row
+								.col-lg-2.b-service__figure-wrap
+									.b-service__figure
+										i.e-icon.e-icon--bg-accent.e-icon--m0.e-icon--xxxl
+											span.e-icon__figure.e-icon__figure--xxxl.e-icon__figure--monitor
+								.col-lg-8
+									.b-service__caption
+										h5.h5.b-service__title Видео-собеседование
+
+										.b-service__price-wrap
+											| от <span class="b-service__price">1000</span> грн.
+
+									.b-service__content
+										P.b-service__text С другой стороны начало работы по формированию позиции позволяет выполнять задания
+											| по разработке.  Задача организации, в особенности же укрепление и развитие структуры позволяет оценить значение направлений прогрессивного развития.
+
+										h6.b-service__sub-caption Преиумещества:
+
+										ul.b-list
+											li.b-list__item.b-list__item--sm Проведения собеседования онлайн и выбор лучшего кандидата;
+											li.b-list__item.b-list__item--sm Другой стороны сложившаяся структура организации представляет собой интересный;
+											li.b-list__item.b-list__item--sm Эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.
+								.col-lg-2.b-service__btn-wrap
+									a(href="#").btn.btn--xs.btn--norm Заказать
+				//Active vacancy
+				section.b-commutator__content.js-commutator-content(data-child='b')
+					.b-table.b-table--odd-bg
+						.container
+							.b-table__header.b-table__header--bg.hidden-lg-down
+								.row.align-items-center
+									.col-1.b-table__date Дата заказа
+									.col-2 Номер счета
+									.col-3 Вакансия
+									.col-lg-2.col-xl-3 Услуга
+									.col-1.b-table__left-time Осталось дней
+									.col-1 Стоимость
+									.col-1
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										| Администратор сайта, контент-менеджер
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										| Администратор сайта
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										| Администратор сайта, контент-менеджер
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										| Администратор сайта, контент-менеджер
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										|  Контент-менеджер
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										| Администратор сайта, контент-менеджер
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										| Администратор сайта
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-3
+										span.b-table__label Вакансия:
+										| Администратор сайта, контент-менеджер
+									.col-lg-2.col-xl-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+				//History
+				section.b-commutator__content.js-commutator-content(data-child='c')
+					.b-table.b-table--odd-bg
+						.container
+							.b-table__header.b-table__header--bg.hidden-lg-down
+								.row.align-items-center
+									.col-1.b-table__date Дата заказа
+									.col-2 Номер счета
+									.col-2 Вакансия
+									.col-lg-3 Услуга
+									.col-1 Стоимость
+									.col
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Администратор сайта
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Контент-менеджер
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Администратор сайта
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Контент-менеджер
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Администратор сайта
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Контент-менеджер
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Администратор сайта
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-1.b-table__date
+										span.b-table__label Дата заказа:
+										| 11.03.18
+									.col-lg-2
+										span.b-table__label Номер счета:
+										| 25638455932888
+									.col-lg-2
+										span.b-table__label Вакансия:
+										| Контент-менеджер
+									.col-lg-3
+										span.b-table__label Услуга:
+										| Видео-собеседование
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col.b-table__left-time
+										a(href="#").b-table__add-link Статистика
+									.col.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать

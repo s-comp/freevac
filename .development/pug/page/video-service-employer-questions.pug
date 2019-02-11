@@ -1,0 +1,253 @@
+extends ../template/employer-one-btn-head
+block title
+	| Markup
+block main
+	+breadcrumb('Видеосервис')
+	.o-video-helper
+		.c-content.c-content--padd-sm
+			.container
+
+				.b-commutator.js-commutator-body
+					.b-commutator__tabs.b-commutator__tabs--mb
+						.row
+							.col-sm-4
+								.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+									| Запись опросов
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+									| База вопросов
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+									| Инструкция
+
+					section.b-commutator__content.active.js-commutator-content(data-child='a')
+						.o-interview-tables
+							.o-interview-tables__item.active#edit-table
+								form(action="#" method="post")
+									.b-table
+										//table row
+										.b-table__row
+											.row.align-items-center
+												.col-lg-3.b-table__column-title
+													h6.h7.b-table__caption Название вакансии
+												.col-10.col-lg-8
+													input(type='text' value="Менеджер по продажам со знанияем англ.языка (IT)")
+												.col-2.col-lg-1.b-table__column.b-table__column--right
+													i.e-icon.e-icon--xs.e-icon--m0
+														span.e-icon__figure.e-icon__figure--text ?
+										//table row
+										.b-table__row
+											.row.align-items-center
+												.col-lg-3.b-table__column-title
+													h6.h7.b-table__caption Язык собеседования
+												.col-10.col-lg-4
+													.b-select.js-dropdown-body
+														.b-select__caption-wrap.js-dropdown-btn
+															span.b-select__caption.js-value-name Выберите язык
+															input(type="hidden" value="" name="select").js-value-input
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+																+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+														.b-select__dropdown(data-child="a").js-dropdown-content
+																a.b-select__item(data-value="Украинский") Украинский
+																a.b-select__item.active(data-value="Белорусский") Белорусский
+																a.b-select__item(data-value="Русский") Русский
+
+									.o-content-caption.o-content-caption__mt-60
+										h5.h5 Дополнительные вопросы
+
+									.b-table
+
+										//table row
+										.b-table__header
+											.row.align-items-center
+												.col-1
+												.col-11.col-sm-8.col-lg-7.b-table__head-caption-column
+													| Текст вопроса
+												.col-3.col-lg-1.b-table__head-caption-column.hidden-lg-down
+													| Время для ответов
+												.col-1.b-table__head-caption-column.hidden-lg-down
+													| Обязательный вопрос
+												.col-2
+
+										//table row
+										.b-table__row
+											.row.align-items-center
+												.col-1.b-table__number 1
+												.col-11.col-lg-7.b-table__column-title
+													input(type="text" placeholder="Введите вопрос")
+												.offset-1.offset-lg-0.col-3.col-lg-1
+													input(type="text" placeholder="00:00").b-table__time-input
+
+												.col-8.col-lg-1
+													.b-table__required-row
+														.main-checkbox.form__chekbox
+															label.main-checkbox__label
+																input.main-checkbox__check.js-required(type='checkbox', style='display: none')
+																span.main-checkbox__item.main-checkbox__item--icon
+																	+icon('check','main-checkbox__svg')
+																span.main-checkbox__label-text.b-table__auxiliary-text Обязательный вопрос
+										//table row
+										.b-table__row.b-table__row--p-md
+											.row.align-items-center
+												.col-12
+													i.e-icon.e-icon--md.e-icon--m0
+														+icon('plus','e-icon__figure e-icon__figure--plus')
+
+
+										//table row
+										.b-table__footer
+											.row.align-items-center
+												.col-12.col-sm-4.b-table__back
+													a(href="#").btn-transp
+														i.e-icon.e-icon--no-border.e-icon--no-size
+															+icon('backspace','e-icon__figure e-icon__figure--backspace')
+														| Назад
+												.col-12.col-sm-8.text-a-c-sm-down
+													a(href="#more-questions-added").btn.btn--lg.js-modal-btn Продолжить
+
+					section.b-commutator__content.js-commutator-content(data-child='b')
+						.b-table
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-3.b-table__column-title
+										h6.h7.b-table__caption Название вакансии
+									.col-12.col-lg-9
+										input(type='text' value="Менеджер по продажам со знанияем англ.языка (IT)")
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-3.b-table__column-title
+										h6.h7.b-table__caption Язык собеседования
+									.col-12.col-lg-4
+										.b-select.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name Выберите язык
+												input(type="hidden" value="" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content
+													a.b-select__item(data-value="Украинский") Украинский
+													a.b-select__item.active(data-value="Белорусский") Белорусский
+													a.b-select__item(data-value="Русский") Русский
+						.o-content-caption.o-content-caption__mt-60
+							h5.h5 Ваши вопросы для кандидатов
+
+						.b-table.b-table--even-bg
+							//table row
+							.b-table__row.b-table__row--border-top
+								.row.align-items-center
+									.col-1.b-table__number 1
+									.col-11.col-sm-8.col-lg-9
+										| Расскажите немного о себе.
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--right
+											span.e-icon__figure.e-icon__figure--freevac-pictures
+									.col-12.col-sm-3.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Добавить к вопросам
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-1.b-table__number 2
+									.col-11.col-sm-8.col-lg-9
+										| Вы считаете себя достойным занять эту должность? В чем ваши преимущества перед другими кандидатами?
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--right
+											+icon('freevac-pictures','e-icon__figure e-icon__figure--freevac-pictures')
+									.col-12.col-sm-3.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Добавить к вопросам
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-1.b-table__number 3
+									.col-11.col-sm-8.col-lg-9
+										| Чем Вас привлекает работа у нас в данной должности?
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--right
+											+icon('freevac-pictures','e-icon__figure e-icon__figure--freevac-pictures')
+									.col-12.col-sm-3.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Добавить к вопросам
+
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-1.b-table__number 4
+									.col-11.col-sm-8.col-lg-9
+										| В чем ваши преимущества  перед другими кандидатами?
+
+									.col-12.col-sm-3.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Добавить к вопросам
+
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-1.b-table__number 5
+									.col-11.col-sm-8.col-lg-9
+										| Чем Вас привлекает работа у нас в данной должности?
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--right
+											+icon('freevac-pictures','e-icon__figure e-icon__figure--freevac-pictures')
+									.col-12.col-sm-3.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Добавить к вопросам
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-1.b-table__number 6
+									.col-11.col-sm-8.col-lg-9
+										| В чем ваши преимущества  перед другими кандидатами?
+
+									.col-12.col-sm-3.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Добавить к вопросам
+
+					section.b-commutator__content.js-commutator-content(data-child='c')
+						.row.justify-content-between
+							.col-xl-5.col-lg-5.o-video-helper__block
+								h5.h5.o-video-helper__title-block Работодатель
+
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap
+										i.e-icon
+											+icon('credit-card','e-icon__figure e-icon__figure--credit-card')
+										p.b-text-info__text Подключает платный сервис у вакансии
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap
+										i.e-icon
+											+icon('assignment','e-icon__figure e-icon__figure--assignment')
+										p.b-text-info__text Получает предложения от кандидатов или приглашает из сам на запись видео
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap
+										i.e-icon
+											+icon('visibility','e-icon__figure e-icon__figure--visibility')
+										p.b-text-info__text Просматривает ответы кандидатов и выбирает лучшего
+
+
+							.col-xl-5.col-lg-5.o-video-helper__block
+								h5.h5.o-video-helper__title-block Кандидат
+
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap
+										i.e-icon
+											+icon('file-text','e-icon__figure e-icon__figure--file')
+										p.b-text-info__text Подает заявку на видео-собеседование и получает подтверждение администратора
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap
+										i.e-icon
+											+icon('comments','e-icon__figure e-icon__figure--comments')
+										p.b-text-info__text В режиме онлайн отвечает на вопросы, составленные  работодателем
+								.b-text-info.b-text-info--mb-60.b-text-info--c-light
+									.b-text-info__caption-wrap
+										i.e-icon
+											+icon('thumbs','e-icon__figure e-icon__figure--thumb')
+										p.b-text-info__text Ожидает обратной связи от работодателя
+
+
+	.o-modal#more-questions-added
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						i.e-icon.e-icon--lg.o-modal__greeting--figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Спасибо, дополнительные вопросы добавлены
+

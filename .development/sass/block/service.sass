@@ -1,0 +1,84 @@
+.b-service
+	&--mb-35
+		margin-bottom: 35px
+	&--mb-50
+		margin-bottom: 50px
+	&.__mt-60
+		margin-top: 60px
+	&.__mb-60
+		margin-bottom: 60px
+
+	&__caption
+		margin-bottom: 30px
+		&--center
+			justify-content: center
+	&__title
+		&--ttu
+			text-transform: uppercase
+
+	&__price-wrap
+		color: $font-light
+	&__price
+		color: $font-dark
+		font-family: $font-bold
+		font-size: 24px
+	&__figure-wrap
+		margin-bottom: 30px
+	&__figure
+		text-align: center
+	&__content
+		font-size: 16px
+		color: $font-light
+	&__text
+		margin-bottom: 25px
+	&__sub-caption
+		font-size: 16px
+	&__btn-wrap
+		text-align: center
+	&__inform
+		text-align: center
+		&--mb-50
+			margin-bottom: 50px
+		&.__border-bottom
+			border-bottom: 1px solid $grey-light
+			padding-bottom: 40px
+			margin-bottom: 40px
+	&__inform-text
+		color: $font-light
+	&__inform-figure
+		margin: 0 0 25px 0
+	&__footer
+		border-top: 1px solid $grey-light
+		padding-top: 30px
+		padding-bottom: 30px
+		&.__no-border
+			border: none
+
+
+	//.b-service
+	@media screen and (min-width: $sm)
+		&__title
+			margin-bottom: 0
+		&__caption
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+
+	@media screen and (min-width: $lg)
+		&__figure-wrap
+			margin-bottom: 0
+		&__figure
+			text-align: left
+		&__btn-wrap
+			text-align: right
+		&__inform-figure
+			margin: 0 0 35px 0
+		&__inform
+			&.__border-bottom
+				padding-bottom: 60px
+				margin-bottom: 60px
+
+
+
+

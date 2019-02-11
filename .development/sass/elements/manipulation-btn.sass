@@ -1,0 +1,18 @@
+.e-manipulation-btn
+	background-color: #ffffff
+	border: 2px solid $accent
+	padding: 9px 19px 9px
+	display: inline-block
+	+border-radius(2em)
+	&:hover
+		&__figure
+			color: $accent
+	&.__active
+		border-color: $grey-light-dark
+
+	&__figure
+		+transition(all, .4s, ease)
+		&:hover
+			color: $accent
+		&.__fill
+			color: $accent

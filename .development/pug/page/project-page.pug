@@ -1,0 +1,407 @@
+extends ../template/main
+block title
+	| Markup
+block main
+	+breadcrumb('Страницы проекта')
+	.c-content
+		section
+			.container
+				.row
+					.col-lg-4
+						ul.b-list
+							li.b-list__item
+								strong
+									a(href="landing.html") Главная - landing
+							li.b-list__item
+								strong
+									a(href="index.html") Главная
+							li.b-list__item
+								strong
+									a(href="login.html") Вход
+							li.b-list__item
+								strong
+									a(href="registration.html") Регистрация
+							li.b-list__item
+								strong
+									a(href="faq.html") Часто задаваемые вопросы
+							li.b-list__item
+								strong
+									a(href="conditions.html") Условия и соглашения
+							li.b-list__item
+								strong
+									a(href="rules.html") Правила сервиса
+							li.b-list__item
+								strong
+									a(href="video-service-employer.html") Видеосервис Работодатель
+							li.b-list__item
+								strong
+									a(href="video-service-employer-questions.html") Видеосервис Работодатель / Доп. вопросы
+							li.b-list__item
+								strong
+									a(href="video-service-aspirant.html") Видеосервис Соискатель
+							li.b-list__item
+								strong
+									a(href="video-service-aspirant-2.html") Видеосервис Соискатель 2
+							li.b-list__item
+								strong
+									a(href="video-interview-start.html") Видеосервис Соискатель 3
+							li.b-list__item
+								strong
+									a(href="video-interview-start-2.html") Видеосервис Соискатель 4
+							li.b-list__item
+								strong
+									a(href="services.html") Сервисы
+							li.b-list__item
+								strong
+									a(href="services-user.html") Сервисы / Соискатель
+							li.b-list__item
+								strong
+									a(href="services_no-vacancies.html") Сервисы - Нет вакансий
+							li.b-list__item
+								strong
+									a(href="services-order.html") Сервис — оформление
+							li.b-list__item
+								strong
+									a(href="services-order-user.html") Сервис — оформление / Соискатель
+							li.b-list__item
+								strong
+									a(href="services-payment.html") Сервис — оплата
+							li.b-list__item
+								strong
+									a(href="services-payment-user.html") Сервис — оплата / Соискатель
+							li.b-list__item
+								strong
+									a(href="services-creditcard.html") Сервис — платежные данные
+							li.b-list__item
+								strong
+									a(href="services-creditcard-user.html") Сервис — платежные данные / Соискатель
+							li.b-list__item
+								strong
+									a(href="services-invoice.html") Сервис — счет
+							li.b-list__item
+								strong
+									a(href="services-invoice-user.html") Сервис — счет / Соискатель
+							li.b-list__item
+								strong
+									a(href="services-success.html") Сервис — Оплата прошла успешно
+							li.b-list__item
+								strong
+									a(href="services-success-user.html") Сервис — Оплата прошла успешно / Соискатель
+							li.b-list__item
+								strong
+									a(href="services-fail.html") Сервис — Оплата не прошла
+							li.b-list__item
+								strong
+									a(href="services-fail-user.html") Сервис — Оплата не прошла / Соискатель
+							li.b-list__item
+								strong
+									a(href="services-payment-final.html") Сервис — Оплата  , финал
+							li.b-list__item
+								strong
+									a(href="services-payment-final-user.html") Сервис — Оплата  , финал / Соискатель
+					.col-lg-4
+						ul.b-list
+							li.b-list__item
+								strong
+									a(href="vacancies.html") Поиск вакансий
+							li.b-list__item
+								strong
+									a(href="search-candidates.html") Поиск резюме
+							li.b-list__item
+								strong
+									a(href="catalog-candidates.html") Кандидаты / каталог
+							li.b-list__item
+								strong
+									a(href="catalog-candidates-region.html") Кандидаты — город
+							li.b-list__item
+								strong
+									a(href="catalog-candidates-employer.html") Кандидаты — после авторизации
+							li.b-list__item
+								strong
+									a(href="catalog-candidates-employer-fav-empty.html") Избранные кандидаты — нет добавленных
+							li.b-list__item
+								strong
+									a(href="catalog-candidates-employer-result-scan.html") SCAN результат поиска
+							li.b-list__item
+								strong
+									a(href="catalog-candidates-employer-result-scan-2.html") SCAN результат поиска - 2
+							li.b-list__item
+								strong
+									a(href="catalog-candidates-employer-personal-recruiter.html") Кандидаты / Персональный рекрутер
+							li.b-list__item
+								strong
+									a(href="catalog-candidates-employer-personal-recruiter-empty.html") Кандидаты / Персональный рекрутер - Сервис не подключен
+							li.b-list__item
+								strong
+									a(href="profile.html") Профиль кандидата
+							li.b-list__item
+								strong
+									a(href="profile_not-authorized.html") Профиль кандидата — не авторизирован
+
+							li.b-list__item
+								strong
+									a(href="profile_experience.html") Профиль кандидата — без опыта
+							li.b-list__item
+								strong
+									a(href="po-employer.html") Работодатель - После регистрации
+							li.b-list__item
+								strong
+									a(href="po-user.html") Соискатель - После регистрации
+							li.b-list__item
+								strong
+									a(href="vacancy-form.html") Добавление вакансии
+							li.b-list__item
+								strong
+									a(href="vacancy-form-edit.html") Добавление вакансии — редактирование
+							li.b-list__item
+								strong
+									a(href="vacancy-form-final.html") Добавление вакансии — завершение
+							li.b-list__item
+								strong
+									a(href="po-employer__my-vacancies.html") Мои вакансии / Мои вакансии — архив
+							li.b-list__item
+								strong
+									a(href="po-employer__my-vacancy.html") Моя вакансия
+							li.b-list__item
+								strong
+									a(href="po-employer__my-vacancy_edit.html") Моя вакансия — редактирование
+							li.b-list__item
+								strong
+									a(href="po-employer__my-vacancy_video.html") Моя вакансия — с видео
+							li.b-list__item
+								strong
+									a(href="po-employer__my-vacancy_video_questions.html") Моя вакансия — вопросы
+							li.b-list__item
+								strong
+									a(href="po-employer_responces.html") Отклики
+							li.b-list__item
+								strong
+									a(href="po-employer_responses_message-box.html") Отклики / чат
+							li.b-list__item
+								strong
+									a(href="po-employer_responses_message-box-video.html") Отклики с видео
+							li.b-list__item
+								strong
+									a(href="po-employer__settings.html") Настройки профиля / Конфиденциальность
+							li.b-list__item
+								strong
+									a(href="po-employer__settings-edit.html") Настройки профиля — редактирование пароля
+							li.b-list__item
+								strong
+									a(href="po-employer__settings-final.html") Настройки профиля — финал
+							li.b-list__item
+								strong
+									a(href="po-employer__settings-confidentiality_empty.html") Конфиденциальность — пустой список
+							li.b-list__item
+								strong
+									a(href="po-employer_notifications.html") Список Уведомлений
+							li.b-list__item
+								strong
+									a(href="notification.html") Уведомление
+					.col-lg-4
+						ul.b-list
+							li.b-list__item
+								strong
+									a(href="catalog-vacancies.html") Вакансии
+							li.b-list__item
+								strong
+									a(href="po-user__catalog-vacancies.html") Вакансии — после авторизации
+							li.b-list__item
+								strong
+									a(href="po-user__vacancy.html") Вакансия
+							li.b-list__item
+								strong
+									a(href="po-user__vacancy-video.html") Вакансия с видео-собеседованием
+							li.b-list__item
+								strong
+									a(href="po-user__vacancy-video-interview-response.html") Вакансия с видео-собеседованием из отклика
+							li.b-list__item
+								strong
+									a(href="po-user__catalog-vacancies.html") Вакансии Соискатель / SCAN
+							li.b-list__item
+								strong
+									a(href="po-user__catalog-vacancies-fav-empty.html") Избранные вакансии — пусто
+							li.b-list__item
+								strong
+									a(href="po-user__vacancy-fav.html") Избранная вакансия
+							li.b-list__item
+								strong
+									a(href="po-user__catalog-vacancies-scan-result.html") Вакансии Соискатель / SCAN результат поиска
+							li.b-list__item
+								strong
+									a(href="profile_company.html") Профиль компании
+							li.b-list__item
+								strong
+									a(href="po-user__profile.html") Мое резюме
+							li.b-list__item
+								strong
+									a(href="po-user__profile-edit.html") Редактирование «Мое резюме»
+							li.b-list__item
+								strong
+									a(href="po-user__profile-edit-video.html") Редактирование «Мое резюме с видео»
+							li.b-list__item
+								strong
+									a(href="po-user__profile-edit-without-job.html") Редактирование «Мое резюме без опыта»
+							li.b-list__item
+								strong
+									a(href="po-user__constructor.html") Конструктор резюме
+							li.b-list__item
+								strong
+									a(href="po-user__responces.html") Мои отклики
+							li.b-list__item
+								strong
+									a(href="po-user__responces-empty.html") Мои отклики — нет откликов
+							li.b-list__item
+								strong
+									a(href="po-user__responces-vs.html") Мои отклики — видео-собеседование
+							li.b-list__item
+								strong
+									a(href="po-user__responces-open-contacts.html") Отклик — открыть контакты
+							li.b-list__item
+								strong
+									a(href="po-user__responces-suggestions.html") Мои отклики / Предложения
+							li.b-list__item
+								strong
+									a(href="po-user__responces-suggestions-empty.html") Мои отклики — нет откликов / Предложения
+							li.b-list__item
+								strong
+									a(href="po-user__settings.html") Настройки профиля / Конфиденциальность / Соискатель
+							li.b-list__item
+								strong
+									a(href="po-user__settings-edit.html") Настройки профиля — редактирование пароля / Соискатель
+							li.b-list__item
+								strong
+									a(href="po-user__settings-final.html") Настройки профиля — финал / Конфиденциальность — пустой список /  Соискатель
+							li.b-list__item
+								strong
+									a(href="po-user__settings-experience.html") Подтвержедение опыта
+							li.b-list__item
+								strong
+									a(href="po-user__settings-service-interview.html") Собеседование сервисом
+							li.b-list__item
+								strong
+									a(href="po-user_notifications.html") Список Уведомлений / Соискатель
+							li.b-list__item
+								strong
+									a(href="po-user_notification.html") Уведомление / Соискатель
+							li.b-list__item
+								strong
+									a(href="po-employer_responses_private-chat.html") Отклики / чат 2
+							li.b-list__item
+								strong
+									a(href="po-employer_responses_private-chat-video.html") Отклики с видео / чат 2
+							li.b-list__item
+								strong
+									a(href="po-employer_responses_private-chat-video-2.html") Отклики с 2-видео / чат 2
+							li.b-list__item
+								strong
+									a(href="po-user_responses_private-chat-add-questions.html") Отклики - дополнительные вопросы / чат 2
+							li.b-list__item
+								strong
+									a(href="po-employer_responses_private-chat-close-vacancy.html") Отклики - Закрытая вакансия / чат 2
+							li.b-list__item
+								strong
+									a(href="po-employer_responses-vacancy_video.html") Отклики - Вакансии с видео
+							li.b-list__item
+								strong
+									a(href="po-user__responce__questions-record.html") Запись дополнительных ответов
+
+				//Letters
+				.o-content-caption.o-content-caption__mt-60
+					h5.h5 Письма
+				ul.b-list
+					li.b-list__item
+						strong
+							a(href="mail-register.html") Добро пожаловать на Freevac
+					li.b-list__item
+						strong
+							a(href="mail-order.html") Оплата заказа
+
+
+
+
+				//POPUP
+				.o-content-caption.o-content-caption__mt-60
+					h5.h5 Всплывающие окна (popup)
+				ul.b-list
+					li.b-list__item
+						strong
+							a(href="#reccovery-pass").js-modal-btn Востановление пароля
+					li.b-list__item
+						strong
+							a(href="#video-interview-questions-final").js-modal-btn Поздравляем!
+					li.b-list__item
+						strong
+							a(href="#video-interview-final").js-modal-btn Видео-собеседование отправлено
+					li.b-list__item
+						strong
+							a(href="#video-interview-record").js-modal-btn Вы записали видео-резюме
+					li.b-list__item
+						strong
+							a(href="#need-register").js-modal-btn Вам нужно зарегистрировать
+					li.b-list__item
+						strong
+							a(href="#add-to-favorite").js-modal-btn Добавить в избранные кандидаты
+					li.b-list__item
+						strong
+							a(href="#offer").js-modal-btn Предложить вакансию
+
+					li.b-list__item
+						strong
+							a(href="#offer-videoresume").js-modal-btn Пригласить на видео-собеседование
+					li.b-list__item
+						strong
+							a(href="#vacancy-preview").js-modal-btn Добавление вакансии — предварительный просмотр
+					li.b-list__item
+						strong
+							a(href="#vacancy-added").js-modal-btn Поздравляем, вакансия добавлена
+					li.b-list__item
+						strong
+							a(href="#vacancy-to-archive").js-modal-btn Вакансия перенесена в Архив
+					li.b-list__item
+						strong
+							a(href="#vacancy-active").js-modal-btn Вакансия активирована
+					li.b-list__item
+						strong
+							a(href="#candidate-hired").js-modal-btn Отклик — кандидат нанят
+					li.b-list__item
+						strong
+							a(href="#candidate-delete").js-modal-btn Отклик — удалить кандидата
+					li.b-list__item
+						strong
+							a(href="#complaint").js-modal-btn Отклик — жалоба
+					li.b-list__item
+						strong
+							a(href="#resume-delete").js-modal-btn Настройки профиля — удалить
+					li.b-list__item
+						strong
+							a(href="#vacancy-favorite").js-modal-btn Вакансия — в избранное
+					li.b-list__item
+						strong
+							a(href="#send-resume").js-modal-btn Вакансия — отправить резюме
+					li.b-list__item
+						strong
+							a(href="#need-register-vacancy").js-modal-btn Вакансия — в избранное (незарегистрирован)
+					li.b-list__item
+						strong
+							a(href="#record-video-constructor").js-modal-btn Конструктор резюме — спасибо
+					li.b-list__item
+						strong
+							a(href="#confirm-experience").js-modal-btn Заявки на подтвержедение опыта работы
+					li.b-list__item
+						strong
+							a(href="#request-sent").js-modal-btn Настройки профиля — подтвердить
+					li.b-list__item
+						strong
+							a(href="#more-questions-added").js-modal-btn Дополнительные вопросы добавлены
+					li.b-list__item
+						strong
+							a(href="#additional-questions").js-modal-btn Дополниетльные вопросы отправлены
+					li.b-list__item
+						strong
+							a(href="#loaded-resume").js-modal-btn Загруженное резюме
+
+
+
+
+	include ../blocks/modal

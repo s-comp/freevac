@@ -1,0 +1,115 @@
+.b-text-info
+	&--mb-15
+		margin-bottom: 15px
+	&--mb-30
+		margin-bottom: 20px
+	&--mb-60
+		margin-bottom: 35px
+	&:last-child
+		margin-bottom: 0
+	&--white
+		color: #ffffff
+	&--c-light
+		color: $font-light
+	&.__one-center
+		max-width: 500px
+		margin: 0 auto
+	&.__mt-50
+		margin-top: 50px
+	&__caption-wrap
+		+row
+		align-items: center
+
+		margin-bottom: 10px
+		&--mb20
+			margin-bottom: 20px
+
+		.b-text-info__caption
+			margin-bottom: 0
+			flex: 1
+
+	&__caption
+		font-size: 16px
+		letter-spacing: -0.36px
+		margin-bottom: 10px
+
+
+	&__content
+		padding-left: 48px
+
+	&__text
+		font-size: 16px
+		letter-spacing: -0.24px
+		line-height: 1.5
+		margin-bottom: 0
+
+		flex: 1
+
+	&__list
+		@extend .b-text-info__content
+
+	&__list-item
+		font-size: 16px
+		position: relative
+		margin-bottom: 13px
+		&:last-child
+			margin-bottom: 0
+		&.__mb-30
+			margin-bottom: 30px
+		&:before
+			content: ''
+			position: absolute
+			top: 13px
+			left: -33px
+			width: 6px
+			height: 6px
+			background-color: $accent
+
+			+border-radius(50%)
+			+translate(0%,-50%)
+
+	&__sub-caption
+		display: block
+		font-size: 18px
+		margin-bottom: 20px
+	//.b-text-info
+	@media screen and (max-width: $max-lg)
+		&__caption-wrap
+			&--align-top-table
+				align-items: flex-start
+				.e-icon
+					margin-top: 10px
+
+	@media screen and (min-width: $sm)
+		&__caption
+			font-size: 18px
+			&.__md
+				font-size: 20px
+
+	@media screen and (min-width: $lg)
+		&__caption
+			//font-size: 18px
+			margin-bottom: 15px
+		&__caption-wrap
+			margin-bottom: 4px
+			&--mb20
+				margin-bottom: 20px
+		&__content
+			padding-left: 58px
+		&__list-item
+			&:before
+				left: -40px
+	@media screen and (min-width: $xl)
+		&__caption
+			font-size: 20px
+			&.__md
+				font-size: 24px
+		&__content
+			padding-left: 75px
+		&--mb-30
+			margin-bottom: 30px
+		&--mb-60
+			margin-bottom: 60px
+		&__list-item
+			&:before
+				left: -50px

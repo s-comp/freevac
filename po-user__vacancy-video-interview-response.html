@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <meta name="theme-color" content="#ffcc00"/>
+    <link href="css/styles.min.css" type="text/css" rel="stylesheet"/><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js" data-skip-moving="true"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" data-skip-moving="true"></script><![endif]-->
+    <title>Markup
+    </title>
+  </head>
+  <body>
+    <div class="c-page">
+      <header class="c-header">
+        <div class="container-fluid">
+          <div class="row justify-content-between align-content-center">
+            <!--Logo-->
+            <div class="c-header__logo"><a class="b-logo b-logo--dark" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 68" id="logo" width="100%" height="100%"><image xmlns:xlink="http://www.w3.org/1999/xlink" width="268" height="68" xlink:href="data:image/png;base64,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"></image></svg></a></div>
+            <!--Navigation-->
+            <div class="c-header__nav-wrap">
+              <nav class="b-nav"><a class="b-nav__item" href="#">Мои вакансии</a><a class="b-nav__item" href="search-candidates.html">Кандидаты</a><a class="b-nav__item" href="services.html">Услуги и сервисы</a></nav>
+            </div>
+            <div class="c-header__btn-wrap"><a class="btn btn--norml btn--md c-header__btn-link btn-add" href="#"><span class="btn-add__on-mobile">+</span><span class="btn-add__on-desctop">Создать вакансию</span></a>
+              <div class="b-private-office js-dropdown-body">
+                <div class="b-private-office__caption js-dropdown-btn"><i class="e-icon e-icon--no-border e-icon--no-size b-private-office__icon">
+                    <svg class="icon icon-user e-icon__figure e-icon__figure--user">
+                      <use xlink:href="assets/img/sprite/sprite.svg#user"></use>
+                    </svg></i><span class="b-private-office__title">Hewlett Packard</span><i class="e-icon e-icon--no-border e-icon--no-size e-icon--right b-private-office__icon-arrow">
+                    <svg class="icon icon-arrow-down-xs e-icon__figure e-icon__figure--arrow-small">
+                      <use xlink:href="assets/img/sprite/sprite.svg#arrow-down-xs"></use>
+                    </svg></i></div>
+                <ul class="b-private-office__dropdown js-dropdown-content">
+                  <li class="b-private-office__dropdown-item"><a class="b-private-office__link" href="#">Уведомления<span class="b-private-office__count">12</span></a></li>
+                  <li class="b-private-office__dropdown-item"><a class="b-private-office__link" href="#">Настройки профиля</a></li>
+                  <li class="b-private-office__dropdown-item"><a class="b-private-office__link" href="faq.html">Часто задаваемые вопросы</a></li>
+                  <li class="b-private-office__dropdown-item"><a class="b-private-office__link" href="#">Выход</a></li>
+                </ul>
+              </div>
+            </div>
+            <!--Burger-->
+            <div class="c-header__burger-wrapp">
+              <div class="burger js-burger-btn">
+                <div class="burger__icon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="c-main">
+        <div class="b-breadcrumb-wrap __padd-xs">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="b-breadcrumb-back-btn"><a class="btn btn--norm btn--xs btn--transp" href="#"><i class="e-icon e-icon--no-border e-icon--no-size">
+                    <svg class="icon icon-backspace e-icon__figure e-icon__figure--backspace">
+                      <use xlink:href="assets/img/sprite/sprite.svg#backspace"></use>
+                    </svg></i><span class="btn__span">Назад</span></a></div>
+              <ul class="b-breadcrumb __in-btn">
+                <li class="b-breadcrumb__item b-breadcrumb__item--previous"><a class="b-breadcrumb__link" href="#">Вакансии</a></li>
+                <li class="b-breadcrumb__item b-breadcrumb__item--previous"><a class="b-breadcrumb__link" href="#">Менеджер по продажам</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="c-content">
+          <section class="b-vacancy">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-9">
+                  <div class="b-vacancy__header">
+                    <h4 class="b-vacancy__caption"><i class="e-icon e-icon">
+                        <svg class="icon icon-camera e-icon__figure e-icon__figure--camera">
+                          <use xlink:href="assets/img/sprite/sprite.svg#camera"></use>
+                        </svg></i>Менеджер по продажам со знанием англ. языка</h4>
+                    <p class="b-vacancy__paragr b-vacancy__price"><i class="e-icon e-icon--xs e-icon--mr10">
+                        <svg class="icon icon-wallet e-icon__figure e-icon__figure--xs">
+                          <use xlink:href="assets/img/sprite/sprite.svg#wallet"></use>
+                        </svg></i>от <span class="strong">20 000</span> грн.</p>
+                    <p class="b-vacancy__paragr"><i class="e-icon e-icon--xs e-icon--mr10">
+                        <svg class="icon icon-location e-icon__figure e-icon__figure--xs">
+                          <use xlink:href="assets/img/sprite/sprite.svg#location"></use>
+                        </svg></i>Киев</p>
+                  </div>
+                  <div class="b-vacancy__item-block">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <p class="b-vacancy__light-text">Компания:</p>
+                      </div>
+                      <div class="col-md-8">
+                        <p class="b-vacancy__under-line"><a href="#" class="strong">Soft-Group</a> <a href="#" class="b-vacancy__light-text">(Все вакансии)</a></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <p class="b-vacancy__light-text">Вид занятости:</p>
+                      </div>
+                      <div class="col-md-8">
+                        <p>полная занятость, неполная занятость, готовы взять студента</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <p class="b-vacancy__light-text">Язык:</p>
+                      </div>
+                      <div class="col-md-8">
+                        <p>Английский — средний</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-vacancy__item-block">
+                    <h6 class="h6">Необходимые навыки</h6>
+                    <ul class="b-list">
+                      <li class="b-list__item">Условия работы: официальное оформление, полный соц.пакет. Обучение в отделе продажи предприятия.</li>
+                      <li class="b-list__item">Желание работать и получать достойную заработную плату;</li>
+                      <li class="b-list__item">Умение общаться с клиентами, расположить их к себе;</li>
+                      <li class="b-list__item">Трудолюбие;</li>
+                      <li class="b-list__item">Аналитический ум;</li>
+                      <li class="b-list__item">Опыт работы в большой команде приветствуется.</li>
+                    </ul>
+                  </div>
+                  <div class="b-vacancy__item-block">
+                    <h6 class="h6">Дополнительно приветствуются</h6>
+                    <ul class="b-list">
+                      <li class="b-list__item">Регистрация пользователей локальной сети и почтового сервера, назначение идентификаторов и паролей.</li>
+                      <li class="b-list__item">Установка операционных систем и необходимого для работы программного обеспечения.</li>
+                      <li class="b-list__item">Знание правильной эксплуатации орг. техники, её настроек и устранения неполадок.</li>
+                    </ul>
+                  </div>
+                  <div class="b-vacancy__item-block">
+                    <h6 class="h6">Мы предлагаем</h6>
+                    <ul class="b-list">
+                      <li class="b-list__item">Работу в комфортном офисе в центре города</li>
+                      <li class="b-list__item">Гибкий график: 7 часов в день / 5 дней в неделю</li>
+                      <li class="b-list__item">Хорошо оборудованный офис со всеми удобствами и «плюшками» (корпоративные программы/скидки, кухня и печенюшки, игровая комната с видео- и настольными играми и т.д.)</li>
+                      <li class="b-list__item">Оплата: фиксированная ставка и/или % от заказов</li>
+                      <li class="b-list__item">Прямые USA/Europe-заказчики, интересные проекты</li>
+                    </ul>
+                    <p>Компания работает на рынке web разработки и аутсорсинга с 2005 г. За продолжительное время работы наша команда разработала и внедрила множество проектов различной степени сложности.</p>
+                    <p>На сегодняшний день основные наши клиенты это стартап-компании из Европы (Великобритания, Германия, Нидерланды, Дания), США и Израиля, а также те, кто заинтересован в кастомных решениях. В ближайшее время планируется расширение компании и открытие нового офиса.</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 b-vacancy__aside-right">
+                  <div class="b-vacancy__item-block __aside-block">
+                    <div class="b-vacancy__paragr"><a class="btn-transp __lg" href="#">Пройти<br/>видео-собеседование</a></div>
+                    <div class="b-vacancy__paragr"><a class="btn-transp __lg" href="#">Написать сообщение</a></div>
+                    <div class="b-vacancy__paragr"><a class="btn-transp __lg" href="#">Добавить в избранное</a></div>
+                    <div class="b-vacancy__paragr"><a class="btn-transp __lg" href="#">Отклонить</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="c-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-sm-5">
+              <div class="c-footer__link-wrap"><a class="c-footer__link" href="#">Условия и соглашения</a></div>
+              <div class="c-footer__link-wrap"><a class="c-footer__link" href="#">Персональные данные</a></div>
+            </div>
+            <div class="col-lg-6 col-lg-6 col-sm-7 c-footer__contacts-wrap">
+              <div class="b-footer-contacts">
+                <div class="b-footer-contacts__item">
+                  <p>Связаться с нами:</p>
+                </div>
+                <div class="b-footer-contacts__item"><a class="b-footer-contacts__info" href="tel:0660102034"><i class="b-footer-contacts__icon-wrap">
+                      <svg class="icon icon-phone b-footer-contacts__icon">
+                        <use xlink:href="assets/img/sprite/sprite.svg#phone"></use>
+                      </svg></i><span class="b-footer-contacts__text">(066) 010-20-34</span></a><a class="b-footer-contacts__info" href="mailto:info@freevac.com.ua"><i class="b-footer-contacts__icon-wrap">
+                      <svg class="icon icon-mail b-footer-contacts__icon b-footer-contacts__icon--mail">
+                        <use xlink:href="assets/img/sprite/sprite.svg#mail"></use>
+                      </svg></i><span class="b-footer-contacts__text">info@freevac.com.ua</span></a>
+                  <div class="b-footer-contacts__location-wrap"><a class="b-footer-contacts__info b-footer-contacts__info--light" href="mailto:info@freevac.com.ua"><i class="b-footer-contacts__icon-wrap">
+                        <svg class="icon icon-location b-footer-contacts__icon b-footer-contacts__icon--location">
+                          <use xlink:href="assets/img/sprite/sprite.svg#location"></use>
+                        </svg></i><span class="b-footer-contacts__text b-footer-contacts__text--address">Киев, ул. Степана Бандери, 9. корпус 3В,<br/>7 этаж, офис №3-701</span></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 c-footer__info-block">
+              <div class="c-footer__social">
+                <div class="c-footer__social-item">
+                  <p>Мы в соцсетях:</p>
+                </div>
+                <div class="b-social"><a class="b-social__item" href="#"><i class="b-social__icon-wrap">
+                      <svg class="icon icon-fb b-social__icon">
+                        <use xlink:href="assets/img/sprite/sprite.svg#fb"></use>
+                      </svg></i></a><a class="b-social__item" href="#"><i class="b-social__icon-wrap">
+                      <svg class="icon icon-linkedin b-social__icon">
+                        <use xlink:href="assets/img/sprite/sprite.svg#linkedin"></use>
+                      </svg></i></a><a class="b-social__item" href="#"><i class="b-social__icon-wrap">
+                      <svg class="icon icon-youtube b-social__icon">
+                        <use xlink:href="assets/img/sprite/sprite.svg#youtube"></use>
+                      </svg></i></a></div>
+              </div>
+              <p class="c-footer__copyright">© 2017 Freevac</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--include ../global/modal-->
+    <!-- script markup only!-->
+    <script src="js/scripts.min.js"></script>
+    <!--map-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZIOVlLdQbI7U_aQQU1msO3zaHHRgimFQ&amp;callback=initMap" async="async" defer="defer"></script>
+  </body>
+</html>

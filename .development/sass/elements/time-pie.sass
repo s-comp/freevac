@@ -1,0 +1,74 @@
+@keyframes spin
+
+	to
+		transform: rotate(.5turn)
+
+@keyframes bg
+
+	50%
+		background: currentColor
+
+.e-time-pie
+	width: 100px
+	height: 100px
+	border-radius: 50%
+	background: $accent
+	background-image: linear-gradient(to right, transparent 50%, currentColor 0)
+	color: $grey-darker
+	//color: rgba(255,255,255,.15)
+	position: relative
+	flex-shrink: 0
+	&--opacity
+		opacity: .8
+
+	&--xs
+		width: 40px
+		height: 40px
+	&--lg
+		width: 70px
+		height: 70px
+	&__fill
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		display: block
+		margin-left: 50%
+		height: 100%
+		border-radius: 0 100% 100% 0 / 50%
+		background-color: inherit
+		transform-origin: left
+		&--animation
+			animation: spin 1.5s linear infinite, bg 3s step-end infinite
+	&__set-time
+		font-size: 14px
+		font-family: $font-bold
+		color: $font
+		//line-height: 0
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		text-align: center
+		+translate(0, -50%)
+		z-index: 1
+		&--lg
+			font-size: 40px
+
+	//.e-time-pie
+	@media screen and (min-width: $sm)
+		&--lg
+			width: 100px
+			height: 100px
+		&__set-time
+			&--lg
+				font-size: 50px
+	@media screen and (min-width: $xl)
+		&--lg
+			width: 134px
+			height: 134px
+		&__set-time
+			&--lg
+				font-size: 72px

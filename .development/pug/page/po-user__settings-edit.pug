@@ -1,0 +1,492 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Настройки профиля', 'Кабинет соискателя')
+	.c-content
+		.b-commutator.js-commutator-body
+			form.b-form.__error-bg
+				.b-commutator__tabs
+					.container
+						.row
+							.col-lg-9
+								.row
+									.col-sm-6
+										.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+											| Профиль
+									.col-sm-6
+										.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+											| Конфиденциальность
+
+
+							.col-md-3.offset-md-9.offset-lg-0
+								.b-form__settings-aside
+									.b-form__upload-file.b-form__settings-img
+										img(src="assets/img/candidats/candidat.jpg" alt="alt")
+										.b-form__settings-img-hover
+											i.e-icon.e-icon--m0.e-icon--white
+												+icon('photo-camera','e-icon__figure e-icon__figure--white')
+
+											span.b-form__settings-img-hover-text Обновить фото
+												br
+												| профиля
+										label.b-form__file-input
+											input(type='file').b-form__input-file
+									.b-form__settings-aside-block
+										+checkbox('Работаю, но открыт к предложениям', '__mb-15')
+										+checkbox('Не трудоустроен, ищу работу', '__mb-15')
+										+checkbox('Готов к удаленной работе','__mb-15')
+
+
+				section.b-commutator__content.active.js-commutator-content(data-child='a').b-form__settings-content
+					.container
+						.row
+							.col-md-9
+								//Form block
+								.b-form__block
+									//Form row
+									.b-form__field-wrap.row
+										.col-sm-6
+											.b-form__field-label.__bold
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('check','e-icon__figure e-icon__figure--check--xs')
+												| Собеседована сервисом
+
+										.col-sm-6
+											.b-form__field-label.__bold
+												span.tooltip
+													i.e-icon.e-icon--xs.e-icon--mr10
+														i.e-icon.e-icon--xs.e-icon--mr10.e-icon--disabled
+															+icon('question','e-icon__figure e-icon__figure--check--xs')
+													span.tooltiptext tooltip some text
+													| Опыт работы не подтвержден
+									//Form row
+									.b-form__field-wrap.row
+										.col-sm-6
+										.col-sm-6
+											a(href='#confirm-experience').btn-transp.__lg Подтвердить
+								//Form block
+								.b-form__block
+									.b-form__caption
+										i.e-icon
+											+icon('lock','e-icon__figure e-icon__figure--credit-lock')
+										h5.h5.b-form__title Информация для авторизации
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center.__mb-20
+										.col-sm-4
+											.b-form__field-label.__bold Email
+
+										.col-lg-4.col-md-5.col-sm-6.col-9
+											| kuzya_yaroslava@gmail.com
+
+										.col-lg-4.col-md-3.col-sm-2.col-3
+											button
+												i.e-icon.e-icon--md
+													+icon('edit','e-icon__figure e-icon__figure--sm')
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Ваш текущий пароль
+
+										.col-lg-4.col-sm-8
+											input(type='password' placeholder='' value='').b-form__field.js-required
+
+										.col-lg-4.col-12
+											.b-form__recov-pass
+												| Не удалось изменить пароль попробуйте еще раз. <a href="#reccovery-pass" class="js-modal-btn">Забыли пароль? </a>
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Новый пароль
+
+										.col-lg-4.col-sm-8
+											input(type='password' placeholder='' value='').b-form__field.js-required
+
+										.col-md-4.col-sm-2.col-3
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Новый пароль еще раз
+
+										.col-lg-4.col-sm-8
+											input(type='password' placeholder='' value='').b-form__field.js-required
+
+										.col-md-4.col-sm-2.col-3
+
+								//Form block
+								.b-form__block
+									.b-form__caption
+										i.e-icon
+											+icon('user','e-icon__figure')
+										h5.h5.b-form__title Персональные данные
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold ФИО *
+
+										.col-sm-8.col-12
+											input(type='text' placeholder='ФИО' value='Кузьмина Ярослава Ивановна').b-form__field.js-required
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Город *
+
+										.col-xl-4.col-lg-5.col-sm-8.col-12
+											input(type='text' placeholder='Город' value='Киев').b-form__field.js-required
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Телефон *
+
+										.col-xl-4.col-lg-5.col-sm-6.col-10
+											input(type='text' value='0671234567').b-form__field.js-required.js-phone-masked
+										.col-2
+											button
+												i.e-icon.e-icon--md.e-icon--m0
+													+icon('plus','e-icon__figure e-icon__figure--plus')
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Skype
+
+										.col-xl-4.col-lg-5.col-sm-8.col-12
+											input(type='text' placeholder='Skype' value='kuzya_yaroslava').b-form__field
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Дата рождения *
+
+										.col-xl-4.col-lg-5.col-md-6.col-sm-8.col-12
+											.row
+												.col
+													input(type='text' value='12').b-form__field.js-required
+												.col
+													input(type='text' value='12').b-form__field.js-required
+												.col
+													input(type='text' value='1982').b-form__field.js-required
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Опыт работы *
+
+										.col-sm-8.col-12
+											.b-select.js-dropdown-body
+												.b-select__caption-wrap.js-dropdown-btn
+													span.b-select__caption.js-value-name Укажите опыт
+													input(type="hidden" value="" name="select").js-value-input.js-required
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+												.b-select__dropdown(data-child="a").js-dropdown-content
+													a.b-select__item(data-value="Торговля") Торговля
+													a.b-select__item(data-value="Торговля") Торговля
+													a.b-select__item.active(data-value="Торговля") Торговля
+
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Профессия *
+
+										.col-sm-8.col-12
+											.b-select.js-dropdown-body
+												.b-select__caption-wrap.js-dropdown-btn
+													span.b-select__caption.js-value-name.active IT, компьютеры, интернет
+													input(type="hidden" value="IT, компьютеры, интернет" name="select").js-value-input.js-required
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+												.b-select__dropdown(data-child="a").js-dropdown-content
+													a.b-select__item(data-value="Киевский национальный университет") Киевский национальный университет
+													a.b-select__item(data-value="Киевский национальный университет") Киевский национальный университет
+													a.b-select__item.active(data-value="Киевский национальный университет") Киевский национальный университет
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Сфера *
+
+										.col-sm-8.col-12
+											.b-select.js-dropdown-body
+												.b-select__caption-wrap.js-dropdown-btn
+													span.b-select__caption.js-value-name.active IT, компьютеры, интернет
+													input(type="hidden" value="Менеджмент" name="select").js-value-input.js-required
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+												.b-select__dropdown(data-child="a").js-dropdown-content
+													a.b-select__item(data-value="Менеджмент") Менеджмент
+													a.b-select__item(data-value="Менеджмент") Менеджмент
+													a.b-select__item.active(data-value="Менеджмент") Менеджмент
+
+									//Form row
+									.b-form__field-wrap.row.align-items-center
+										.col-sm-4
+											.b-form__field-label.__bold Образование *
+
+										.col-sm-8.col-12
+											.b-select.js-dropdown-body
+												.b-select__caption-wrap.js-dropdown-btn
+													span.b-select__caption.js-value-name.active Высшее
+													input(type="hidden" value="Магистр" name="select").js-value-input.js-required
+													i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+														+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+												.b-select__dropdown(data-child="a").js-dropdown-content
+													a.b-select__item(data-value="Магистр") Магистр
+													a.b-select__item(data-value="Магистр") Магистр
+													a.b-select__item.active(data-value="Магистр") Магистр
+
+									//Form row
+									.b-form__field-wrap.row
+										.col-sm-4
+											.b-form__field-label.__bold Язык
+
+										.col-sm-8.col-12
+											.row
+												.col-md-5.b-form__md-mb-15
+													.b-select.js-dropdown-body
+														.b-select__caption-wrap.js-dropdown-btn
+															span.b-select__caption.js-value-name.active Польский
+															input(type="hidden" value="Польский" name="select").js-value-input
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+																+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+														.b-select__dropdown(data-child="a").js-dropdown-content
+															a.b-select__item(data-value="Дневная") Дневная
+															a.b-select__item(data-value="Дневная") Дневная
+															a.b-select__item.active(data-value="Дневная") Дневная
+												.col-md-5.b-form__md-mb-15
+													.b-select.js-dropdown-body
+														.b-select__caption-wrap.js-dropdown-btn
+															span.b-select__caption.js-value-name.active Высокий
+															input(type="hidden" value="Высокий" name="select").js-value-input
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+																+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+														.b-select__dropdown(data-child="a").js-dropdown-content
+															a.b-select__item(data-value="Низкий") Низкий
+															a.b-select__item(data-value="Средний") средний
+															a.b-select__item.active(data-value="Высокий") Высокий
+
+									//Form row
+									.b-form__field-wrap.row
+										.col-sm-4
+										.col-sm-8.col-12
+											.row
+												.col-md-5.b-form__md-mb-15
+													.b-select.js-dropdown-body
+														.b-select__caption-wrap.js-dropdown-btn
+															span.b-select__caption.js-value-name Выберите язык
+															input(type="hidden" value="Дневная" name="select").js-value-input
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+																+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+														.b-select__dropdown(data-child="a").js-dropdown-content
+															a.b-select__item(data-value="Дневная") Дневная
+															a.b-select__item(data-value="Дневная") Дневная
+															a.b-select__item.active(data-value="Дневная") Дневная
+												.col-md-5.b-form__md-mb-15
+													.b-select.js-dropdown-body
+														.b-select__caption-wrap.js-dropdown-btn
+															span.b-select__caption.js-value-name Выберите уровень
+															input(type="hidden" value="Высокий" name="select").js-value-input
+															i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+																+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+														.b-select__dropdown(data-child="a").js-dropdown-content
+															a.b-select__item(data-value="Низкий") Низкий
+															a.b-select__item(data-value="Средний") средний
+															a.b-select__item.active(data-value="Высокий") Высокий
+												.col-md-2
+													a(href="#")
+														i.e-icon.e-icon--md.e-icon--m0
+															+icon('plus','e-icon__figure e-icon__figure--plus')
+
+
+						.row
+							.col-md-9
+								//Form block
+								.b-form__block
+									.b-form__caption
+										i.e-icon
+											+icon('paper','e-icon__figure ')
+										h5.h5.b-form__title Настройка рассылок
+
+									//Form row
+									.b-form__field-wrap.row
+										.col-sm-4
+											.b-form__field-label.__bold Сообщения
+											p.b-form__light-text Ежедневные извещения, приходящие в формате вайбер-сообщений
+
+										.col-sm-8.col-12
+											+checkbox('полученные приглашения к просмотру вакансии или прохождению видео-собеседований','b-form__field-wrap',  '__center')
+											+checkbox('полученные сообщения/отклики','b-form__field-wrap', '__center')
+
+									//Form row
+									.b-form__field-wrap.row
+										.col-sm-4
+											.b-form__field-label.__bold Уведомления
+											p.b-form__light-text Ежедневные подборки важной информации, приходящие на электронную почту
+
+										.col-sm-8.col-12
+											+checkbox('подходящие резюме по вашему профилю','b-form__field-wrap',  '__center')
+
+									//Form row
+									.b-form__field-wrap.row
+										.col-sm-4
+											.b-form__field-label.__bold Новости
+											p.b-form__light-text Ежедневные подборки новостей и прочей полезной информации, приходящие на электронную почту
+
+										.col-sm-8.col-12
+											+checkbox('получать новости','b-form__field-wrap',  '__center')
+											+checkbox('отказаться от всех рассылок','b-form__field-wrap', '__center')
+
+								.b-form__footer.__no-border
+									.row.no-gutters
+										.b-form__footer-button.__lg
+											button.btn.btn--lg.js-send Сохранить
+										.b-form__footer-button.__sm
+											a(href="#resume-delete" data-tooltip="Удалить").e-manipulation-btn.js-modal-btn
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+			section.b-commutator__content.js-commutator-content(data-child='b').b-form__settings-content
+					.container
+						.row
+							.col-md-9
+								form.b-form.b-form--mb-30
+									//Form block
+									.b-form__block.__no-border
+										.b-form__caption
+											i.e-icon
+												+icon('hand','e-icon__figure ')
+											h5.h5.b-form__title Стоп-лист
+
+										p Стоп-лист может сделать так, чтобы определенные рекрутеры не могли вас найти и предложить вакансию.
+										//Form row
+										.b-form__field-wrap
+											.b-form__field-label.__bold Введите стоп-слова через запятую
+											input(type='text' placeholder='Например: global, consultant, ivanov').js-required
+
+										.b-form__button-wrap.__mt-20
+											button.btn.btn--lg.js-send Обновить стоп-лист
+									//Form block
+									.b-form__block
+										h6.h6 Как это работает?
+
+										p Каждый раз, когда ваш профиль попадает в поисковую выдачу работодателя, система проверяет, не находится ли этот работодатель у вас в стоп-листе. Если да, ваш профиль для него исчезает. Даже если такой работодатель пападен на ваш профиль он увидит только «профиль неактивен».
+										p Стоп-лист проверяется по имени и должности, указанной в профиле работодателя.
+										p Мы не можем дать 100% гарантию, что работодатель не найдет ваш профиль, если задастся такой целью. Задача стоп-листа — избежать неловких ситуаций, когда вас случайно находит работодатель, с которым вы не хотели общаться.
+
+								.b-black-list
+									.b-black-list__caption
+										i.e-icon
+											+icon('list-ul','e-icon__figure ')
+										h5.h5.b-black-list__title Черный список
+
+									.b-black-list__item
+										.b-black-list__item-body
+											img(src='assets/img/company/item-1.jpg' alt='alt').b-black-list__image
+											.b-black-list__content
+												.b-black-list__name HP Украина
+												.b-black-list__location Киев
+
+										a(href="#" data-tooltip="Удалить").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+									.b-black-list__item
+										.b-black-list__item-body
+											img(src='assets/img/company/item-5.jpg' alt='alt').b-black-list__image
+											.b-black-list__content
+												.b-black-list__name Soft Group
+												.b-black-list__location Киев
+
+										a(href="#" data-tooltip="Удалить").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+
+									.b-black-list__item
+										.b-black-list__item-body
+											img(src='assets/img/company/item-4.jpg' alt='alt').b-black-list__image
+											.b-black-list__content
+												.b-black-list__name LG Electronics Украина
+												.b-black-list__location Киев
+
+										a(href="#" data-tooltip="Удалить").e-manipulation-btn
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')
+	//resume delete
+	.o-modal#resume-delete
+		.o-modal__center
+			.o-modal__content.__md
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						h5.h5 Вы уверены, что хотите удалить свой профиль ?
+					.o-modal__footer.__mt-70
+						.o-modal__button-row
+							.o-modal__button-wrap
+								a(href="#").btn-transp Да
+							.o-modal__button-wrap
+								a(href="#").btn-transp Нет
+
+
+	//confirm-experience
+	.o-modal#confirm-experience
+		.o-modal__center
+			.o-modal__content
+				form.b-form
+					.o-modal__close.js-modal-close
+						i.e-icon.e-icon--xs.e-icon--m0
+							+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+					h5.h5.o-modal__caption Заявки на подтвержедение опыта работы
+					.o-modal__body
+						.b-offer
+							.b-form__field-label.__bold Название компании (сайт)
+							+input('Введите название компании или адрес сайта')
+							.b-form__field-label.__bold Должность
+								+input('Введите вашу должность')
+							.b-form__field-label.__bold Период работы
+								+input('Введите название компании или адрес сайта')
+							.b-form__field-label.__bold Должность
+							+input('Введите вашу должность')
+
+					.o-modal__footer.__border-top
+						button.btn.btn--lg.js-send Отправить
+
+
+	.o-modal#request-sent
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						i.e-icon.e-icon--lg.o-modal__greeting--figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Спасибо, ваш запрос отправлен
+
+					.o-modal__footer
+						button.btn.btn--lg.btn--transp Записать видео-резюме
+
+	//reccovery-pass modal
+	.o-modal#reccovery-pass
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				.o-modal__inside-wrap
+					h5.h5.o-modal__caption Востановление пароля
+					.o-modal__body
+						form(action="/" method="post").b-form
+							p.o-modal__text Введите электронную почту, которую вы использовали
+								br
+								| при регистрации. Туда вышлем пароль.
+							+input('Email *', '', 'email')
+							.b-form__button-wrap.b-form__button-wrap--modal
+								button.btn.btn--lg.js-send Отправить

@@ -1,0 +1,456 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+
+  &--auto {
+    width: auto;
+    height: auto;
+  }
+}
+
+.icon-align-center {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-align-justify {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-align-left {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-align-right {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-arrow-down-xs {
+  font-size:(8/10)*1rem;
+  width:(12/8)*1em;
+}
+.icon-arrow-down-xs-dark {
+  font-size:(8/10)*1rem;
+  width:(12/8)*1em;
+}
+.icon-arrow-left {
+  font-size:(512/10)*1rem;
+  width:(192/512)*1em;
+}
+.icon-arrow-right {
+  font-size:(512/10)*1rem;
+  width:(192/512)*1em;
+}
+.icon-arrow-to-button {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-arrow_down {
+  font-size:(11/10)*1rem;
+  width:(16/11)*1em;
+}
+.icon-assignment {
+  font-size:(31/10)*1rem;
+  width:(28/31)*1em;
+}
+.icon-attach {
+  font-size:(1000/10)*1rem;
+  width:(1000/1000)*1em;
+}
+.icon-backspace {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-bag {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-bold {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-building {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-calendar {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-camera {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-candidat {
+  font-size:(63/10)*1rem;
+  width:(57/63)*1em;
+}
+.icon-candidat-icon-1 {
+  font-size:(53/10)*1rem;
+  width:(56/53)*1em;
+}
+.icon-candidat-icon-2 {
+  font-size:(44/10)*1rem;
+  width:(52/44)*1em;
+}
+.icon-candidat-icon-3 {
+  font-size:(59/10)*1rem;
+  width:(57/59)*1em;
+}
+.icon-candidat-icon-4 {
+  font-size:(58/10)*1rem;
+  width:(54/58)*1em;
+}
+.icon-check {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-circle {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-close {
+  font-size:(512/10)*1rem;
+  width:(320/512)*1em;
+}
+.icon-close-bord {
+  font-size:(28/10)*1rem;
+  width:(28/28)*1em;
+}
+.icon-comments {
+  font-size:(31/10)*1rem;
+  width:(36/31)*1em;
+}
+.icon-communication {
+  font-size:(26/10)*1rem;
+  width:(32/26)*1em;
+}
+.icon-credit-card {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-credit-card-light {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-dollar {
+  font-size:(512/10)*1rem;
+  width:(256/512)*1em;
+}
+.icon-edit {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-ellipsis {
+  font-size:(512/10)*1rem;
+  width:(320/512)*1em;
+}
+.icon-employer {
+  font-size:(55/10)*1rem;
+  width:(55/55)*1em;
+}
+.icon-employer-icon-1 {
+  font-size:(54/10)*1rem;
+  width:(52/54)*1em;
+}
+.icon-employer-icon-2 {
+  font-size:(55/10)*1rem;
+  width:(52/55)*1em;
+}
+.icon-employer-icon-3 {
+  font-size:(52/10)*1rem;
+  width:(56/52)*1em;
+}
+.icon-employer-icon-4 {
+  font-size:(54/10)*1rem;
+  width:(54/54)*1em;
+}
+.icon-eraser {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-expand {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-eye-slash {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-fb {
+  font-size:(512/10)*1rem;
+  width:(264/512)*1em;
+}
+.icon-file {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-file-text {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-freevac-icon {
+  font-size:(40/10)*1rem;
+  width:(50/40)*1em;
+}
+.icon-freevac-icon-lg {
+  font-size:(98/10)*1rem;
+  width:(100/98)*1em;
+}
+.icon-freevac-video-services {
+  font-size:(24/10)*1rem;
+  width:(30/24)*1em;
+}
+.icon-freevac-video-services--white {
+  font-size:(24/10)*1rem;
+  width:(30/24)*1em;
+}
+.icon-freevac-what-it {
+  font-size:(31/10)*1rem;
+  width:(30/31)*1em;
+}
+.icon-freevac-what-work {
+  font-size:(31/10)*1rem;
+  width:(35/31)*1em;
+}
+.icon-globe {
+  font-size:(512/10)*1rem;
+  width:(496/512)*1em;
+}
+.icon-graduation {
+  font-size:(512/10)*1rem;
+  width:(640/512)*1em;
+}
+.icon-hand {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-hourglass {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-image {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-indent {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-info {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-instruction {
+  font-size:(31/10)*1rem;
+  width:(27/31)*1em;
+}
+.icon-instruction-st2 {
+  font-size:(51/10)*1rem;
+  width:(46/51)*1em;
+}
+.icon-interview-video {
+  font-size:(51/10)*1rem;
+  width:(64/51)*1em;
+}
+.icon-italic {
+  font-size:(512/10)*1rem;
+  width:(320/512)*1em;
+}
+.icon-key {
+  font-size:(1000/10)*1rem;
+  width:(1000/1000)*1em;
+}
+.icon-leaf {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-link {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-linkedin {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-list-ol {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-list-ul {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-location {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-lock {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-logo {
+  font-size:(68/10)*1rem;
+  width:(268/68)*1em;
+}
+.icon-logo-sub {
+  font-size:(63/10)*1rem;
+  width:(166/63)*1em;
+}
+.icon-mail {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-microphone {
+  font-size:(512/10)*1rem;
+  width:(352/512)*1em;
+}
+.icon-minus {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-mobile {
+  font-size:(512/10)*1rem;
+  width:(320/512)*1em;
+}
+.icon-music {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-outdent {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-paper {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-pause {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-phone {
+  font-size:(18/10)*1rem;
+  width:(18/18)*1em;
+}
+.icon-phone-svg {
+  font-size:(1000/10)*1rem;
+  width:(1000/1000)*1em;
+}
+.icon-photo-camera {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-play {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-play-white {
+  font-size:(67/10)*1rem;
+  width:(67/67)*1em;
+}
+.icon-plus {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-privatbank {
+  font-size:(25/10)*1rem;
+  width:(25/25)*1em;
+}
+.icon-question {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-redo {
+  font-size:(512/10)*1rem;
+  width:(512.33/512)*1em;
+}
+.icon-save {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-search {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-skype {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-sound {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-star {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-star-fill {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}
+.icon-stop {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-strikethrough {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-tag {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-thumbs {
+  font-size:(34/10)*1rem;
+  width:(30/34)*1em;
+}
+.icon-tie {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-timeout {
+  font-size:(40/10)*1rem;
+  width:(40/40)*1em;
+}
+.icon-tint {
+  font-size:(512/10)*1rem;
+  width:(384/512)*1em;
+}
+.icon-trash-all {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-underline {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-undo {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-user {
+  font-size:(512/10)*1rem;
+  width:(448/512)*1em;
+}
+.icon-video-cv {
+  font-size:(51/10)*1rem;
+  width:(56/51)*1em;
+}
+.icon-video-resume {
+  font-size:(26/10)*1rem;
+  width:(27/26)*1em;
+}
+.icon-visibility {
+  font-size:(24/10)*1rem;
+  width:(33/24)*1em;
+}
+.icon-wallet {
+  font-size:(512/10)*1rem;
+  width:(512/512)*1em;
+}
+.icon-youtube {
+  font-size:(512/10)*1rem;
+  width:(576/512)*1em;
+}

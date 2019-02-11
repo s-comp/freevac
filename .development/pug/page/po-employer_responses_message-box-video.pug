@@ -1,0 +1,194 @@
+extends ../template/employer
+block title
+	| Markup
+block main
+	+breadcrumb('', 'Мои отклики', 'Кабинет работодаля')
+	.c-content
+		.o-dialog-box
+			.container
+				h4.o-dialog-box__title Менеджер по продажам со знанием англ. языка (IT)
+
+			.container
+				.row
+					.col-lg-4.col-xl-3
+						.o-aside-wrap.js-filter-wrap
+							button.btn-transp.js-open-filter.b-filter-btn-open-filter Открыть диалоги
+							.o-aside.js-filter-body
+								.o-aside__content
+									//Person message
+									.b-person-message.active
+										.b-person-message__figure
+											img(src="assets/img/candidats/small/item-2.jpg" alt="alt")
+										.b-person-message__body
+											.b-person-message__caption
+												.b-person-message__name Дячук Мирослава
+												.b-person-message__date 11.02.17
+											.b-person-message__message
+												<span class="b-person-message__message-name">Мирослава:</span> Уточнения дальнейших направлений Уточнения дальнейших направлений
+									//Person message
+									.b-person-message.__unread
+										.b-person-message__figure
+											img(src="assets/img/candidats/small/item-1.jpg" alt="alt")
+										.b-person-message__body
+											.b-person-message__caption
+												.b-person-message__name Михайлюк Алексей
+												.b-person-message__date 11.02.17
+											.b-person-message__message
+												<span class="b-person-message__message-name">Вы:</span> Уточнения дальнейших направлений Уточнения дальнейших направлений
+									//Person message
+									.b-person-message
+										.b-person-message__figure
+											img(src="assets/img/candidats/small/item-3.jpg" alt="alt")
+										.b-person-message__body
+											.b-person-message__caption
+												.b-person-message__name Гордиенко Андрей
+												.b-person-message__date 11.02.17
+											.b-person-message__message
+												<span class="b-person-message__message-name">Андрей:</span> Уточнения дальнейших направлений Уточнения дальнейших направлений
+									//Person message
+									.b-person-message
+										.b-person-message__figure
+											img(src="assets/img/candidats/small/item-4.jpg" alt="alt")
+										.b-person-message__body
+											.b-person-message__caption
+												.b-person-message__name Тимощук Евгения
+												.b-person-message__date 11.02.17
+											.b-person-message__message
+												<span class="b-person-message__message-name">Евгения:</span> Уточнения дальнейших направлений Уточнения дальнейших направлений
+									//Person message
+									.b-person-message
+										.b-person-message__figure
+											img(src="assets/img/candidats/small/item-3.jpg" alt="alt")
+										.b-person-message__body
+											.b-person-message__caption
+												.b-person-message__name Гордиенко Андрей
+												.b-person-message__date 11.02.17
+											.b-person-message__message
+												<span class="b-person-message__message-name">Андрей:</span> Уточнения дальнейших направлений Уточнения дальнейших направлений
+									//Person message
+									.b-person-message
+										.b-person-message__figure
+											img(src="assets/img/candidats/small/item-4.jpg" alt="alt")
+										.b-person-message__body
+											.b-person-message__caption
+												.b-person-message__name Тимощук Евгения
+												.b-person-message__date 11.02.17
+											.b-person-message__message
+												<span class="b-person-message__message-name">Евгения:</span> Уточнения дальнейших направлений Уточнения дальнейших направлений
+
+					.col-lg-8.col-xl-9
+						.b-message-box
+							.b-message-box__caption.js-slideToggle-wrap
+								h5.b-message-box__title Дячук Мирослава
+
+								button.b-message-box__more-btn.js-slideToggle-btn
+									i.e-icon.e-icon--m0.e-icon--no-size.e-icon--no-border
+										+icon('ellipsis','e-icon__figure e-icon__figure--ellipsis')
+								.b-profile.__message-box.js-slideToggle-content
+									.b-profile__caption.__no-border
+										.b-profile__photo
+											img(src="assets/img/candidats/small/item-2.jpg" alt="alt")
+										h3.b-profile__title Кузьминова Ярослава Ивановна
+										h5.b-profile__sub-caption Инженер компьютерных сетей
+
+
+										.row.justify-content-center.align-items-center.justify-content-md-between
+											.b-profile__button-wrap
+												a(href="#offer").btn-transp.__lg.b-profile__btn.js-modal-btn Удалить кандидата
+											.b-profile__button-wrap
+												a(href="#offer").btn-transp.__lg.b-profile__btn.js-modal-btn Заблокировать
+											.b-profile__button-wrap
+												a(href="#").btn-transp.__lg.b-profile__btn Добавить в избранное
+
+
+							.b-message-box__body
+
+								.b-video.js-video-wrap.paused
+									.b-video__controls
+										button.b-video__start.js-video-control
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('play','e-icon__figure e-icon__figure--play')
+
+										.b-video__control-bottom
+											button.b-video__play-pause.js-video-control.paused
+												+icon('play','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-play')
+												+icon('pause','e-icon__figure e-icon__figure--play e-icon__figure--play--xs b-video__control-pause')
+											.b-video__seekbar.js-progress-bar-video
+												span
+
+											button.b-video__fullscreen.js-video-full-screen
+												+icon('expand','e-icon__figure e-icon__figure--play')
+									video.js-video-content.b-video__video.__w100.video
+										source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv', type='video/ogg')
+										source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4', type='video/mp4')
+										source(src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm', type='video/webm')
+
+								//Message
+								.b-message-box__message.__alien
+									.b-message-box__message-caption
+										.b-message-box__message-name Дячук Мирослава
+										.b-message-box__message-date сегодня в 13:00
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Уточнения дальнейших направлений развития. Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную роль в формировании форм развития. Повседневная практика показывает, что начало <span class="tdu">повседневной работы</span> по формированию позиции позволяет выполнять важные задания по разработке систем массового участия.
+
+								//Message
+								.b-message-box__message.__own
+									.b-message-box__message-caption
+										.b-message-box__message-name Вы
+										.b-message-box__message-date сегодня в 13:25
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия. Равным образом консультация с широким активом.
+								//Message
+								.b-message-box__message.__alien
+									.b-message-box__message-caption
+										.b-message-box__message-name Дячук Мирослава
+										.b-message-box__message-date сегодня в 13:00
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную роль в формировании форм развития практика показывает, что начало формированию позиции позволяет выполнять важные задания по разработке систем массового участия.
+								//Message
+								.b-message-box__message
+									.b-message-box__message-caption
+										.b-message-box__message-name Кандидат открыл вам свои контакты
+										.b-message-box__message-date сегодня в 13:00
+									.b-message-box__message-body
+										.b-message-box__message-message
+											a(href="tel:+380951234567").b-message-box__message-link
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('phone','e-icon__figure e-icon__figure--xs')
+
+												| +38 (095) 123 45 67
+											a(href="mailto:kuzya_yaroslava@gmail.com").b-message-box__message-link
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('mail','e-icon__figure e-icon__figure--xs')
+
+												| kuzya_yaroslava@gmail.com
+											a(href="skype:kuzya_yaroslava@gmail.com").b-message-box__message-link
+												i.e-icon.e-icon--xs.e-icon--mr10
+													+icon('skype','e-icon__figure e-icon__figure--xs')
+
+												| kuzya_yaroslava
+
+								//Message
+								.b-message-box__message.__own
+									.b-message-box__message-caption
+										.b-message-box__message-name Вы
+										.b-message-box__message-date сегодня в 13:25
+									.b-message-box__message-body
+										.b-message-box__message-message
+											| Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия. Равным образом консультация с широким активом.
+
+							.b-message-box__footer
+								.b-message-box__text-editor
+									include ../blocks/wysiwyg-enter-text
+
+								.b-message-box__button-wrpa
+									.row.no-gutters
+										.b-message-box__button.__lg
+											button.btn.btn--lg Отправить
+										.b-message-box__button.__sm
+											button(data-tooltip="Удалить").e-manipulation-btn
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('trash-all','e-icon__figure e-icon__figure--trash e-manipulation-btn__figure')

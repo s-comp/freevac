@@ -1,0 +1,27 @@
+header.c-header.c-header--landing
+	.container
+		.row.justify-content-between.align-content-center
+			//Logo
+			.c-header__logo
+				a(href="/").b-logo
+					include ../../assets/img/svg/logo-sub.svg
+			//Navigation
+			.c-header__nav-wrap
+				nav.b-nav
+					a(href="vacancies.html").b-nav__item.b-nav__item--white Вакансии
+					a(href="search-candidates.html").b-nav__item.b-nav__item--white Кандидаты
+					a(href="faq.html").b-nav__item.b-nav__item--white Часто задаваемые вопросы
+
+			.c-header__btn-wrap
+				.b-private-office.hidden-sm.hidden-md.hidden-lg.js-login-menu
+					.js-login-menu-btn
+						i.e-icon.e-icon--no-border.e-icon--no-size.b-private-office__icon
+							+icon('user','e-icon__figure e-icon__figure--user e-icon__figure--white e-icon__figure--md-sm')
+				.c-header__btn-dropdown.js-login-menu-content
+					a(href="login.html").btn-transp.btn-transp--white.c-header__btn-link.c-header__btn-link--right-10.c-header__btn-dropdown-item Войти
+					a(href="registration.html").btn.btn--style-2.c-header__btn-dropdown-item Регистрация
+
+			//Burger
+			.c-header__burger-wrapp
+				.burger.js-burger-btn
+					.burger__icon.burger__icon--white

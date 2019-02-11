@@ -1,0 +1,43 @@
+include ../global/_mixins
+.o-aside-wrap.js-filter-wrap
+	button.btn.btn--transp.btn--xs.b-filter-btn-open-filter.js-open-filter Открыть фильтры
+	aside.o-aside.js-filter-body
+		.o-aside__content
+			.b-filter
+				a(href="#").b-filter__top-caption
+					i.e-icon.e-icon--xs
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+					h6.h7.b-filter__top-title Параметры
+
+				//Filter block
+				.b-filter__block
+					.b-filter__block-body
+						.b-filter__row
+							.b-filter__point.__flex-auto Сфера:
+							.b-filter__strong IT, компьютеры, интернет
+						.b-filter__row
+							.b-filter__point.__flex-auto Профессия:
+							.b-filter__strong не выбрано
+						.b-filter__point Искать вакансии с тегами:
+						.b-filter__tag-wrap.__mb-20
+							span.b-filter__tag mobile
+							span.b-filter__tag web
+							span.b-filter__tag английский
+							span.b-filter__tag IT
+							span.b-filter__tag программирование
+							span.b-filter__tag python
+							span.b-filter__tag java
+
+						.b-filter__point Исключить вакансии с тегами:
+						.b-filter__tag-wrap
+							span.b-filter__tag.__not-active become
+							span.b-filter__tag.__not-active dove
+							span.b-filter__tag.__not-active breake
+							span.b-filter__tag.__not-active bow
+							span.b-filter__tag.__not-active TI
+
+				a(href="#").b-filter__top-caption
+					i.e-icon.e-icon--xs
+						+icon('edit','e-icon__figure e-icon__figure--edit--xs')
+					h6.h7.b-filter__top-title.__sm Изменить параметры
+

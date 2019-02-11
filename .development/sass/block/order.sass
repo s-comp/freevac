@@ -1,0 +1,118 @@
+.b-order
+	&__row
+		//+row
+		//align-items: center
+		//justify-content: space-between
+	&__row-col
+		+row
+		//+col
+		align-items: center
+		justify-content: space-between
+
+	&__select
+		&--border
+			padding-top: 30px
+			padding-bottom: 30px
+			border-top: 1px solid $grey-light
+
+			margin-bottom: 0 !important
+		&--no-border
+			border: none
+		&--order-inform
+			padding-top: 40px
+			padding-bottom: 40px
+
+
+	&__caption
+		+row
+		align-items: center
+		margin-bottom: 20px
+
+		&--mb-xs
+			margin-bottom: 10px
+		&--mb-0
+			margin-bottom: 0
+		&--mb-50
+			margin-bottom: 35px
+	&__title
+		margin-bottom: 0
+		flex: 1
+
+	&__content
+		padding-left: 48px
+	&__text
+		color: $font-light
+		&:last-child
+			margin-bottom: 0
+	&__check
+		letter-spacing: -0.36px
+		margin-bottom: 20px
+		+row
+		align-items: center
+		justify-content: space-between
+
+	&__pricing,
+	&__number
+		font-size: 18px
+
+	&__price,
+	&__count
+		font-family: $font-bold
+		font-size: 20px
+	&__footer
+		position: relative
+		padding-top: 40px
+		padding-bottom: 40px
+		border-top: 1px solid $grey-light
+	&__back
+		margin-bottom: 15px
+	&__label-text
+		font-family: $additional-font-bold
+		margin-bottom: 0
+
+	//.b-order
+	@media screen and (min-width: $sm)
+		&__select
+			&--order-inform
+				padding-left: 48px
+		&__caption
+			font-size: 18px
+
+		&__back
+			margin-bottom: 0
+
+
+
+
+	@media screen and (min-width: $lg)
+		&__select
+			&--order-inform
+				padding-left: 58px
+		&__content
+			padding-left: 58px
+
+		&__check
+			font-size: 19px
+		&__pricing
+			font-size: 19px
+		&__price
+			font-size: 28px
+		&__label-text
+			font-size: 18px
+		&__caption
+			&--mb-50
+				margin-bottom: 50px
+
+	@media screen and (min-width: $xl)
+		&__select
+			margin-bottom: 54px
+			&--order-inform
+				padding-left: 75px
+		&__content
+			padding-left: 75px
+		&__check
+			font-size: 24px
+		&__pricing
+			font-size: 24px
+		&__price
+			font-size: 36px

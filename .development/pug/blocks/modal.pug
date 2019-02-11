@@ -1,0 +1,661 @@
+include ../global/_mixins
+.o-modal#video-interview-questions-final
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Поздравляем!
+						br
+						| Вы опубликовали видео-собеседование.
+
+
+//reccovery-pass modal
+.o-modal#reccovery-pass
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption Востановление пароля
+			.o-modal__body
+				form(action="/" method="post").b-form
+					p.o-modal__text Введите электронную почту, которую вы использовали
+						br
+						| при регистрации. Туда вышлем пароль.
+					+input('Email *', '', 'email')
+					.b-form__button-wrap.b-form__button-wrap--modal.__right
+						button.btn.btn--lg.js-send Отправить
+
+.o-modal#video-interview-final
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Спасибо!
+						br
+						| Ваше видео-собеседование отправлено
+
+.o-modal#video-interview-record
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Поздравляем!
+						br
+						| Вы записали видео-резюме.
+
+				.o-modal__footer
+					button.btn-transp.__lg.b-record-answer__btn.b-record-answer__start-overwrite.js-start-record  Предпросмотр
+
+
+.o-modal#need-register
+	.o-modal__center
+		.o-modal__content.__md
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					h5.h5 Чтобы добавить кандидата в избранное Вам нужно зарегистрировать
+				.o-modal__footer.__mt-70
+					.o-modal__button-row
+						.o-modal__button-wrap
+							a(href="#").btn.btn--transp.btn--lg Авторизироваться
+						.o-modal__button-wrap
+							a(href="#").btn.btn--lg Зарегистрироваться
+
+
+
+.o-modal#add-to-favorite
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption Добавить в избранные кандидаты
+			.o-modal__body
+				form(action="/" method="post")
+
+					.row.no-gutters
+						.col-lg-10
+							.b-form__field-wrap
+								.b-select.js-dropdown-body
+									.b-select__caption-wrap.js-dropdown-btn
+										span.b-select__caption.js-value-name Без привязки к вакансиям
+										input(type="hidden" value="" name="select").js-value-input
+										i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+											+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+									.b-select__dropdown(data-child="a").js-dropdown-content
+										a.b-select__item(data-value="Авдеевка") Авдеевка
+										a.b-select__item(data-value="Александровка") Александровка
+										a.b-select__item(data-value="Андрушевка") Андрушевка
+							.b-form__field-group-row
+								p.b-form__light-text.b-form__help-text Кандидат будет отмечен как
+
+								span.b-form__dark-text.b-form__help-text.b-form__text-row
+									i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--mr10
+										+icon('star-fill','e-icon__figure e-icon__figure--star e-favorit-btn__figure __fill')
+									| Интересный
+
+							.main-checkbox.form__chekbox
+								label.main-checkbox__label
+									input.main-checkbox__check(type='checkbox', style='display: none')
+									span.main-checkbox__item.main-checkbox__item--icon
+										+icon('check','main-checkbox__svg')
+									span.main-checkbox__label-text.c-form__chek-label-text Уведомить соискателя с предложением ознакомиться с вакансией
+										br
+										span.b-form__light-text.b-form__help-text Кандидат получит письмо с сылкой на вакансию
+
+					.b-form__button-wrap.b-form__button-wrap--modal
+						button.btn.btn--lg.js-send Добавить
+
+//offer a job
+.o-modal#offer
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption Предложить вакансию
+			.o-modal__body
+				.b-offer
+					.row
+						.col-md-3
+							img(src="assets/img/candidats/small/item-4.jpg" alt="alt").b-offer__img
+
+						.col-md-8
+							h5.b-offer__name Кузьминова Ярослава Ивановна
+							p.b-offer__position Инженер компьютерных сетей
+
+							p Киев / 34 года / Менеджмент, руководство высшего звена / Украинский - эксперт, Английский - средний, Руский - эксперт
+			.o-modal__body.__border-top
+				.b-offer
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Менеджер по продажам финансовых услуг брокерской компании (Forex , Форекс)
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Руководитель отдела маркетинга
+
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Менеджер по продажам банковских продуктов
+
+			.o-modal__footer.__border-top
+				button.btn.btn--lg Предложить
+
+
+//offer a videoresume
+.o-modal#offer-videoresume
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption Пригласить на видео-собеседование
+			.o-modal__body
+				.b-offer
+					.row
+						.col-md-3
+							img(src="assets/img/candidats/small/item-4.jpg" alt="alt").b-offer__img
+
+						.col-md-8
+							h5.b-offer__name Кузьминова Ярослава Ивановна
+							p.b-offer__position Инженер компьютерных сетей
+
+							p Киев / 34 года / Менеджмент, руководство высшего звена / Украинский - эксперт, Английский - средний, Руский - эксперт
+			.o-modal__body.__border-top
+				.b-offer
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Менеджер по продажам финансовых услуг брокерской компании (Forex , Форекс)
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Руководитель отдела маркетинга
+
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Менеджер по продажам банковских продуктов
+
+			.o-modal__footer.__border-top
+				button.btn.btn--lg Пригласить
+//vacancy-preview
+.o-modal#vacancy-preview
+	.o-modal__center
+		.o-modal__content.__lg
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption Предварительный просмотр
+			.o-modal__body
+				.b-vacancy
+					.b-vacancy__header
+						h4.b-vacancy__caption Менеджер по продажам со знанием англ. языка (IT)
+
+						p.b-vacancy__paragr.b-vacancy__price
+							i.e-icon.e-icon--xs.e-icon--mr10
+								+icon('wallet','e-icon__figure e-icon__figure--xs')
+
+							| от <span class="strong">20 000</span> грн.
+						p.b-vacancy__paragr
+							i.e-icon.e-icon--xs.e-icon--mr10
+								+icon('location','e-icon__figure e-icon__figure--xs')
+
+							| Киев
+
+					.b-vacancy__item-block
+						.row
+							.col-md-2
+								p.b-vacancy__light-text Компания:
+
+							.col-md-8
+								p.b-vacancy__under-line <a href="#" class="strong">Soft-Group</a> <a href="#" class="b-vacancy__light-text">(Все вакансии)</a>
+
+						.row
+							.col-md-2
+								p.b-vacancy__light-text Вид занятости:
+
+							.col-md-8
+								p полная занятость, неполная занятость, готовы взять студента
+
+						.row
+							.col-md-2
+								p.b-vacancy__light-text Язык:
+
+							.col-md-8
+								p Английский — средний
+
+
+					.b-vacancy__item-block
+
+						h6.h6 Необходимые навыки
+
+						ul.b-list
+							li.b-list__item Условия работы: официальное оформление, полный соц.пакет. Обучение в отделе продажи предприятия.
+							li.b-list__item Желание работать и получать достойную заработную плату;
+							li.b-list__item Умение общаться с клиентами, расположить их к себе;
+							li.b-list__item Трудолюбие;
+							li.b-list__item Аналитический ум;
+							li.b-list__item Опыт работы в большой команде приветствуется.
+
+					.b-vacancy__item-block
+
+						h6.h6 Дополнительно приветствуются
+
+						ul.b-list
+							li.b-list__item Регистрация пользователей локальной сети и почтового сервера, назначение идентификаторов и паролей.
+							li.b-list__item Установка операционных систем и необходимого для работы программного обеспечения.
+							li.b-list__item Знание правильной эксплуатации орг. техники, её настроек и устранения неполадок.
+
+					.b-vacancy__item-block
+
+						h6.h6 Мы предлагаем
+
+						ul.b-list
+							li.b-list__item Работу в комфортном офисе в центре города
+							li.b-list__item Гибкий график: 7 часов в день / 5 дней в неделю
+							li.b-list__item Хорошо оборудованный офис со всеми удобствами и «плюшками» (корпоративные программы/скидки, кухня и печенюшки, игровая комната с видео- и настольными играми и т.д.)
+							li.b-list__item Оплата: фиксированная ставка и/или % от заказов
+							li.b-list__item Прямые USA/Europe-заказчики, интересные проекты
+
+						p Компания работает на рынке web разработки и аутсорсинга с 2005 г. За продолжительное время работы наша команда разработала и внедрила множество проектов различной степени сложности.
+
+						p На сегодняшний день основные наши клиенты это стартап-компании из Европы (Великобритания, Германия, Нидерланды, Дания), США и Израиля, а также те, кто заинтересован в кастомных решениях. В ближайшее время планируется расширение компании и открытие нового офиса.
+
+			.o-modal__footer.__border-top
+				button.btn.btn--lg Опубликовать
+
+//Add vacancy
+.o-modal#vacancy-added
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Поздравляем! Вакансия добавлена
+//Vacancy to archive
+.o-modal#vacancy-to-archive
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Вакансия перенесена в Архив
+//Vacancy active
+.o-modal#vacancy-active
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Вакансия активирована
+//candidate is hired
+.o-modal#candidate-hired
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Поздравляем! Кандидат нанят.
+
+
+//candidate is delete
+.o-modal#candidate-delete
+	.o-modal__center
+		.o-modal__content.__md
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					h5.h5 Вы уверены, что хотите удалить кандидата ?
+				.o-modal__footer.__mt-70
+					.o-modal__button-row
+						.o-modal__button-wrap
+							a(href="#").btn-transp Да
+						.o-modal__button-wrap
+							a(href="#").btn-transp Нет
+
+
+//complaint
+.o-modal#complaint
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption Причина блокировки
+			.o-modal__body
+				.b-offer
+					h6.h7 Выберите причину жалобы:
+
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Условия вакансии не соответствуют действительности
+					.main-checkbox.form__chekbox.b-offer__check-vacancy
+						label.main-checkbox__label
+							input.main-checkbox__check(type='checkbox', style='display: none')
+							span.main-checkbox__item.main-checkbox__item--icon
+								+icon('check','main-checkbox__svg')
+							span.main-checkbox__label-text.b-offer__label Работодатель подлец и негодяй
+
+
+			.o-modal__body.__border-top
+				h6.h7 Введите текст жалобы:
+
+				textarea(placeholder='Текст жалобы').o-modal__textarea.place-norm
+			.o-modal__footer.__border-top
+				button.btn.btn--lg Отправить
+
+
+//resume delete
+.o-modal#resume-delete
+	.o-modal__center
+		.o-modal__content.__md
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					h5.h5 Вы уверены, что хотите удалить свой профиль ?
+				.o-modal__footer.__mt-70
+					.o-modal__button-row
+						.o-modal__button-wrap
+							a(href="#").btn-transp Да
+						.o-modal__button-wrap
+							a(href="#").btn-transp Нет
+
+
+//candidate is hired
+.o-modal#vacancy-favorite
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Вакансия добавлена в избранное
+
+
+
+//send-resume
+.o-modal#send-resume
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption Откликнуться на вакансию
+			.o-modal__body
+				h6.h7 Сопроводительное письмо:
+
+				textarea(placeholder='Добрый день, меня заинтересовала вакансия Вашей компании..').o-modal__textarea.place-norm
+			.o-modal__footer.__border-top
+				button.btn.btn--lg Отправить
+
+
+.o-modal#need-register-vacancy
+	.o-modal__center
+		.o-modal__content.__md
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					h5.h5 Чтобы добавить вакансию в избранное Вам нужно зарегистрировать
+				.o-modal__footer.__mt-70
+					.o-modal__button-row
+						.o-modal__button-wrap
+							a(href="#").btn.btn--transp.btn--lg Авторизироваться
+						.o-modal__button-wrap
+							a(href="#").btn.btn--transp.btn--lg Зарегистрироваться
+
+.o-modal#record-video-constructor
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Спасибо, ваше резюме добавлено
+
+				.o-modal__footer
+					button.btn.btn--lg.btn--transp Записать видео-резюме
+
+
+
+
+//confirm-experience
+.o-modal#confirm-experience
+	.o-modal__center
+		.o-modal__content
+			form.b-form
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				h5.h5.o-modal__caption Заявки на подтвержедение опыта работы
+				.o-modal__body
+					.b-offer
+						.b-form__field-label.__bold Название компании (сайт)
+						+input('Введите название компании или адрес сайта')
+						.b-form__field-label.__bold Должность
+							+input('Введите вашу должность')
+						.b-form__field-label.__bold Период работы
+							+input('Введите название компании или адрес сайта')
+						.b-form__field-label.__bold Должность
+						+input('Введите вашу должность')
+
+				.o-modal__footer.__border-top
+					button.btn.btn--lg.js-send Отправить
+
+
+.o-modal#request-sent
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Спасибо, ваш запрос отправлен
+
+				.o-modal__footer
+					button.btn.btn--lg.btn--transp Записать видео-резюме
+
+.o-modal#more-questions-added
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Спасибо, дополнительные вопросы добавлены
+
+.o-modal#additional-questions
+	.o-modal__center
+		.o-modal__content
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			.o-modal__inside-wrap
+				.o-modal__body.o-modal__greeting
+					i.e-icon.e-icon--lg.o-modal__greeting--figure
+						+icon('check','e-icon__figure e-icon__figure--check')
+
+					h5.h5 Поздравляем, ответы на дополнительные вопросы отправлены
+
+//Loaded resume
+.o-modal#loaded-resume
+	.o-modal__center
+		.o-modal__content.__lg
+			.o-modal__close.js-modal-close
+				i.e-icon.e-icon--xs.e-icon--m0
+					+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+			h5.h5.o-modal__caption.__mb-10 Загруженное резюме
+			.o-modal__body
+				.o-modal__caption-bg
+					h4.o-modal__caption-bg-title Менеджер по продажам на английском языке
+
+				.row
+					.col-md-3
+						.o-modal__profile-photo
+							img(src='assets/img/candidats/candidat.jpg' alt='alt')
+
+					.col-md-8
+						h5 Кузьминова Ярослава Ивановна
+
+						p <span class='strong'>Дата рождения:</span> 8 января 1983
+
+						p <span class='strong'> Вакансия, на которую претендую:</span> Менеджер по продажам на английском языке
+
+						p <span class='strong'> Город:</span> Киев
+						p <span class='strong'>Желаемая з/п: </span> 25000 грн.
+				.b-profile
+					.b-profile__text-block.__no-border
+						.b-text-info
+							.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+								h5 Ключевая информация
+							ul.b-text-info__list
+								li.b-text-info__list-item весомый опыт по управлению ключевыми клиентами
+								li.b-text-info__list-item продвинутый английский
+								li.b-text-info__list-item стремления к обучению и развитию
+								li.b-text-info__list-item лидерские и управленческие качества
+								li.b-text-info__list-item командрный игрок
+
+					.b-profile__text-block.__no-border
+						.b-text-info
+							.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+
+								h5 Последнее место работы
+							.b-text-info__text
+								h6 ООО «Украино-Бельгийское предприятие Айвокс»
+								p <strong> Должность:</strong>  Менеджер по продажам
+								p <strong> Отрасль компании:</strong> Некоммерческие - Общественные организации
+								p <strong> Начало работы:</strong> апрель 2010
+								p <strong> Конец работы:</strong> март 2015
+								p <strong> Обязаности и достижения:</strong> С другой стороны сложившаяся структура организации
+									| играет важную роль в формировании соответствующий условий активизации.
+									| Не следует, однако забывать, что сложившаяся структура организации требуют
+									| от нас анализа соответствующий условий активизации.
+
+					.b-profile__text-block.__no-border
+						.b-text-info
+							.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+								h5 Место учебы
+							.b-text-info__text
+								h6 Киевский национальный университет имени Тараса Шевченко
+								p <strong> Специализация:</strong> Менеджмент
+								p <strong> Степень:</strong> магистр
+								p <strong> Год окончания: </strong> 2008
+
+					.b-profile__text-block.__no-border
+						.b-text-info
+							.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+								h5 Владение языками
+							.b-text-info__text
+
+								p <strong> Английский:</strong> средний уровень
+								p <strong> Польский:</strong> средний уровень
+
+
+					.b-profile__text-block.__no-border
+						.b-text-info
+							.b-text-info__caption-wrap.b-text-info__caption-wrap--mb20
+								h5 Дополнительно
+							.b-text-info__text
+								p Повседневная практика показывает, что начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Задача организации, в особенности же рамки и место обучения кадров позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Таким образом новая модель организационной деятельности позволяет выполнять важные задания по разработке новых предложений. Идейные соображения высшего порядка, а также консультация с широким активом требуют определения и уточнения соответствующий условий активизации. Равным образом постоянный количественный рост и сфера нашей активности требуют от нас анализа форм развития.
+								p Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки новых предложений. Разнообразный и богатый опыт рамки и место обучения кадров играет важную роль в формировании новых предложений. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности требуют определения и уточнения направлений прогрессивного развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития.
+
+				.b-link-resume
+					.b-link-resume__text
+						| Ссылка на резюме: <a href='freevac.ua/profile/resume/id1234567895231'>freevac.ua/profile/resume/id1234567895231</a>
+						br
+						| Дата создания: 12.06.2017
+					a(href='/').b-link-resume__logo
+						+icon('logo','b-link-resume__icon')
+			.o-modal__footer.__border-top.__mt-10
+				.o-modal__button-row
+					.o-modal__button-wrap
+						button.btn-transp.__lg Скачать резюме
+					.o-modal__button-wrap
+						button.btn-transp.__lg Печатать резюме

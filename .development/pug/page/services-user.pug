@@ -1,0 +1,251 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Подбор вакансии','Услуги и сервисы')
+	.o-video-helper
+		.c-content.c-content--padd-sm
+			.b-commutator.js-commutator-body
+				//Tabs
+				.b-commutator__tabs.b-commutator__tabs--mb
+					.container
+						.row
+							.col-sm-4
+								.b-commutator__tabs-item.active.js-commutator-btn(data-main='a')
+									| Заказать услугу
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='b')
+									| Активные услуги
+							.col-sm-4
+								.b-commutator__tabs-item.js-commutator-btn(data-main='c')
+									| История
+				//Tab content
+				section.b-commutator__content.active.js-commutator-content(data-child='a')
+					.b-service
+						.container
+							.row.justify-content-center
+
+								.col-lg-4.col-md-6
+									.b-service-panel
+										.b-service-panel__header
+											h6.h6.b-service-panel__title Подбор вакансии
+										.b-service-panel__price-circle
+											| от
+
+											.b-service-panel__price 500
+
+											| гривень
+
+										.b-service-panel__body
+											P.b-service-panel__text С другой стороны начало работы по формированию позиции позволяет выполнять задания по разработке.
+
+											h6.b-service-panel__sub-caption Преиумещества:
+
+											ul.b-list.b-service-panel__list
+												li.b-list__item.b-list__item--sm Выгоден при поиске 3 и более кандидатов аналогичную должность.
+												li.b-list__item.b-list__item--sm Позволяет закрыть сразу несколько одинаковых вакансий.
+
+										.b-service-panel__footer
+											a(href="#").btn.btn--xs.b-service-panel__btn Заказать услугу
+								.col-lg-4.col-md-6
+									.b-service-panel
+										.b-service-panel__header
+											h6.h6.b-service-panel__title Поднятие в ТОП
+										.b-service-panel__price-circle
+											| от
+
+											.b-service-panel__price 1000
+
+											| гривень
+
+										.b-service-panel__body
+											P.b-service-panel__text Закрепление резюме или видео-резюме в топе. При оплате совершается выбор срока действия «7 дней», «14 дней».
+
+											h6.b-service-panel__sub-caption Преиумещества:
+
+											ul.b-list.b-service-panel__list
+												li.b-list__item.b-list__item--sm Проведения собеседования онлайн и выбор лучшего кандидата.
+												li.b-list__item.b-list__item--sm Индивидуальный подбор.
+
+										.b-service-panel__footer
+											a(href="#").btn.btn--xs.b-service-panel__btn Заказать услугу
+
+
+
+
+				//Active vacancy
+				section.b-commutator__content.js-commutator-content(data-child='b')
+					.b-table.b-table--odd-bg
+						.container
+							.b-table__header.b-table__header--bg.hidden-lg-down
+								.row.align-items-center
+									.col-xl-9.col-lg-8 Услуга
+									.col-lg-1.b-table__left-time Осталось дней
+									.col-lg-1 Стоимость
+									.col-lg-2.col-xl-1
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-xl-9.col-lg-8
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-xl-9.col-lg-8
+										span.b-table__label Услуга:
+										| Поднятие в ТОП
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 7
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-xl-9.col-lg-8
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-xl-9.col-lg-8
+										span.b-table__label Услуга:
+										| Поднятие в ТОП
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 7
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-xl-9.col-lg-8
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 10
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-xl-9.col-lg-8
+										span.b-table__label Услуга:
+										| Поднятие в ТОП
+									.col-lg-1.b-table__left-time
+										span.b-table__label Осталось дней:
+										| 7
+									.col-lg-1
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.col-xl-1.b-table__add-link-wrap
+										a(href="#").b-table__add-link Продлить
+
+
+				//History
+				section.b-commutator__content.js-commutator-content(data-child='c')
+					.b-table.b-table--odd-bg
+						.container
+							.b-table__header.b-table__header--bg.hidden-lg-down
+								.row.align-items-center
+									.col-lg-6 Услуга
+									.col-lg-2 Дата заказа
+									.col-lg-2 Стоимость
+									.col-lg-2
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-6
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-2
+										span.b-table__label Дата заказа:
+										| 21.10.2017
+									.col-lg-2
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-6
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-2
+										span.b-table__label Дата заказа:
+										| 17.08.2017
+									.col-lg-2
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-6
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-2
+										span.b-table__label Дата заказа:
+										| 21.10.2017
+									.col-lg-2
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-6
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-2
+										span.b-table__label Дата заказа:
+										| 17.08.2017
+									.col-lg-2
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать
+							//table row
+							.b-table__row
+								.row.align-items-center
+									.col-lg-6
+										span.b-table__label Услуга:
+										| Подбор вакансий
+									.col-lg-2
+										span.b-table__label Дата заказа:
+										| 17.08.2017
+									.col-lg-2
+										span.b-table__label Стоимость:
+										| 2000 грн.
+									.col-lg-2.b-table__add-link-wrap
+										a(href="#").b-table__add-link Активировать

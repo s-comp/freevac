@@ -1,0 +1,155 @@
+.b-message-box
+
+	&__caption
+		border-bottom: 1px solid $grey-darker
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 12px
+		margin-bottom: 40px
+
+		+row
+
+	&__title
+		font-family: $default-font
+		font-weight: 400
+		margin-bottom: 0
+
+	&__more-btn
+		position: relative
+		z-index: 1
+		border: none
+		box-shadow: none
+		background: none
+
+		&.active
+			svg
+				color: $accent
+
+	&__company-name
+		color: $font-dark
+		width: 100%
+		margin-bottom: 20px
+	&__message
+		position: relative
+		//min-height: 170px
+		border: 1px solid $grey-darker
+		padding: 20px
+		margin-bottom: 50px
+		&:before
+			content: ''
+			position: absolute
+			top: calc(100% - 1px)
+			display: block
+			width: 0
+			height: 0
+			z-index: 1
+
+		&:after
+			content: ''
+			position: absolute
+			top: calc(100% + 1px)
+			display: block
+			width: 0
+			height: 0
+		&.__inform
+			background-color: $grey-light
+		&.__own
+			background-color: $grey-light
+			&:before
+				right: 20px
+				border-style: solid
+				border-width: 0 18px 20px 0
+				border-color: transparent $grey-light transparent transparent
+			&:after
+				right: 19px
+				border-style: solid
+				border-width: 0 19px 21px 0
+				border-color: transparent $grey-darker transparent transparent
+		&.__alien
+			&:before
+				left: 20px
+				border-style: solid
+				border-width: 20px 18px 0 0
+				border-color: #fff transparent transparent transparent
+			&:after
+				left: 19px
+				border-style: solid
+				border-width: 21px 19px 0 0
+				border-color: $grey-darker transparent transparent transparent
+	&__message-caption
+		margin-bottom: 17px
+		justify-content: space-between
+		align-items: center
+		+row
+	&__inform-caption
+		justify-content: space-between
+		align-items: center
+		+row
+		margin-bottom: 0
+	&__message-name
+		color: $font-dark
+		padding-right: 10px
+		&.__bold
+			font-family: $additional-font-bold
+
+
+	&__message-date
+		font: 16px $font-italic
+		color: $font-light
+
+	&__open-content-btn
+		font-size: 14px
+		color: $font-light
+		.e-icon
+			margin-right: 0
+			margin-left: 10px
+			+transition(all, .4s, ease)
+		.close
+			display: none
+		&.active
+			.open
+				display: none
+			.close
+				display: inline-block
+			.e-icon
+				+rotate(180deg)
+	&__inform-body
+		margin-top: 17px
+	&__message-message
+		font-size: 16px
+		color: $font-light
+
+	&__message-link
+		display: block
+		font-size: 16px
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+
+	&__text-editor
+		margin-bottom: 25px
+
+	&__button
+		text-align: center
+		margin-bottom: 15px
+		&.__lg
+			@extend .col
+			@extend .col-sm-9
+			@extend .col-md-8
+			@extend .col-lg-9
+			@extend .col-xl-8
+		&.__sm
+			@extend .col
+			@extend .col-sm-3
+			@extend .col-md-4
+			@extend .col-lg-3
+			@extend .col-xl-4
+
+	//.b-message-box
+	@media screen and (min-width: $xs)
+		&__button
+			&.__sm
+				text-align: right
+	@media screen and (min-width: $sm)
+		&__button
+			text-align: right

@@ -1,0 +1,40 @@
+mixin breadcrumb(thisPage, previousPage, previousPageSecond)
+	.b-breadcrumb-wrap
+		.container
+			.row.justify-content-center
+				ul.b-breadcrumb
+					if previousPageSecond
+						li.b-breadcrumb__item.b-breadcrumb__item--previous
+							a(href="#").b-breadcrumb__link= previousPageSecond
+					if previousPage
+						li.b-breadcrumb__item.b-breadcrumb__item--previous
+							a(href="#").b-breadcrumb__link= previousPage
+					if thisPage == ''
+
+					else
+						li.b-breadcrumb__item
+							h4.h4.b-breadcrumb__caption= thisPage
+
+mixin breadcrumb-btn-back(thisPage, previousPage, previousPageSecond)
+	.b-breadcrumb-wrap.__padd-xs
+		.container
+			.row.justify-content-center
+				.b-breadcrumb-back-btn
+					a(href="#").btn.btn--norm.btn--xs.btn--transp
+						i.e-icon.e-icon--no-border.e-icon--no-size
+							+icon('backspace','e-icon__figure e-icon__figure--backspace')
+						span.btn__span Назад
+				ul.b-breadcrumb.__in-btn
+					if previousPageSecond
+						li.b-breadcrumb__item.b-breadcrumb__item--previous
+							a(href="#").b-breadcrumb__link= previousPageSecond
+					if previousPage
+						li.b-breadcrumb__item.b-breadcrumb__item--previous
+							a(href="#").b-breadcrumb__link= previousPage
+					if thisPage == ''
+
+					else
+						li.b-breadcrumb__item
+							h4.h4.b-breadcrumb__caption= thisPage
+
+

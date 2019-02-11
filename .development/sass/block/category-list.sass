@@ -1,0 +1,52 @@
+.b-category-list
+	margin-bottom: 30px
+	&__item
+		margin-bottom: 11px
+		&:last-child
+			margin-bottom: 0
+	&__point
+		display: inline-flex
+		letter-spacing: -0.27px
+	&__point-between
+		display: flex
+		justify-content: space-between
+		letter-spacing: -0.27px
+	&__point-column
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__count
+		font-size: 16px
+		display: block
+		color: $accent
+		margin-left: 10px
+
+.b-category-block
+	padding: 10px 0
+	&__point-column
+		font-family: $default-font
+		@extend .b-category-list__point-column
+		@extend h5
+	&__count
+		@extend .b-category-list__count
+		margin: 0
+
+
+@media screen and (min-width: $sm)
+	//.b-category-block
+	.b-category-block
+		padding: 25px 0
+
+@media screen and (min-width: $lg)
+	//b-category-list
+	.b-category-list
+		&__count
+			font-size: 18px
+
+
+	//.b-category-block
+	.b-category-block
+		padding: 40px 0
+
+
+

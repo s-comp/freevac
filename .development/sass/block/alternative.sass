@@ -1,0 +1,54 @@
+.b-alternative
+	position: relative
+	overflow: hidden
+
+	display: flex
+	align-items: center
+
+	font: 500 14px $rubik
+	color: #ffffff
+
+	width: 290px
+	margin: 0 auto
+
+	+border-radius(29px)
+	@media screen and (min-width: $sm)
+		font-size: 16px
+		width: 428px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		border: 1px solid #ffffff
+		+border-radius(29px)
+
+	&__item
+		position: relative
+		flex: 1
+		text-align: center
+		padding: 18px 10px
+		cursor: pointer
+		+transition(all, .4s, ease)
+		@media screen and (min-width: $sm)
+			padding: 21px 27px
+		span
+			position: relative
+		&.active
+			color: $font
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				top: -1px
+				right: -1px
+				bottom: -1px
+				left: -1px
+				background-color: $accent
+.b-alternative-content
+	display: none
+	&.active
+		display: block

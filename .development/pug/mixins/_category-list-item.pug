@@ -1,0 +1,14 @@
+mixin category-list-item(title, count, link, className)
+	if className === 'between'
+		li.b-category-list__item
+			a(href=link class="b-category-list__point-between ")=title
+				span.b-category-list__count=count
+	else if className === 'column'
+		.b-category-block
+			a(href=link class="b-category-block__point-column ")=title
+				span.b-category-block__count=count
+
+	else
+		li.b-category-list__item
+			a(href=link class="b-category-list__point ")=title
+				span.b-category-list__count=count

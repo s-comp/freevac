@@ -1,0 +1,365 @@
+.b-form
+	&--mb-30
+		margin-bottom: 30px
+	&--mt30
+		margin-top: 30px
+	&__field-wrap
+		padding: 9px 0
+		//margin-bottom: 8px
+
+		&--row
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+
+		&.__gutter-t-b-30
+			margin-top: 30px
+			margin-bottom: 30px
+
+		&:last-child
+			margin-bottom: 0
+		&.__mb-50
+			margin-bottom: 35px
+		&.__mb-40
+			margin-bottom: 25px
+		&.__mb-20
+			margin-bottom: 20px
+
+		&.error
+			.b-form__recov-pass
+				display: block
+			//background-color: $error-block-bg
+			input, textarea
+				//&:focus:required:invalid
+				border-color: $input-error-border
+	&.__error-bg
+		.b-form__field-wrap
+			&.error
+				background-color: $error-block-bg
+
+	&__field-label
+		font-family: $add-font
+		margin: 8px 0
+		&.__bold
+			font-family: $additional-font-bold
+		&.__sm
+			font-size: 16px
+	&__field-group
+		display: flex
+		align-items: center
+		&--row
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+
+		&.error
+			input, textarea
+				&:focus:required:invalid
+					border-color: $input-error-border
+	&__field-group-row
+		display: flex
+		align-items: center
+		margin-bottom: 18px
+		&.__between
+			justify-content: space-between
+
+	&__field-group-item
+		margin-bottom: 10px
+	&__field-group-custom
+		display: flex
+		flex-direction: column
+	&__input-place-norm
+		&::placeholder
+			font-family: $default-font
+	&__input-xxs
+		max-width: 92px
+	&__error
+		display: none
+		padding: 25px 25px 22px
+		text-align: center
+		background-color: $error-block-bg
+		font-size: 16px
+		color: $error-text
+		margin-bottom: 18px
+		a
+			color: $error-text
+			text-decoration: underline
+
+		&.error
+			display: block
+
+	&__recov-pass
+		display: none
+		color: $error-text
+		text-align: left
+		font-size: 14px
+		a
+			color: $error-text
+			text-decoration: underline
+	&__button-wrap
+		text-align: center
+		margin-top: 35px
+		&.__mt-20
+			margin-top: 20px
+		&--modal
+			padding-top: 20px
+			border-top: 1px solid $grey-darker
+	&__subs
+		margin: 0 8px
+		font-size: 16px
+		text-align: center
+	&__link
+		font-size: 16px
+		color: $font-dark
+		letter-spacing: -0.24px
+		text-decoration: underline
+		margin-top: 15px
+
+	&__text
+		font-family: $additional-font-bold
+		letter-spacing: -0.27px
+		display: inline-block
+		margin: 5px 0
+
+	&__light-text
+		font: 16px $font-def-light
+		color: $font-light
+	&__dark-text
+		font-size: 16px
+		color: $font-dark
+	&__help-text
+
+		display: inline-block
+		margin: 5px 10px 5px 0
+
+	&__sub-text
+		color: $font-light
+		font-size: 15px
+		margin-bottom: 15px
+		&.__bottom
+			margin-top: 15px
+		&.__bottom-0
+			margin-bottom: 0
+
+	&__text-row
+		+row
+		align-items: center
+	&__field-group--mr
+		margin-bottom: 2px
+	&__footer
+		border-top: 1px solid $grey-darker
+		position: relative
+		padding-top: 40px
+		padding-bottom: 40px
+		margin-top: 40px
+		&.__no-border
+			border-top: none
+
+	&__footer-btn
+		margin-top: 5px
+		margin-bottom: 5px
+
+	&__upload-file
+		position: relative
+
+	&__file-input
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		cursor: pointer
+
+	&__upload-file-label
+		display: flex
+		justify-content: space-between
+	&__input-file
+		width: 0.1px
+		height: 0.1px
+		opacity: 0
+		overflow: hidden
+		position: absolute
+		z-index: -1
+	&__placeholder
+		font-family: $add-font
+		letter-spacing: -0.27px
+		color: $font-light
+
+	&__block
+		padding: 30px 0
+		border-bottom: 1px solid $grey-darker
+		&.__no-border
+			border-bottom: none
+		&.__recov-video-btn
+			text-align: center
+			padding: 60px 0
+		&.__padd-t-0
+			padding-top: 0
+	&__caption
+		display: flex
+		align-items: center
+		margin-bottom: 40px
+
+	&__title
+		margin-bottom: 0
+	&__upload-img
+		position: relative
+
+	&__settings-img
+		position: relative
+		z-index: 1
+		max-width: 260px
+		max-height: 260px
+		overflow: hidden
+		margin: 25px auto 25px auto
+		&:hover
+			.b-form__settings-img-hover
+				opacity: 1
+				visibility: visible
+
+	&__settings-img-hover
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		background-color: rgba($dark-bg, .55)
+
+		opacity: 0
+		visibility: hidden
+
+		+transition(all, .4s, ease)
+
+	&__settings-img-hover-text
+		display: block
+		margin: 5px auto 0
+		text-align: center
+		color: #ffffff
+		font-family: $font-add-semi-bold
+
+	&__footer-button
+		text-align: center
+		margin-bottom: 15px
+		&.__lg
+			@extend .col
+			@extend .col-sm-9
+			@extend .col-md-8
+			@extend .col-lg-9
+			@extend .col-xl-8
+		&.__sm
+			@extend .col
+			@extend .col-sm-3
+			@extend .col-md-4
+			@extend .col-lg-3
+			@extend .col-xl-4
+	&__add-btn
+		display: flex
+		align-items: center
+		font: 18px $font-def-light
+		color: $font-dark
+
+		margin-top: 10px
+	&__md-mb-15
+		margin-bottom: 15px
+
+	&__figure-preview
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: $grey-light
+		margin-bottom: 5px
+		width: 145px
+		height: 193px
+	//.b-form
+	@media screen and (max-width: $max-sm)
+		&__field-group-row
+			.__coumn-sm
+			flex-direction: column
+			align-items: flex-start
+		&__field-group-item
+			&--sm-center
+				text-align: center
+
+	@media screen and (min-width: $xs)
+		&__field-wrap
+			&--row
+				flex-direction: row
+		&__link
+			&--recov-pass
+				margin-top: 0
+		&__footer-button
+			&.__sm
+				text-align: right
+	@media screen and (min-width: $sm)
+
+		&__button-wrap
+			margin-top: 60px
+			&--modal
+				&.__right
+					text-align: right
+
+				padding: 22px 0 0
+		&__field-group-item
+			margin-bottom: 0
+		&__field-group-custom
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+		&__item-group-lg
+			max-width: 70%
+		&__item-group-xs
+			max-width: 29%
+		&__searh-field-group
+			display: flex
+			align-items: center
+		&__field-group--mr
+			margin-right: 2px
+			margin-bottom: 0
+		&__footer-button
+			text-align: right
+		&__add-btn
+			font-size: 20px
+	@media screen and (min-width: $sm-l)
+		&__settings-aside
+			height: 0
+		&__md-mb-15
+			margin-bottom: 0
+	@media screen and (min-width: $lg)
+		&__field-wrap
+			&.__mb-50
+				margin-bottom: 50px
+			&.__mb-40
+				margin-bottom: 40px
+		&__field-group-custom
+			padding-left: 0
+		&__button-wrap
+
+			&--modal
+				padding: 26px 0 0
+
+		&__settings-img
+			margin-top: 0px
+
+		&__settings-img-hover-text
+			margin: 15px auto 0
+
+		&__add-btn
+			font-size: 24px
+	@media screen and (min-width: $xl)
+		&__button-wrap
+
+			&--modal
+				padding: 30px 0 0
+
+		&__settings-img-hover-text
+			margin: 25px auto 0
+
+

@@ -1,0 +1,57 @@
+.b-person-message
+
+	padding: 10px
+	border-bottom: 1px solid $grey-darker
+	+row
+	align-items: center
+	&:first-child
+		border-top: 1px solid $grey-darker
+	&.active
+		border: 2px solid $accent
+	&.__unread
+		background-color: $grey-light
+	&__figure
+		width: 66px
+		overflow: hidden
+		margin-right: 8px
+
+		+border-radius(50%)
+
+
+	&__caption
+		color: $font-dark
+		justify-content: space-between
+		margin-bottom: 3px
+		+row
+
+
+	&__body
+		flex: 1
+
+		margin-top: 5px
+	&__name
+		font-size: 12px
+		padding-right: 10px
+
+	&__date
+		font-size: 10px
+
+	&__message
+		font-size: 11px
+		color: $font-light
+		overflow: hidden
+		text-overflow: ellipsis
+		display: -webkit-box
+		line-height: 18px     /* fallback */
+		max-height: 36px     /* fallback */
+		-webkit-line-clamp: 2 /* number of lines to show */
+		-webkit-box-orient: vertical
+	&__message-name
+		color: $font-dark
+		font-size: 11px
+		margin-right: 5px
+
+	&__vacancy-caption
+		font: 11px $font-bold
+		color: $font-dark
+

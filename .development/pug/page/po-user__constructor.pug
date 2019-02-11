@@ -1,0 +1,486 @@
+extends ../template/aspirant
+block title
+	| Markup
+block main
+	+breadcrumb('Конструктор резюме')
+	.c-content
+		.container
+			.b-constructor.js-constructor-body
+				.b-constructor-progress
+					//item
+					.b-constructor-progress__item(data-step='1').active
+						.b-constructor-progress__inside-wrap
+							.b-constructor-progress__count 1
+								i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+									+icon('check','e-icon__figure')
+							.b-constructor-progress__text Персональные данные
+					//item
+					.b-constructor-progress__item(data-step='2')
+						.b-constructor-progress__inside-wrap
+							.b-constructor-progress__count 2
+								i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+									+icon('check','e-icon__figure')
+							.b-constructor-progress__text Желаемая должность
+					//item
+					.b-constructor-progress__item(data-step='3')
+						.b-constructor-progress__inside-wrap
+							.b-constructor-progress__count 3
+								i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+									+icon('check','e-icon__figure')
+							.b-constructor-progress__text Опыт работы
+					//item
+					.b-constructor-progress__item(data-step='4')
+						.b-constructor-progress__inside-wrap
+							.b-constructor-progress__count 4
+								i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+									+icon('check','e-icon__figure')
+							.b-constructor-progress__text Образование
+					//item
+					.b-constructor-progress__item(data-step='5')
+						.b-constructor-progress__inside-wrap
+							.b-constructor-progress__count 5
+								i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+									+icon('check','e-icon__figure')
+							.b-constructor-progress__text Владение языками
+					//item
+					.b-constructor-progress__item(data-step='6')
+						.b-constructor-progress__inside-wrap
+							.b-constructor-progress__count 6
+								i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+									+icon('check','e-icon__figure')
+							.b-constructor-progress__text Дополнительно
+
+				form(action='/' method='post').b-form.__error-bg
+					.container
+						//Step
+						.b-constructor__step(data-form='1').active
+							//Form block
+							.b-form__block.__no-border
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold ФИО *
+
+									.col-sm-9.col-12
+										input(type='text' placeholder='ФИО' value='Дяченко Мирослава Ивановна').b-form__field.js-required
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Город *
+
+									.col-lg-6.col-sm-9.col-12
+										input(type='text' placeholder='Город' value='Киев').b-form__field.js-required
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Телефон *
+
+									.col-lg-4.col-sm-9.col-12
+										input(type='text' value='0671234567').b-form__field.js-required.js-phone-masked.js-only-number
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Email *
+
+									.col-lg-6.col-sm-9.col-12
+										input(type='email' placeholder='Email' value='kuzya_yaroslava@gmail.com').b-form__field.js-required
+								//Form row
+								.b-form__field-wrap.row
+									.col-sm-3
+										.b-form__field-label.__bold Фотография
+
+									.col-lg-7.col-sm-9.col-12
+										.row
+											.col-xl-3.col-md-4
+												.b-form__figure-preview
+													i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+														+icon('photo-camera','e-icon__figure e-icon__figure--xxl')
+											.col
+												.b-form__sub-text
+													| Загрузите свою фотографию для резюме.
+													| После загрузки вы сможете отредактировать до нужного размера.
+												.b-form__sub-text
+													| Размер до 2мб, формат JPG, PNG
+												.b-form__upload-file
+													label.e-input.js-labelFile.b-form__upload-file-label
+														input(type='file', name='file').b-form__input-file.js-input-file
+														span.b-form__placeholder.js-fileName Файл не выбран
+														i.e-icon.e-icon--no-border.e-icon--m0.e-icon--no-size
+															+icon('attach','e-icon__figure e-icon__figure--attach')
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Дата рождения *
+
+									.col-xl-3.col-lg-4.col-md-5.col-sm-7.col-12
+										.row
+
+											div(class="form-group mb0")
+												div(class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd")
+													input(class="form-control date-input js-required" size="16" type="text" value="" readonly)
+													span(class="input-group-addon")
+														span(class="glyphicon glyphicon-remove")
+													span(class="input-group-addon")
+														span(class="glyphicon glyphicon-calendar")
+
+											//div(class="input-group date form_date" id="datetimepicker1")
+											//	input(type='text' class="form-control b-form__field js-required place-norm")
+											//	span.input-group-addon
+											//	span.glyphicon.glyphicon-calendar
+
+											//.col
+											//	input(type='text' value='' placeholder='дд').b-form__field.js-required.place-norm
+											//.col
+											//	input(type='text' value='' placeholder='мм').b-form__field.js-required.place-norm
+											//.col
+											//	input(type='text' value='' placeholder='гггг').b-form__field.js-required.place-norm
+						//Step
+						.b-constructor__step(data-form='2')
+							//Form block
+							.b-form__block.__no-border
+								.b-form__caption
+									i.e-icon
+										+icon('tie','e-icon__figure')
+									h5.h5.b-form__title Желаемая должность
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-md-3
+										.b-form__field-label.__bold Вакансия, на которую вы претендуете
+
+									.col-md-9.col-12
+										input(type='text' placeholder='' value='Менеджер по продажам').b-form__field
+										.b-form__sub-text.__bottom.__bottom-0 Например: Старший менеджер по работе с ключевыми клиентами (Sensor KAM)
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Желаемая з/п
+
+									.col-12.col-md-4.col-sm-6
+										.row.no-gutters.align-items-center
+											.col
+												input(type='text' placeholder='' value='15000').b-form__field
+											.col
+												i.e-icon.e-icon--md.e-icon--m0.e-icon--no-border
+													+icon('dollar','e-icon__figure e-icon__figure--plus')
+
+								//Form row
+								.b-form__field-wrap.row
+									.col-md-3
+										.b-form__field-label.__bold Ключевая информация
+
+									.col-md-9.col-12
+										textarea.tinymce
+										.b-form__sub-text.__bottom Аргументируйте тезисно, почему вам должны платить желаемую заработную плату.
+										.b-form__sub-text.__bottom
+											| Например:
+											br
+											| весомый опыт по управлению ключевыми клиентами
+											br
+											| продвинутый английский
+											br
+											| стремление к обучению и развитию
+											br
+											| лидерские и управленческие качества
+											br
+											| командный игрок
+
+								//Form row
+								.b-form__field-wrap.row
+									.col-md-3
+										.b-form__field-label.__bold Ваш текущий статус
+									.col-sm-9.col-12
+										label.e-radio
+											input(type='radio', checked='checked', name='status')
+											span.e-radio__btn
+											| работаю, но открыт к предложениям
+										//+radio('работаю, но открыт к предложениям', 'status')
+										+radio('не трудоустроен, ищу работу', 'status')
+										+radio('готов к удаленной работе', 'status')
+
+						//Step
+						.b-constructor__step(data-form='3')
+							//Form block
+							.b-form__block.__no-border
+								.b-form__caption
+									h5.h5.b-form__title Раскажите о последнем месте работы
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Название компании
+
+									.col-sm-9.col-12
+										input(type='text' placeholder='Название до 70 символов' value='').b-form__field.place-norm
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Должность
+
+									.col-md-9.col-sm-9.col-12
+										input(type='text' placeholder='Название до 70 символов' value='').b-form__field.place-norm
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Отрасль компании
+
+									.col-md-6.col-sm-9.col-12
+										.b-select.js-dropdown-body
+											.b-select__caption-wrap.js-dropdown-btn
+												span.b-select__caption.js-value-name Выбрать из списка
+												input(type="hidden" value="" name="select").js-value-input
+												i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+													+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+											.b-select__dropdown(data-child="a").js-dropdown-content
+												a.b-select__item(data-value="Задача организации, в особенности") Задача организации, в особенности
+												a.b-select__item(data-value="Значимость этих проблем настолько очевидна") Значимость этих проблем настолько очевидна
+												a.b-select__item(data-value="Повседневная практика показывает") Повседневная практика показывает
+												a.b-select__item.active(data-value="Равным образом консультация") Равным образом консультация
+												a.b-select__item(data-value="Разнообразный и богатый опыт ") Разнообразный и богатый опыт
+												a.b-select__item(data-value="Равным образом консультация с широким активом ") Равным образом консультация с широким активом
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Начало работы
+
+									.col-xl-2.col-lg-3.col-md-4.col-sm-6.col-12
+										.row
+											.col-6
+												input(type='text' value='' placeholder='мм').b-form__field.place-norm
+											.col-6
+												input(type='text' value='' placeholder='гггг').b-form__field.place-norm
+
+								//Form row
+								.b-form__field-wrap.row.align-items-center
+									.col-sm-3
+										.b-form__field-label.__bold Конец работы
+
+									.col-xl-4.col-lg-6.col-md-8.col-sm-9.col-12
+										.row.align-items-center
+											.col-md-3.col-sm-4.col-6
+												input(type='text' value='' placeholder='мм').b-form__field.place-norm
+											.col-md-3.col-sm-4.col-6
+												input(type='text' value='' placeholder='гггг').b-form__field.place-norm
+											.col-md-6.col-sm-4
+												+checkbox('еще работаю', '__mt-b-10', '__center')
+
+
+								//Form row
+								.b-form__field-wrap.row
+									.col-sm-3
+										.b-form__field-label.__bold Обязаности и достижения
+
+									.col-sm-9.col-12
+										include ../blocks/wysiwyg--edit
+
+								//Form row
+								.b-form__field-wrap.row.__gutter-t-b-30
+									.col-sm-3
+									.col-sm-9.col-12
+										button.b-form__add-btn
+											i.e-icon.e-icon--md
+												+icon('plus','e-icon__figure e-icon__figure--plus')
+											| Добавить еще одно место работы
+
+								//Form row
+								.b-form__field-wrap.row
+									.col-md-3
+									.col-md-9.col-12
+
+										+checkbox('Еще нигде не работал', '__lg', '__center')
+										br
+										+checkbox('Студент', '__lg', '__center')
+
+
+						//Step
+						.b-constructor__step(data-form='4')
+							//Form block
+							.b-form__block.__no-border
+								.b-form__caption
+									h5.h5.b-form__title Раскажите о последнем месте учебы
+
+							//Form row
+							.b-form__field-wrap.row.align-items-center
+								.col-sm-3
+									.b-form__field-label.__bold Название учебного заведения
+
+								.col-md-6.col-sm-9.col-12
+									.b-select.js-dropdown-body
+										.b-select__caption-wrap.js-dropdown-btn
+											span.b-select__caption.js-value-name.active Выбрать из списка
+											input(type="hidden" value="" name="select").js-value-input
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+										.b-select__dropdown(data-child="a").js-dropdown-content
+											a.b-select__item(data-value="Киевский национальный университет") Киевский национальный университет
+											a.b-select__item(data-value="Киевский национальный университет") Киевский национальный университет
+											a.b-select__item.active(data-value="Киевский национальный университет") Киевский национальный университет
+
+							//Form row
+							.b-form__field-wrap.row.align-items-center
+								.col-sm-3
+									.b-form__field-label.__bold Специализация
+
+								.col-md-6.col-sm-9.col-12
+									.b-select.js-dropdown-body
+										.b-select__caption-wrap.js-dropdown-btn
+											span.b-select__caption.js-value-name.active Выбрать из списка
+											input(type="hidden" value="" name="select").js-value-input
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+										.b-select__dropdown(data-child="a").js-dropdown-content
+											a.b-select__item(data-value="Менеджмент") Менеджмент
+											a.b-select__item(data-value="Менеджмент") Менеджмент
+											a.b-select__item.active(data-value="Менеджмент") Менеджмент
+
+							//Form row
+							.b-form__field-wrap.row.align-items-center
+								.col-sm-3
+									.b-form__field-label.__bold Степень
+
+								.col-md-6.col-sm-9.col-12
+									.b-select.js-dropdown-body
+										.b-select__caption-wrap.js-dropdown-btn
+											span.b-select__caption.js-value-name.active Выбрать из списка
+											input(type="hidden" value="" name="select").js-value-input
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+										.b-select__dropdown(data-child="a").js-dropdown-content
+											a.b-select__item(data-value="Магистр") Магистр
+											a.b-select__item(data-value="Магистр") Магистр
+											a.b-select__item.active(data-value="Магистр") Магистр
+							//Form row
+							.b-form__field-wrap.row.align-items-center
+								.col-sm-3
+									.b-form__field-label.__bold Форма обучения
+
+								.col-md-6.col-sm-9.col-12
+									.b-select.js-dropdown-body
+										.b-select__caption-wrap.js-dropdown-btn
+											span.b-select__caption.js-value-name.active Выбрать из списка
+											input(type="hidden" value="" name="select").js-value-input
+											i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+												+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+										.b-select__dropdown(data-child="a").js-dropdown-content
+											a.b-select__item(data-value="Дневная") Дневная
+											a.b-select__item(data-value="Дневная") Дневная
+											a.b-select__item.active(data-value="Дневная") Дневная
+
+
+							//Form row
+							.b-form__field-wrap.row
+								.col-sm-3
+								.col-sm-9.col-12
+									button.b-form__add-btn
+										i.e-icon.e-icon--md
+											+icon('plus','e-icon__figure e-icon__figure--plus')
+										| Добавить еще одно место учебы
+
+						//Step
+						.b-constructor__step(data-form='5')
+							//Form block
+							.b-form__block.__no-border
+								//Form row
+								.b-form__field-wrap.row
+									.col-sm-3
+										.b-form__field-label.__bold Язык
+
+									.col-sm-9.col-12
+										.row
+											.col-md-4.b-form__md-mb-15
+												.b-select.js-dropdown-body
+													.b-select__caption-wrap.js-dropdown-btn
+														span.b-select__caption.js-value-name.active Польский
+														input(type="hidden" value="Польский" name="select").js-value-input
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+													.b-select__dropdown(data-child="a").js-dropdown-content
+														a.b-select__item(data-value="Дневная") Дневная
+														a.b-select__item(data-value="Дневная") Дневная
+														a.b-select__item.active(data-value="Дневная") Дневная
+											.col-md-4.b-form__md-mb-15
+												.b-select.js-dropdown-body
+													.b-select__caption-wrap.js-dropdown-btn
+														span.b-select__caption.js-value-name.active Высокий
+														input(type="hidden" value="Высокий" name="select").js-value-input
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+													.b-select__dropdown(data-child="a").js-dropdown-content
+														a.b-select__item(data-value="Низкий") Низкий
+														a.b-select__item(data-value="Средний") средний
+														a.b-select__item.active(data-value="Высокий") Высокий
+
+								//Form row
+								.b-form__field-wrap.row
+									.col-sm-3
+									.col-sm-9.col-12
+										.row
+											.col-md-4.b-form__md-mb-15
+												.b-select.js-dropdown-body
+													.b-select__caption-wrap.js-dropdown-btn
+														span.b-select__caption.js-value-name Выберите язык
+														input(type="hidden" value="Дневная" name="select").js-value-input
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+													.b-select__dropdown(data-child="a").js-dropdown-content
+														a.b-select__item(data-value="Дневная") Дневная
+														a.b-select__item(data-value="Дневная") Дневная
+														a.b-select__item.active(data-value="Дневная") Дневная
+											.col-md-4.b-form__md-mb-15
+												.b-select.js-dropdown-body
+													.b-select__caption-wrap.js-dropdown-btn
+														span.b-select__caption.js-value-name Выберите уровень
+														input(type="hidden" value="Высокий" name="select").js-value-input
+														i.e-icon.e-icon--no-border.e-icon--no-size.e-icon--m0
+															+icon('arrow-down-xs-dark','e-icon__figure e-icon__figure--arrow-small b-select__arrow')
+													.b-select__dropdown(data-child="a").js-dropdown-content
+														a.b-select__item(data-value="Низкий") Низкий
+														a.b-select__item(data-value="Средний") средний
+														a.b-select__item.active(data-value="Высокий") Высокий
+											.col-md-2
+												a(href="#")
+													i.e-icon.e-icon--md.e-icon--m0
+														+icon('plus','e-icon__figure e-icon__figure--plus')
+
+						//Step
+						.b-constructor__step(data-form='6')
+							//Form block
+							.b-form__block.__no-border
+								//Form row
+								.b-form__field-wrap.row
+									.col-sm-3
+										.b-form__field-label.__bold Напишите все, что считаете нужным
+
+									.col-sm-9.col-12
+										include ../blocks/wysiwyg--edit
+
+								.b-form__footer
+									.row.no-gutters.justify-content-center
+										a(href="#record-video-constructor").btn.btn--lg.js-send.js-modal-btn Сохранить
+
+				.b-constructor__footer
+					.row.no-gutters.justify-content-center
+							button.btn.btn--lg.js-constructor-btn Далее
+
+
+
+	.o-modal#record-video-constructor
+		.o-modal__center
+			.o-modal__content
+				.o-modal__close.js-modal-close
+					i.e-icon.e-icon--xs.e-icon--m0
+						+icon('close','e-icon__figure e-icon__figure--close e-icon__figure--close--xs')
+				.o-modal__inside-wrap
+					.o-modal__body.o-modal__greeting
+						i.e-icon.e-icon--lg.o-modal__greeting--figure
+							+icon('check','e-icon__figure e-icon__figure--check')
+
+						h5.h5 Спасибо, ваше резюме добавлено
+
+					.o-modal__footer
+						button.btn.btn--lg.btn--transp Записать видео-резюме

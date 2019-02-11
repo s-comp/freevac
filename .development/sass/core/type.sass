@@ -1,0 +1,229 @@
+body,
+html
+	height: 100%
+	margin: 0
+body
+	font: 16px/1.4 $default-font
+	letter-spacing: -0.27px
+
+	color: $font
+	@media screen and (min-width: $xl)
+		font-size: 18px
+
+
+	*
+		box-sizing: border-box
+		outline: none
+		&:hover,
+		&:focus
+			outline: none
+
+	&.modal-open
+		overflow: hidden
+a
+	text-decoration: none
+	color: $dark
+	+transition(all, .4s, ease)
+
+
+img
+	max-width: 100%
+	vertical-align: middle
+
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-bold
+	margin-top: 0
+
+.h1, .h2, .h3, .h4, .h5, .h6, .h7
+	font-family: $additional-font-bold
+	&.__def
+		font-family: $font-bold
+.hst-2
+	font-family: $rubik
+
+h1
+	font-size:  30px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $sm)
+		font-size: 40px
+	@media screen and (min-width: $lg)
+		font-size: 50px
+	@media screen and (min-width: $xl)
+		font-size: 60px
+h2
+	font-size:  26px
+	margin-bottom: 20px
+	@media screen and (min-width: $sm)
+		font-size: 28px
+	@media screen and (min-width: $lg)
+		font-size: 36px
+	@media screen and (min-width: $xl)
+		font-size: 42px
+h3
+	font-size: 24px
+	@media screen and (min-width: $sm)
+		font-size: 26px
+	@media screen and (min-width: $lg)
+		font-size: 31px
+	@media screen and (min-width: $xl)
+		font-size: 36px
+h4
+	font-size: 18px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $sm)
+		font-size: 20px
+	@media screen and (min-width: $lg)
+		font-size: 25px
+	@media screen and (min-width: $xl)
+		font-size: 30px
+
+h5
+	font-size: 17px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $lg)
+		font-size: 19px
+	@media screen and (min-width: $xl)
+		font-size: 24px
+h6
+	font-size: 17px
+	letter-spacing: -0.3px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $lg)
+		font-size: 18px
+	@media screen and (min-width: $xl)
+		font-size: 20px
+
+
+.h1
+	font-size:  30px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $sm)
+		font-size: 40px
+	@media screen and (min-width: $lg)
+		font-size: 50px
+	@media screen and (min-width: $xl)
+		font-size: 60px
+
+.h3
+	font-size: 24px
+	@media screen and (min-width: $sm)
+		font-size: 26px
+	@media screen and (min-width: $lg)
+		font-size: 31px
+	@media screen and (min-width: $xl)
+		font-size: 36px
+.h4
+	font-size: 18px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $sm)
+		font-size: 20px
+	@media screen and (min-width: $lg)
+		font-size: 25px
+	@media screen and (min-width: $xl)
+		font-size: 30px
+
+.h5
+	font-size: 17px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $lg)
+		font-size: 19px
+	@media screen and (min-width: $xl)
+		font-size: 24px
+.h6
+	font-size: 17px
+	letter-spacing: -0.3px
+	margin-bottom: 20px
+
+	@media screen and (min-width: $lg)
+		font-size: 18px
+	@media screen and (min-width: $xl)
+		font-size: 20px
+.h7
+	font-size: 15px
+	@media screen and (min-width: $sm)
+		font-size: 16px
+	@media screen and (min-width: $xl)
+		font-size: 18px
+
+p
+	font-size: 16px
+	margin-top: 0
+	margin-bottom: 15px
+
+button, input, textarea, .e-input
+	+transition(all, .4s, ease)
+
+
+input, textarea, .e-input
+	display: block
+	border: 2px solid transparent
+	background-color: $grey-light
+	padding: 13px 11px 11px
+	width: 100%
+	font-size: 16px
+	&.error, &:focus:required:invalid
+		border-color: $input-error-border
+	&:focus,
+	&:required:valid
+		border-color: $accent
+	@media screen and (min-width: $lg)
+		padding: 15px 11px 13px
+
+input[type="time"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-inner-spin-button
+
+	-webkit-appearance: none
+	-moz-appearance: textfield
+	margin: 0
+	padding: 0
+	width: 0
+	display: none
+
+input[type="time"]
+	font-size: 13px
+	padding-right: 0
+button
+	padding: 0
+	background-color: transparent
+	border: none
+	box-shadow: none
+video
+	max-width: 100%
+table
+	width: 100%
+
+::selection
+	background-color: $accent
+	color: #fff
+	text-shadow: none
+::placeholder
+	font-family: $add-font
+	letter-spacing: -0.27px
+	color: $font-light
+.place-norm::placeholder
+	font-family: $default-font
+.ttu
+	text-transform: uppercase
+.tdu
+	text-decoration: underline
+	color: $font-dark
+.strong
+	color: $font-dark
+	font-family: $font-bold
+.bold
+	font-family: $rubik
+	font-weight: 500
+
+ul
+	list-style: none
+	padding: 0
+	margin: 0
